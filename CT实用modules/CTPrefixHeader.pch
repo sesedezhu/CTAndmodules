@@ -1,0 +1,27 @@
+//
+//  CTPrefixHeader.pch
+//  CT实用modules
+//
+//  Created by 涛程 on 2018/7/23.
+//  Copyright © 2018年 涛程. All rights reserved.
+//
+
+#ifndef CTPrefixHeader_pch
+#define CTPrefixHeader_pch
+
+#import "BaseHeader.h"
+
+
+
+//
+#import "UIColor+Definition.h"
+
+
+#endif /* CTPrefixHeader_pch */
+
+
+
+/*
+ Shift + 田 + j = 当前类的位置
+ 
+ */
