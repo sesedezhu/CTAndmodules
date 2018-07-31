@@ -24,9 +24,9 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     // 1.添加5个子控制器
-    UIViewController *vc1 = [self addChildViewControllerWithClassName:@"HomeViewCtrls" andTabBarItemWithTitle:@"爆款" andImageName:@"home_icon1"];
+    UIViewController *vc1 = [self addChildViewControllerWithClassName:@"HomeViewCtrl" andTabBarItemWithTitle:@"爆款" andImageName:@"home_icon1"];
 //    UIViewController *vc2 = [self addChildViewControllerWithClassName:@"HomeViewCtrl" andTabBarItemWithTitle:@"首页" andImageName:@"home_icon1"];
-   UIViewController *vc3 = [self addChildViewControllerWithClassName:@"FoundCtrls" andTabBarItemWithTitle:@"发现" andImageName:@"home_icon2"];
+   UIViewController *vc3 = [self addChildViewControllerWithClassName:@"FoundCtrl" andTabBarItemWithTitle:@"发现" andImageName:@"home_icon2"];
     UIViewController *vc5 = [self addChildViewControllerWithClassName:@"MyViewCtrl" andTabBarItemWithTitle:@"我的" andImageName:@"home_icon3"];
     
     // 给标签控制器添加五个子控制器
@@ -66,7 +66,7 @@
 
     // 设置导航条的标题
     vc.navigationItem.title = title;
-    vc.view.backgroundColor = [UIColor whiteColor];
+//    vc.view.backgroundColor = [UIColor whiteColor];
     
     return nav;
 }

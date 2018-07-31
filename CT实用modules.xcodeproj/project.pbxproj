@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625021104CB500B30B93 /* HomeViewCtrl.m */; };
+		2160625421104E6300B30B93 /* FoundCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625321104E6300B30B93 /* FoundCtrl.m */; };
+		2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625621104E7400B30B93 /* MyViewCtrl.m */; };
 		2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FA7D21056F33005D6F2B /* AppDelegate.m */; };
 		2169FA8421056F33005D6F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2169FA8221056F33005D6F2B /* Main.storyboard */; };
 		2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2169FA8521056F33005D6F2B /* Assets.xcassets */; };
@@ -44,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2160624F21104CB500B30B93 /* HomeViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
+		2160625021104CB500B30B93 /* HomeViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
+		2160625221104E6300B30B93 /* FoundCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundCtrl.h; sourceTree = "<group>"; };
+		2160625321104E6300B30B93 /* FoundCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundCtrl.m; sourceTree = "<group>"; };
+		2160625521104E7400B30B93 /* MyViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewCtrl.h; sourceTree = "<group>"; };
+		2160625621104E7400B30B93 /* MyViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewCtrl.m; sourceTree = "<group>"; };
 		2169FA7921056F33005D6F2B /* CT实用modules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT实用modules.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2169FA7C21056F33005D6F2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2169FA7D21056F33005D6F2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +115,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2160623F21104C6600B30B93 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				2160624521104C6600B30B93 /* Home */,
+				2160624021104C6600B30B93 /* Found */,
+				2160624A21104C6600B30B93 /* My */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		2160624021104C6600B30B93 /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				2160624121104C6600B30B93 /* Ctrls */,
+				2160624221104C6600B30B93 /* Models */,
+				2160624321104C6600B30B93 /* Other */,
+				2160624421104C6600B30B93 /* Views */,
+			);
+			path = Found;
+			sourceTree = "<group>";
+		};
+		2160624121104C6600B30B93 /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				2160625221104E6300B30B93 /* FoundCtrl.h */,
+				2160625321104E6300B30B93 /* FoundCtrl.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		2160624221104C6600B30B93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2160624321104C6600B30B93 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2160624421104C6600B30B93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2160624521104C6600B30B93 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2160624621104C6600B30B93 /* Ctrls */,
+				2160624721104C6600B30B93 /* Models */,
+				2160624821104C6600B30B93 /* Other */,
+				2160624921104C6600B30B93 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2160624621104C6600B30B93 /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				2160624F21104CB500B30B93 /* HomeViewCtrl.h */,
+				2160625021104CB500B30B93 /* HomeViewCtrl.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		2160624721104C6600B30B93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2160624821104C6600B30B93 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2160624921104C6600B30B93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2160624A21104C6600B30B93 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				2160624B21104C6600B30B93 /* Ctrls */,
+				2160624C21104C6600B30B93 /* Models */,
+				2160624D21104C6600B30B93 /* Other */,
+				2160624E21104C6600B30B93 /* Views */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		2160624B21104C6600B30B93 /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				2160625521104E7400B30B93 /* MyViewCtrl.h */,
+				2160625621104E7400B30B93 /* MyViewCtrl.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		2160624C21104C6600B30B93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2160624D21104C6600B30B93 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2160624E21104C6600B30B93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2169FA7021056F33005D6F2B = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +273,7 @@
 			children = (
 				2169FAD9210580DD005D6F2B /* CTFramework */,
 				2169FAB821057A22005D6F2B /* Beas */,
+				2160623F21104C6600B30B93 /* Body */,
 				2169FA7C21056F33005D6F2B /* AppDelegate.h */,
 				2169FA7D21056F33005D6F2B /* AppDelegate.m */,
 				2169FAD821057D21005D6F2B /* CTPrefixHeader.pch */,
@@ -395,15 +538,18 @@
 			files = (
 				2169FAD621057A22005D6F2B /* UIFactory.m in Sources */,
 				2169FAD021057A22005D6F2B /* BaseViewController.m in Sources */,
+				2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */,
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
 				2169FAD421057A22005D6F2B /* ThemeManager.m in Sources */,
 				2169FACF21057A22005D6F2B /* BaseTaBarViewCtrl.m in Sources */,
 				2169FAD221057A22005D6F2B /* SkinTableViewCtrl.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
 				2169FAD121057A22005D6F2B /* NSAttributedString+Additon.m in Sources */,
+				2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,
 				2169FAD521057A22005D6F2B /* ThemeTabBarItem.m in Sources */,
 				2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */,
+				2160625421104E6300B30B93 /* FoundCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
