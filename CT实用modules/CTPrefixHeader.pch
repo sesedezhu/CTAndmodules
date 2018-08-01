@@ -17,6 +17,15 @@
 #import "UIColor+Definition.h"
 
 
+/*--屏幕的宽高----*/
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+//以640为设计稿
+#define TRANS_VALUE(x) ceil(kScreenWidth * x / 320)
+//以750为设计稿
+#define CONVER_VALUE(x) ceil(kScreenWidth * x / 375)
+
+
 #endif /* CTPrefixHeader_pch */
 
 
