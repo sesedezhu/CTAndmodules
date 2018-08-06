@@ -14,7 +14,7 @@
 #define Height_Space  CONVER_VALUE(20.0f)           // 竖间距
 #define Button_Height CONVER_VALUE(60.0f)           // 高
 #define Button_Width  CONVER_VALUE(100.0f)          // 宽
-#define Button_font   CONVER_VALUE(17.0f)           // 字体大小
+#define Button_font   CONVER_VALUE(14.0f)           // 字体大小
 @implementation CTCollects
 
 - (void)CTloadDataArr:(NSArray *)arr senderBlock:(senderBlock)block{

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AB21184FA100F820BD /* CTShowsManager.m */; };
+		214A03AF21184FA200F820BD /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AC21184FA100F820BD /* CTShowView.m */; };
 		2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625021104CB500B30B93 /* HomeViewCtrl.m */; };
 		2160625421104E6300B30B93 /* FoundCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625321104E6300B30B93 /* FoundCtrl.m */; };
 		2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625621104E7400B30B93 /* MyViewCtrl.m */; };
@@ -48,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214A03AA21184FA100F820BD /* CTShowsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowsManager.h; sourceTree = "<group>"; };
+		214A03AB21184FA100F820BD /* CTShowsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowsManager.m; sourceTree = "<group>"; };
+		214A03AC21184FA100F820BD /* CTShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowView.m; sourceTree = "<group>"; };
+		214A03AD21184FA100F820BD /* CTShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowView.h; sourceTree = "<group>"; };
 		2160624F21104CB500B30B93 /* HomeViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		2160625021104CB500B30B93 /* HomeViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		2160625221104E6300B30B93 /* FoundCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundCtrl.h; sourceTree = "<group>"; };
@@ -118,6 +124,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214A03A921184F0200F820BD /* CTShows */ = {
+			isa = PBXGroup;
+			children = (
+				214A03AA21184FA100F820BD /* CTShowsManager.h */,
+				214A03AB21184FA100F820BD /* CTShowsManager.m */,
+				214A03AD21184FA100F820BD /* CTShowView.h */,
+				214A03AC21184FA100F820BD /* CTShowView.m */,
+			);
+			path = CTShows;
+			sourceTree = "<group>";
+		};
 		2160623F21104C6600B30B93 /* Body */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +409,7 @@
 		2169FADC210580DD005D6F2B /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				214A03A921184F0200F820BD /* CTShows */,
 				217B7A9A2111B50900157434 /* CTCollectSimplify */,
 			);
 			path = CTViews;
@@ -550,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2169FAD621057A22005D6F2B /* UIFactory.m in Sources */,
+				214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */,
 				2169FAD021057A22005D6F2B /* BaseViewController.m in Sources */,
 				2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */,
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
@@ -557,6 +576,7 @@
 				2169FACF21057A22005D6F2B /* BaseTaBarViewCtrl.m in Sources */,
 				2169FAD221057A22005D6F2B /* SkinTableViewCtrl.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
+				214A03AF21184FA200F820BD /* CTShowView.m in Sources */,
 				2169FAD121057A22005D6F2B /* NSAttributedString+Additon.m in Sources */,
 				2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,

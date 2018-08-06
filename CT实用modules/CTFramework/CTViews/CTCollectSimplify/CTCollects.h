@@ -16,3 +16,10 @@ typedef void (^senderBlock)(UIButton *sender);
 @property(nonatomic, copy)senderBlock senderBlock;
 - (void)CTloadDataArr:(NSArray *)arr senderBlock:(senderBlock)block;
 @end
+
+
+/*
+ 
+     自定义版，简化的CollectionView
+ 
+ */
