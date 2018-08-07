@@ -1,45 +1,43 @@
 //
-//  MyViewCtrl.m
+//  CacheCtrl.m
 //  CT实用modules
 //
-//  Created by 涛程 on 2018/7/31.
+//  Created by 涛程 on 2018/8/7.
 //  Copyright © 2018年 涛程. All rights reserved.
 //
 
-#import "MyViewCtrl.h"
-#import "CTCollects.h"
-
 #import "CacheCtrl.h"
-@interface MyViewCtrl ()
+#import "CTCollects.h"
+#import "PlistManager.h"
+@interface CacheCtrl ()
 
 @end
 
-@implementation MyViewCtrl
+@implementation CacheCtrl
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
-    self.title =  @"数据类型封装";
     
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.本地cache",@"未知类型",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.测试",@"未知类型",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
-        [weakSelf ClickBtnMy:sender];
+        [weakSelf ClickBtnCache:sender];
     }];
     [self.view addSubview:collview];
 }
-- (void)ClickBtnMy:(UIButton *)sender{
+- (void)ClickBtnCache:(UIButton *)sender{
     switch (sender.tag-1) {
         case 0:
         {
-            //一、本地缓存集合
-            CacheCtrl *cacha = [[CacheCtrl alloc]init];
-            cacha.title = @"本地cache";
-            [cacha setHidesBottomBarWhenPushed:YES];
-            [self.navigationController pushViewController:cacha animated:YES];
+            //一、测试
+//            NSMutableDictionary *mutaDic = [[NSMutableDictionary alloc]init];
+            id mutaDic = [PlistManager getFilePlists:@"chengtao"];
+            NSLog(@"mutaDic ====== %@",mutaDic);
+            
         }
             break;
         case 1:
@@ -52,6 +50,8 @@
             break;
     }
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

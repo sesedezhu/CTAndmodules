@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AB21184FA100F820BD /* CTShowsManager.m */; };
 		214A03AF21184FA200F820BD /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AC21184FA100F820BD /* CTShowView.m */; };
+		214A03B521193E9400F820BD /* CacheCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B421193E9400F820BD /* CacheCtrl.m */; };
+		214A03B921194B3B00F820BD /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B821194B3A00F820BD /* PlistManager.m */; };
 		2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625021104CB500B30B93 /* HomeViewCtrl.m */; };
 		2160625421104E6300B30B93 /* FoundCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625321104E6300B30B93 /* FoundCtrl.m */; };
 		2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625621104E7400B30B93 /* MyViewCtrl.m */; };
@@ -54,6 +56,10 @@
 		214A03AB21184FA100F820BD /* CTShowsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowsManager.m; sourceTree = "<group>"; };
 		214A03AC21184FA100F820BD /* CTShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowView.m; sourceTree = "<group>"; };
 		214A03AD21184FA100F820BD /* CTShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowView.h; sourceTree = "<group>"; };
+		214A03B321193E9400F820BD /* CacheCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCtrl.h; sourceTree = "<group>"; };
+		214A03B421193E9400F820BD /* CacheCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCtrl.m; sourceTree = "<group>"; };
+		214A03B721194B3A00F820BD /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
+		214A03B821194B3A00F820BD /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistManager.m; sourceTree = "<group>"; };
 		2160624F21104CB500B30B93 /* HomeViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		2160625021104CB500B30B93 /* HomeViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		2160625221104E6300B30B93 /* FoundCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundCtrl.h; sourceTree = "<group>"; };
@@ -133,6 +139,15 @@
 				214A03AC21184FA100F820BD /* CTShowView.m */,
 			);
 			path = CTShows;
+			sourceTree = "<group>";
+		};
+		214A03B621194B3A00F820BD /* CTPlistManagers */ = {
+			isa = PBXGroup;
+			children = (
+				214A03B721194B3A00F820BD /* PlistManager.h */,
+				214A03B821194B3A00F820BD /* PlistManager.m */,
+			);
+			path = CTPlistManagers;
 			sourceTree = "<group>";
 		};
 		2160623F21104C6600B30B93 /* Body */ = {
@@ -243,6 +258,8 @@
 			children = (
 				2160625521104E7400B30B93 /* MyViewCtrl.h */,
 				2160625621104E7400B30B93 /* MyViewCtrl.m */,
+				214A03B321193E9400F820BD /* CacheCtrl.h */,
+				214A03B421193E9400F820BD /* CacheCtrl.m */,
 			);
 			path = Ctrls;
 			sourceTree = "<group>";
@@ -394,6 +411,7 @@
 		2169FADA210580DD005D6F2B /* CTDatas */ = {
 			isa = PBXGroup;
 			children = (
+				214A03B621194B3A00F820BD /* CTPlistManagers */,
 				2169FADD21058210005D6F2B /* CTColor */,
 			);
 			path = CTDatas;
@@ -574,12 +592,14 @@
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
 				2169FAD421057A22005D6F2B /* ThemeManager.m in Sources */,
 				2169FACF21057A22005D6F2B /* BaseTaBarViewCtrl.m in Sources */,
+				214A03B521193E9400F820BD /* CacheCtrl.m in Sources */,
 				2169FAD221057A22005D6F2B /* SkinTableViewCtrl.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
 				214A03AF21184FA200F820BD /* CTShowView.m in Sources */,
 				2169FAD121057A22005D6F2B /* NSAttributedString+Additon.m in Sources */,
 				2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,
+				214A03B921194B3B00F820BD /* PlistManager.m in Sources */,
 				2169FAD521057A22005D6F2B /* ThemeTabBarItem.m in Sources */,
 				2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */,
 				217B7A9D2111B52900157434 /* CTCollects.m in Sources */,
