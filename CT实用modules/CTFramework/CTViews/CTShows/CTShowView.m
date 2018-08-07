@@ -60,9 +60,12 @@
     view.frame = CGRectMake(0, 0, _width, _height);
     
 }
+- (void)setTimeAnimation:(CGFloat)timeAnimation{
+    _timeAnimation = timeAnimation;
+}
 - (void)setTransparencyAnimation:(BOOL)transparencyAnimation{
     _transparencyAnimation = transparencyAnimation;
-    if (_transparencyAnimation) {
+    if (!_transparencyAnimation) {
         self.contentView.alpha = 1.0;
     }
 }
@@ -72,37 +75,42 @@
 }
 #pragma mark - 开始动画
 - (void)showView{
-    
-    [UIView animateWithDuration:1.0 animations:^{
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        [window addSubview:self];
-        
-        self.shadowView.alpha = 0.5;
-        self.contentView.alpha = 1.0;
-        //样式配置
-        self.contentView.frame = CGRectMake(_left, _top, _width, _height);
-        
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:_timeAnimation animations:^{
+        [weakSelf showAnimations];
     } completion:^(BOOL finished) {
         
     }];
 }
+- (void)showAnimations{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window addSubview:self];
+    
+    self.shadowView.alpha = 0.5;
+    self.contentView.alpha = 1.0;
+    //样式配置
+    self.contentView.frame = CGRectMake(_left, _top, _width, _height);
+}
 #pragma mark - 移除动画
 - (void)dismiss{
-    [UIView animateWithDuration:1.0 animations:^{
-        //设置结束动画
-        [self endAnimation];
-        self.shadowView.alpha = 0.0;
-        if (self.transparencyAnimation) {
-            self.contentView.alpha = 1.0;
-        }else{
-            self.contentView.alpha = 0.0;
-        }
-        
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:_timeAnimation animations:^{
+        [weakSelf dismissAnimations];
     } completion:^(BOOL finished) {
         if (self.superview || self) {
             [self removeFromSuperview];
         }
     }];
+}
+- (void)dismissAnimations{
+    //设置结束动画
+    [self endAnimation];
+    self.shadowView.alpha = 0.0;
+    if (!self.transparencyAnimation) {
+        self.contentView.alpha = 1.0;
+    }else{
+        self.contentView.alpha = 0.0;
+    }
 }
 #pragma mark - 动画类型配置
 - (void)NLWAnimationConfiguration:(NLWAnimationMode)tepy{

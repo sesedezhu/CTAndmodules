@@ -21,7 +21,8 @@ typedef NS_ENUM(NSUInteger, NLWAnimationMode) {
 };
 @interface CTShowView : UIView
 
-@property (nonatomic, assign) BOOL transparencyAnimation; //是否开启透明度动画，默认开启
+@property (nonatomic, assign) CGFloat timeAnimation; //执行动画时间
+@property (nonatomic, assign) BOOL transparencyAnimation; //是否开启内容透明度动画，默认开启(设置为no，内容视图的透明度将不跟随遮罩图透明度动画走)
 @property (nonatomic, assign) BOOL isUserInteractionShadowView; //判断遮罩图是否可以点击
 /*
  * @param view    开发者传入自定义的内容视图
