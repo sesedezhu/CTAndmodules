@@ -46,10 +46,20 @@
  */
 + (id)getFilePlists:(NSString *)name{
     NSString *pash = [self getFilePlistPushName:name];
-    id json = [NSMutableDictionary dictionaryWithContentsOfFile:pash];
-    if (json == nil) {
-        json = [NSArray arrayWithContentsOfFile:pash];
+    //判断路径是否存在
+    BOOL dataPath = [PlistManager isFileExistWithFilePlistPath:pash];
+    id json;
+    if (dataPath) {
+        json = [NSMutableDictionary dictionaryWithContentsOfFile:pash];
+        if (json == nil) {
+            json = [NSArray arrayWithContentsOfFile:pash];
+        }
+        NSLog(@"Plist路径存在");
+    }else{
+        json = nil;
+        NSLog(@"Plist路径不存在");
     }
+    
     return json;
 }
 /**
@@ -57,8 +67,17 @@
  */
 + (NSString *)getFileDatas:(NSString *)name{
     NSString *pash = [self getFilePlistPushName:name];
-    NSData *data = [NSData dataWithContentsOfFile:pash];
-    NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    //判断路径是否存在
+    BOOL dataPath = [PlistManager isFileExistWithFilePlistPath:pash];
+    NSString *str = nil;
+    if (dataPath) {
+        NSData *data = [NSData dataWithContentsOfFile:pash];
+        str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"data路径存在");
+    }else{
+        NSLog(@"data路径不存在");
+    }
+   
 //    NSLog(@"取出的gata数据为＝＝＝＝＝＝%@",str);
     return str;
 }

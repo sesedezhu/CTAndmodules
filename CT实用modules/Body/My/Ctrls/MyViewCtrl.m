@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
-    self.title =  @"数据类型封装";
+    self.navigationItem.title =  @"数据类型封装";
     
     __weak typeof(self) weakSelf = self;
     

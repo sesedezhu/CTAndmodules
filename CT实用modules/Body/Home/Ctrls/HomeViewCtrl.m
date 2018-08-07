@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
-    self.title =  @"页面封装类";
+    self.navigationItem.title =  @"页面封装类";
     
     __weak typeof(self) weakSelf = self;
     

@@ -13,6 +13,9 @@
 
 @end
 
+
+#define UserPlists @"User.plist"
+
 @implementation CacheCtrl
 
 - (void)viewDidLoad {
@@ -22,7 +25,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.测试",@"未知类型",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.生成plist",@"2.修改plist",@"3.删除plist",@"未知类型",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtnCache:sender];
@@ -33,23 +36,71 @@
     switch (sender.tag-1) {
         case 0:
         {
-            //一、测试
-//            NSMutableDictionary *mutaDic = [[NSMutableDictionary alloc]init];
-            id mutaDic = [PlistManager getFilePlists:@"chengtao"];
-            NSLog(@"mutaDic ====== %@",mutaDic);
-            
+            //写入本地文件
+            [self dateSavePlisets];
         }
             break;
         case 1:
         {
-            
+            //修改.plist文件
+            [self dateChangePlisets];
         }
             break;
-            
+        case 2:
+        {
+            //删除.plist文件
+            [self dateDeletePlisets];
+        }
+            break;
         default:
             break;
     }
 }
+//生成本地plist文件
+- (void)dateSavePlisets{
+    //1、字典存入
+    NSDictionary *dic = @{
+                          @"sourceId":@(4),
+                          @"userId":@(12345),
+                          @"linkman":@"程涛"
+                          };
+    [PlistManager isFilePlistName:UserPlists loadData:dic];
+    
+    //2、数组存入
+    NSArray *arr = [NSArray arrayWithObjects:@"我是程",@"程是谁",@"程是大帅哥", nil];
+    [PlistManager isFilePlistName:@"arr.plist" loadData:arr];
+}
+//修改本地Plisets文件内容
+- (void)dateChangePlisets{
+    
+    NSMutableDictionary *mutaDic = [[NSMutableDictionary alloc]init];
+    mutaDic = [PlistManager getFilePlists:UserPlists];
+    if (mutaDic != nil) {
+        [mutaDic removeObjectForKey:@"linkman"];
+        [mutaDic setValue:@"帅哥程66" forKey:@"linkman"];
+        [PlistManager isFilePlistName:UserPlists loadData:mutaDic];
+        NSLog(@"字典不为nil");
+    }else{
+        NSLog(@"字典为nil");
+    }
+    
+}
+//删除本地plist文件
+- (void)dateDeletePlisets{
+    NSString *path = [PlistManager getFilePlistPushName:UserPlists];
+    BOOL dataPath = [PlistManager isFileExistWithFilePlistPath:path];
+    if (dataPath) {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        [fileManager removeItemAtPath:path error:nil];
+        NSLog(@"删除成功");
+    }else{
+        NSLog(@"删除失败，路径不存在");
+    }
+    
+    
+    
+}
+
 
 
 

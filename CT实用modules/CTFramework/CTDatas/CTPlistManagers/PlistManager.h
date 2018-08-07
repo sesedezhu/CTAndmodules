@@ -10,7 +10,7 @@
 
 @interface PlistManager : NSObject
 /**
- *  判断文件是否存在
+ *  根据路径判断文件是否存在
  */
 + (BOOL)isFileExistWithFilePlistPath:(NSString *)PlistPath;
 /**
@@ -21,6 +21,7 @@
 /**
  *  将数据存入Data文件->直接调用
  *  （判断路径是否存在？存在，存入更改：不存在，创建新路径，生产新Data文件）
+ *   name  命名格式：xxx.plist
  */
 + (void)isFileDataName:(NSString *)name loadData:(id)data;
 /**
@@ -34,7 +35,7 @@
  */
 + (NSString *)getFileDatas:(NSString *)name;
 /**
- *  生成plist文件路径，会判断文件是否存在
+ *  生成plist文件路径
  *  (ps：此步骤不会生成文件，只会生成文件路径)
  */
 + (NSString *)getFilePlistPushName:(NSString *)name;
