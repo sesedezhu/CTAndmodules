@@ -11,6 +11,17 @@
 		214A03AF21184FA200F820BD /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AC21184FA100F820BD /* CTShowView.m */; };
 		214A03B521193E9400F820BD /* CacheCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B421193E9400F820BD /* CacheCtrl.m */; };
 		214A03B921194B3B00F820BD /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B821194B3A00F820BD /* PlistManager.m */; };
+		214A03D5211BDB8100F820BD /* PosterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03D4211BDB8100F820BD /* PosterView.m */; };
+		214A03D9211BDC9C00F820BD /* MovieCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03D8211BDC9C00F820BD /* MovieCollectionView.m */; };
+		214A03DC211BDDAA00F820BD /* LargeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03DA211BDDAA00F820BD /* LargeLayout.m */; };
+		214A03DF211BDDF700F820BD /* MovieLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03DE211BDDF700F820BD /* MovieLayout.m */; };
+		214A03E2211BDEBB00F820BD /* LargeMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03E0211BDEBA00F820BD /* LargeMovieView.m */; };
+		214A03E5211BDF2800F820BD /* LargeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03E4211BDF2800F820BD /* LargeViewCell.m */; };
+		214A03E8211BE29E00F820BD /* CollectionModeul.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03E7211BE29E00F820BD /* CollectionModeul.m */; };
+		214A03EA211BEDD100F820BD /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A03E9211BEDD100F820BD /* 123.png */; };
+		214A03ED211BF6BC00F820BD /* SmallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03EC211BF6BB00F820BD /* SmallLayout.m */; };
+		214A03F0211BF6CD00F820BD /* SmallMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03EF211BF6CC00F820BD /* SmallMovieView.m */; };
+		214A03F3211BF6F700F820BD /* SmallViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03F2211BF6F700F820BD /* SmallViewCell.m */; };
 		2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625021104CB500B30B93 /* HomeViewCtrl.m */; };
 		2160625421104E6300B30B93 /* FoundCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625321104E6300B30B93 /* FoundCtrl.m */; };
 		2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625621104E7400B30B93 /* MyViewCtrl.m */; };
@@ -60,6 +71,27 @@
 		214A03B421193E9400F820BD /* CacheCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCtrl.m; sourceTree = "<group>"; };
 		214A03B721194B3A00F820BD /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
 		214A03B821194B3A00F820BD /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistManager.m; sourceTree = "<group>"; };
+		214A03D3211BDB8100F820BD /* PosterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosterView.h; sourceTree = "<group>"; };
+		214A03D4211BDB8100F820BD /* PosterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PosterView.m; sourceTree = "<group>"; };
+		214A03D7211BDC9C00F820BD /* MovieCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionView.h; sourceTree = "<group>"; };
+		214A03D8211BDC9C00F820BD /* MovieCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionView.m; sourceTree = "<group>"; };
+		214A03DA211BDDAA00F820BD /* LargeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeLayout.m; sourceTree = "<group>"; };
+		214A03DB211BDDAA00F820BD /* LargeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeLayout.h; sourceTree = "<group>"; };
+		214A03DD211BDDF600F820BD /* MovieLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieLayout.h; sourceTree = "<group>"; };
+		214A03DE211BDDF700F820BD /* MovieLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieLayout.m; sourceTree = "<group>"; };
+		214A03E0211BDEBA00F820BD /* LargeMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeMovieView.m; sourceTree = "<group>"; };
+		214A03E1211BDEBA00F820BD /* LargeMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeMovieView.h; sourceTree = "<group>"; };
+		214A03E3211BDF2800F820BD /* LargeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LargeViewCell.h; sourceTree = "<group>"; };
+		214A03E4211BDF2800F820BD /* LargeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LargeViewCell.m; sourceTree = "<group>"; };
+		214A03E6211BE29E00F820BD /* CollectionModeul.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionModeul.h; sourceTree = "<group>"; };
+		214A03E7211BE29E00F820BD /* CollectionModeul.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionModeul.m; sourceTree = "<group>"; };
+		214A03E9211BEDD100F820BD /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
+		214A03EB211BF6BB00F820BD /* SmallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallLayout.h; sourceTree = "<group>"; };
+		214A03EC211BF6BB00F820BD /* SmallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallLayout.m; sourceTree = "<group>"; };
+		214A03EE211BF6CC00F820BD /* SmallMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallMovieView.h; sourceTree = "<group>"; };
+		214A03EF211BF6CC00F820BD /* SmallMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallMovieView.m; sourceTree = "<group>"; };
+		214A03F1211BF6F700F820BD /* SmallViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallViewCell.h; sourceTree = "<group>"; };
+		214A03F2211BF6F700F820BD /* SmallViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallViewCell.m; sourceTree = "<group>"; };
 		2160624F21104CB500B30B93 /* HomeViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		2160625021104CB500B30B93 /* HomeViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		2160625221104E6300B30B93 /* FoundCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundCtrl.h; sourceTree = "<group>"; };
@@ -150,6 +182,38 @@
 			path = CTPlistManagers;
 			sourceTree = "<group>";
 		};
+		214A03D2211BDB6F00F820BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				214A03D3211BDB8100F820BD /* PosterView.h */,
+				214A03D4211BDB8100F820BD /* PosterView.m */,
+				214A03D7211BDC9C00F820BD /* MovieCollectionView.h */,
+				214A03D8211BDC9C00F820BD /* MovieCollectionView.m */,
+				214A03E1211BDEBA00F820BD /* LargeMovieView.h */,
+				214A03E0211BDEBA00F820BD /* LargeMovieView.m */,
+				214A03EE211BF6CC00F820BD /* SmallMovieView.h */,
+				214A03EF211BF6CC00F820BD /* SmallMovieView.m */,
+				214A03E3211BDF2800F820BD /* LargeViewCell.h */,
+				214A03E4211BDF2800F820BD /* LargeViewCell.m */,
+				214A03F1211BF6F700F820BD /* SmallViewCell.h */,
+				214A03F2211BF6F700F820BD /* SmallViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		214A03D6211BDC5E00F820BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				214A03DB211BDDAA00F820BD /* LargeLayout.h */,
+				214A03DA211BDDAA00F820BD /* LargeLayout.m */,
+				214A03EB211BF6BB00F820BD /* SmallLayout.h */,
+				214A03EC211BF6BB00F820BD /* SmallLayout.m */,
+				214A03DD211BDDF600F820BD /* MovieLayout.h */,
+				214A03DE211BDDF700F820BD /* MovieLayout.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2160623F21104C6600B30B93 /* Body */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,9 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				2160624621104C6600B30B93 /* Ctrls */,
-				2160624721104C6600B30B93 /* Models */,
+				214A03D6211BDC5E00F820BD /* Models */,
 				2160624821104C6600B30B93 /* Other */,
-				2160624921104C6600B30B93 /* Views */,
+				214A03D2211BDB6F00F820BD /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,15 +281,10 @@
 			children = (
 				2160624F21104CB500B30B93 /* HomeViewCtrl.h */,
 				2160625021104CB500B30B93 /* HomeViewCtrl.m */,
+				214A03E6211BE29E00F820BD /* CollectionModeul.h */,
+				214A03E7211BE29E00F820BD /* CollectionModeul.m */,
 			);
 			path = Ctrls;
-			sourceTree = "<group>";
-		};
-		2160624721104C6600B30B93 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		2160624821104C6600B30B93 /* Other */ = {
@@ -233,13 +292,6 @@
 			children = (
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		2160624921104C6600B30B93 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		2160624A21104C6600B30B93 /* My */ = {
@@ -314,6 +366,7 @@
 				2169FA7C21056F33005D6F2B /* AppDelegate.h */,
 				2169FA7D21056F33005D6F2B /* AppDelegate.m */,
 				2169FAD821057D21005D6F2B /* CTPrefixHeader.pch */,
+				214A03E9211BEDD100F820BD /* 123.png */,
 				2169FA8221056F33005D6F2B /* Main.storyboard */,
 				2169FA8521056F33005D6F2B /* Assets.xcassets */,
 				2169FA8721056F33005D6F2B /* LaunchScreen.storyboard */,
@@ -561,6 +614,7 @@
 				2169FA8921056F33005D6F2B /* LaunchScreen.storyboard in Resources */,
 				2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */,
 				2169FA8421056F33005D6F2B /* Main.storyboard in Resources */,
+				214A03EA211BEDD100F820BD /* 123.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,17 +643,27 @@
 				214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */,
 				2169FAD021057A22005D6F2B /* BaseViewController.m in Sources */,
 				2160625121104CB500B30B93 /* HomeViewCtrl.m in Sources */,
+				214A03ED211BF6BC00F820BD /* SmallLayout.m in Sources */,
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
 				2169FAD421057A22005D6F2B /* ThemeManager.m in Sources */,
 				2169FACF21057A22005D6F2B /* BaseTaBarViewCtrl.m in Sources */,
 				214A03B521193E9400F820BD /* CacheCtrl.m in Sources */,
 				2169FAD221057A22005D6F2B /* SkinTableViewCtrl.m in Sources */,
+				214A03E2211BDEBB00F820BD /* LargeMovieView.m in Sources */,
+				214A03DC211BDDAA00F820BD /* LargeLayout.m in Sources */,
+				214A03E8211BE29E00F820BD /* CollectionModeul.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
+				214A03D5211BDB8100F820BD /* PosterView.m in Sources */,
+				214A03F0211BF6CD00F820BD /* SmallMovieView.m in Sources */,
 				214A03AF21184FA200F820BD /* CTShowView.m in Sources */,
 				2169FAD121057A22005D6F2B /* NSAttributedString+Additon.m in Sources */,
 				2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */,
+				214A03F3211BF6F700F820BD /* SmallViewCell.m in Sources */,
+				214A03DF211BDDF700F820BD /* MovieLayout.m in Sources */,
+				214A03D9211BDC9C00F820BD /* MovieCollectionView.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,
 				214A03B921194B3B00F820BD /* PlistManager.m in Sources */,
+				214A03E5211BDF2800F820BD /* LargeViewCell.m in Sources */,
 				2169FAD521057A22005D6F2B /* ThemeTabBarItem.m in Sources */,
 				2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */,
 				217B7A9D2111B52900157434 /* CTCollects.m in Sources */,

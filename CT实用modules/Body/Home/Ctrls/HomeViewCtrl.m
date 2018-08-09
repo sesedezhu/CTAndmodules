@@ -9,7 +9,7 @@
 #import "HomeViewCtrl.h"
 #import "CTCollects.h"
 #import "CTShowsManager.h"
-
+#import "CollectionModeul.h"
 @interface HomeViewCtrl ()
 
 @end
@@ -24,7 +24,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.自定义弹窗",@"未知类型",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.自定义弹窗",@"UICollectionView",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -48,7 +48,9 @@
             break;
         case 1:
         {
-            
+            CollectionModeul *collection = [[CollectionModeul alloc]init];
+            [collection setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:collection animated:YES];
         }
             break;
             
