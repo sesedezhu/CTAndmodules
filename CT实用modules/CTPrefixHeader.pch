@@ -14,8 +14,9 @@
 
 
 //
-#import "UIColor+Definition.h"
-
+#import "UIColor+Definition.h"                 //非系统颜色生成方法
+#import "UIView+SDAutoLayout.h"                //自动布局（不完整-不包括cell自动高）
+#import "UIImageView+WebCache.h"               //图片处理类
 
 /*--屏幕的宽高----*/
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
