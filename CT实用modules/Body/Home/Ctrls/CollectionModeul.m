@@ -22,7 +22,7 @@
     
     posterView = [[PosterView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:posterView];
-    posterView.dataArr = [NSArray arrayWithObjects:@"喜洋洋",@"mei洋洋",@"hua洋洋",@"dou洋洋",@"zhu洋洋", nil];
+    posterView.dataArr = [NSArray arrayWithObjects:@"喜洋洋",@"mei洋洋",@"hua洋洋",@"dou洋洋",@"zhu洋洋",@"zhu洋洋",@"zhu洋洋",@"zhu洋洋",@"zhu洋洋",@"zhu洋洋",@"zhu洋洋",@"zhu洋洋", nil];
     
 }
 

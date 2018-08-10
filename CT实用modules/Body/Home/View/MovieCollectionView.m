@@ -116,6 +116,7 @@
     if (_currentIndex != index) {
         [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         self.currentIndex = index;
+         NSLog(@"滑动事件到中");
     }
     
 }

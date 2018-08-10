@@ -16,7 +16,7 @@
 {
     [largeView removeObserver:smallView forKeyPath:@"currentIndex" context:nil];
     [smallView removeObserver:largeView forKeyPath:@"currentIndex" context:nil];
-//    [largeView removeObserver:self forKeyPath:@"currentIndex" context:nil];
+    
 }
 -(instancetype)init
 {
@@ -42,6 +42,7 @@
     //大小collectionview互相观察
     [largeView addObserver:smallView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
     [smallView addObserver:largeView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
+    
 }
 
 -(void)createLargeView

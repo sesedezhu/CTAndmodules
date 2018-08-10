@@ -29,8 +29,8 @@
     
     _UserImaView.sd_layout
     .topSpaceToView(view, CONVER_VALUE(15))
-    .leftSpaceToView(view, CONVER_VALUE(12))
-    .widthIs(CONVER_VALUE(50))
+    .leftSpaceToView(view, CONVER_VALUE(15))
+    .rightSpaceToView(view, CONVER_VALUE(15))
     .heightIs(CONVER_VALUE(50));
     
     _NickNameLab.sd_layout

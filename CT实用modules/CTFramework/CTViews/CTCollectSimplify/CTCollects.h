@@ -20,6 +20,6 @@ typedef void (^senderBlock)(UIButton *sender);
 
 /*
  
-     自定义版，简化的CollectionView
+     自定义版，简化的仿制CollectionView
  
  */

@@ -10,4 +10,6 @@
 
 @interface SmallViewCell : UICollectionViewCell
 
+
+
 @end
