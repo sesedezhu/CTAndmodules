@@ -50,7 +50,8 @@
     MovieLayout *layout = [[LargeLayout alloc] init];
 
     UIImageView *imaview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 300, kScreenWidth, CONVER_VALUE(365))];
-    imaview.image = [UIImage imageNamed:@"123"];
+//    imaview.image = [UIImage imageNamed:@"2.jpeg"];
+    [imaview setImage:[UIImage imageNamed:@"4.jpeg"]];
     [self addSubview:imaview];
     
     largeView = [[LargeMovieView alloc] initWithFrame:CGRectMake(0, 300, kScreenWidth, CONVER_VALUE(365)) collectionViewLayout:layout];

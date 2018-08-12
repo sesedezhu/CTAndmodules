@@ -41,9 +41,21 @@
     
     _UserImaView.backgroundColor = [UIColor lightGrayColor];
     _NickNameLab.backgroundColor = [UIColor lightGrayColor];
+    
+    //变圆
+    _UserImaView.layer.cornerRadius = CONVER_VALUE(25);//半径大小
+    _UserImaView.layer.masksToBounds = YES;//是否切割
+    
+    _NickNameLab.adjustsFontSizeToFitWidth = YES;
 }
 
-
+- (void)setDataDic:(NSDictionary *)dataDic{
+    _dataDic = dataDic;
+    
+    _NickNameLab.text = dataDic[@"name"];
+//    _UserImaView.image = [UIImage imageNamed:dataDic[@"image"]];
+    [_UserImaView setImage:[UIImage imageNamed:dataDic[@"image"]]];
+}
 #pragma mark - 懒加载
 - (UIImageView *)UserImaView{
     if (!_UserImaView) {

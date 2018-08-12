@@ -32,7 +32,7 @@
 {
     SmallViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSmallViewCellID forIndexPath:indexPath];
     
-//    cell.model = self.dataArr[indexPath.row];
+    cell.dataDic = self.dataArr[indexPath.row];
     
     return cell;
 }

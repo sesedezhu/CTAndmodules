@@ -10,6 +10,6 @@
 
 @interface SmallViewCell : UICollectionViewCell
 
-
+@property(nonatomic, strong)NSDictionary *dataDic;//数据源
 
 @end
