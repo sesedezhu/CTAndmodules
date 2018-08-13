@@ -25,7 +25,7 @@
 + (instancetype)colorWithRed:(uint8_t)red green:(uint8_t)green blue:(uint8_t)blue {
     return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:1.0];
 }
-+ (UIImage*)colorWithCreateImage:(UIColor*)color
++ (UIImage*)imageColorWithCreateImage:(UIColor*)color
 {
     CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);

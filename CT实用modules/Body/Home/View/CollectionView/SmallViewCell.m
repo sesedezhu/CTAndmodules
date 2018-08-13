@@ -55,6 +55,7 @@
     _NickNameLab.text = dataDic[@"name"];
 //    _UserImaView.image = [UIImage imageNamed:dataDic[@"image"]];
     [_UserImaView setImage:[UIImage imageNamed:dataDic[@"image"]]];
+    
 }
 #pragma mark - 懒加载
 - (UIImageView *)UserImaView{

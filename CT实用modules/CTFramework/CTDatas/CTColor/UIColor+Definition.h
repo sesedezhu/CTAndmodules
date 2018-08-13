@@ -33,5 +33,5 @@
  * @color 颜色值
  * @return 返回图片类型
  */
-+ (UIImage*)colorWithCreateImage:(UIColor*)color;
++ (UIImage*)imageColorWithCreateImage:(UIColor*)color;
 @end
