@@ -8,9 +8,6 @@
 
 #import "SmallLayout.h"
 
-//居中卡片宽度与据屏幕宽度比例
-static float CardWidthScale = 0.7f;
-
 @implementation SmallLayout
 
 - (instancetype)init
@@ -23,36 +20,30 @@ static float CardWidthScale = 0.7f;
     return self;
 }
 
+static CGFloat const ActiveDistance = 80;
+static CGFloat const ScaleFactor = 0.2; //放大倍数
 //设置缩放动画
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     
-    //扩大控制范围，防止出现闪屏现象
-    CGRect bigRect = rect;
-    bigRect.size.width = rect.size.width + 2*[self cellWidth];
-    bigRect.origin.x = rect.origin.x - [self cellWidth];
     
-    NSArray *arr = [self getCopyOfAttributes:[super layoutAttributesForElementsInRect:bigRect]];
-    //屏幕中线
-    CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.bounds.size.width/2.0f;
-    //刷新cell缩放
-    for (UICollectionViewLayoutAttributes *attributes in arr) {
-        CGFloat distance = fabs(attributes.center.x - centerX);
-        //移动的距离和屏幕宽度的的比例
-        CGFloat apartScale = distance/(self.collectionView.bounds.size.width);
-        //把卡片移动范围固定到 -π/4到 +π/4这一个范围内
-        CGFloat scale = fabs(cos(apartScale * M_PI/4));
-        //设置cell的缩放 按照余弦函数曲线 越居中越趋近于1
-        attributes.transform = CGAffineTransformMakeScale(scale, scale);
+    NSArray *array = [super layoutAttributesForElementsInRect:rect];
+    CGRect visibleRect = (CGRect){self.collectionView.contentOffset, self.collectionView.bounds.size};
+    for (UICollectionViewLayoutAttributes *attributes in array) {
+        //如果cell在屏幕上则进行缩放
+        if (CGRectIntersectsRect(attributes.frame, rect)) {
+//            attributes.alpha = 0.5;
+            CGFloat distance = CGRectGetMidX(visibleRect) - attributes.center.x;//距离中点的距离
+            CGFloat normalizedDistance = distance / CONVER_VALUE(ActiveDistance);
+            if (ABS(distance) < CONVER_VALUE(ActiveDistance)) {
+                CGFloat zoom = 1 + ScaleFactor * (1 - ABS(normalizedDistance)); //放大渐变
+                attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0);
+                attributes.zIndex = 1;
+//                attributes.alpha = 1.0;
+            }
+        }
     }
-    return arr;
-}
+    return array;
 
-#pragma mark -
-#pragma mark 配置方法
-
-////卡片宽度
-- (CGFloat)cellWidth {
-    return self.collectionView.bounds.size.width * CardWidthScale;
 }
 
 #pragma mark -

@@ -50,6 +50,7 @@
             break;
         case 1:
         {
+            //上下联动，放大缩小动画
             CollectionModeul *collection = [[CollectionModeul alloc]init];
             [collection setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:collection animated:YES];
@@ -57,14 +58,16 @@
             break;
         case 2:
         {
+            //一、简单背景view
             OneSimpleView *view = [[OneSimpleView alloc]init];
-            [CTShowsManager CTloadInitContViewTop:(CTStopStatusRect+CTStopNavRect) Left:0 Width:self.view.frame.size.width Height:self.view.frame.size.height addView:view animationTepy:NLWDefault transparency:YES interaction:YES time:1.0];
+            [CTShowsManager CTloadInitContViewTop:(CTStopStatusRect+CTStopNavRect) Left:0 Width:self.view.frame.size.width Height:self.view.frame.size.height addView:view animationTepy:NLWMobileAndReturnTop transparency:YES interaction:YES time:1.0];
         }
             break;
         case 3:
         {
+            //二、简单背景view
             TwoSimpleView *view = [[TwoSimpleView alloc]init];
-            [CTShowsManager CTloadInitContViewTop:(CTStopStatusRect+CTStopNavRect) Left:0 Width:self.view.frame.size.width Height:self.view.frame.size.height addView:view animationTepy:NLWDefault transparency:YES interaction:YES time:1.0];
+            [CTShowsManager CTloadInitContViewTop:(CTStopStatusRect+CTStopNavRect) Left:0 Width:self.view.frame.size.width Height:self.view.frame.size.height addView:view animationTepy:NLWMobileAndReturnLeft transparency:YES interaction:YES time:1.0];
         }
             break;
             
