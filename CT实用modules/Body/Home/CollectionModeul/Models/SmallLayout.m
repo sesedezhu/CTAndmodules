@@ -15,17 +15,17 @@
     self = [super init];
     if (self) {
         //最小行间距
-        self.minimumLineSpacing = CONVER_VALUE(14);
+        self.minimumLineSpacing = CONVER_VALUE(43);
     }
     return self;
 }
 
-static CGFloat const ActiveDistance = 80;
-static CGFloat const ScaleFactor = 0.2; //放大倍数
+static CGFloat const ActiveDistance = 55; //和cell的宽高一致
+static CGFloat const ScaleFactor = 0.5; //放大倍数
 //设置缩放动画
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    
-    
+
+
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
     CGRect visibleRect = (CGRect){self.collectionView.contentOffset, self.collectionView.bounds.size};
     for (UICollectionViewLayoutAttributes *attributes in array) {

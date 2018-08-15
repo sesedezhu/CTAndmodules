@@ -28,7 +28,7 @@
 - (void)loadUI{
     [self addSubview:self.imaView];
     [_imaView addSubview:self.TitleImaView];
-    [_imaView addSubview:self.ContentLabel];
+    [_imaView addSubview:self.ContentLab];
     [_imaView addSubview:self.btn];
     
     UIView *view = self;
@@ -50,18 +50,18 @@
     .widthIs(CONVER_VALUE(252))
     .heightIs(CONVER_VALUE(50));
     
-    _ContentLabel.sd_layout
+    _ContentLab.sd_layout
     .topSpaceToView(_TitleImaView, CONVER_VALUE(26))
     .centerXIs(kScreenWidth/2)
     .widthIs(CONVER_VALUE(305))
     .autoHeightRatio(0);
-    [_ContentLabel setMaxNumberOfLinesToShow:20];//自适应高度的时候限制控件最大行数
+    [_ContentLab setMaxNumberOfLinesToShow:20];//自适应高度的时候限制控件最大行数
     
     [_imaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"OneSimple_background"]];
     [_TitleImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"OneSimple_title"]];
     [_btn setBackgroundImage:[UIImage imageNamed:@"OneSimple_btn_background"] forState:UIControlStateNormal];
     [_btn setTitle:@"匹配当地玩咖" forState:UIControlStateNormal];
-    _ContentLabel.text = @"只有当地玩咖才能带您领略最本土风情";
+    _ContentLab.text = @"只有当地玩咖才能带您领略最本土风情";
     
 }
 
@@ -78,15 +78,15 @@
     }
     return _TitleImaView;
 }
-- (UILabel *)ContentLabel{
-    if (!_ContentLabel) {
-        _ContentLabel = [[UILabel alloc]init];
+- (UILabel *)ContentLab{
+    if (!_ContentLab) {
+        _ContentLab = [[UILabel alloc]init];
 //        _ContentLabel.numberOfLines = 0;
-        _ContentLabel.textColor = [UIColor whiteColor];
-        _ContentLabel.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
+        _ContentLab.textColor = [UIColor whiteColor];
+        _ContentLab.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
        
     }
-    return _ContentLabel;
+    return _ContentLab;
 }
 - (UIButton *)btn{
     if (!_btn) {

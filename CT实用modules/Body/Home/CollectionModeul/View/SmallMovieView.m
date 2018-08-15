@@ -19,7 +19,7 @@
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
         
-        self.itemWidth = CONVER_VALUE(80);
+        self.itemWidth = CONVER_VALUE(55);
         
         //一、注册cell
         [self registerClass:[SmallViewCell class] forCellWithReuseIdentifier:kSmallViewCellID];
@@ -40,7 +40,7 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //    NSLog(@"%@", NSStringFromCGSize(CGSizeMake(_itemWidth, self.height)));
-    return CGSizeMake(self.itemWidth, CONVER_VALUE(100));
+    return CGSizeMake(self.itemWidth, CONVER_VALUE(80));
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

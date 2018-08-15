@@ -17,6 +17,7 @@
         
         //最小行间距
         self.minimumLineSpacing = CONVER_VALUE(25);
+        
     }
     return self;
 }

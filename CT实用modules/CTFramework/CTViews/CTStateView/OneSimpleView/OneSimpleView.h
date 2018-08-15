@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface OneSimpleView : UIView
-@property (nonatomic, strong) UILabel *ContentLabel;         //内容文字
+@property (nonatomic, strong) UILabel *ContentLab;         //内容文字
 @end

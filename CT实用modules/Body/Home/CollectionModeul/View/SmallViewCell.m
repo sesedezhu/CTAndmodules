@@ -7,9 +7,10 @@
 //
 
 #import "SmallViewCell.h"
+
 @interface SmallViewCell()
 @property (nonatomic, strong) UIImageView *UserImaView;  //头像
-@property (nonatomic, strong) UILabel *NickNameLab;      //昵称
+@property (nonatomic, strong) UILabel *NicknameLab;      //昵称
 @end
 @implementation SmallViewCell
 - (instancetype)initWithFrame:(CGRect)frame
@@ -22,37 +23,37 @@
 }
 
 - (void)loadUI{
-    self.contentView.backgroundColor = [UIColor redColor];
+//    self.contentView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.UserImaView];
-    [self.contentView addSubview:self.NickNameLab];
+    [self.contentView addSubview:self.NicknameLab];
     UIView *view = self.contentView;
     
     _UserImaView.sd_layout
-    .topSpaceToView(view, CONVER_VALUE(15))
-    .leftSpaceToView(view, CONVER_VALUE(15))
-    .rightSpaceToView(view, CONVER_VALUE(15))
-    .heightIs(CONVER_VALUE(50));
+    .topSpaceToView(view, CONVER_VALUE(5))
+    .leftSpaceToView(view, CONVER_VALUE(1))
+    .widthIs(CONVER_VALUE(51))
+    .heightIs(CONVER_VALUE(51));
     
-    _NickNameLab.sd_layout
-    .topSpaceToView(_UserImaView, CONVER_VALUE(8))
+    _NicknameLab.sd_layout
+    .bottomSpaceToView(view, CONVER_VALUE(8))
     .leftEqualToView(_UserImaView)
     .rightEqualToView(_UserImaView)
-    .heightIs(CONVER_VALUE(12));
+    .heightIs(CONVER_VALUE(11));
     
-    _UserImaView.backgroundColor = [UIColor lightGrayColor];
-    _NickNameLab.backgroundColor = [UIColor lightGrayColor];
+//    _UserImaView.backgroundColor = [UIColor lightGrayColor];
+//    _NickNameLab.backgroundColor = [UIColor lightGrayColor];
     
     //变圆
-    _UserImaView.layer.cornerRadius = CONVER_VALUE(25);//半径大小
+    _UserImaView.layer.cornerRadius = CONVER_VALUE(25.5);//半径大小
     _UserImaView.layer.masksToBounds = YES;//是否切割
     
-    _NickNameLab.adjustsFontSizeToFitWidth = YES;
+    
 }
 
 - (void)setDataDic:(NSDictionary *)dataDic{
     _dataDic = dataDic;
     
-    _NickNameLab.text = dataDic[@"name"];
+    _NicknameLab.text = dataDic[@"name"];
 //    _UserImaView.image = [UIImage imageNamed:dataDic[@"image"]];
     [_UserImaView setImage:[UIImage imageNamed:dataDic[@"image"]]];
     
@@ -64,10 +65,13 @@
     }
     return _UserImaView;
 }
-- (UILabel *)NickNameLab{
-    if (!_NickNameLab) {
-        _NickNameLab = [[UILabel alloc]init];
+- (UILabel *)NicknameLab{
+    if (!_NicknameLab) {
+        _NicknameLab = [[UILabel alloc]init];
+        _NicknameLab.font = [UIFont systemFontOfSize:CONVER_VALUE(11)];
+        _NicknameLab.textColor = allcolorAlphasCT(0, 0, 0, 1.0);
+        _NicknameLab.textAlignment = NSTextAlignmentCenter;
     }
-    return _NickNameLab;
+    return _NicknameLab;
 }
 @end

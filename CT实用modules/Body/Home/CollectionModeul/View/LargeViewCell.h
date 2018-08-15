@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LargeViewCell : UICollectionViewCell
-
+@property(nonatomic, strong)NSDictionary *dataDic;//数据源
 @end
