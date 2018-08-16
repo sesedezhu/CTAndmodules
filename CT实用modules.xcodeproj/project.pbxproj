@@ -108,6 +108,9 @@
 		2169FAD621057A22005D6F2B /* UIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FACD21057A22005D6F2B /* UIFactory.m */; };
 		2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FADF2105851F005D6F2B /* UIColor+Definition.m */; };
 		217B7A9D2111B52900157434 /* CTCollects.m in Sources */ = {isa = PBXBuildFile; fileRef = 217B7A9C2111B52900157434 /* CTCollects.m */; };
+		21998E81212558EC007B845E /* YTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21998E80212558EC007B845E /* YTAnimation.m */; };
+		21998E8421255B1E007B845E /* WK_deleteBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21998E8221255B1D007B845E /* WK_deleteBtn@2x.png */; };
+		21998E8521255B1E007B845E /* WK_deleteBtn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21998E8321255B1E007B845E /* WK_deleteBtn@3x.png */; };
 		21B4CC362121795100C37C8A /* OneSimple_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B4CC2E2121795000C37C8A /* OneSimple_background@2x.png */; };
 		21B4CC372121795100C37C8A /* OneSimple_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B4CC2F2121795000C37C8A /* OneSimple_background@3x.png */; };
 		21B4CC382121795100C37C8A /* OneSimple_btn_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B4CC302121795000C37C8A /* OneSimple_btn_background@2x.png */; };
@@ -366,6 +369,10 @@
 		2169FADF2105851F005D6F2B /* UIColor+Definition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Definition.m"; sourceTree = "<group>"; };
 		217B7A9B2111B52900157434 /* CTCollects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollects.h; sourceTree = "<group>"; };
 		217B7A9C2111B52900157434 /* CTCollects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollects.m; sourceTree = "<group>"; };
+		21998E7F212558EB007B845E /* YTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAnimation.h; sourceTree = "<group>"; };
+		21998E80212558EC007B845E /* YTAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAnimation.m; sourceTree = "<group>"; };
+		21998E8221255B1D007B845E /* WK_deleteBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WK_deleteBtn@2x.png"; sourceTree = "<group>"; };
+		21998E8321255B1E007B845E /* WK_deleteBtn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WK_deleteBtn@3x.png"; sourceTree = "<group>"; };
 		21B4CC2E2121795000C37C8A /* OneSimple_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OneSimple_background@2x.png"; sourceTree = "<group>"; };
 		21B4CC2F2121795000C37C8A /* OneSimple_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OneSimple_background@3x.png"; sourceTree = "<group>"; };
 		21B4CC302121795000C37C8A /* OneSimple_btn_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OneSimple_btn_background@2x.png"; sourceTree = "<group>"; };
@@ -1143,6 +1150,8 @@
 				21B4CC5621240DD400C37C8A /* MovieLayout.m */,
 				21B4CC5721240DD400C37C8A /* SmallLayout.h */,
 				21B4CC5821240DD400C37C8A /* SmallLayout.m */,
+				21998E7F212558EB007B845E /* YTAnimation.h */,
+				21998E80212558EC007B845E /* YTAnimation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1177,6 +1186,8 @@
 		21B4CC8B21240EC000C37C8A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				21998E8221255B1D007B845E /* WK_deleteBtn@2x.png */,
+				21998E8321255B1E007B845E /* WK_deleteBtn@3x.png */,
 				21B4CC9021242D9800C37C8A /* WK_ellipsisBack@2x.png */,
 				21B4CC9121242D9800C37C8A /* WK_ellipsisBack@3x.png */,
 				21B4CC8C21240EC000C37C8A /* WK_matchingBtn@2x.png */,
@@ -1324,10 +1335,12 @@
 				214A05CB211C3F8A00F820BD /* LICENSE in Resources */,
 				42C9C0EC211FF02A00870E10 /* 7.jpeg in Resources */,
 				42C9C0EA211FF02A00870E10 /* 1.jpeg in Resources */,
+				21998E8421255B1E007B845E /* WK_deleteBtn@2x.png in Resources */,
 				2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */,
 				21B4CC3A2121795100C37C8A /* OneSimple_title@2x.png in Resources */,
 				21B4CC372121795100C37C8A /* OneSimple_background@3x.png in Resources */,
 				21B4CC4821217F6600C37C8A /* OneSimpleView.png in Resources */,
+				21998E8521255B1E007B845E /* WK_deleteBtn@3x.png in Resources */,
 				21B4CC8F21240EC000C37C8A /* WK_matchingBtn@3x.png in Resources */,
 				42C9C0F1211FF02A00870E10 /* 2.jpeg in Resources */,
 				2169FA8421056F33005D6F2B /* Main.storyboard in Resources */,
@@ -1427,6 +1440,7 @@
 				21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */,
 				214A05C1211C3F8A00F820BD /* UIView+WebCache.m in Sources */,
 				214A05EB211C3F8A00F820BD /* UIScrollView+MJRefresh.m in Sources */,
+				21998E81212558EC007B845E /* YTAnimation.m in Sources */,
 				214A05A2211C3F8A00F820BD /* IQUIScrollView+Additions.m in Sources */,
 				214A05C2211C3F8A00F820BD /* UIView+WebCacheOperation.m in Sources */,
 				214A05E1211C3F8A00F820BD /* MJRefreshBackNormalFooter.m in Sources */,

@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^longClickBlock)(void);
+typedef void (^deleteBtnBlock)(NSIndexPath *indexPath);
 @interface SmallViewCell : UICollectionViewCell
 
-@property(nonatomic, strong)NSDictionary *dataDic;//数据源
+@property(nonatomic, copy)longClickBlock longClickBlocks;
+@property(nonatomic, copy)deleteBtnBlock deleteBtnBlocks;
 
+@property(nonatomic, strong)NSDictionary *dataDic;//数据源
+@property (nonatomic,strong) UIButton *deleteBtn;  //删除按钮
+@property (nonatomic,strong)NSIndexPath *indexPath;
 @end

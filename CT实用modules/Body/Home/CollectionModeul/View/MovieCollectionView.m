@@ -44,8 +44,8 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSLog(@"_dataArr ========666 %@",_dataArr);
-    return _dataArr.count;
+    NSLog(@"_dataArr ========666 %@",self.dataArr);
+    return self.dataArr.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -122,4 +122,10 @@
     
 }
 
+- (NSMutableArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [[NSMutableArray alloc]init];
+    }
+    return _dataArr;
+}
 @end

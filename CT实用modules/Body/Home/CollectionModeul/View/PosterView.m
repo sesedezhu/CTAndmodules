@@ -65,13 +65,13 @@
 }
 -(void)createHeaderView{
     MovieLayout *layout = [[SmallLayout alloc] init];
-    _smallView = [[SmallMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(50), kScreenWidth, CONVER_VALUE(110)) collectionViewLayout:layout];
+    _smallView = [[SmallMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(50), kScreenWidth, CONVER_VALUE(120)) collectionViewLayout:layout];
     [self addSubview:_smallView];
     _smallView.backgroundColor = [UIColor lightGrayColor];
     
 }
 
-- (void)setDataArr:(NSArray *)dataArr{
+- (void)setDataArr:(NSMutableArray *)dataArr{
     _dataArr = dataArr;
     _largeView.dataArr = dataArr;
     _smallView.dataArr = dataArr;

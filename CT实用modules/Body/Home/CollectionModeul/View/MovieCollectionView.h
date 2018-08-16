@@ -10,7 +10,7 @@
 
 @interface MovieCollectionView : UICollectionView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
-@property(nonatomic, strong)NSArray *dataArr;       //数据源
+@property(nonatomic, strong)NSMutableArray *dataArr;       //数据源
 
 @property(nonatomic, assign)CGFloat itemWidth;      //单元格的宽度
 

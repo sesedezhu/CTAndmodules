@@ -22,7 +22,7 @@
     
     posterView = [[PosterView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:posterView];
-    posterView.dataArr = [NSArray arrayWithObjects:@{@"name":@"程帅哥0",@"image":@"1.jpeg"},@{@"name":@"程帅哥1",@"image":@"2.jpeg"},@{@"name":@"程帅哥2",@"image":@"3.jpeg"},@{@"name":@"程帅哥3",@"image":@"4.jpeg"},@{@"name":@"程帅哥4",@"image":@"5.jpeg"},@{@"name":@"程帅哥5",@"image":@"6.jpeg"},@{@"name":@"程帅哥6",@"image":@"7.jpeg"},@{@"name":@"程帅哥700000",@"image":@"8.jpeg"},@{@"name":@"程帅哥8",@"image":@"1.jpeg"}, nil];
+    posterView.dataArr = [NSMutableArray arrayWithObjects:@{@"name":@"程帅哥0",@"image":@"1.jpeg"},@{@"name":@"程帅哥1",@"image":@"2.jpeg"},@{@"name":@"程帅哥2",@"image":@"3.jpeg"},@{@"name":@"程帅哥3",@"image":@"4.jpeg"},@{@"name":@"程帅哥4",@"image":@"5.jpeg"},@{@"name":@"程帅哥5",@"image":@"6.jpeg"},@{@"name":@"程帅哥6",@"image":@"7.jpeg"},@{@"name":@"程帅哥700000",@"image":@"8.jpeg"},@{@"name":@"程帅哥8",@"image":@"1.jpeg"}, nil];
     
 }
 

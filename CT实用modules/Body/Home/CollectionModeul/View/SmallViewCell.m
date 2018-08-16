@@ -7,7 +7,7 @@
 //
 
 #import "SmallViewCell.h"
-
+#import "YTAnimation.h"
 @interface SmallViewCell()
 @property (nonatomic, strong) UIImageView *UserImaView;  //头像
 @property (nonatomic, strong) UILabel *NicknameLab;      //昵称
@@ -23,9 +23,10 @@
 }
 
 - (void)loadUI{
-//    self.contentView.backgroundColor = [UIColor redColor];
+    self.contentView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.UserImaView];
     [self.contentView addSubview:self.NicknameLab];
+    [self.contentView addSubview:self.deleteBtn];
     UIView *view = self.contentView;
     
     _UserImaView.sd_layout
@@ -40,16 +41,41 @@
     .rightEqualToView(_UserImaView)
     .heightIs(CONVER_VALUE(11));
     
+    _deleteBtn.sd_layout
+    .topSpaceToView(view, 1)
+    .leftSpaceToView(view, 0)
+    .widthIs(CONVER_VALUE(18))
+    .heightIs(CONVER_VALUE(18));
+    
 //    _UserImaView.backgroundColor = [UIColor lightGrayColor];
 //    _NickNameLab.backgroundColor = [UIColor lightGrayColor];
-    
+//    _deleteBtn.backgroundColor = [UIColor blackColor];
     //变圆
     _UserImaView.layer.cornerRadius = CONVER_VALUE(25.5);//半径大小
     _UserImaView.layer.masksToBounds = YES;//是否切割
     
+    [_deleteBtn setBackgroundImage:[UIImage imageNamed:@"WK_deleteBtn"] forState:UIControlStateNormal];
+    [_deleteBtn addTarget:self action:@selector(deleteCell) forControlEvents:UIControlEventTouchUpInside];
     
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longClick:)];
+    [self addGestureRecognizer:lpgr];
 }
-
+#pragma mark - 删除动画功能
+- (void)longClick:(UILongPressGestureRecognizer *)lpgr
+{
+    NSLog(@"启动删除模式，抖动动画！");
+    if (_longClickBlocks) {
+        _longClickBlocks();
+    }
+}
+- (void)deleteCell{
+    NSLog(@"啊！我被删除了,结束抖动！");
+    [YTAnimation toMiniAnimation:self];//变小动画
+    if (_deleteBtnBlocks) {
+        _deleteBtnBlocks(_indexPath);
+    }
+}
+#pragma mark - 数据赋值
 - (void)setDataDic:(NSDictionary *)dataDic{
     _dataDic = dataDic;
     
@@ -74,4 +100,17 @@
     }
     return _NicknameLab;
 }
+- (UIButton *)deleteBtn{
+    if (!_deleteBtn) {
+        _deleteBtn = [[UIButton alloc]init];
+    }
+    return _deleteBtn;
+}
+
+
+
+
+
+
+
 @end

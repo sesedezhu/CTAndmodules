@@ -8,9 +8,12 @@
 
 #import "SmallMovieView.h"
 #import "SmallViewCell.h"
-
+#import "YTAnimation.h"
 #define kSmallViewCellID    @"kSmallViewCellID"
-
+@interface SmallMovieView ()
+@property(nonatomic, assign) BOOL deleteBtnFlag; //删除按钮是否显示
+@property(nonatomic, assign) BOOL vibrateAniFlag;//抖动动画是否执行
+@end
 @implementation SmallMovieView
 
 
@@ -23,7 +26,7 @@
         
         //一、注册cell
         [self registerClass:[SmallViewCell class] forCellWithReuseIdentifier:kSmallViewCellID];
-        
+        [self setFlagAndGsr];
     }
     
     return self;
@@ -34,6 +37,8 @@
     SmallViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSmallViewCellID forIndexPath:indexPath];
     
     cell.dataDic = self.dataArr[indexPath.row];
+    
+    [self setCellVibrate:cell IndexPath:indexPath];
     
     return cell;
 }
@@ -57,6 +62,63 @@
     }
     //点击cell响应
     NSLog(@"indexPath2222 ============== %ld",(long)indexPath.row);
+}
+#pragma mark - 删除动画功能
+- (void)setCellVibrate:(SmallViewCell *)cell IndexPath:(NSIndexPath *)indexPath{
+    cell.indexPath = indexPath;
+    cell.deleteBtn.hidden = _deleteBtnFlag?YES:NO;
+    __weak typeof(self) weakSelf = self;
+    cell.longClickBlocks = ^{
+        [weakSelf showAllDeleteBtn];
+    };
+    cell.deleteBtnBlocks = ^(NSIndexPath *indexPath) {
+        NSLog(@"删除了%ld",indexPath.row);
+        [weakSelf deleteCellAtIndexpath:indexPath];
+    };
+    if (!_vibrateAniFlag) {
+        [YTAnimation vibrateAnimation:cell];
+    }else{
+        [cell.layer removeAnimationForKey:@"shake"];
+    }
+    
+}
+-(void)deleteCellAtIndexpath:(NSIndexPath *)indexPath
+{
+    
+    [self performBatchUpdates:^{
+        
+        //delete the cell you selected
+        [self.dataArr removeObjectAtIndex:indexPath.row];
+        [self deleteItemsAtIndexPaths:@[indexPath]];
+        
+    } completion:^(BOOL finished) {
+        [self reloadData];
+    }];
+}
+- (void)setFlagAndGsr{//设置默认模式
+    _deleteBtnFlag = YES;
+    _vibrateAniFlag = YES;
+    [self addDoubleTapGesture];
+}
+- (void)addDoubleTapGesture{//添加双击效果
+    UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    [doubletap setNumberOfTapsRequired:2];
+    [self addGestureRecognizer:doubletap];
+}
+- (void) handleDoubleTap:(UITapGestureRecognizer *) gestureRecognizer{
+    [self hideAllDeleteBtn];
+}
+- (void)hideAllDeleteBtn{//进入默认模式
+    if (!_deleteBtnFlag) {
+        _deleteBtnFlag = YES;
+        _vibrateAniFlag = YES;
+        [self reloadData];
+    }
+}
+- (void)showAllDeleteBtn{//进入删除模式
+    _deleteBtnFlag = NO;
+    _vibrateAniFlag = NO;
+    [self reloadData];
 }
 //#define mark - kvo
 ////观察者接收通知
