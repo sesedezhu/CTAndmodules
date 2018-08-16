@@ -38,7 +38,11 @@
     
     return cell;
 }
-
+//重写显示cell的偏移量
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(CONVER_VALUE(122), (kScreenWidth-self.itemWidth)/2, CONVER_VALUE(29), (kScreenWidth-self.itemWidth)/2);
+}
 //设置每个单元格大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {

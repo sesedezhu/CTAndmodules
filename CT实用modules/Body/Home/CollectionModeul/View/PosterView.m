@@ -54,17 +54,18 @@
 
 -(void)createLargeView
 {
-    self.BackImaView.frame = CGRectMake(0, 300, kScreenWidth, CONVER_VALUE(365));
+    self.BackImaView.frame = CGRectMake(0, CONVER_VALUE(203), kScreenWidth, CONVER_VALUE(365));
     [_BackImaView setImage:[UIImage imageNamed:@"4.jpeg"]];
     [self addSubview:_BackImaView];
     
     MovieLayout *layout = [[LargeLayout alloc] init];
-    largeView = [[LargeMovieView alloc] initWithFrame:CGRectMake(0, 300, kScreenWidth, CONVER_VALUE(365)) collectionViewLayout:layout];
+    largeView = [[LargeMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(203), kScreenWidth, CONVER_VALUE(365)) collectionViewLayout:layout];
     [self addSubview:largeView];
+
 }
 -(void)createHeaderView{
     MovieLayout *layout = [[SmallLayout alloc] init];
-    smallView = [[SmallMovieView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth, CONVER_VALUE(110)) collectionViewLayout:layout];
+    smallView = [[SmallMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(50), kScreenWidth, CONVER_VALUE(110)) collectionViewLayout:layout];
     [self addSubview:smallView];
     smallView.backgroundColor = [UIColor lightGrayColor];
 }
