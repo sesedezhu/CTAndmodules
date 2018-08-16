@@ -23,6 +23,7 @@
         
         //一、注册cell
         [self registerClass:[SmallViewCell class] forCellWithReuseIdentifier:kSmallViewCellID];
+        
     }
     
     return self;

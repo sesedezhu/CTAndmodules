@@ -18,8 +18,8 @@
 @implementation PosterView
 - (void)dealloc
 {
-    [largeView removeObserver:smallView forKeyPath:@"currentIndex" context:nil];
-    [smallView removeObserver:largeView forKeyPath:@"currentIndex" context:nil];
+    [_largeView removeObserver:_smallView forKeyPath:@"currentIndex" context:nil];
+    [_smallView removeObserver:_largeView forKeyPath:@"currentIndex" context:nil];
     
 }
 -(instancetype)init
@@ -47,8 +47,8 @@
     
     //注册观察者
     //大小collectionview互相观察
-    [largeView addObserver:smallView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
-    [smallView addObserver:largeView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
+    [_largeView addObserver:_smallView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
+    [_smallView addObserver:_largeView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
     
 }
 
@@ -59,21 +59,22 @@
     [self addSubview:_BackImaView];
     
     MovieLayout *layout = [[LargeLayout alloc] init];
-    largeView = [[LargeMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(203), kScreenWidth, CONVER_VALUE(365)) collectionViewLayout:layout];
-    [self addSubview:largeView];
+    _largeView = [[LargeMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(203), kScreenWidth, CONVER_VALUE(365)) collectionViewLayout:layout];
+    [self addSubview:_largeView];
 
 }
 -(void)createHeaderView{
     MovieLayout *layout = [[SmallLayout alloc] init];
-    smallView = [[SmallMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(50), kScreenWidth, CONVER_VALUE(110)) collectionViewLayout:layout];
-    [self addSubview:smallView];
-    smallView.backgroundColor = [UIColor lightGrayColor];
+    _smallView = [[SmallMovieView alloc] initWithFrame:CGRectMake(0, CONVER_VALUE(50), kScreenWidth, CONVER_VALUE(110)) collectionViewLayout:layout];
+    [self addSubview:_smallView];
+    _smallView.backgroundColor = [UIColor lightGrayColor];
+    
 }
 
 - (void)setDataArr:(NSArray *)dataArr{
     _dataArr = dataArr;
-    largeView.dataArr = dataArr;
-    smallView.dataArr = dataArr;
+    _largeView.dataArr = dataArr;
+    _smallView.dataArr = dataArr;
 }
 
 - (void)createSuspensionButton{

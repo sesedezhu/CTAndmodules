@@ -10,8 +10,8 @@
 #import "MovieCollectionView.h"
 @interface PosterView : UIView
 {
-    MovieCollectionView *smallView; //上部分
-    MovieCollectionView *largeView; //下部分
+    MovieCollectionView *_smallView; //上部分
+    MovieCollectionView *_largeView; //下部分
 }
 @property(nonatomic, strong)NSArray *dataArr;//数据源
 
