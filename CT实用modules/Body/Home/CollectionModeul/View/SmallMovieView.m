@@ -10,8 +10,8 @@
 #import "SmallViewCell.h"
 #import "YTAnimation.h"
 #define kSmallViewCellID    @"kSmallViewCellID"
-@interface SmallMovieView ()
-@property(nonatomic, assign) BOOL deleteBtnFlag; //删除按钮是否显示
+@interface SmallMovieView ()<UIGestureRecognizerDelegate>
+@property(nonatomic, assign) BOOL deleteBtnFlag; //删除按钮是否隐藏
 @property(nonatomic, assign) BOOL vibrateAniFlag;//抖动动画是否执行
 @end
 @implementation SmallMovieView
@@ -58,7 +58,12 @@
         self.currentIndex = indexPath.row;
          NSLog(@"点击事件滚动到中");
     }else{
-        NSLog(@"小图居中");
+        if (!_deleteBtnFlag) {
+            NSLog(@"删除模式，点击无效");
+        }else{
+            NSLog(@"小图居中");
+        }
+        
     }
     //点击cell响应
     NSLog(@"indexPath2222 ============== %ld",(long)indexPath.row);
@@ -103,10 +108,12 @@
 - (void)addDoubleTapGesture{//添加双击效果
     UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
     [doubletap setNumberOfTapsRequired:2];
+    doubletap.delegate = self;
     [self addGestureRecognizer:doubletap];
 }
 - (void) handleDoubleTap:(UITapGestureRecognizer *) gestureRecognizer{
     [self hideAllDeleteBtn];
+    NSLog(@"双击了！～");
 }
 - (void)hideAllDeleteBtn{//进入默认模式
     if (!_deleteBtnFlag) {
@@ -120,6 +127,15 @@
     _vibrateAniFlag = NO;
     [self reloadData];
 }
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    //只让UIcollectionView响应，cell不响应
+    if (touch.view != self) {
+        return NO;
+    }
+    return YES;
+}
+
+
 //#define mark - kvo
 ////观察者接收通知
 //- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

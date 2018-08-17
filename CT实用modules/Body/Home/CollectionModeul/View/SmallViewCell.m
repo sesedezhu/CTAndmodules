@@ -58,15 +58,21 @@
     [_deleteBtn addTarget:self action:@selector(deleteCell) forControlEvents:UIControlEventTouchUpInside];
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longClick:)];
+    lpgr.minimumPressDuration = 1;//长按等待时间
     [self addGestureRecognizer:lpgr];
 }
 #pragma mark - 删除动画功能
 - (void)longClick:(UILongPressGestureRecognizer *)lpgr
 {
-    NSLog(@"启动删除模式，抖动动画！");
-    if (_longClickBlocks) {
-        _longClickBlocks();
+    if (lpgr.state==UIGestureRecognizerStateBegan) {
+        NSLog(@"长按手势开启,启动删除模式，抖动动画！");
+        if (_longClickBlocks) {
+            _longClickBlocks();
+        }
+    } else {
+        NSLog(@"长按手势结束");
     }
+    
 }
 - (void)deleteCell{
     NSLog(@"啊！我被删除了,结束抖动！");
