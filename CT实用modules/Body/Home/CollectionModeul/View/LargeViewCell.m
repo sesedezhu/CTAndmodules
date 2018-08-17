@@ -84,6 +84,10 @@
 //    _ContentLab.backgroundColor = [UIColor redColor];
     
 }
+- (void)setDataDic:(NSDictionary *)dataDic{
+    _dataDic = dataDic;
+    _NicknameLab.text = dataDic[@"name"];
+}
 
 #pragma mark - 懒加载
 - (UIView *)BackView{

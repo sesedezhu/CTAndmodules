@@ -9,6 +9,7 @@
 #import "SmallViewCell.h"
 #import "YTAnimation.h"
 @interface SmallViewCell()
+//<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIImageView *UserImaView;  //头像
 @property (nonatomic, strong) UILabel *NicknameLab;      //昵称
 @end
@@ -59,8 +60,22 @@
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longClick:)];
     lpgr.minimumPressDuration = 1;//长按等待时间
+//    lpgr.delegate = self;
     [self addGestureRecognizer:lpgr];
+    
+    UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:nil];
+    [doubletap setNumberOfTapsRequired:2];
+    [self addGestureRecognizer:doubletap];
+    
 }
+//-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+//    //只让UIcollectionView响应，cell不响应
+//    if (touch.view != self) {
+//        return NO;
+//    }
+//
+//    return YES;
+//}
 #pragma mark - 删除动画功能
 - (void)longClick:(UILongPressGestureRecognizer *)lpgr
 {

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface MovieCollectionView : UICollectionView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property(nonatomic, strong)NSMutableArray *dataArr;       //数据源
@@ -15,5 +14,4 @@
 @property(nonatomic, assign)CGFloat itemWidth;      //单元格的宽度
 
 @property(nonatomic, assign)NSInteger currentIndex; //当前第几页
-
 @end

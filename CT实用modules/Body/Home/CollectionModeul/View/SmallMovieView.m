@@ -89,15 +89,18 @@
 }
 -(void)deleteCellAtIndexpath:(NSIndexPath *)indexPath
 {
-    
+    __weak typeof(self) weakSelf = self;
     [self performBatchUpdates:^{
         
         //delete the cell you selected
-        [self.dataArr removeObjectAtIndex:indexPath.row];
-        [self deleteItemsAtIndexPaths:@[indexPath]];
+        [weakSelf.dataArr removeObjectAtIndex:indexPath.row];
+        [weakSelf deleteItemsAtIndexPaths:@[indexPath]];
         
     } completion:^(BOOL finished) {
-        [self reloadData];
+        [weakSelf reloadData];
+        
+        //发送通知，让关联的cell同步
+        [[NSNotificationCenter defaultCenter] postNotificationName:AssociatedAndCellIndexPath object:nil userInfo:nil];
     }];
 }
 - (void)setFlagAndGsr{//设置默认模式
@@ -129,9 +132,14 @@
 }
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     //只让UIcollectionView响应，cell不响应
-    if (touch.view != self) {
-        return NO;
-    }
+//    if (!_deleteBtnFlag){
+//        if (touch.view != self) {
+//            return NO;
+//        }
+//    }else{
+//
+//    }
+    
     return YES;
 }
 

@@ -36,6 +36,8 @@
 
 //颜色
 #define allcolorAlphasCT(r,g,b,CGFloat)  [UIColor  colorWithRed:r/255.00 green:g/255.00 blue:b/255.00 alpha:CGFloat]
+//通知
+#define AssociatedAndCellIndexPath @"AssociatedAndCellIndexPath"
 
 #endif /* CTPrefixHeader_pch */
 

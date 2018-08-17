@@ -22,19 +22,17 @@
         self.itemWidth = CONVER_VALUE(276);
         //一、注册cell
         [self registerClass:[LargeViewCell class] forCellWithReuseIdentifier:kLargeMovieViewCellID];
-        
-       
+
     }
     
     return self;
 }
-
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //二、重用cell
     LargeViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kLargeMovieViewCellID forIndexPath:indexPath];
     
-//    cell.model = self.dataArr[indexPath.row];
+    cell.dataDic = self.dataArr[indexPath.row];
     
     return cell;
 }

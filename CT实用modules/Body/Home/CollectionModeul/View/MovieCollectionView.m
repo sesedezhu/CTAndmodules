@@ -118,6 +118,8 @@
         [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         self.currentIndex = index;
          NSLog(@"滑动事件到中");
+    }else{
+        NSLog(@"111");
     }
     
 }

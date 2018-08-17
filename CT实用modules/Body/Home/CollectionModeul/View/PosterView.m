@@ -20,7 +20,9 @@
 {
     [_largeView removeObserver:_smallView forKeyPath:@"currentIndex" context:nil];
     [_smallView removeObserver:_largeView forKeyPath:@"currentIndex" context:nil];
-    
+    //销毁通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AssociatedAndCellIndexPath object:nil];
+    NSLog(@"销毁了！～");
 }
 -(instancetype)init
 {
@@ -49,9 +51,15 @@
     //大小collectionview互相观察
     [_largeView addObserver:_smallView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
     [_smallView addObserver:_largeView forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:nil];
-    
+    //注册通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadAssociatedAndCellIndexPath) name:AssociatedAndCellIndexPath object:nil];
 }
-
+- (void)loadAssociatedAndCellIndexPath{
+    [_largeView reloadData];
+    if (_smallView.dataArr.count == 0) {
+        NSLog(@"数组空了！！");
+    }
+}
 -(void)createLargeView
 {
     self.BackImaView.frame = CGRectMake(0, CONVER_VALUE(203), kScreenWidth, CONVER_VALUE(365));
