@@ -34,8 +34,7 @@
         self.delegate = self;
         //设置减速的速率
         self.decelerationRate = UIScrollViewDecelerationRateFast;
-        
-        
+
     }
     return self;
 }

@@ -11,8 +11,11 @@
 #import "YTAnimation.h"
 #define kSmallViewCellID    @"kSmallViewCellID"
 @interface SmallMovieView ()<UIGestureRecognizerDelegate>
-@property(nonatomic, assign) BOOL deleteBtnFlag; //删除按钮是否隐藏
-@property(nonatomic, assign) BOOL vibrateAniFlag;//抖动动画是否执行
+{
+    UITapGestureRecognizer *_doubletap;
+}
+@property(nonatomic, assign) BOOL deleteBtnFlag; //删除按钮是否隐藏，不存在，删除状态
+@property(nonatomic, assign) BOOL vibrateAniFlag;//抖动动画是否执行,不存在抖动，存在不抖动
 @end
 @implementation SmallMovieView
 
@@ -50,9 +53,11 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    //如果点击的不是居中的cell，那么就滚动到中间
+    [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    
     if (self.currentIndex != indexPath.row) {
-        //如果点击的不是居中的cell，那么就滚动到中间
-        [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         
         //给当前页码赋值，让观察者能够响应
         self.currentIndex = indexPath.row;
@@ -68,6 +73,7 @@
     //点击cell响应
     NSLog(@"indexPath2222 ============== %ld",(long)indexPath.row);
 }
+
 #pragma mark - 删除动画功能
 - (void)setCellVibrate:(SmallViewCell *)cell IndexPath:(NSIndexPath *)indexPath{
     cell.indexPath = indexPath;
@@ -106,32 +112,37 @@
 - (void)setFlagAndGsr{//设置默认模式
     _deleteBtnFlag = YES;
     _vibrateAniFlag = YES;
-    [self addDoubleTapGesture];
+    
 }
 - (void)addDoubleTapGesture{//添加双击效果
-    UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-    [doubletap setNumberOfTapsRequired:2];
-    doubletap.delegate = self;
-    [self addGestureRecognizer:doubletap];
+    _doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    [_doubletap setNumberOfTapsRequired:2];
+    _doubletap.delegate = self;
+    [self addGestureRecognizer:_doubletap];
 }
+
 - (void) handleDoubleTap:(UITapGestureRecognizer *) gestureRecognizer{
     [self hideAllDeleteBtn];
     NSLog(@"双击了！～");
 }
 - (void)hideAllDeleteBtn{//进入默认模式
     if (!_deleteBtnFlag) {
+        [self removeGestureRecognizer:_doubletap];
         _deleteBtnFlag = YES;
         _vibrateAniFlag = YES;
         [self reloadData];
     }
 }
 - (void)showAllDeleteBtn{//进入删除模式
-    _deleteBtnFlag = NO;
-    _vibrateAniFlag = NO;
-    [self reloadData];
+    if (_deleteBtnFlag) {
+        [self addDoubleTapGesture];
+        _deleteBtnFlag = NO;
+        _vibrateAniFlag = NO;
+        [self reloadData];
+    }
 }
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-    //只让UIcollectionView响应，cell不响应
+//-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+//    //只让UIcollectionView响应，cell不响应
 //    if (!_deleteBtnFlag){
 //        if (touch.view != self) {
 //            return NO;
@@ -139,9 +150,9 @@
 //    }else{
 //
 //    }
-    
-    return YES;
-}
+//
+//    return YES;
+//}
 
 
 //#define mark - kvo

@@ -63,9 +63,9 @@
 //    lpgr.delegate = self;
     [self addGestureRecognizer:lpgr];
     
-    UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:nil];
-    [doubletap setNumberOfTapsRequired:2];
-    [self addGestureRecognizer:doubletap];
+//    UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:nil];
+//    [doubletap setNumberOfTapsRequired:2];
+//    [self addGestureRecognizer:doubletap];
     
 }
 //-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{

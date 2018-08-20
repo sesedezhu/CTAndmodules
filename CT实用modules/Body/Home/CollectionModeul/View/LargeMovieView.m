@@ -49,9 +49,9 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    //如果点击的不是居中的cell，那么就滚动到中间
+    [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
     if (self.currentIndex != indexPath.row) {
-        //如果点击的不是居中的cell，那么就滚动到中间
-        [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         
         //给当前页码赋值，让观察者能够响应
         self.currentIndex = indexPath.row;
