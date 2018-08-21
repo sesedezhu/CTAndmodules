@@ -39,7 +39,7 @@
 //重写显示cell的偏移量
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(CONVER_VALUE(122), (kScreenWidth-self.itemWidth)/2, CONVER_VALUE(29), (kScreenWidth-self.itemWidth)/2);
+    return UIEdgeInsetsMake(0, (kScreenWidth-self.itemWidth)/2, 0, (kScreenWidth-self.itemWidth)/2);
 }
 //设置每个单元格大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -57,6 +57,8 @@
         self.currentIndex = indexPath.row;
     }else{
         NSLog(@"大图居中");
+        //发送通知，让关联的cell同步
+        [[NSNotificationCenter defaultCenter] postNotificationName:ClickLargeMovieViewCell object:indexPath userInfo:nil];
     }
     //点击cell响应
     NSLog(@"indexPath1111 ============== %ld",(long)indexPath.row);

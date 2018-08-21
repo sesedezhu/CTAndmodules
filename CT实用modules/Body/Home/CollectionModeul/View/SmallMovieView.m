@@ -19,7 +19,10 @@
 @end
 @implementation SmallMovieView
 
-
+-(void)dealloc{
+    //销毁通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:ExitSmallMovieViewAnimation object:nil];
+}
 -(instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout
 {
     self = [super initWithFrame:frame collectionViewLayout:layout];
@@ -30,11 +33,14 @@
         //一、注册cell
         [self registerClass:[SmallViewCell class] forCellWithReuseIdentifier:kSmallViewCellID];
         [self setFlagAndGsr];
+        
+        //二、注册通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideAllDeleteBtn) name:ExitSmallMovieViewAnimation object:nil];
     }
     
     return self;
 }
-
+#pragma mark- UICollectionViewDelegate
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SmallViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSmallViewCellID forIndexPath:indexPath];
@@ -48,9 +54,9 @@
 //设置每个单元格大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    NSLog(@"%@", NSStringFromCGSize(CGSizeMake(_itemWidth, self.height)));
     return CGSizeMake(self.itemWidth, CONVER_VALUE(80));
 }
+//点击事件
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -67,14 +73,13 @@
             NSLog(@"删除模式，点击无效");
         }else{
             NSLog(@"小图居中");
+            //发送通知，让关联的cell同步
+            [[NSNotificationCenter defaultCenter] postNotificationName:ClickSmallMovieViewCell object:indexPath userInfo:nil];
         }
-        
     }
-    //点击cell响应
-    NSLog(@"indexPath2222 ============== %ld",(long)indexPath.row);
 }
 
-#pragma mark - 删除动画功能
+#pragma mark - 删除模式、默认模式、删除功能
 - (void)setCellVibrate:(SmallViewCell *)cell IndexPath:(NSIndexPath *)indexPath{
     cell.indexPath = indexPath;
     cell.deleteBtn.hidden = _deleteBtnFlag?YES:NO;
@@ -93,6 +98,8 @@
     }
     
 }
+
+//删除事件
 -(void)deleteCellAtIndexpath:(NSIndexPath *)indexPath
 {
     __weak typeof(self) weakSelf = self;
@@ -105,15 +112,11 @@
     } completion:^(BOOL finished) {
         [weakSelf reloadData];
         
-        //发送通知，让关联的cell同步
+        //发送通知，让关联的cell同步删除
         [[NSNotificationCenter defaultCenter] postNotificationName:AssociatedAndCellIndexPath object:nil userInfo:nil];
     }];
 }
-- (void)setFlagAndGsr{//设置默认模式
-    _deleteBtnFlag = YES;
-    _vibrateAniFlag = YES;
-    
-}
+//双击空白进入默认模式
 - (void)addDoubleTapGesture{//添加双击效果
     _doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
     [_doubletap setNumberOfTapsRequired:2];
@@ -124,6 +127,12 @@
 - (void) handleDoubleTap:(UITapGestureRecognizer *) gestureRecognizer{
     [self hideAllDeleteBtn];
     NSLog(@"双击了！～");
+}
+//状态类型方法
+- (void)setFlagAndGsr{//设置默认模式
+    _deleteBtnFlag = YES;
+    _vibrateAniFlag = YES;
+    
 }
 - (void)hideAllDeleteBtn{//进入默认模式
     if (!_deleteBtnFlag) {
@@ -141,18 +150,6 @@
         [self reloadData];
     }
 }
-//-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-//    //只让UIcollectionView响应，cell不响应
-//    if (!_deleteBtnFlag){
-//        if (touch.view != self) {
-//            return NO;
-//        }
-//    }else{
-//
-//    }
-//
-//    return YES;
-//}
 
 
 //#define mark - kvo

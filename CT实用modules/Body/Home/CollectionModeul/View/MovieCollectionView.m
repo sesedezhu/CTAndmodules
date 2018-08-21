@@ -10,15 +10,7 @@
 #import "MovieLayout.h"
 
 @implementation MovieCollectionView
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
+#pragma mark- 初始化
 - (instancetype)init
 {
     return [self initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewLayout alloc] init]];
@@ -40,10 +32,9 @@
 }
 
 
-
+#pragma mark- UICollectionViewDelegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSLog(@"_dataArr ========666 %@",self.dataArr);
     return self.dataArr.count;
 }
 
@@ -82,7 +73,7 @@
 //        NSLog(@"居中");
 //    }
 }
-
+#pragma mark- UIScrollView
 //inout表示 形参能读能写
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
@@ -122,7 +113,7 @@
     }
     
 }
-
+#pragma mark- 懒加载
 - (NSMutableArray *)dataArr{
     if (!_dataArr) {
         _dataArr = [[NSMutableArray alloc]init];

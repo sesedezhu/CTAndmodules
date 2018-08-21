@@ -52,7 +52,7 @@
         {
             //上下联动，放大缩小动画
             CollectionModeul *collection = [[CollectionModeul alloc]init];
-            [collection setHidesBottomBarWhenPushed:YES];
+//            [collection setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:collection animated:YES];
         }
             break;

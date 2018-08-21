@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieCollectionView.h"
+
+typedef void (^PushPosterViewBlock)(int tag, NSIndexPath *indexPath);
+
 @interface PosterView : UIView
 {
     MovieCollectionView *_smallView; //上部分
     MovieCollectionView *_largeView; //下部分
 }
 @property(nonatomic, strong)NSArray *dataArr;//数据源
-
+@property(nonatomic, copy)PushPosterViewBlock PushPosterViewBlocks;
 @end
 
 /*

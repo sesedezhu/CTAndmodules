@@ -11,7 +11,7 @@
 @interface SmallViewCell()
 //<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIImageView *UserImaView;  //头像
-@property (nonatomic, strong) UILabel *NicknameLab;      //昵称
+
 @end
 @implementation SmallViewCell
 - (instancetype)initWithFrame:(CGRect)frame
@@ -24,7 +24,7 @@
 }
 
 - (void)loadUI{
-    self.contentView.backgroundColor = [UIColor redColor];
+    self.contentView.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:self.UserImaView];
     [self.contentView addSubview:self.NicknameLab];
     [self.contentView addSubview:self.deleteBtn];
@@ -62,20 +62,14 @@
     lpgr.minimumPressDuration = 1;//长按等待时间
 //    lpgr.delegate = self;
     [self addGestureRecognizer:lpgr];
-    
-//    UITapGestureRecognizer *doubletap = [[UITapGestureRecognizer alloc] initWithTarget:self action:nil];
-//    [doubletap setNumberOfTapsRequired:2];
-//    [self addGestureRecognizer:doubletap];
+
     
 }
-//-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
-//    //只让UIcollectionView响应，cell不响应
-//    if (touch.view != self) {
-//        return NO;
-//    }
-//
-//    return YES;
-//}
+#pragma mark - 通过透明度来改变标题颜色
+- (void)setAlpha:(CGFloat)alpha{
+    _NicknameLab.textColor = (alpha == 1.0) ? allcolorAlphasCT(0, 0, 0, 1.0):allcolorAlphasCT(174, 174, 174, 1.0);
+}
+
 #pragma mark - 删除动画功能
 - (void)longClick:(UILongPressGestureRecognizer *)lpgr
 {
@@ -105,6 +99,7 @@
     [_UserImaView setImage:[UIImage imageNamed:dataDic[@"image"]]];
     
 }
+
 #pragma mark - 懒加载
 - (UIImageView *)UserImaView{
     if (!_UserImaView) {
@@ -116,7 +111,8 @@
     if (!_NicknameLab) {
         _NicknameLab = [[UILabel alloc]init];
         _NicknameLab.font = [UIFont systemFontOfSize:CONVER_VALUE(11)];
-        _NicknameLab.textColor = allcolorAlphasCT(0, 0, 0, 1.0);
+        
+        _NicknameLab.textColor = allcolorAlphasCT(174, 174, 174, 1.0);
         _NicknameLab.textAlignment = NSTextAlignmentCenter;
     }
     return _NicknameLab;

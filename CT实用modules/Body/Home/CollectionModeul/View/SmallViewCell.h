@@ -18,4 +18,6 @@ typedef void (^deleteBtnBlock)(NSIndexPath *indexPath);
 @property(nonatomic, strong)NSDictionary *dataDic;//数据源
 @property (nonatomic,strong) UIButton *deleteBtn;  //删除按钮
 @property (nonatomic,strong)NSIndexPath *indexPath;
+
+@property (nonatomic, strong) UILabel *NicknameLab;      //昵称
 @end

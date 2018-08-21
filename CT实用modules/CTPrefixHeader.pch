@@ -36,8 +36,16 @@
 
 //颜色
 #define allcolorAlphasCT(r,g,b,CGFloat)  [UIColor  colorWithRed:r/255.00 green:g/255.00 blue:b/255.00 alpha:CGFloat]
-//通知
+
+
+//通知,上下cell联动通知
 #define AssociatedAndCellIndexPath @"AssociatedAndCellIndexPath"
+//通知，退出删除效果动画
+#define ExitSmallMovieViewAnimation @"SmallMovieViewAnimationExit"
+//通知，小图标居中点击事件
+#define ClickSmallMovieViewCell @"ClickSmallMovieViewCell"
+//通知，大图标居中点击事件
+#define ClickLargeMovieViewCell @"ClickLargeMovieViewCell"
 
 #endif /* CTPrefixHeader_pch */
 
