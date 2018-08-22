@@ -83,13 +83,13 @@
     
     UIView *view = self;
     _BackImaView.sd_layout
-    .bottomSpaceToView(view, CTStopTabBarRect+CTStopNavRect+CTStopStatusRect)
+    .bottomSpaceToView(view, 0)
     .leftSpaceToView(view, 0)
     .rightSpaceToView(view, 0)
     .heightIs(CONVER_VALUE(365));
     
     _largeView.sd_layout
-    .bottomSpaceToView(view, CTStopTabBarRect+CTStopNavRect+CTStopStatusRect+CONVER_VALUE(29))
+    .bottomSpaceToView(view, CONVER_VALUE(29))
     .leftSpaceToView(view, 0)
     .rightSpaceToView(view, 0)
     .heightIs(CONVER_VALUE(203));
@@ -107,7 +107,7 @@
     
     UIView *view = self;
     imaView.sd_layout
-    .bottomSpaceToView(view, CTStopTabBarRect+CTStopNavRect+CTStopStatusRect+CONVER_VALUE(15))
+    .bottomSpaceToView(view, CONVER_VALUE(15))
     .rightSpaceToView(view, CONVER_VALUE(4))
     .widthIs(CONVER_VALUE(74))
     .heightIs(CONVER_VALUE(74));

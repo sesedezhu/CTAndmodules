@@ -10,4 +10,5 @@
 
 @interface OneSimpleView : UIView
 @property (nonatomic, strong) UILabel *ContentLab;         //内容文字
+@property (nonatomic, strong) UIButton *btn;         //按钮
 @end

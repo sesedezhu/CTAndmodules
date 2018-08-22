@@ -11,7 +11,6 @@
 
 @property (nonatomic, strong) UIImageView *imaView;       //背景图片
 @property (nonatomic, strong) UIImageView *TitleImaView;  //标题文字图片
-@property (nonatomic, strong) UIButton *btn;         //按钮
 
 @end
 @implementation OneSimpleView
@@ -69,6 +68,7 @@
 - (UIImageView *)imaView{
     if (!_imaView) {
         _imaView = [[UIImageView alloc]init];
+        _imaView.userInteractionEnabled = YES;
     }
     return _imaView;
 }
