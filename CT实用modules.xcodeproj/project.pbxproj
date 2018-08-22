@@ -146,6 +146,12 @@
 		21E0B461212C00DF00876E24 /* PosterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B444212C00DF00876E24 /* PosterView.m */; };
 		21E0B462212C00DF00876E24 /* SmallMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B446212C00DF00876E24 /* SmallMovieView.m */; };
 		21E0B463212C00DF00876E24 /* SmallViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B448212C00DF00876E24 /* SmallViewCell.m */; };
+		21E0B4D7212D1C5700876E24 /* ThreeSimpleView.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B4D6212D1C5700876E24 /* ThreeSimpleView.png */; };
+		21E0B4D9212D1C5D00876E24 /* FourSimpleView.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B4D8212D1C5D00876E24 /* FourSimpleView.png */; };
+		21E0B4DC212D3EA000876E24 /* ThreeSimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B4DB212D3EA000876E24 /* ThreeSimpleView.m */; };
+		21E0B4DF212D3EBB00876E24 /* FourSimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B4DE212D3EBA00876E24 /* FourSimpleView.m */; };
+		21E0B4E5212D522000876E24 /* MBProgressHUD+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B4E2212D522000876E24 /* MBProgressHUD+HUD.m */; };
+		21E0B4E6212D522000876E24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B4E4212D522000876E24 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,6 +429,16 @@
 		21E0B446212C00DF00876E24 /* SmallMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallMovieView.m; sourceTree = "<group>"; };
 		21E0B447212C00DF00876E24 /* SmallViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallViewCell.h; sourceTree = "<group>"; };
 		21E0B448212C00DF00876E24 /* SmallViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallViewCell.m; sourceTree = "<group>"; };
+		21E0B4D6212D1C5700876E24 /* ThreeSimpleView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThreeSimpleView.png; sourceTree = "<group>"; };
+		21E0B4D8212D1C5D00876E24 /* FourSimpleView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FourSimpleView.png; sourceTree = "<group>"; };
+		21E0B4DA212D3EA000876E24 /* ThreeSimpleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeSimpleView.h; sourceTree = "<group>"; };
+		21E0B4DB212D3EA000876E24 /* ThreeSimpleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeSimpleView.m; sourceTree = "<group>"; };
+		21E0B4DD212D3EBA00876E24 /* FourSimpleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourSimpleView.h; sourceTree = "<group>"; };
+		21E0B4DE212D3EBA00876E24 /* FourSimpleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourSimpleView.m; sourceTree = "<group>"; };
+		21E0B4E1212D522000876E24 /* MBProgressHUD+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HUD.h"; sourceTree = "<group>"; };
+		21E0B4E2212D522000876E24 /* MBProgressHUD+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HUD.m"; sourceTree = "<group>"; };
+		21E0B4E3212D522000876E24 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		21E0B4E4212D522000876E24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,6 +505,7 @@
 		214A03F6211C3EDB00F820BD /* Original */ = {
 			isa = PBXGroup;
 			children = (
+				21E0B4E0212D522000876E24 /* MBProgressHUD */,
 				214A04F2211C3F8800F820BD /* IQKeyboardManager */,
 				214A0552211C3F8900F820BD /* MJExtension */,
 				214A0570211C3F8A00F820BD /* MJRefresh */,
@@ -1085,6 +1102,8 @@
 		21B4CC1B2121343600C37C8A /* CTStateView */ = {
 			isa = PBXGroup;
 			children = (
+				21E0B4D5212D1C3500876E24 /* FourSimpleView */,
+				21E0B4D4212D1C3400876E24 /* ThreeSimpleView */,
 				21B4CC3D212179CF00C37C8A /* TwoSimpleView */,
 				21B4CC2C2121795000C37C8A /* OneSimpleView */,
 			);
@@ -1208,6 +1227,37 @@
 				21E0B448212C00DF00876E24 /* SmallViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		21E0B4D4212D1C3400876E24 /* ThreeSimpleView */ = {
+			isa = PBXGroup;
+			children = (
+				21E0B4D6212D1C5700876E24 /* ThreeSimpleView.png */,
+				21E0B4DA212D3EA000876E24 /* ThreeSimpleView.h */,
+				21E0B4DB212D3EA000876E24 /* ThreeSimpleView.m */,
+			);
+			path = ThreeSimpleView;
+			sourceTree = "<group>";
+		};
+		21E0B4D5212D1C3500876E24 /* FourSimpleView */ = {
+			isa = PBXGroup;
+			children = (
+				21E0B4D8212D1C5D00876E24 /* FourSimpleView.png */,
+				21E0B4DD212D3EBA00876E24 /* FourSimpleView.h */,
+				21E0B4DE212D3EBA00876E24 /* FourSimpleView.m */,
+			);
+			path = FourSimpleView;
+			sourceTree = "<group>";
+		};
+		21E0B4E0212D522000876E24 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				21E0B4E1212D522000876E24 /* MBProgressHUD+HUD.h */,
+				21E0B4E2212D522000876E24 /* MBProgressHUD+HUD.m */,
+				21E0B4E3212D522000876E24 /* MBProgressHUD.h */,
+				21E0B4E4212D522000876E24 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		42C9C0E0211FF02A00870E10 /* Images */ = {
@@ -1340,6 +1390,7 @@
 				21B4CC382121795100C37C8A /* OneSimple_btn_background@2x.png in Resources */,
 				21E0B451212C00DF00876E24 /* 4.jpeg in Resources */,
 				214A05CB211C3F8A00F820BD /* LICENSE in Resources */,
+				21E0B4D7212D1C5700876E24 /* ThreeSimpleView.png in Resources */,
 				2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */,
 				21E0B450212C00DF00876E24 /* 3.jpeg in Resources */,
 				21B4CC3A2121795100C37C8A /* OneSimple_title@2x.png in Resources */,
@@ -1354,6 +1405,7 @@
 				214A05E7211C3F8A00F820BD /* MJRefresh.bundle in Resources */,
 				214A03EA211BEDD100F820BD /* 123.png in Resources */,
 				21E0B457212C00DF00876E24 /* WK_deleteBtn@3x.png in Resources */,
+				21E0B4D9212D1C5D00876E24 /* FourSimpleView.png in Resources */,
 				21E0B459212C00DF00876E24 /* WK_ellipsisBack@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1398,6 +1450,7 @@
 				2169FAD021057A22005D6F2B /* BaseViewController.m in Sources */,
 				214A05BA211C3F8A00F820BD /* SDWebImagePrefetcher.m in Sources */,
 				214A05AC211C3F8A00F820BD /* IQTitleBarButtonItem.m in Sources */,
+				21E0B4E5212D522000876E24 /* MBProgressHUD+HUD.m in Sources */,
 				21E0B44D212C00DF00876E24 /* YTAnimation.m in Sources */,
 				214A05DA211C3F8A00F820BD /* MJRefreshComponent.m in Sources */,
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
@@ -1434,6 +1487,7 @@
 				214A05B9211C3F8A00F820BD /* SDWebImageManager.m in Sources */,
 				21E0B44A212C00DF00876E24 /* LargeLayout.m in Sources */,
 				214A05AA211C3F8A00F820BD /* IQBarButtonItem.m in Sources */,
+				21E0B4DC212D3EA000876E24 /* ThreeSimpleView.m in Sources */,
 				214A05CD211C3F8A00F820BD /* MJFoundation.m in Sources */,
 				214A05CF211C3F8A00F820BD /* MJPropertyKey.m in Sources */,
 				214A05AD211C3F8A00F820BD /* IQToolbar.m in Sources */,
@@ -1449,6 +1503,7 @@
 				214A05C2211C3F8A00F820BD /* UIView+WebCacheOperation.m in Sources */,
 				214A05E1211C3F8A00F820BD /* MJRefreshBackNormalFooter.m in Sources */,
 				214A05DF211C3F8A00F820BD /* MJRefreshAutoStateFooter.m in Sources */,
+				21E0B4DF212D3EBB00876E24 /* FourSimpleView.m in Sources */,
 				21B4CC40212179E100C37C8A /* TwoSimpleView.m in Sources */,
 				21E0B460212C00DF00876E24 /* MovieCollectionView.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,
@@ -1482,6 +1537,7 @@
 				214A05A3211C3F8A00F820BD /* IQUITextFieldView+Additions.m in Sources */,
 				214A05AE211C3F8A00F820BD /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				214A05B3211C3F8A00F820BD /* SDImageCache.m in Sources */,
+				21E0B4E6212D522000876E24 /* MBProgressHUD.m in Sources */,
 				214A05E6211C3F8A00F820BD /* MJDIYBackFooter.m in Sources */,
 				2160625421104E6300B30B93 /* FoundCtrl.m in Sources */,
 			);
