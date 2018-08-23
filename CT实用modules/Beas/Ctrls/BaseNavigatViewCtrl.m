@@ -25,7 +25,7 @@
        使用此方法，当隐藏导航栏的时候，其下的字类都将不调用
      */
     [self.navigationBar setBackgroundImage:[UIColor imageColorWithCreateImage:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-//    [self.navigationBar setShadowImage:[UIImage new]];
+    [self.navigationBar setShadowImage:[UIImage new]];
     
     //导航栏的背景颜色
 //    self.navigationBar.barTintColor =allcolor;

@@ -14,11 +14,15 @@
 
 
 //
+#import "PlistManager.h"
 #import "UIColor+Definition.h"                 //非系统颜色生成方法
 #import "UIView+SDAutoLayout.h"                //自动布局（不完整-不包括cell自动高）
 #import "UIImageView+WebCache.h"               //图片处理类
 #import "MBProgressHUD+HUD.h"                  //风火轮
-
+#import "LAndRRequest.h"                       //网络请求
+#import "CTString.h"                           //sing拼接需要
+#import "LCMD5Tool.h"                          //md5生成方法
+#import "CTFreeText.h"
 /*--屏幕的宽高----*/
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
@@ -47,6 +51,13 @@
 #define ClickSmallMovieViewCell @"ClickSmallMovieViewCell"
 //通知，大图标居中点击事件
 #define ClickLargeMovieViewCell @"ClickLargeMovieViewCell"
+
+
+
+
+//用户资料
+#define UserPlists @"User.plist"
+
 
 #endif /* CTPrefixHeader_pch */
 

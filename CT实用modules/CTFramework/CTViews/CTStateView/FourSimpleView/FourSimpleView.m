@@ -85,7 +85,7 @@
     _ContentLab.text = @"10秒未操作，将自动返回……";
     [_btn setTitle:@"重新匹配" forState:UIControlStateNormal];
     [_ReturnBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"1.jpeg"]];
+    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"WK_WarningImage02"]];
     
     [_btn addTarget:self action:@selector(gainMatchingObjectWK) forControlEvents:UIControlEventTouchDown];
     [_ReturnBtn addTarget:self action:@selector(returnPosterViews) forControlEvents:UIControlEventTouchDown];
@@ -146,7 +146,7 @@
 - (UILabel *)LoadTitleLab{
     if (!_LoadTitleLab) {
         _LoadTitleLab = [[UILabel alloc]init];
-        _LoadTitleLab.textColor = allcolorAlphasCT(96, 96, 96, 1.0);
+        _LoadTitleLab.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
         _LoadTitleLab.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
         _LoadTitleLab.textAlignment = NSTextAlignmentCenter;
         _LoadTitleLab.numberOfLines = 0;
@@ -157,7 +157,7 @@
     if (!_ContentLab) {
         _ContentLab = [[UILabel alloc]init];
         //        _ContentLabel.numberOfLines = 0;
-        _ContentLab.textColor = allcolorAlphasCT(173, 173, 173, 1.0);
+        _ContentLab.textColor = allcolorAlphasCT(187, 187, 187, 1.0);
         _ContentLab.font = [UIFont systemFontOfSize: CONVER_VALUE(12)];
         _ContentLab.textAlignment = NSTextAlignmentCenter;
     }
@@ -166,9 +166,9 @@
 - (UIButton *)btn{
     if (!_btn) {
         _btn = [[UIButton alloc]init];
-        [_btn setTitleColor:allcolorAlphasCT(87, 95, 115, 1.0) forState:UIControlStateNormal];
+        [_btn setTitleColor:allcolorAlphasCT(255, 255, 255, 1.0) forState:UIControlStateNormal];
         _btn.titleLabel.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
-        _btn.backgroundColor = [UIColor clearColor];
+        _btn.backgroundColor = allcolorAlphasCT(73, 75, 81, 1.0);
     }
     return _btn;
 }
@@ -177,7 +177,7 @@
         _ReturnBtn = [[UIButton alloc]init];
         [_ReturnBtn setTitleColor:allcolorAlphasCT(87, 95, 115, 1.0) forState:UIControlStateNormal];
         _ReturnBtn.titleLabel.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
-        _ReturnBtn.backgroundColor = [UIColor clearColor];
+        _ReturnBtn.backgroundColor = [UIColor whiteColor];
     }
     return _ReturnBtn;
 }

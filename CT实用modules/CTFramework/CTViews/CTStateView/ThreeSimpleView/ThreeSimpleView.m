@@ -65,7 +65,7 @@
     _LoadTitleLab.text = @"稍等，当地玩家正在加速赶来……";
     _ContentLab.text = @"只有当地玩咖才能带您领略最本土风情";
     [_btn setTitle:@"取消匹配" forState:UIControlStateNormal];
-    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"1.jpeg"]];
+    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"WK_WarningImage01"]];
     
     //添加旋转动画
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
@@ -86,7 +86,7 @@
 - (UILabel *)LoadTitleLab{
     if (!_LoadTitleLab) {
         _LoadTitleLab = [[UILabel alloc]init];
-        _LoadTitleLab.textColor = allcolorAlphasCT(96, 96, 96, 1.0);
+        _LoadTitleLab.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
         _LoadTitleLab.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
         _LoadTitleLab.textAlignment = NSTextAlignmentCenter;
     }
@@ -96,7 +96,7 @@
     if (!_ContentLab) {
         _ContentLab = [[UILabel alloc]init];
         //        _ContentLabel.numberOfLines = 0;
-        _ContentLab.textColor = allcolorAlphasCT(173, 173, 173, 1.0);
+        _ContentLab.textColor = allcolorAlphasCT(187, 187, 187, 1.0);
         _ContentLab.font = [UIFont systemFontOfSize: CONVER_VALUE(12)];
         _ContentLab.textAlignment = NSTextAlignmentCenter;
     }
@@ -105,9 +105,9 @@
 - (UIButton *)btn{
     if (!_btn) {
         _btn = [[UIButton alloc]init];
-        [_btn setTitleColor:allcolorAlphasCT(87, 95, 115, 1.0) forState:UIControlStateNormal];
+        [_btn setTitleColor:allcolorAlphasCT(255, 255, 255, 1.0) forState:UIControlStateNormal];
         _btn.titleLabel.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
-        _btn.backgroundColor = [UIColor clearColor];
+        _btn.backgroundColor = allcolorAlphasCT(73, 75, 81, 1.0);
     }
     return _btn;
 }

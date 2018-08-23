@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaseTaBarViewCtrl.h"
+#import "IQKeyboardManager.h"
 @interface AppDelegate ()
 
 @end
@@ -23,9 +24,25 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[BaseTaBarViewCtrl alloc] init];
     [self.window makeKeyAndVisible];
+    
+    
+    //三、注册键盘监听
+    [self loadIQKey];
     return YES;
 }
-
+#pragma mark - 键盘监听
+- (void)loadIQKey{
+    // 设置键盘监听管理
+    //    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    [[IQKeyboardManager sharedManager] setToolbarManageBehaviour:IQAutoToolbarBySubviews];
+    //设置点击背景收回键盘
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;// 控制点击背景是否收起键盘
+    
+    [IQKeyboardManager sharedManager].enable = YES;// 控制整个功能是否启用
+    [IQKeyboardManager sharedManager].toolbarManageBehaviour = IQAutoToolbarBySubviews;// 有多个输入框时，可以通过点击Toolbar 上的“前一个”“后一个”按钮来实现移动到不同的输入框
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;// 控制是否显示键盘上的工具条
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
