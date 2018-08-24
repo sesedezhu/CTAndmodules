@@ -60,7 +60,7 @@
         {
             //登录模块
             LoginCtrls *login = [[LoginCtrls alloc]init];
-//            [login setHidesBottomBarWhenPushed:YES];
+            [login setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:login animated:YES];
            
         }
