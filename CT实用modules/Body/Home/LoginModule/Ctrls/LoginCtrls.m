@@ -134,6 +134,8 @@
     [self loadHaedSwitchBtnSelected];
     //加载第三方微信登陆
     [self loadLoginWX];
+    //加载按钮点击登陆方法
+    [self loadLonginButton];
 }
 //登录方式切换方法
 - (void)loadHaedSwitchBtnSelected{
@@ -175,6 +177,32 @@
 }
 - (void)WxClickEvent{
     NSLog(@"微信登陆");
+}
+//按钮登陆方法
+- (void)loadLonginButton{
+    [_loginBtn addTarget:self action:@selector(ButtonClickEvent) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)ButtonClickEvent{
+    NSLog(@"按钮登陆");
+}
+#pragma mark - scrollViewDecele
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"已经停止减速");
+    
+    //contentOffset是UIScrollView的偏移量, contentOffset和contentSize有关, 用偏移量除以scrollView的frame的宽度得到当前页码
+    int x = scrollView.contentOffset.x;
+    if (x < kScreenWidth) {
+        _logHaedViews.LeftBtn.userInteractionEnabled = NO;
+        _logHaedViews.RightBtn.userInteractionEnabled = YES;
+        _logHaedViews.LeftBtn.selected = YES;
+        _logHaedViews.RightBtn.selected = NO;
+    }else{
+        _logHaedViews.LeftBtn.userInteractionEnabled = YES;
+        _logHaedViews.RightBtn.userInteractionEnabled = NO;
+        _logHaedViews.RightBtn.selected = YES;
+        _logHaedViews.LeftBtn.selected = NO;
+    }
 }
 #pragma mark - 懒加载
 - (NavEveryoneView *)NavView{
