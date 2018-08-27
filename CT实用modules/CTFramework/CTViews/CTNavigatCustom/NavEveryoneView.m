@@ -144,8 +144,6 @@
 //    _leftBtn.titleLabel.backgroundColor = [UIColor blueColor];
 }
 #pragma mark - 赋值
-
-
 //判断底部线条是否存在
 - (void)setBottomLine:(BOOL)bottomLine{
     _bottomLine = bottomLine;
@@ -155,7 +153,14 @@
         _botViewBak.hidden = NO;
     }
 }
-
+//判断左边按钮文字是否显示
+- (void)leftButtonTextAndSelected:(BOOL)selected{
+    if (selected) {
+        [_leftBtn setTitle:@"左边" forState:UIControlStateNormal];
+    }else{
+        [_leftBtn setTitle:@"" forState:UIControlStateNormal];
+    }
+}
 #pragma mark - 懒加载
 - (UIButton *)rightBtn{
     if (!_rightBtn) {

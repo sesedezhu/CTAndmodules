@@ -16,4 +16,6 @@
 
 
 @property (nonatomic, assign) BOOL bottomLine; //底部线条是否存在，默认不存在
+
+- (void)leftButtonTextAndSelected:(BOOL)selected;
 @end

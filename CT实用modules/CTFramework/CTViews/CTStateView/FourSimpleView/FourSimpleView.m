@@ -135,6 +135,9 @@
         [self returnPosterViews];
     }
 }
+-(void)dealloc{
+    [self EndTimer];
+}
 #pragma mark - 懒加载
 - (UIImageView *)LoadImaView{
     if (!_LoadImaView) {

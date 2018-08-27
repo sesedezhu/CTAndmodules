@@ -11,4 +11,6 @@
 @interface LogHaedView : UIView
 @property(nonatomic ,strong) UIButton *LeftBtn;
 @property(nonatomic ,strong) UIButton *RightBtn;
+
+- (void)SwitchRightBottenSelected:(BOOL)Rightselected; 
 @end

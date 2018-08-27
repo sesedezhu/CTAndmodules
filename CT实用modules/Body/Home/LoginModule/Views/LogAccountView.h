@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LogAccountView : UIView
-
+- (void)WarningAndHidden:(BOOL)hidden; //判断是否隐藏提示语，默认隐藏
+- (void)EyesAndSelected:(BOOL)selected; //判断眼睛张开关闭，默认关闭
 @end

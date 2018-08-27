@@ -60,7 +60,11 @@
     
     [_NavView.leftBtn addTarget:self action:@selector(popNavViewLeftBtn) forControlEvents:UIControlEventTouchUpInside];
     _NavView.bottomLine = YES;
-    [_NavView.leftBtn setTitle:@"" forState:UIControlStateNormal];
+    [_NavView leftButtonTextAndSelected:NO];
+    
+    _NavView.title.text = @"登陆";
+    self.navigationItem.title = @"登陆";
+    
 }
 - (void)popNavViewLeftBtn{
     [self.navigationController popViewControllerAnimated:YES];
@@ -77,9 +81,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     _loginBakView.backgroundColor = [UIColor whiteColor];
-    _accountBakView.backgroundColor = [UIColor redColor];
+    _accountBakView.backgroundColor = [UIColor clearColor];
     _logHaedViews.backgroundColor = [UIColor clearColor];
-    _mobileBakView.backgroundColor = [UIColor yellowColor];
+    _mobileBakView.backgroundColor = [UIColor clearColor];
     _logBottomViews.backgroundColor = [UIColor clearColor];
     _loginBtn.backgroundColor = [UIColor clearColor];
     
@@ -136,6 +140,8 @@
     [self loadLoginWX];
     //加载按钮点击登陆方法
     [self loadLonginButton];
+    //获取验证码按钮点击方法
+    [self loadVerification];
 }
 //登录方式切换方法
 - (void)loadHaedSwitchBtnSelected{
@@ -147,12 +153,9 @@
 //        [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
         
 //        [self textresignresponders];
-        _logHaedViews.LeftBtn.userInteractionEnabled = NO;
-        _logHaedViews.RightBtn.userInteractionEnabled = YES;
+        __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.4  animations:^{
-            self.logHaedViews.LeftBtn.selected = YES;
-            self.logHaedViews.RightBtn.selected = NO;
-            self.logScrollViews.contentOffset=CGPointMake(0, 0);
+            [weakSelf logHaedViewsSwitchRightBottenSelected:NO];
         }];
     }
 }
@@ -161,13 +164,18 @@
 //        [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
         
 //        [self textresignresponders];
-        _logHaedViews.LeftBtn.userInteractionEnabled = YES;
-        _logHaedViews.RightBtn.userInteractionEnabled = NO;
+        __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.4  animations:^{
-            self.logHaedViews.RightBtn.selected = YES;
-            self.logHaedViews.LeftBtn.selected = NO;
-            self.logScrollViews.contentOffset=CGPointMake(kScreenWidth, 0);
+            [weakSelf logHaedViewsSwitchRightBottenSelected:YES];
         }];
+    }
+}
+- (void)logHaedViewsSwitchRightBottenSelected:(BOOL)selected{
+    [self.logHaedViews SwitchRightBottenSelected:selected];
+    if (selected) {
+        self.logScrollViews.contentOffset=CGPointMake(kScreenWidth, 0);
+    }else{
+        self.logScrollViews.contentOffset=CGPointMake(0, 0);
     }
 }
 //微信登陆方法
@@ -185,6 +193,12 @@
 - (void)ButtonClickEvent{
     NSLog(@"按钮登陆");
 }
+- (void)loadVerification{
+    __weak typeof(self) weakSelf = self;
+    _mobileBakView.clickButtonStateBlocks = ^{
+        NSLog(@"发送验证码请求");
+    };
+}
 #pragma mark - scrollViewDecele
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -193,15 +207,9 @@
     //contentOffset是UIScrollView的偏移量, contentOffset和contentSize有关, 用偏移量除以scrollView的frame的宽度得到当前页码
     int x = scrollView.contentOffset.x;
     if (x < kScreenWidth) {
-        _logHaedViews.LeftBtn.userInteractionEnabled = NO;
-        _logHaedViews.RightBtn.userInteractionEnabled = YES;
-        _logHaedViews.LeftBtn.selected = YES;
-        _logHaedViews.RightBtn.selected = NO;
+        [self.logHaedViews SwitchRightBottenSelected:NO];
     }else{
-        _logHaedViews.LeftBtn.userInteractionEnabled = YES;
-        _logHaedViews.RightBtn.userInteractionEnabled = NO;
-        _logHaedViews.RightBtn.selected = YES;
-        _logHaedViews.LeftBtn.selected = NO;
+        [self.logHaedViews SwitchRightBottenSelected:YES];
     }
 }
 #pragma mark - 懒加载
