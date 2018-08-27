@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LogAccountView : UIView
+@property(nonatomic ,strong) UITextField *Text_ZhangHao;
+@property(nonatomic ,strong) UITextField *Text_MiMa;
+
 - (void)WarningAndHidden:(BOOL)hidden; //判断是否隐藏提示语，默认隐藏
 - (void)EyesAndSelected:(BOOL)selected; //判断眼睛张开关闭，默认关闭
 @end

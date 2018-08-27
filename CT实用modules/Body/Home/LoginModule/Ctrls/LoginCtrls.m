@@ -51,6 +51,8 @@
     [self customNaviView];
     //3.加载点击事件
     [self loadClickEvent];
+    //4.添加键盘代理对象
+    [self loadTextFieldDelegateObject];
 }
 #pragma mark - 自定义导航栏
 - (void)customNaviView{
@@ -211,6 +213,81 @@
     }else{
         [self.logHaedViews SwitchRightBottenSelected:YES];
     }
+}
+#pragma mark - 键盘代理
+//为键盘代理添加对象
+- (void)loadTextFieldDelegateObject{
+    _mobileBakView.Text_Mobile.delegate = self;
+    _mobileBakView.Text_Check.delegate = self;
+    _accountBakView.Text_ZhangHao.delegate = self;
+    _accountBakView.Text_MiMa.delegate = self;
+    
+    _mobileBakView.Text_Mobile.tag = 3;
+    _mobileBakView.Text_Check.tag = 2;
+    _accountBakView.Text_ZhangHao.tag = 4;
+    _accountBakView.Text_MiMa.tag = 5;
+}
+//取消text第一响应，键盘消失
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self textresignresponders];
+}
+//取消text第一响应，键盘消失
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self textresignresponders];
+    
+    //按retun使密码响应
+    if (textField == _accountBakView.Text_ZhangHao) {
+        [_accountBakView.Text_MiMa becomeFirstResponder];
+    }
+    return YES;
+}
+- (void)textresignresponders{
+    [_mobileBakView.Text_Mobile resignFirstResponder];
+    [_mobileBakView.Text_Check resignFirstResponder];
+    [_accountBakView.Text_ZhangHao resignFirstResponder];
+    [_accountBakView.Text_MiMa resignFirstResponder];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    switch (textField.tag) {
+        case 2:
+        {
+            NSString *toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+            if ([toBeString length] > 6) {
+                textField.text = [toBeString substringToIndex:6];
+                return NO;
+            }
+        }
+            break;
+            
+        case 3:
+        {
+            NSString *toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+            if ([toBeString length] > 11) {
+                [_mobileBakView.Text_Check becomeFirstResponder];
+            }
+        }
+            break;
+            
+        case 4:
+        {
+            
+        }
+            break;
+            
+        case 5:
+        {
+            NSString *toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+            if ([toBeString length] > 16) {
+                textField.text = [toBeString substringToIndex:16];
+                return NO;
+            }
+        }
+            break;
+        default:
+            break;
+    }
+    return YES;
 }
 #pragma mark - 懒加载
 - (NavEveryoneView *)NavView{

@@ -10,8 +10,6 @@
 @interface LogMobileView ()
 @property(nonatomic ,strong) UILabel *Lab_Mobile;
 @property(nonatomic ,strong) UILabel *Lab_Check;
-@property(nonatomic ,strong) UITextField *Text_Mobile;
-@property(nonatomic ,strong) UITextField *Text_Check;
 @property(nonatomic ,strong) UILabel *Lab_Warning;
 @property(nonatomic ,strong) UIButton *Btn_State;
 @property(nonatomic ,strong) UIView *View_Line01;
@@ -50,10 +48,10 @@
     .heightIs(CONVER_VALUE(12));
     
     _Text_Mobile.sd_layout
-    .topSpaceToView(_Lab_Mobile, CONVER_VALUE(13))
+    .topSpaceToView(_Lab_Mobile, CONVER_VALUE(11))
     .leftEqualToView(_Lab_Mobile)
     .rightEqualToView(_Lab_Mobile)
-    .heightIs(CONVER_VALUE(13));
+    .heightIs(CONVER_VALUE(15));
     
     _View_Line01.sd_layout
     .topSpaceToView(_Text_Mobile, CONVER_VALUE(10))
@@ -68,10 +66,10 @@
     .heightIs(CONVER_VALUE(12));
     
     _Text_Check.sd_layout
-    .topSpaceToView(_Lab_Check, CONVER_VALUE(13))
+    .topSpaceToView(_Lab_Check, CONVER_VALUE(11))
     .leftEqualToView(_Lab_Mobile)
     .rightSpaceToView(_Btn_State, CONVER_VALUE(5))
-    .heightIs(CONVER_VALUE(13));
+    .heightIs(CONVER_VALUE(15));
     
     _View_Line02.sd_layout
     .topSpaceToView(_Text_Check, CONVER_VALUE(10))
@@ -195,6 +193,8 @@
         _Text_Mobile.placeholder = @"请输入手机号";
         _Text_Mobile.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
         _Text_Mobile.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
+        
+        _Text_Mobile.keyboardType = UIKeyboardTypeNumberPad;
     }
     return _Text_Mobile;
 }
@@ -205,8 +205,9 @@
         _Text_Check.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
         _Text_Check.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
         
-        _Text_Check.returnKeyType = UIReturnKeyDone;//更改键盘右下角返回样式
-        _Text_Check.secureTextEntry = YES;
+//        _Text_Check.returnKeyType = UIReturnKeyDone;//更改键盘右下角返回样式
+        
+        _Text_Check.keyboardType = UIKeyboardTypeNumberPad;
     }
     return _Text_Check;
 }

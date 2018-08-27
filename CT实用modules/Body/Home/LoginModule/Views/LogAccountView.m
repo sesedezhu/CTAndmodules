@@ -10,8 +10,6 @@
 @interface LogAccountView ()
 @property(nonatomic ,strong) UILabel *Lab_ZhangHao;
 @property(nonatomic ,strong) UILabel *Lab_MiMa;
-@property(nonatomic ,strong) UITextField *Text_ZhangHao;
-@property(nonatomic ,strong) UITextField *Text_MiMa;
 @property(nonatomic ,strong) UIButton *Btn_Warning;
 @property(nonatomic ,strong) UIButton *Btn_State;
 @property(nonatomic ,strong) UIView *View_Line01;
@@ -46,10 +44,10 @@
     .heightIs(CONVER_VALUE(12));
     
     _Text_ZhangHao.sd_layout
-    .topSpaceToView(_Lab_ZhangHao, CONVER_VALUE(13))
+    .topSpaceToView(_Lab_ZhangHao, CONVER_VALUE(11))
     .leftEqualToView(_Lab_ZhangHao)
     .rightEqualToView(_Lab_ZhangHao)
-    .heightIs(CONVER_VALUE(13));
+    .heightIs(CONVER_VALUE(15));
     
     _View_Line01.sd_layout
     .topSpaceToView(_Text_ZhangHao, CONVER_VALUE(10))
@@ -64,10 +62,10 @@
     .heightIs(CONVER_VALUE(12));
     
     _Text_MiMa.sd_layout
-    .topSpaceToView(_Lab_MiMa, CONVER_VALUE(13))
+    .topSpaceToView(_Lab_MiMa, CONVER_VALUE(11))
     .leftEqualToView(_Lab_ZhangHao)
     .rightSpaceToView(_Btn_State, CONVER_VALUE(5))
-    .heightIs(CONVER_VALUE(13));
+    .heightIs(CONVER_VALUE(15));
     
     _View_Line02.sd_layout
     .topSpaceToView(_Text_MiMa, CONVER_VALUE(10))

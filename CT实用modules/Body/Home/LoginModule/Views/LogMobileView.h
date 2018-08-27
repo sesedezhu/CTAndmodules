@@ -10,6 +10,10 @@
 
 typedef void (^ClickButtonStateBlock)(void);
 @interface LogMobileView : UIView
+
+@property(nonatomic ,strong) UITextField *Text_Mobile;
+@property(nonatomic ,strong) UITextField *Text_Check;
+
 @property(nonatomic, copy)ClickButtonStateBlock clickButtonStateBlocks;
 
 - (void)WarningAndHidden:(BOOL)hidden; //判断是否隐藏提示语，默认隐藏
