@@ -13,6 +13,7 @@
 #import "OneSimpleView.h"
 #import "TwoSimpleView.h"
 #import "LoginCtrls.h"
+#import "CellModeuls.h"
 @interface HomeViewCtrl ()
 
 @end
@@ -27,7 +28,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.自定义弹窗",@"UICollectionView",@"登录模块",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.自定义弹窗",@"UICollectionView",@"登录模块",@"cell模型列表",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -67,7 +68,10 @@
             break;
         case 3:
         {
-            
+            //cell模型列表
+            CellModeuls *cell = [[CellModeuls alloc]init];
+            [cell setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:cell animated:YES];
         }
             break;
             

@@ -40,6 +40,24 @@
     [self addSubview:self.View_Line01];
     [self addSubview:self.View_Line02];
     
+    
+    if (ABOVE_IOS9){
+        _Lab_Mobile.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Lab_Check.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Lab_Warning.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Btn_State.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+        _Text_Mobile.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+        _Text_Check.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+    }else{
+        _Lab_Mobile.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Lab_Check.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Lab_Warning.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Btn_State.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(14)];
+        _Text_Mobile.font = [UIFont systemFontOfSize:CONVER_VALUE(14)];
+        _Text_Check.font = [UIFont systemFontOfSize:CONVER_VALUE(14)];
+    }
+    
+    
     UIView *view = self;
     _Lab_Mobile.sd_layout
     .topSpaceToView(view, CONVER_VALUE(3))
@@ -100,8 +118,14 @@
     }
 }
 - (void)ClickBottenState{
+    _Text_Mobile.text = [CTFreeText CTRemoveStrEmpty:_Text_Mobile.text];
+    if (!(_Text_Mobile.text.length == 11)){
+        [MBProgressHUD showHUDMsg:@"手机号码格式输入错误"];
+        //        [_mobileBakView WarningAndHidden:NO]; //显示错误提示语
+        return;
+    }
+        
     [self startTimer:60];
-    
     if (_clickButtonStateBlocks) {
         _clickButtonStateBlocks();
     }
@@ -141,7 +165,6 @@
     if (!_Lab_Mobile) {
         _Lab_Mobile = [[UILabel alloc]init];
         _Lab_Mobile.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
-        _Lab_Mobile.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
         _Lab_Mobile.text = @"手机号";
         _Lab_Mobile.textAlignment = NSTextAlignmentLeft;
     }
@@ -151,7 +174,6 @@
     if (!_Lab_Check) {
         _Lab_Check = [[UILabel alloc]init];
         _Lab_Check.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
-        _Lab_Check.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
         _Lab_Check.text = @"验证码";
         _Lab_Check.textAlignment = NSTextAlignmentLeft;
     }
@@ -161,7 +183,6 @@
     if (!_Lab_Warning) {
         _Lab_Warning = [[UILabel alloc]init];
         _Lab_Warning.textColor = allcolorAlphasCT(255, 0, 0, 1.0);
-        _Lab_Warning.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
         _Lab_Warning.text = @"您填写的手机号或验证码有误！";
         _Lab_Warning.textAlignment = NSTextAlignmentLeft;
     }
@@ -172,8 +193,6 @@
         _Btn_State = [[UIButton alloc]init];
         [_Btn_State setTitle:@"发送验证码" forState:UIControlStateNormal];
         _Btn_State.titleLabel.adjustsFontSizeToFitWidth = YES;
-        
-        _Btn_State.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
         
         [_Btn_State setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
         [_Btn_State.layer setBorderColor:allcolorAlphasCT(143, 152, 174, 1.0).CGColor];
@@ -191,7 +210,7 @@
     if (!_Text_Mobile) {
         _Text_Mobile = [[UITextField alloc]init];
         _Text_Mobile.placeholder = @"请输入手机号";
-        _Text_Mobile.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+
         _Text_Mobile.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
         
         _Text_Mobile.keyboardType = UIKeyboardTypeNumberPad;
@@ -202,7 +221,6 @@
     if (!_Text_Check) {
         _Text_Check = [[UITextField alloc]init];
         _Text_Check.placeholder = @"请输入验证码";
-        _Text_Check.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
         _Text_Check.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
         
 //        _Text_Check.returnKeyType = UIReturnKeyDone;//更改键盘右下角返回样式

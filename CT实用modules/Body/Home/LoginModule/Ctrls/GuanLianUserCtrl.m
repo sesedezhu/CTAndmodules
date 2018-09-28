@@ -9,7 +9,7 @@
 #import "GuanLianUserCtrl.h"
 #import "GLMiMaCtrl.h"
 
-@interface GuanLianUserCtrl ()<UITextFieldDelegate,UIGestureRecognizerDelegate,ZYHttpManagerDelegate>
+@interface GuanLianUserCtrl ()<UITextFieldDelegate,UIGestureRecognizerDelegate>
 {
     NSString *msgInfo;
 }
@@ -29,11 +29,6 @@
 @property(nonatomic ,strong) UITextField *Text_Name;
 @property(nonatomic ,strong) UITextField *Text_Call;
 
-
-//网络请求
-@property (nonatomic ,retain)LAndRRequest *manager;
-@property(nonatomic,retain)NSMutableDictionary *messageDic;
-
 @property (nonatomic, strong) NSTimer *countTimer;
 @property (nonatomic, assign) int count;
 @end
@@ -42,6 +37,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     //加载ui
     [self loadGLUSerUI];
 }
@@ -53,7 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+//    [self.navigationController setNavigationBarHidden:NO animated:animated];
     
 }
 - (void)viewWillDisappear:(BOOL)animated {
@@ -80,21 +76,10 @@
         //启动定时器
         [self startTimer];
         
-        self.manager=[[LAndRRequest alloc]init];
-        _manager.delegate=self;
-        _manager.tag = 1100;
-        
-        NSString *remarkInfo = @"5";
-        self.messageDic = [[NSMutableDictionary alloc]init];
-        [_messageDic setObject:_Text_Name.text forKey:@"mobileNo"];
-        [_messageDic setObject:remarkInfo forKey:@"remarkInfo"];
-        
-        //拼接字符串，生产md5
-        NSString *md5Str = [NSString stringWithFormat:@"%@%@naliwan",_Text_Name.text,remarkInfo];
-        NSString *md5 = [LCMD5Tool MD5ForUpper32Bate:md5Str];
-        [_messageDic setObject:md5 forKey:@"sign"];
-        
-//        [_manager startPostConnectionWithPath:NLWSendDps parameter:_messageDic CaCha:NO];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            //结束倒计时
+            [self EndTimer];
+        });
         
     }else{
         [MBProgressHUD showHUDMsg:@"手机号码格式输入错误"];
@@ -110,7 +95,7 @@
     }
     return result;
 }
-//发送登录请求
+//发送绑定请求
 - (void)loadNetWorkLogin{
     
     if (!(_Text_Name.text.length == 11) || !(_Text_Call.text.length == 6) || ![_Text_Call.text isEqualToString:msgInfo]) {
@@ -118,98 +103,8 @@
         return;
     }
     
-    
-    
-//    MBHUD;
-    
-    self.manager=[[LAndRRequest alloc]init];
-    _manager.delegate=self;
-    _manager.tag = 1200;
-    
-    
-    self.messageDic = [[NSMutableDictionary alloc]init];
-    
-    [_messageDic setObject:_Text_Name.text forKey:@"mobileNo"];
-    [_messageDic setObject:_userId forKey:@"userId"];
-    [_messageDic setObject:msgInfo forKey:@"msgInfo"];
-    NSString *md5Str = [NSString stringWithFormat:@"%@%@%@naliwan",_Text_Name.text,msgInfo,_userId];
-    
-    NSString *md5 = [LCMD5Tool MD5ForUpper32Bate:md5Str];
-    [_messageDic setObject:md5 forKey:@"sign"];
-    
-//    [_manager startPostConnectionWithPath:NLWUserBuildMoblie parameter:_messageDic CaCha:NO];
-    
-}
-#pragma mark - 请求成功回调处理
-//缓存数据
-- (void)CaChaToRequest:(LAndRRequest* )manager withData:(id)data{
-}
-//成功了
-- (void)successToRequest:(LAndRRequest* )manager withData:(id)data{
-    [MBProgressHUD hideHUD];
-    NSString *errCode = [data objectForKey:@"errCode"];
-    
-    switch (manager.tag) {
-        case 1100:
-        {
-            if ([errCode isEqualToString:@"00000"]) {
-                NSDictionary *UserDic = data[@"data"];
-                msgInfo = UserDic[@"msgInfo"];
-            }else{
-                NSString *errMsg = [data objectForKey:@"errMsg"];
-                [MBProgressHUD showHUDMsg:errMsg];
-                //结束倒计时
-                [self EndTimer];
-            }
-        }
-            break;
-        case 1200:
-        {
-            if ([errCode isEqualToString:@"00000"]) {
-                
-                //替换手机号
-                
-                NSMutableDictionary *mutaDic = [[NSMutableDictionary alloc]init];
-                mutaDic = [PlistManager getFilePlists:UserPlists];
-                [mutaDic removeObjectForKey:@"mobile"];
-                [mutaDic setValue:_Text_Name.text forKey:@"mobile"];
-                [PlistManager isFilePlistName:UserPlists loadData:mutaDic];
-                
-                
-                int new_user = [_is_new_user intValue];
-                if (new_user == 1) {
-                    GLMiMaCtrl *glmm = [[GLMiMaCtrl alloc]init];
-                    glmm.userId = _userId;
-                    glmm.jdxqlog = _jdxqlog;
-                    [self.navigationController pushViewController:glmm animated:YES];
-                }else{
-                    
-                    if (_jdxqlog == 2) {
-//                        UserDefaul2(@"2", UserJDXQ);
-                        for (UIViewController *controller in self.navigationController.viewControllers) {
-//                            if ([controller isKindOfClass:[JDXQCtrl class]]) {
-//                                [self.navigationController popToViewController:controller animated:YES];
-//                            }
-                        }
-                    }else{
-                        [self.navigationController popToRootViewControllerAnimated:YES];
-                    }
-                }
-                
-            }else{
-                NSString *errMsg = [data objectForKey:@"errMsg"];
-                [MBProgressHUD showHUDMsg:errMsg];
-                
-            }
-        }
-            break;
-        default:
-            break;
-    }
-}
-//失败了
-- (void)failToRequest:(LAndRRequest* )manager withData:(id)data{
-    
+    GLMiMaCtrl *glmm = [[GLMiMaCtrl alloc]init];
+    [self.navigationController pushViewController:glmm animated:YES];
 }
 #pragma mark - 键盘代理
 //取消text第一响应，键盘消失
@@ -283,8 +178,9 @@
 
 #pragma mark - UI
 - (void)loadGLUSerUI{
+    
     self.navigationItem.title = _NavTitle;
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = allcolorAlphasCT(255, 255, 255, 1.0);
     
     [self.view addSubview:self.viwe1];
     [self.view addSubview:self.Lab_1];
@@ -293,45 +189,54 @@
     [_viwe1 addSubview:self.Lab_3];
     [_viwe1 addSubview:self.Text_Name];
     [_viwe1 addSubview:self.Text_Call];
-    [_viwe1 addSubview:self.viwe2];
-    [_viwe1 addSubview:self.viwe3];
+    [_viwe1 addSubview:self.viwe2];//线条
+    [_viwe1 addSubview:self.viwe3];//线条
     [_viwe1 addSubview:self.btn1];
-    
-    _viwe1.backgroundColor = [UIColor whiteColor];
-    _viwe2.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    _viwe3.backgroundColor = [UIColor groupTableViewBackgroundColor];
-//    _btn.backgroundColor = allcolor;
-//    [_btn1 setTitleColor:allcolor forState:UIControlStateNormal];
-    _Lab_1.textColor = [UIColor grayColor];
     
     _Lab_1.text = @"为了方便您的使用，请关联手机号码！";
     _Lab_2.text = @"手机号";
     _Lab_3.text = @"验证码";
-    
-    
     [_btn setTitle:@"确 定" forState:UIControlStateNormal];
     [_btn1 setTitle:@"获取验证码" forState:UIControlStateNormal];
     
+    _viwe1.backgroundColor = [UIColor clearColor];
+    _viwe2.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
+    _viwe3.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
+    _btn.backgroundColor = allcolorAlphasCT(73, 75, 81, 1.0);
     
-    _Lab_1.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
-    _Lab_2.font = [UIFont systemFontOfSize:CONVER_VALUE(11)];
-    _Lab_3.font = [UIFont systemFontOfSize:CONVER_VALUE(11)];
+    _Lab_1.textColor = allcolorAlphasCT(255, 0, 0, 1.0);
+    [_btn setTitleColor:allcolorAlphasCT(255, 255, 255, 1.0) forState:UIControlStateNormal];
+    _Lab_2.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    _Lab_3.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    [_btn1 setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
+    _Text_Name.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    _Text_Call.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
     
+    if (ABOVE_IOS9) {
+        _Lab_1.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Lab_2.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Lab_3.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Text_Name.font=[UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+        _Text_Call.font=[UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+    }else{
+        _Lab_1.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Lab_2.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Lab_3.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Text_Name.font=[UIFont systemFontOfSize:CONVER_VALUE(14)];
+        _Text_Call.font=[UIFont systemFontOfSize:CONVER_VALUE(14)];
+    }
     
-    _Text_Name.font=[UIFont fontWithName:@"Times New Roman" size:CONVER_VALUE(11)];
-    _Text_Call.font=[UIFont fontWithName:@"Times New Roman" size:CONVER_VALUE(11)];
     
     
     _btn1.titleLabel.adjustsFontSizeToFitWidth = YES;
-    _btn1.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(11)];
+    _btn1.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(14)];
     
-    
-    _btn.layer.cornerRadius = CONVER_VALUE(22);
+    _btn.layer.cornerRadius = CONVER_VALUE(5);
     _btn.clipsToBounds = YES;
-    _btn1.layer.cornerRadius = CONVER_VALUE(10);
+    _btn1.layer.cornerRadius = CONVER_VALUE(5);
     _btn1.clipsToBounds = YES;
     
-//    [_btn1.layer setBorderColor:allcolor.CGColor];
+    [_btn1.layer setBorderColor:allcolorAlphasCT(143, 152, 174, 1).CGColor];
     [_btn1.layer setBorderWidth:1];
     [_btn1.layer setMasksToBounds:YES];
     
@@ -340,71 +245,71 @@
     
     _btn1.titleLabel.textAlignment = NSTextAlignmentCenter;
     
-    
     UIView *views = self.view;
     UIView *views1 = self.viwe1;
     
-    
-    _Lab_1.sd_layout
-    .topSpaceToView(views, 20)
-    .leftSpaceToView(views, CONVER_VALUE(12))
-    .rightSpaceToView(views, CONVER_VALUE(12))
-    .heightIs(CONVER_VALUE(20));
-    
     _viwe1.sd_layout
-    .topSpaceToView(_Lab_1, 20)
+    .topSpaceToView(views, CONVER_VALUE(40))
     .leftSpaceToView(views, 0)
     .rightSpaceToView(views, 0)
-    .heightIs(CONVER_VALUE(120));
-    
-    
-    _btn.sd_layout
-    .topSpaceToView(views1, CONVER_VALUE(20))
-    .leftSpaceToView(views, CONVER_VALUE(50))
-    .rightSpaceToView(views, CONVER_VALUE(50))
-    .heightIs(CONVER_VALUE(44));
+    .heightIs(CONVER_VALUE(130));
     
     _Lab_2.sd_layout
-    .topSpaceToView(views1, CONVER_VALUE(20))
-    .leftSpaceToView(views1, CONVER_VALUE(12))
-    .widthIs(CONVER_VALUE(60))
-    .heightIs(CONVER_VALUE(20));
-    
-    _Lab_3.sd_layout
-    .topSpaceToView(_Lab_2, CONVER_VALUE(40))
-    .leftEqualToView(_Lab_2)
-    .widthIs(CONVER_VALUE(60))
-    .heightIs(CONVER_VALUE(20));
+    .topSpaceToView(views1, CONVER_VALUE(4))
+    .leftSpaceToView(views1, CONVER_VALUE(52))
+    .rightSpaceToView(views1, CONVER_VALUE(50))
+    .heightIs(CONVER_VALUE(12));
     
     _Text_Name.sd_layout
-    .topEqualToView(_Lab_2)
-    .leftSpaceToView(_Lab_2, 10)
-    .widthIs(CONVER_VALUE(200))
-    .heightIs(CONVER_VALUE(20));
-    
-    _Text_Call.sd_layout
-    .topEqualToView(_Lab_3)
-    .leftSpaceToView(_Lab_3, 10)
-    .widthIs(CONVER_VALUE(200))
-    .heightIs(CONVER_VALUE(20));
+    .topSpaceToView(_Lab_2, CONVER_VALUE(6))
+    .leftEqualToView(_Lab_2)
+    .rightEqualToView(_Lab_2)
+    .heightIs(CONVER_VALUE(25));
     
     _viwe2.sd_layout
-    .topSpaceToView(_Lab_2, CONVER_VALUE(20))
-    .leftSpaceToView(views1, CONVER_VALUE(12))
-    .rightSpaceToView(views1, CONVER_VALUE(12))
+    .topSpaceToView(_Text_Name, CONVER_VALUE(6))
+    .leftEqualToView(_Lab_2)
+    .rightEqualToView(_Lab_2)
     .heightIs(1);
     
+    _Lab_3.sd_layout
+    .topSpaceToView(_viwe2, CONVER_VALUE(26))
+    .leftEqualToView(_Lab_2)
+    .rightEqualToView(_Lab_2)
+    .heightIs(CONVER_VALUE(12));
+    
+    _Text_Call.sd_layout
+    .topSpaceToView(_Lab_3, CONVER_VALUE(6))
+    .leftEqualToView(_Lab_2)
+    .widthIs(CONVER_VALUE(170))
+    .heightIs(CONVER_VALUE(25));
+    
     _viwe3.sd_layout
-    .topSpaceToView(_Lab_3, CONVER_VALUE(20))
-    .leftSpaceToView(views1, CONVER_VALUE(12))
-    .rightSpaceToView(views1, CONVER_VALUE(12))
+    .topSpaceToView(_Text_Call, CONVER_VALUE(6))
+    .leftEqualToView(_Lab_2)
+    .rightEqualToView(_Lab_2)
     .heightIs(1);
     
     _btn1.sd_layout
-    .topEqualToView(_Lab_3)
-    .rightSpaceToView(views1, CONVER_VALUE(12))
-    .leftSpaceToView(_Text_Call, CONVER_VALUE(2))
-    .heightIs(CONVER_VALUE(20));
+    .topEqualToView(_Text_Call)
+    .rightEqualToView(_Lab_2)
+    .leftSpaceToView(_Text_Call, CONVER_VALUE(4))
+    .heightIs(CONVER_VALUE(25));
+   
+    _Lab_1.sd_layout
+    .topSpaceToView(views1, CONVER_VALUE(15))
+    .leftSpaceToView(views, CONVER_VALUE(52))
+    .rightSpaceToView(views, CONVER_VALUE(50))
+    .heightIs(CONVER_VALUE(12));
+    
+    _btn.sd_layout
+    .topSpaceToView(_Lab_1, CONVER_VALUE(73))
+    .leftSpaceToView(views, CONVER_VALUE(51))
+    .rightSpaceToView(views, CONVER_VALUE(52))
+    .heightIs(CONVER_VALUE(38));
+    
+    
+    
 }
 #pragma mark - 懒加载
 - (UIView *)viwe1{
@@ -467,10 +372,8 @@
         _Text_Call.delegate = self;
         _Text_Call.keyboardType = UIKeyboardTypeNumberPad;
         _Text_Call.tag = 2;
-        
         _Text_Call.textAlignment = NSTextAlignmentLeft;
-        
-        
+        _Text_Call.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;  //垂直居中
     }
     return _Text_Call;
 }
@@ -481,9 +384,8 @@
         _Text_Name.placeholder = @"请输入手机号";
         _Text_Name.delegate = self;
         _Text_Name.tag = 3;
-        
         _Text_Name.textAlignment = NSTextAlignmentLeft;
-        
+        _Text_Name.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;  //垂直居中
     }
     return _Text_Name;
 }

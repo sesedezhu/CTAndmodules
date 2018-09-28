@@ -17,4 +17,5 @@ typedef void (^ClickButtonStateBlock)(void);
 @property(nonatomic, copy)ClickButtonStateBlock clickButtonStateBlocks;
 
 - (void)WarningAndHidden:(BOOL)hidden; //判断是否隐藏提示语，默认隐藏
+- (void)EndTimer;    //关闭定时器
 @end

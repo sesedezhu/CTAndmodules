@@ -55,19 +55,32 @@
     if (Rightselected) {
         _LeftBtn.selected = NO;
         _LeftBtn.userInteractionEnabled = YES;
-        _LeftBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(15)];
         
         _RightBtn.selected = YES;
         _RightBtn.userInteractionEnabled = NO;
-        _RightBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Bold" size:CONVER_VALUE(15)];
+        
+        if (ABOVE_IOS9){
+            _LeftBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(15)];
+            _RightBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Bold" size:CONVER_VALUE(15)];
+        }else{
+            _LeftBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+            _RightBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+        }
+        
     }else{
         _LeftBtn.selected = YES;
         _LeftBtn.userInteractionEnabled = NO;
-        _LeftBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Bold" size:CONVER_VALUE(15)];
         
         _RightBtn.selected = NO;
         _RightBtn.userInteractionEnabled = YES;
-        _RightBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(15)];
+        
+        if (ABOVE_IOS9){
+            _LeftBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Bold" size:CONVER_VALUE(15)];
+            _RightBtn.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(15)];
+        }else{
+            _LeftBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+            _RightBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+        }
     }
 }
 #pragma mark - 懒加载
@@ -76,7 +89,7 @@
         _LeftBtn = [[UIButton alloc]init];
         
         [_LeftBtn setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
-        [_LeftBtn setTitleColor:allcolorAlphasCT(25, 25, 25, 1.0) forState:UIControlStateSelected];
+        [_LeftBtn setTitleColor:allcolorAlphasCT(51, 51, 51, 1.0) forState:UIControlStateSelected];
         [_LeftBtn setTitle:@"手机验证码登陆" forState:UIControlStateNormal];
         
 //        _LeftBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
@@ -90,7 +103,7 @@
         _RightBtn = [[UIButton alloc]init];
         
         [_RightBtn setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
-        [_RightBtn setTitleColor:allcolorAlphasCT(25, 25, 25, 1.0) forState:UIControlStateSelected];
+        [_RightBtn setTitleColor:allcolorAlphasCT(51, 51, 51, 1.0) forState:UIControlStateSelected];
         
         [_RightBtn setTitle:@"账号密码登陆" forState:UIControlStateNormal];
 //        _RightBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];

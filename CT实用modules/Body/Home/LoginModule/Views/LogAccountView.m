@@ -10,7 +10,6 @@
 @interface LogAccountView ()
 @property(nonatomic ,strong) UILabel *Lab_ZhangHao;
 @property(nonatomic ,strong) UILabel *Lab_MiMa;
-@property(nonatomic ,strong) UIButton *Btn_Warning;
 @property(nonatomic ,strong) UIButton *Btn_State;
 @property(nonatomic ,strong) UIView *View_Line01;
 @property(nonatomic ,strong) UIView *View_Line02;
@@ -21,7 +20,6 @@
     if (self = [super initWithFrame:frame]) {
         /* 添加子控件的代码*/
         [self loadUI];
-        
     }
     return self;
 }
@@ -35,6 +33,20 @@
     [self addSubview:self.Btn_State];
     [self addSubview:self.View_Line01];
     [self addSubview:self.View_Line02];
+    
+    if (ABOVE_IOS9) {
+        _Lab_ZhangHao.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Lab_MiMa.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Btn_Warning.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
+        _Text_ZhangHao.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+        _Text_MiMa.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
+    }else{
+        _Lab_ZhangHao.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Lab_MiMa.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Btn_Warning.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(12)];
+        _Text_ZhangHao.font = [UIFont systemFontOfSize:CONVER_VALUE(14)];
+        _Text_MiMa.font = [UIFont systemFontOfSize:CONVER_VALUE(14)];
+    }
     
     UIView *view = self;
     _Lab_ZhangHao.sd_layout
@@ -81,8 +93,8 @@
     
     _Btn_Warning.sd_layout
     .topSpaceToView(_View_Line02, CONVER_VALUE(17))
-    .leftSpaceToView(view, CONVER_VALUE(52))
     .rightSpaceToView(view, CONVER_VALUE(50))
+    .widthIs(CONVER_VALUE(80))
     .heightIs(CONVER_VALUE(12));
     
     [self WarningAndHidden:YES];//默认隐藏
@@ -118,7 +130,6 @@
     if (!_Lab_ZhangHao) {
         _Lab_ZhangHao = [[UILabel alloc]init];
         _Lab_ZhangHao.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
-        _Lab_ZhangHao.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
         _Lab_ZhangHao.text = @"账号";
         _Lab_ZhangHao.textAlignment = NSTextAlignmentLeft;
     }
@@ -129,7 +140,6 @@
         _Lab_MiMa = [[UILabel alloc]init];
         
         _Lab_MiMa.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
-        _Lab_MiMa.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
         _Lab_MiMa.text = @"密码";
         _Lab_MiMa.textAlignment = NSTextAlignmentLeft;
     }
@@ -140,7 +150,6 @@
         _Btn_Warning = [[UIButton alloc]init];
         
         [_Btn_Warning setTitleColor: allcolorAlphasCT(255, 0, 0, 1.0) forState:UIControlStateNormal];
-        _Btn_Warning.titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];
         [_Btn_Warning setTitle:@"忘记密码？" forState:UIControlStateNormal];
         
         _Btn_Warning.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;//按钮对齐
@@ -160,7 +169,6 @@
     if (!_Text_ZhangHao) {
         _Text_ZhangHao = [[UITextField alloc]init];
         _Text_ZhangHao.placeholder = @"请输入账号";
-        _Text_ZhangHao.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
         _Text_ZhangHao.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
     }
     return _Text_ZhangHao;
@@ -169,7 +177,6 @@
     if (!_Text_MiMa) {
         _Text_MiMa = [[UITextField alloc]init];
         _Text_MiMa.placeholder = @"请输入密码";
-        _Text_MiMa.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:CONVER_VALUE(14)];
         _Text_MiMa.textColor = allcolorAlphasCT(25, 25, 25, 1.0);
         
         _Text_MiMa.returnKeyType = UIReturnKeyDone;//更改键盘右下角返回样式

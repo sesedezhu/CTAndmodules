@@ -13,9 +13,13 @@
 #import "LogAccountView.h"
 #import "LogMobileView.h"
 #import "IQKeyboardManager.h"
-@interface LoginCtrls ()<UITextFieldDelegate,UIGestureRecognizerDelegate,ZYHttpManagerDelegate,UIScrollViewDelegate>
+#import "GuanLianUserCtrl.h"
+#import "GLMiMaCtrl.h"
+#import "MiMaCtrl.h"
+@interface LoginCtrls ()<UITextFieldDelegate,UIGestureRecognizerDelegate,UIScrollViewDelegate>
 {
- 
+    NSString *_msgInfo; //验证码
+
 }
 @property(nonatomic ,strong) NavEveryoneView *NavView; //虚假导航条
 @property(nonatomic ,strong) UIScrollView *logScrollViews;
@@ -26,9 +30,11 @@
 @property(nonatomic ,strong) LogBottomView *logBottomViews;  //微信背景
 @property(nonatomic ,strong) UIButton *loginBtn;     //登录按钮
 
+@property(nonatomic,strong)GuanLianUserCtrl *GuanLian;//关联账号页面
+
 @end
-#define allcolorAlpha(CGFloat) [UIColor  colorWithRed:85/255.00 green:210/255.00 blue:146/255.00 alpha:CGFloat]
 @implementation LoginCtrls
+#pragma mark - viewDidLoad
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -38,12 +44,14 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    MBHUD_End;
+    [self textresignresponders];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-
     
     //1.加载UI
     [self liadUI];
@@ -65,7 +73,7 @@
     [_NavView leftButtonTextAndSelected:NO];
     
     _NavView.title.text = @"登陆";
-    self.navigationItem.title = @"登陆";
+    self.navigationItem.title = @"";
     
 }
 - (void)popNavViewLeftBtn{
@@ -106,16 +114,16 @@
     .topSpaceToView(_logHaedViews, CONVER_VALUE(40))
     .leftEqualToView(_logHaedViews)
     .widthIs(kScreenWidth)
-    .heightIs(CONVER_VALUE(158));
+    .heightIs(CONVER_VALUE(164));
     
     _loginBtn.sd_layout
     .topSpaceToView(_logScrollViews, CONVER_VALUE(27))
-    .centerXIs(kScreenWidth/2)
-    .widthIs(CONVER_VALUE(250))
+    .leftSpaceToView(_loginBakView, CONVER_VALUE(52))
+    .rightSpaceToView(_loginBakView, CONVER_VALUE(50))
     .heightIs(CONVER_VALUE(38));
     
     _logBottomViews.sd_layout
-    .bottomSpaceToView(_loginBakView, CONVER_VALUE(43))
+    .bottomSpaceToView(_loginBakView, CTStopTabBarRect - CONVER_VALUE(6))
     .leftSpaceToView(_loginBakView, 0)
     .rightSpaceToView(_loginBakView, 0)
     .heightIs(CONVER_VALUE(30));
@@ -131,7 +139,6 @@
     .leftSpaceToView(_mobileBakView, 0)
     .widthIs(kScreenWidth)
     .bottomSpaceToView(_logScrollViews, 0);
-    
     
 }
 #pragma mark - 点击事件方法集合
@@ -150,22 +157,18 @@
     [_logHaedViews.LeftBtn addTarget:self action:@selector(lanShouJiHao) forControlEvents:UIControlEventTouchUpInside];
     [_logHaedViews.RightBtn addTarget:self action:@selector(lanZhangHaoMiMa) forControlEvents:UIControlEventTouchUpInside];
 }
+//左滑
 - (void)lanShouJiHao{
     if (!_logHaedViews.LeftBtn.selected) {
-//        [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
-        
-//        [self textresignresponders];
         __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.4  animations:^{
             [weakSelf logHaedViewsSwitchRightBottenSelected:NO];
         }];
     }
 }
+//右滑
 - (void)lanZhangHaoMiMa{
     if (!_logHaedViews.RightBtn.selected) {
-//        [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
-        
-//        [self textresignresponders];
         __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.4  animations:^{
             [weakSelf logHaedViewsSwitchRightBottenSelected:YES];
@@ -182,25 +185,103 @@
 }
 //微信登陆方法
 - (void)loadLoginWX{
-    
     [_logBottomViews.WXBtn addTarget:self action:@selector(WxClickEvent) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)WxClickEvent{
-    NSLog(@"微信登陆");
+    MBHUD_Warning(@"微信登陆成功");
 }
 //按钮登陆方法
 - (void)loadLonginButton{
-    [_loginBtn addTarget:self action:@selector(ButtonClickEvent) forControlEvents:UIControlEventTouchUpInside];
+    [_loginBtn addTarget:self action:@selector(loadNetWorkLogin) forControlEvents:UIControlEventTouchUpInside];
 }
-- (void)ButtonClickEvent{
-    NSLog(@"按钮登陆");
-}
+//验证码按钮点击事件
 - (void)loadVerification{
     __weak typeof(self) weakSelf = self;
     _mobileBakView.clickButtonStateBlocks = ^{
         NSLog(@"发送验证码请求");
+        [weakSelf loadNetWorkTime];
     };
 }
+- (void)loadNetWorkTime{
+    MBHUD_Warning(@"获取验证码成功");
+    //gcd倒计时，一次性
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //结束倒计时
+        [_mobileBakView EndTimer];
+    });
+}
+//发送登陆请求，手机号或者账号密码登陆
+- (void)loadNetWorkLogin{
+    //判断是否响应登陆请求
+    if (_logHaedViews.LeftBtn.selected) {//手机号码
+        if (![_mobileBakView.Text_Check.text isEqualToString:_msgInfo] || !(_mobileBakView.Text_Mobile.text.length == 11)) {
+            [_mobileBakView WarningAndHidden:NO];
+            return;
+        }
+    }else{//账号密码登陆
+        _accountBakView.Text_ZhangHao.text = [CTFreeText CTRemoveStrEmpty:_accountBakView.Text_ZhangHao.text];
+        if ((_accountBakView.Text_ZhangHao.text.length == 0)) {
+            [MBProgressHUD showHUDMsg:@"账号不能为空"];
+            return;
+        }
+    }
+    //允许响应，发送请求
+    MBHUD_Warning(@"登陆成功");
+    
+    if (_logHaedViews.LeftBtn.selected) {
+        [self pushNextCtrlJudgeNewUser:@"1"];//手机号登陆
+    }else{
+        [self pushNextCtrlMobile:@"不等于11位手机号"];//账号密码登陆
+    }
+    [_accountBakView WarningAndHidden:NO];
+    [_mobileBakView WarningAndHidden:NO];
+}
+//跳转进入忘记密码页面
+- (void)pushMiMaCtrl{
+    MiMaCtrl *miam = [[MiMaCtrl alloc]init];
+    miam.NavTitle = @"忘记密码";
+    [self.navigationController pushViewController:miam animated:YES];
+}
+//新用户判断
+- (void)pushNextCtrlJudgeNewUser:(NSString *)is_new_user{
+
+    int new_user = [is_new_user intValue];
+    if (new_user == 1){//新用户，进入关联密码页面
+        NSLog(@"进入关联密码页面");
+        GLMiMaCtrl *miam = [[GLMiMaCtrl alloc]init];
+        [self.navigationController pushViewController:miam animated:YES];
+       
+    }else{//非新用户，返回上一页
+        NSLog(@"成功，返回上一页");
+        [self.navigationController popViewControllerAnimated:YES];
+
+    }
+}
+//判断手机号是否正确
+- (void)pushNextCtrlMobile:(NSString *)mobile{
+
+    
+    if (!(mobile.length == 11)){//手机号不为11位，跳入关联账户页面并删除本控制器
+        NSLog(@"进入关联账户");
+        _GuanLian = [[GuanLianUserCtrl alloc]init];
+        _GuanLian.NavTitle = @"关联账号";
+        [self.navigationController pushViewController:_GuanLian animated:YES];
+      
+    }else{
+        BOOL mobilebool = [CTFreeText deptNumInputShouldNumber:mobile];//判断手机号是否为全数字
+        if (mobilebool) {//纯数字
+            NSLog(@"成功，返回上一页");
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{//手机号不为纯数字，跳入关联账户页面并删除本控制器
+            NSLog(@"进入关联账户");
+            _GuanLian = [[GuanLianUserCtrl alloc]init];
+            _GuanLian.NavTitle = @"关联账号";
+            [self.navigationController pushViewController:_GuanLian animated:YES];
+          
+        }
+    }
+}
+
 #pragma mark - scrollViewDecele
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -311,6 +392,7 @@
 - (LogAccountView *)accountBakView{
     if (!_accountBakView) {
         _accountBakView = [[LogAccountView alloc]init];
+        [_accountBakView.Btn_Warning addTarget:self action:@selector(pushMiMaCtrl) forControlEvents:UIControlEventTouchUpInside];
     }
     return _accountBakView;
 }
