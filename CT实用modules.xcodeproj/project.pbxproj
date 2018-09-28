@@ -119,6 +119,10 @@
 		21B4CC4421217F4400C37C8A /* TwoSimpleView.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B4CC4321217F4400C37C8A /* TwoSimpleView.png */; };
 		21B4CC4821217F6600C37C8A /* OneSimpleView.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B4CC4721217F6500C37C8A /* OneSimpleView.png */; };
 		21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */; };
+		21B65A102134F6E300C1F2BA /* fourSimple_Warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B65A0E2134F6E300C1F2BA /* fourSimple_Warning@2x.png */; };
+		21B65A112134F6E300C1F2BA /* fourSimple_Warning@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B65A0F2134F6E300C1F2BA /* fourSimple_Warning@3x.png */; };
+		21B65A142134F6EF00C1F2BA /* threeSimple_Warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B65A122134F6EF00C1F2BA /* threeSimple_Warning@2x.png */; };
+		21B65A152134F6EF00C1F2BA /* threeSimple_Warning@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21B65A132134F6EF00C1F2BA /* threeSimple_Warning@3x.png */; };
 		21E0B449212C00DF00876E24 /* CollectionModeul.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B420212C00DF00876E24 /* CollectionModeul.m */; };
 		21E0B44A212C00DF00876E24 /* LargeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B423212C00DF00876E24 /* LargeLayout.m */; };
 		21E0B44B212C00DF00876E24 /* MovieLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B425212C00DF00876E24 /* MovieLayout.m */; };
@@ -445,6 +449,10 @@
 		21B4CC4721217F6500C37C8A /* OneSimpleView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OneSimpleView.png; sourceTree = "<group>"; };
 		21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
+		21B65A0E2134F6E300C1F2BA /* fourSimple_Warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fourSimple_Warning@2x.png"; sourceTree = "<group>"; };
+		21B65A0F2134F6E300C1F2BA /* fourSimple_Warning@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fourSimple_Warning@3x.png"; sourceTree = "<group>"; };
+		21B65A122134F6EF00C1F2BA /* threeSimple_Warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "threeSimple_Warning@2x.png"; sourceTree = "<group>"; };
+		21B65A132134F6EF00C1F2BA /* threeSimple_Warning@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "threeSimple_Warning@3x.png"; sourceTree = "<group>"; };
 		21E0B41F212C00DF00876E24 /* CollectionModeul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModeul.h; sourceTree = "<group>"; };
 		21E0B420212C00DF00876E24 /* CollectionModeul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModeul.m; sourceTree = "<group>"; };
 		21E0B422212C00DF00876E24 /* LargeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeLayout.h; sourceTree = "<group>"; };
@@ -1391,6 +1399,8 @@
 		21E0B4D4212D1C3400876E24 /* ThreeSimpleView */ = {
 			isa = PBXGroup;
 			children = (
+				21B65A122134F6EF00C1F2BA /* threeSimple_Warning@2x.png */,
+				21B65A132134F6EF00C1F2BA /* threeSimple_Warning@3x.png */,
 				21E0B4D6212D1C5700876E24 /* ThreeSimpleView.png */,
 				21E0B4DA212D3EA000876E24 /* ThreeSimpleView.h */,
 				21E0B4DB212D3EA000876E24 /* ThreeSimpleView.m */,
@@ -1401,6 +1411,8 @@
 		21E0B4D5212D1C3500876E24 /* FourSimpleView */ = {
 			isa = PBXGroup;
 			children = (
+				21B65A0E2134F6E300C1F2BA /* fourSimple_Warning@2x.png */,
+				21B65A0F2134F6E300C1F2BA /* fourSimple_Warning@3x.png */,
 				21E0B4D8212D1C5D00876E24 /* FourSimpleView.png */,
 				21E0B4DD212D3EBA00876E24 /* FourSimpleView.h */,
 				21E0B4DE212D3EBA00876E24 /* FourSimpleView.m */,
@@ -1779,10 +1791,13 @@
 				21E0B556212E99D400876E24 /* WK_WarningImage02@2x.png in Resources */,
 				21E0B450212C00DF00876E24 /* 3.jpeg in Resources */,
 				21B4CC3A2121795100C37C8A /* OneSimple_title@2x.png in Resources */,
+				21B65A142134F6EF00C1F2BA /* threeSimple_Warning@2x.png in Resources */,
+				21B65A112134F6E300C1F2BA /* fourSimple_Warning@3x.png in Resources */,
 				21E0B5FA212FB47400876E24 /* Login_MimaDefault@3x.png in Resources */,
 				21B4CC372121795100C37C8A /* OneSimple_background@3x.png in Resources */,
 				21E0B557212E99D400876E24 /* WK_WarningImage02@3x.png in Resources */,
 				21E0B5FC212FB47400876E24 /* Login_MimaSelected@3x.png in Resources */,
+				21B65A102134F6E300C1F2BA /* fourSimple_Warning@2x.png in Resources */,
 				21E0B45C212C00DF00876E24 /* WX_UserImage@2x.png in Resources */,
 				21E0B5F9212FB47400876E24 /* Login_MimaDefault@2x.png in Resources */,
 				21E0B5F8212FB47400876E24 /* Login_LogBtnBack@3x.png in Resources */,
@@ -1795,6 +1810,7 @@
 				21E0B5D6212EB6F200876E24 /* Nav_leftImage@2x.png in Resources */,
 				21E0B456212C00DF00876E24 /* WK_deleteBtn@2x.png in Resources */,
 				21E0B454212C00DF00876E24 /* 7.jpeg in Resources */,
+				21B65A152134F6EF00C1F2BA /* threeSimple_Warning@3x.png in Resources */,
 				2169FA8421056F33005D6F2B /* Main.storyboard in Resources */,
 				21E0B45B212C00DF00876E24 /* WK_matchingBtn@3x.png in Resources */,
 				214A05E7211C3F8A00F820BD /* MJRefresh.bundle in Resources */,

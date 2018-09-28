@@ -65,7 +65,7 @@
     _LoadTitleLab.text = @"稍等，当地玩家正在加速赶来……";
     _ContentLab.text = @"只有当地玩咖才能带您领略最本土风情";
     [_btn setTitle:@"取消匹配" forState:UIControlStateNormal];
-    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"WK_WarningImage01"]];
+    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"threeSimple_Warning"]];
     
     //添加旋转动画
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
@@ -73,7 +73,11 @@
     rotationAnimation.duration = 0.8;     //动画时长
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = 2000;//重复次数，持续不停设置HUGE_VALF
+    rotationAnimation.removedOnCompletion = NO;  //可防止home再进来动画停止，不用的时候要删除，防止内存泄漏
     [_LoadImaView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+}
+- (void)dealloc{
+    [_LoadImaView.layer removeAnimationForKey:@"rotationAnimation"];
 }
 #pragma mark - 懒加载
 - (UIImageView *)LoadImaView{

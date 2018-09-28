@@ -85,7 +85,7 @@
     _ContentLab.text = @"10秒未操作，将自动返回……";
     [_btn setTitle:@"重新匹配" forState:UIControlStateNormal];
     [_ReturnBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"WK_WarningImage02"]];
+    [_LoadImaView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"fourSimple_Warning"]];
     
     [_btn addTarget:self action:@selector(gainMatchingObjectWK) forControlEvents:UIControlEventTouchDown];
     [_ReturnBtn addTarget:self action:@selector(returnPosterViews) forControlEvents:UIControlEventTouchDown];
