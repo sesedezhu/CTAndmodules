@@ -8,6 +8,7 @@
 
 #import "CellModeuls.h"
 #import "oneModelCell.h"
+#import "twoModelCell.h"
 @interface CellModeuls ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic ,strong) UITableView *TableView;
 @end
@@ -35,6 +36,9 @@
 }
 //每组cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return CONVER_VALUE(93);
+    }
     return CONVER_VALUE(61);
 }
 //设置组数
@@ -43,37 +47,45 @@
 }
 //设置每组有多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *str = @"oneModelCell";
-    oneModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-    if (!cell) {
-        cell = [[oneModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+    if (indexPath.row == 0) {
+        static NSString *str = @"twoModelCell";
+        twoModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        if (!cell) {
+            cell = [[twoModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        }
+        return cell;
+    }else{
+        static NSString *str = @"oneModelCell";
+        oneModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        if (!cell) {
+            cell = [[oneModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+        }
+        switch (indexPath.row) {
+            case 1:
+                cell.Lab_left.text = @"昵称";
+                [cell.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];
+                [cell loadCellHiddenStyle:NO];
+                break;
+            case 2:
+                cell.Lab_left.text = @"手机号";
+                [cell.Btn_right setTitle:@"18789281990" forState:UIControlStateNormal];
+                [cell loadCellHiddenStyle:YES];
+                break;
+            case 3:
+                cell.Lab_left.text = @"个人资料";
+                [cell.Btn_right setTitle:nil forState:UIControlStateNormal];
+                [cell loadCellHiddenStyle:NO];
+                break;
+                
+            default:
+                break;
+        }
+        return cell;
     }
-    switch (indexPath.row) {
-        case 0:
-            cell.Lab_left.text = @"昵称";
-            [cell.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];
-            [cell loadCellHiddenStyle:NO];
-            break;
-        case 1:
-            cell.Lab_left.text = @"手机号";
-            [cell.Btn_right setTitle:@"18789281990" forState:UIControlStateNormal];
-            [cell loadCellHiddenStyle:YES];
-            break;
-        case 2:
-            cell.Lab_left.text = @"个人资料";
-            [cell.Btn_right setTitle:nil forState:UIControlStateNormal];
-            [cell loadCellHiddenStyle:NO];
-            break;
-            
-        default:
-            break;
-    }
-    
-    return cell;
 }
 //获取选择单元格的事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -84,7 +96,7 @@
 //设置cell中分割线的位置
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    cell.separatorInset = UIEdgeInsetsMake(0, CONVER_VALUE(23), 0, CONVER_VALUE(30));
+    //    cell.separatorInset = UIEdgeInsetsMake(0, CONVER_VALUE(23), 0, CONVER_VALUE(30));
     //UIEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right)
     //缩进50pt
 }
@@ -100,7 +112,7 @@
         _TableView.estimatedSectionFooterHeight = 0;
         //去掉cell之间默认虚线
         _TableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-       
+        
         _TableView.backgroundColor = [UIColor whiteColor];
     }
     return _TableView;

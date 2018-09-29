@@ -42,6 +42,9 @@
 		21266E40215DE290005577A8 /* twoModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E3F215DE290005577A8 /* twoModelCell.m */; };
 		21266E43215DE2A7005577A8 /* ThreeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E42215DE2A7005577A8 /* ThreeModelCell.m */; };
 		212728BF215E0A3500160B1E /* CellModeuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 212728BE215E0A3500160B1E /* CellModeuls.m */; };
+		212728C1215F037300160B1E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C0215F037300160B1E /* 2.png */; };
+		212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C2215F072C00160B1E /* portraitDefault@2x.png */; };
+		212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C3215F072C00160B1E /* portraitDefault@3x.png */; };
 		214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AB21184FA100F820BD /* CTShowsManager.m */; };
 		214A03AF21184FA200F820BD /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AC21184FA100F820BD /* CTShowView.m */; };
 		214A03B521193E9400F820BD /* CacheCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B421193E9400F820BD /* CacheCtrl.m */; };
@@ -295,6 +298,9 @@
 		21266E42215DE2A7005577A8 /* ThreeModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeModelCell.m; sourceTree = "<group>"; };
 		212728BD215E0A3500160B1E /* CellModeuls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellModeuls.h; sourceTree = "<group>"; };
 		212728BE215E0A3500160B1E /* CellModeuls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellModeuls.m; sourceTree = "<group>"; };
+		212728C0215F037300160B1E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		212728C2215F072C00160B1E /* portraitDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@2x.png"; sourceTree = "<group>"; };
+		212728C3215F072C00160B1E /* portraitDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@3x.png"; sourceTree = "<group>"; };
 		214A03AA21184FA100F820BD /* CTShowsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowsManager.h; sourceTree = "<group>"; };
 		214A03AB21184FA100F820BD /* CTShowsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowsManager.m; sourceTree = "<group>"; };
 		214A03AC21184FA100F820BD /* CTShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowView.m; sourceTree = "<group>"; };
@@ -735,6 +741,8 @@
 			children = (
 				21266E2F215DDFE3005577A8 /* imageRightCell@2x.png */,
 				21266E2E215DDFE2005577A8 /* imageRightCell@3x.png */,
+				212728C2215F072C00160B1E /* portraitDefault@2x.png */,
+				212728C3215F072C00160B1E /* portraitDefault@3x.png */,
 				21266E36215DE236005577A8 /* OneCell */,
 				21266E32215DE235005577A8 /* TwoCell */,
 				21266E34215DE236005577A8 /* ThreeCell */,
@@ -745,6 +753,7 @@
 		21266E32215DE235005577A8 /* TwoCell */ = {
 			isa = PBXGroup;
 			children = (
+				212728C0215F037300160B1E /* 2.png */,
 				21266E3E215DE290005577A8 /* twoModelCell.h */,
 				21266E3F215DE290005577A8 /* twoModelCell.m */,
 			);
@@ -1860,6 +1869,7 @@
 			files = (
 				21E0B553212E99B300876E24 /* WK_WarningImage013x.png in Resources */,
 				2169FAD321057A22005D6F2B /* theme.plist in Resources */,
+				212728C1215F037300160B1E /* 2.png in Resources */,
 				21E0B45D212C00DF00876E24 /* WX_UserImage@3x.png in Resources */,
 				21E0B455212C00DF00876E24 /* 8.jpeg in Resources */,
 				2169FA8921056F33005D6F2B /* LaunchScreen.storyboard in Resources */,
@@ -1875,6 +1885,7 @@
 				21E0B44F212C00DF00876E24 /* 2.jpeg in Resources */,
 				21E0B451212C00DF00876E24 /* 4.jpeg in Resources */,
 				21266DF9215DC505005577A8 /* FourSimpleView.png in Resources */,
+				212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */,
 				214A05CB211C3F8A00F820BD /* LICENSE in Resources */,
 				21266E05215DC505005577A8 /* ThreeSimpleView.png in Resources */,
 				21266DFB215DC505005577A8 /* OneSimple_background@3x.png in Resources */,
@@ -1908,6 +1919,7 @@
 				214A05E7211C3F8A00F820BD /* MJRefresh.bundle in Resources */,
 				21266E30215DDFE3005577A8 /* imageRightCell@3x.png in Resources */,
 				214A03EA211BEDD100F820BD /* 123.png in Resources */,
+				212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */,
 				21E0B457212C00DF00876E24 /* WK_deleteBtn@3x.png in Resources */,
 				21266E01215DC505005577A8 /* OneSimpleView.png in Resources */,
 				21266DFD215DC505005577A8 /* OneSimple_btn_background@3x.png in Resources */,

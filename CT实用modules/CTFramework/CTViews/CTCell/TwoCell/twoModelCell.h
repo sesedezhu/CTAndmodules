@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface twoModelCell : UITableViewCell
-
+@property(nonatomic ,strong) UILabel *Lab_left;
+@property(nonatomic ,strong) UIImageView *Ima_right;
+@property(nonatomic ,strong) UIView *View_line;
 @end
+/*
+ 高93 ？
+ */

@@ -84,6 +84,7 @@
     }
     [_Btn_right updateLayout];
 }
+#pragma mark - 懒加载
 - (UILabel *)Lab_left{
     if (!_Lab_left) {
         _Lab_left = [[UILabel alloc]init];
