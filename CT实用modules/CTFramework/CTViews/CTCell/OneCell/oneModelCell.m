@@ -19,8 +19,10 @@
     return self;
 }
 - (void)loadUI{
-//    self.selectionStyle = UITableViewCellSelectionStyleNone;
-//    [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    //设置此属性，点击cell不会有灰色显示
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    //设置此属性，是否显示系统右侧图标
+    //    [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     [self.contentView addSubview:self.Lab_left];
     [self.contentView addSubview:self.Btn_right];
     [self.contentView addSubview:self.Ima_right];
