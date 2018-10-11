@@ -79,9 +79,9 @@
         [mutaDic removeObjectForKey:@"linkman"];
         [mutaDic setValue:@"帅哥程66" forKey:@"linkman"];
         [PlistManager isFilePlistName:UserPlists loadData:mutaDic];
-        NSLog(@"字典不为nil");
+        NSLog(@"linkman值修改为====帅哥程66,修改成功");;
     }else{
-        NSLog(@"字典为nil");
+        NSLog(@"字典为nil，修改失败");
     }
     
 }

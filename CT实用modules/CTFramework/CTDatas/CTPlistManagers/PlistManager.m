@@ -102,7 +102,7 @@
         }
         //    4.6在Plists文件夹中添加即将生成的文件的名字
         NSString *plistPath = [createPath stringByAppendingPathComponent:name];
-        NSLog(@"即将生成的文件路径＝＝＝＝＝＝%@",plistPath);
+        NSLog(@"即将生成的文件路径＝＝＝＝＝＝%@\n",plistPath);
         return plistPath;
     }
     return nil;

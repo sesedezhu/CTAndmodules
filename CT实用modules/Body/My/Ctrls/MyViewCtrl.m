@@ -10,6 +10,7 @@
 #import "CTCollects.h"
 
 #import "CacheCtrl.h"
+#import "TextCtrl.h"
 @interface MyViewCtrl ()
 
 @end
@@ -24,7 +25,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.本地cache",@"未知类型",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"1.本地cache",@"text集合",@"未知类型",@"未知类型",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtnMy:sender];
@@ -44,7 +45,11 @@
             break;
         case 1:
         {
-            
+            //一、本地缓存集合
+            TextCtrl *cacha = [[TextCtrl alloc]init];
+            cacha.title = @"text集合";
+            [cacha setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:cacha animated:YES];
         }
             break;
             

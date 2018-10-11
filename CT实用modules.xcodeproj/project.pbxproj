@@ -224,6 +224,7 @@
 		21E0B5FC212FB47400876E24 /* Login_MimaSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5F2212FB47300876E24 /* Login_MimaSelected@3x.png */; };
 		21E0B5FD212FB47400876E24 /* Login_wx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5F3212FB47300876E24 /* Login_wx@2x.png */; };
 		21E0B5FE212FB47400876E24 /* Login_wx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5F4212FB47300876E24 /* Login_wx@3x.png */; };
+		21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF8829216F39B20052BD61 /* TextCtrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -635,6 +636,8 @@
 		21E0B5F2212FB47300876E24 /* Login_MimaSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_MimaSelected@3x.png"; sourceTree = "<group>"; };
 		21E0B5F3212FB47300876E24 /* Login_wx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_wx@2x.png"; sourceTree = "<group>"; };
 		21E0B5F4212FB47300876E24 /* Login_wx@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_wx@3x.png"; sourceTree = "<group>"; };
+		21FF8828216F39B20052BD61 /* TextCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCtrl.h; sourceTree = "<group>"; };
+		21FF8829216F39B20052BD61 /* TextCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCtrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1160,6 +1163,8 @@
 				2160625621104E7400B30B93 /* MyViewCtrl.m */,
 				214A03B321193E9400F820BD /* CacheCtrl.h */,
 				214A03B421193E9400F820BD /* CacheCtrl.m */,
+				21FF8828216F39B20052BD61 /* TextCtrl.h */,
+				21FF8829216F39B20052BD61 /* TextCtrl.m */,
 			);
 			path = Ctrls;
 			sourceTree = "<group>";
@@ -2080,6 +2085,7 @@
 				21E0B5B4212E9C8300876E24 /* YYCache.m in Sources */,
 				214A05DF211C3F8A00F820BD /* MJRefreshAutoStateFooter.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,
+				21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */,
 				214A03B921194B3B00F820BD /* PlistManager.m in Sources */,
 				214A05C5211C3F8A00F820BD /* TAAnimatedDotView.m in Sources */,
 				214A05DC211C3F8A00F820BD /* MJRefreshHeader.m in Sources */,
