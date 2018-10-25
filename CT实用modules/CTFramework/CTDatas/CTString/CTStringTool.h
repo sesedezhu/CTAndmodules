@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTString : NSObject
+@interface CTStringTool : NSObject
 /*
  *  按字典顺序获取value排列起来的字符串
  *  ps:传入的key开头必须是小写字母，不然会出错

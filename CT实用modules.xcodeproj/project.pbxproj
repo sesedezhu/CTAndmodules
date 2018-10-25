@@ -109,6 +109,9 @@
 		214A05EC211C3F8A00F820BD /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A05A0211C3F8A00F820BD /* UIView+MJExtension.m */; };
 		2160625421104E6300B30B93 /* FoundCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625321104E6300B30B93 /* FoundCtrl.m */; };
 		2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2160625621104E7400B30B93 /* MyViewCtrl.m */; };
+		2165207A218175E900A631A8 /* StringCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21652079218175E900A631A8 /* StringCtrl.m */; };
+		2165207D2181760900A631A8 /* MD5Ctrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2165207C2181760900A631A8 /* MD5Ctrl.m */; };
+		216520802181762300A631A8 /* ColorCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2165207F2181762300A631A8 /* ColorCtrl.m */; };
 		2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FA7D21056F33005D6F2B /* AppDelegate.m */; };
 		2169FA8421056F33005D6F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2169FA8221056F33005D6F2B /* Main.storyboard */; };
 		2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2169FA8521056F33005D6F2B /* Assets.xcassets */; };
@@ -209,9 +212,9 @@
 		21E0B5BD212E9C8E00876E24 /* MBProgressHUD+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5BA212E9C8E00876E24 /* MBProgressHUD+HUD.m */; };
 		21E0B5BE212E9C8E00876E24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5BC212E9C8E00876E24 /* MBProgressHUD.m */; };
 		21E0B5C2212E9E0400876E24 /* NavEveryoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C1212E9E0400876E24 /* NavEveryoneView.m */; };
-		21E0B5C9212E9F0500876E24 /* CTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C5212E9F0400876E24 /* CTString.m */; };
-		21E0B5CA212E9F0500876E24 /* LCMD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C8212E9F0500876E24 /* LCMD5Tool.m */; };
-		21E0B5CE212EA11F00876E24 /* CTFreeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5CD212EA11E00876E24 /* CTFreeText.m */; };
+		21E0B5C9212E9F0500876E24 /* CTStringTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C5212E9F0400876E24 /* CTStringTool.m */; };
+		21E0B5CA212E9F0500876E24 /* CTMD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C8212E9F0500876E24 /* CTMD5Tool.m */; };
+		21E0B5CE212EA11F00876E24 /* CTTextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5CD212EA11E00876E24 /* CTTextTool.m */; };
 		21E0B5D6212EB6F200876E24 /* Nav_leftImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5D4212EB6F100876E24 /* Nav_leftImage@2x.png */; };
 		21E0B5D7212EB6F200876E24 /* Nav_leftImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5D5212EB6F100876E24 /* Nav_leftImage@3x.png */; };
 		21E0B5F5212FB47400876E24 /* Login_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5EB212FB47300876E24 /* Login_line@2x.png */; };
@@ -448,6 +451,12 @@
 		2160625321104E6300B30B93 /* FoundCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundCtrl.m; sourceTree = "<group>"; };
 		2160625521104E7400B30B93 /* MyViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewCtrl.h; sourceTree = "<group>"; };
 		2160625621104E7400B30B93 /* MyViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewCtrl.m; sourceTree = "<group>"; };
+		21652078218175E900A631A8 /* StringCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringCtrl.h; sourceTree = "<group>"; };
+		21652079218175E900A631A8 /* StringCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringCtrl.m; sourceTree = "<group>"; };
+		2165207B2181760900A631A8 /* MD5Ctrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5Ctrl.h; sourceTree = "<group>"; };
+		2165207C2181760900A631A8 /* MD5Ctrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5Ctrl.m; sourceTree = "<group>"; };
+		2165207E2181762300A631A8 /* ColorCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorCtrl.h; sourceTree = "<group>"; };
+		2165207F2181762300A631A8 /* ColorCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorCtrl.m; sourceTree = "<group>"; };
 		2169FA7921056F33005D6F2B /* CT实用modules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CT实用modules.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2169FA7C21056F33005D6F2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2169FA7D21056F33005D6F2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -618,12 +627,12 @@
 		21E0B5BC212E9C8E00876E24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		21E0B5C0212E9E0400876E24 /* NavEveryoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavEveryoneView.h; sourceTree = "<group>"; };
 		21E0B5C1212E9E0400876E24 /* NavEveryoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavEveryoneView.m; sourceTree = "<group>"; };
-		21E0B5C4212E9F0400876E24 /* CTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTString.h; sourceTree = "<group>"; };
-		21E0B5C5212E9F0400876E24 /* CTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTString.m; sourceTree = "<group>"; };
-		21E0B5C7212E9F0500876E24 /* LCMD5Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCMD5Tool.h; sourceTree = "<group>"; };
-		21E0B5C8212E9F0500876E24 /* LCMD5Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCMD5Tool.m; sourceTree = "<group>"; };
-		21E0B5CC212EA11E00876E24 /* CTFreeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFreeText.h; sourceTree = "<group>"; };
-		21E0B5CD212EA11E00876E24 /* CTFreeText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFreeText.m; sourceTree = "<group>"; };
+		21E0B5C4212E9F0400876E24 /* CTStringTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTStringTool.h; sourceTree = "<group>"; };
+		21E0B5C5212E9F0400876E24 /* CTStringTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTStringTool.m; sourceTree = "<group>"; };
+		21E0B5C7212E9F0500876E24 /* CTMD5Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMD5Tool.h; sourceTree = "<group>"; };
+		21E0B5C8212E9F0500876E24 /* CTMD5Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMD5Tool.m; sourceTree = "<group>"; };
+		21E0B5CC212EA11E00876E24 /* CTTextTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTextTool.h; sourceTree = "<group>"; };
+		21E0B5CD212EA11E00876E24 /* CTTextTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTextTool.m; sourceTree = "<group>"; };
 		21E0B5D4212EB6F100876E24 /* Nav_leftImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_leftImage@2x.png"; sourceTree = "<group>"; };
 		21E0B5D5212EB6F100876E24 /* Nav_leftImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nav_leftImage@3x.png"; sourceTree = "<group>"; };
 		21E0B5EB212FB47300876E24 /* Login_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_line@2x.png"; sourceTree = "<group>"; };
@@ -1165,6 +1174,12 @@
 				214A03B421193E9400F820BD /* CacheCtrl.m */,
 				21FF8828216F39B20052BD61 /* TextCtrl.h */,
 				21FF8829216F39B20052BD61 /* TextCtrl.m */,
+				21652078218175E900A631A8 /* StringCtrl.h */,
+				21652079218175E900A631A8 /* StringCtrl.m */,
+				2165207B2181760900A631A8 /* MD5Ctrl.h */,
+				2165207C2181760900A631A8 /* MD5Ctrl.m */,
+				2165207E2181762300A631A8 /* ColorCtrl.h */,
+				2165207F2181762300A631A8 /* ColorCtrl.m */,
 			);
 			path = Ctrls;
 			sourceTree = "<group>";
@@ -1727,8 +1742,8 @@
 		21E0B5C3212E9F0400876E24 /* CTString */ = {
 			isa = PBXGroup;
 			children = (
-				21E0B5C4212E9F0400876E24 /* CTString.h */,
-				21E0B5C5212E9F0400876E24 /* CTString.m */,
+				21E0B5C4212E9F0400876E24 /* CTStringTool.h */,
+				21E0B5C5212E9F0400876E24 /* CTStringTool.m */,
 			);
 			path = CTString;
 			sourceTree = "<group>";
@@ -1736,8 +1751,8 @@
 		21E0B5C6212E9F0500876E24 /* LoadMD5 */ = {
 			isa = PBXGroup;
 			children = (
-				21E0B5C7212E9F0500876E24 /* LCMD5Tool.h */,
-				21E0B5C8212E9F0500876E24 /* LCMD5Tool.m */,
+				21E0B5C7212E9F0500876E24 /* CTMD5Tool.h */,
+				21E0B5C8212E9F0500876E24 /* CTMD5Tool.m */,
 			);
 			path = LoadMD5;
 			sourceTree = "<group>";
@@ -1745,8 +1760,8 @@
 		21E0B5CB212EA11E00876E24 /* CTText */ = {
 			isa = PBXGroup;
 			children = (
-				21E0B5CC212EA11E00876E24 /* CTFreeText.h */,
-				21E0B5CD212EA11E00876E24 /* CTFreeText.m */,
+				21E0B5CC212EA11E00876E24 /* CTTextTool.h */,
+				21E0B5CD212EA11E00876E24 /* CTTextTool.m */,
 			);
 			path = CTText;
 			sourceTree = "<group>";
@@ -2050,12 +2065,13 @@
 				21266E43215DE2A7005577A8 /* ThreeModelCell.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
 				214A05DE211C3F8A00F820BD /* MJRefreshAutoNormalFooter.m in Sources */,
+				2165207A218175E900A631A8 /* StringCtrl.m in Sources */,
 				214A05BC211C3F8A00F820BD /* UIImage+GIF.m in Sources */,
 				214A05D9211C3F8A00F820BD /* MJRefreshBackFooter.m in Sources */,
 				214A05D4211C3F8A00F820BD /* NSObject+MJProperty.m in Sources */,
 				214A03AF21184FA200F820BD /* CTShowView.m in Sources */,
 				214A05B9211C3F8A00F820BD /* SDWebImageManager.m in Sources */,
-				21E0B5C9212E9F0500876E24 /* CTString.m in Sources */,
+				21E0B5C9212E9F0500876E24 /* CTStringTool.m in Sources */,
 				214A05AA211C3F8A00F820BD /* IQBarButtonItem.m in Sources */,
 				214A05CD211C3F8A00F820BD /* MJFoundation.m in Sources */,
 				214A05CF211C3F8A00F820BD /* MJPropertyKey.m in Sources */,
@@ -2076,12 +2092,13 @@
 				214A05C1211C3F8A00F820BD /* UIView+WebCache.m in Sources */,
 				214A05EB211C3F8A00F820BD /* UIScrollView+MJRefresh.m in Sources */,
 				214A05A2211C3F8A00F820BD /* IQUIScrollView+Additions.m in Sources */,
-				21E0B5CE212EA11F00876E24 /* CTFreeText.m in Sources */,
+				21E0B5CE212EA11F00876E24 /* CTTextTool.m in Sources */,
 				21266E1C215DC5F1005577A8 /* LogBottomView.m in Sources */,
 				21BB2771216B515600B156A1 /* OneSimpleView.m in Sources */,
 				214A05C2211C3F8A00F820BD /* UIView+WebCacheOperation.m in Sources */,
 				214A05E1211C3F8A00F820BD /* MJRefreshBackNormalFooter.m in Sources */,
 				21BB2766216B515600B156A1 /* CollectionModeul.m in Sources */,
+				2165207D2181760900A631A8 /* MD5Ctrl.m in Sources */,
 				21E0B5B4212E9C8300876E24 /* YYCache.m in Sources */,
 				214A05DF211C3F8A00F820BD /* MJRefreshAutoStateFooter.m in Sources */,
 				2169FA8C21056F33005D6F2B /* main.m in Sources */,
@@ -2100,9 +2117,10 @@
 				2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */,
 				21BB2777216B515600B156A1 /* TwoSimpleView.m in Sources */,
 				217B7A9D2111B52900157434 /* CTCollects.m in Sources */,
+				216520802181762300A631A8 /* ColorCtrl.m in Sources */,
 				214A05BB211C3F8A00F820BD /* UIButton+WebCache.m in Sources */,
 				21E0B5B7212E9C8300876E24 /* YYMemoryCache.m in Sources */,
-				21E0B5CA212E9F0500876E24 /* LCMD5Tool.m in Sources */,
+				21E0B5CA212E9F0500876E24 /* CTMD5Tool.m in Sources */,
 				21E0B5AA212E9C8300876E24 /* UIProgressView+AFNetworking.m in Sources */,
 				21E0B5A7212E9C8300876E24 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				21266E3D215DE236005577A8 /* oneModelCell.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CTFreeText : NSObject
+@interface CTTextTool : NSObject
 /*
  根据文字获取宽度
  * @height 高度

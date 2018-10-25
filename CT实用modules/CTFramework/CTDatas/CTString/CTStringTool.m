@@ -6,9 +6,9 @@
 //  Copyright © 2017年 涛程. All rights reserved.
 //
 
-#import "CTString.h"
+#import "CTStringTool.h"
 
-@implementation CTString
+@implementation CTStringTool
 + (NSString*)stringWithDict:(NSDictionary*)dict{
     
     NSArray*keys = [dict allKeys];

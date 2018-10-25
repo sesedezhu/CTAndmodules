@@ -118,7 +118,7 @@
     }
 }
 - (void)ClickBottenState{
-    _Text_Mobile.text = [CTFreeText CTRemoveStrEmpty:_Text_Mobile.text];
+    _Text_Mobile.text = [CTTextTool CTRemoveStrEmpty:_Text_Mobile.text];
     if (!(_Text_Mobile.text.length == 11)){
         [MBProgressHUD showHUDMsg:@"手机号码格式输入错误"];
         //        [_mobileBakView WarningAndHidden:NO]; //显示错误提示语

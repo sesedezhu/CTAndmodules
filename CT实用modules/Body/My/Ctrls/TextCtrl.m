@@ -37,33 +37,33 @@
     switch (sender.tag-1) {
         case 0:
         {
-            _selecLab.text =[NSString stringWithFormat:@"文字宽度 == %f",[CTFreeText CTFreeWithWidth:CONVER_VALUE(50) font:CONVER_VALUE(19) str:_textView.text]];
+            _selecLab.text =[NSString stringWithFormat:@"文字宽度 == %f",[CTTextTool CTFreeWithWidth:CONVER_VALUE(50) font:CONVER_VALUE(19) str:_textView.text]];
         }
             break;
         case 1:
         {
-            _selecLab.text =[NSString stringWithFormat:@"文字高度 == %f",[CTFreeText getContactHeight:CONVER_VALUE(275) font:CONVER_VALUE(19) str:_textView.text]];//不够精细
+            _selecLab.text =[NSString stringWithFormat:@"文字高度 == %f",[CTTextTool getContactHeight:CONVER_VALUE(275) font:CONVER_VALUE(19) str:_textView.text]];//不够精细
         }
             break;
         case 2:
         {
-            _selecLab.attributedText = [CTFreeText CTFreeRangeAndMakeRangeStart:0 MakeRangeEnd:1 font:CONVER_VALUE(12) str:_textView.text];
+            _selecLab.attributedText = [CTTextTool CTFreeRangeAndMakeRangeStart:0 MakeRangeEnd:1 font:CONVER_VALUE(12) str:_textView.text];
         }
             break;
         case 3:
         {
             _selecLab.text = _textView.text;
-            [CTFreeText fuwenbenLabel:_selecLab FontNumber:CONVER_VALUE(19) AndRange:NSMakeRange(0, 1) AndColor:[UIColor redColor]];
+            [CTTextTool fuwenbenLabel:_selecLab FontNumber:CONVER_VALUE(19) AndRange:NSMakeRange(0, 1) AndColor:[UIColor redColor]];
         }
             break;
         case 4:
         {
-            _selecLab.text =[NSString stringWithFormat:@"%@",[CTFreeText deptNumInputShouldNumber:_textView.text]?@"是全数字":@"不是全数字"];
+            _selecLab.text =[NSString stringWithFormat:@"%@",[CTTextTool deptNumInputShouldNumber:_textView.text]?@"是全数字":@"不是全数字"];
         }
             break;
         case 5:
         {
-            _selecLab.text = [CTFreeText CTRemoveStrEmpty:_textView.text];
+            _selecLab.text = [CTTextTool CTRemoveStrEmpty:_textView.text];
         }
             break;
         default:

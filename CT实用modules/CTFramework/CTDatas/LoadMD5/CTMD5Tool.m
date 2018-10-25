@@ -6,9 +6,9 @@
 //  Copyright © 2017年 涛程. All rights reserved.
 //
 
-#import "LCMD5Tool.h"
+#import "CTMD5Tool.h"
 #import <CommonCrypto/CommonCrypto.h>
-@implementation LCMD5Tool
+@implementation CTMD5Tool
 #pragma mark - 32位 小写
 +(NSString *)MD5ForLower32Bate:(NSString *)str{
     

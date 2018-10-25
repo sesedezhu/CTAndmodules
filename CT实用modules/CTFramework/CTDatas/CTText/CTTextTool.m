@@ -6,9 +6,9 @@
 //  Copyright © 2017年 涛程. All rights reserved.
 //
 
-#import "CTFreeText.h"
+#import "CTTextTool.h"
 
-@implementation CTFreeText
+@implementation CTTextTool
 //根据文字获取宽度
 + (CGFloat)CTFreeWithWidth:(CGFloat)height font:(CGFloat)font str:(NSString *)string{
     UIFont * fonts = [UIFont systemFontOfSize:font];

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LCMD5Tool : NSObject
+@interface CTMD5Tool : NSObject
 /**
  *  MD5加密, 32位 小写
  *

@@ -219,7 +219,7 @@
             return;
         }
     }else{//账号密码登陆
-        _accountBakView.Text_ZhangHao.text = [CTFreeText CTRemoveStrEmpty:_accountBakView.Text_ZhangHao.text];
+        _accountBakView.Text_ZhangHao.text = [CTTextTool CTRemoveStrEmpty:_accountBakView.Text_ZhangHao.text];
         if ((_accountBakView.Text_ZhangHao.text.length == 0)) {
             [MBProgressHUD showHUDMsg:@"账号不能为空"];
             return;
@@ -268,7 +268,7 @@
         [self.navigationController pushViewController:_GuanLian animated:YES];
       
     }else{
-        BOOL mobilebool = [CTFreeText deptNumInputShouldNumber:mobile];//判断手机号是否为全数字
+        BOOL mobilebool = [CTTextTool deptNumInputShouldNumber:mobile];//判断手机号是否为全数字
         if (mobilebool) {//纯数字
             NSLog(@"成功，返回上一页");
             [self.navigationController popViewControllerAnimated:YES];
