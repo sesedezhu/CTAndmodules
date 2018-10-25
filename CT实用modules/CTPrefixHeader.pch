@@ -22,7 +22,7 @@
 #import "UIImageView+WebCache.h"               //图片处理类
 #import "MBProgressHUD+HUD.h"                  //风火轮
 #import "LAndRRequest.h"                       //网络请求
-#import "CTStringTool.h"                           //sing拼接需要
+#import "CTStringTool.h"                       //sing拼接需要
 #import "CTMD5Tool.h"                          //md5生成方法
 #import "CTTextTool.h"
 
