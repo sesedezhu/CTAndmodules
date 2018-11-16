@@ -10,7 +10,8 @@
 #import "PPNetworkHelper.h"
 
 
-#define RequestPrefix @"http://hub.naliwan.com" //正式线
+//#define RequestPrefix @"http://hub.naliwan.com" //正式线
+#define RequestPrefix @"https://lottery.hndnews.com/api/index" //画规正式线
 @implementation LAndRRequest
 
 
@@ -162,17 +163,17 @@
     
 }
 ////获取当前时间的时间戳
-//- (NSString*)getCurrentTimestamp{
-//
-//    NSDate* data= [NSDate dateWithTimeIntervalSinceNow:0];
-//
-//    NSTimeInterval interval=[data timeIntervalSince1970];
-//
-//    NSString *timeString = [NSString stringWithFormat:@"%0.f", interval];//转为字符型
-//
-//    return timeString;
-//
-//}
+- (NSString*)getCurrentTimestamp{
+
+    NSDate* data= [NSDate dateWithTimeIntervalSinceNow:0];
+
+    NSTimeInterval interval=[data timeIntervalSince1970];
+
+    NSString *timeString = [NSString stringWithFormat:@"%0.f", interval];//转为字符型
+
+    return timeString;
+
+}
 
 //取消所有网络请求
 - (void)CancelRequests{

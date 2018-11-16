@@ -11,7 +11,7 @@
 #import "NetworkErrorTwo.h"
 #import "NetworkErrorThree.h"
 #import "PanDuanHeaderView.h"
-
+#import "AFNetworking/AFNetworking.h"
 
 @class LAndRRequest;
 
@@ -48,7 +48,7 @@
 
 - (void)startPostConnectionWithPath:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne;
 ////获取时间耀
-//- (NSString*)getCurrentTimestamp;
+- (NSString*)getCurrentTimestamp;
 //取消所有网络请求
 - (void)CancelRequests;
 //获取网络缓存的总大小 bytes(字节)
