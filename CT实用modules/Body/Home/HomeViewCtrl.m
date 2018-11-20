@@ -8,7 +8,7 @@
 
 #import "HomeViewCtrl.h"
 #import "CTCollects.h"
-#import "CTShowsManager.h"
+#import "ShowsCtrls.h"
 #import "OneSimpleView.h"
 #import "TwoSimpleView.h"
 #import "LoginCtrls.h"
@@ -41,10 +41,11 @@
     switch (sender.tag-1) {
         case 0:
         {
-            //一、CTShows 自定义弹窗
-            UIView *view = [[UIView alloc]init];
-            view.backgroundColor = [UIColor orangeColor];
-            [CTShowsManager CTloadInitContViewTop:kScreenHeight/2-50 Left:kScreenWidth/2-50 Width:100 Height:100 addView:view animationTepy:NLWDefault transparency:YES interaction:YES time:1.0];
+//            一、CTShows 自定义弹窗
+            ShowsCtrls *login = [[ShowsCtrls alloc]init];
+            [login setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:login animated:YES];
+            
         }
             break;
         case 1:

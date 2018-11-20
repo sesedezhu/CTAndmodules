@@ -157,6 +157,7 @@
     hud.label.font = [UIFont systemFontOfSize:13];
     //关闭交互可以点击去风火轮外的区域
     hud.userInteractionEnabled = YES;
+    [hud hideAnimated:YES afterDelay:DelayTime];//设置几秒后消失
 }
 /** 自定义加载动画 + 文字 多图**///后面的imageName字符串要改为数组，后面用了再整理吧
 +(void)showCustomTwoGifHUD:(NSString *)msg imageArray:(NSArray *)imageArray{
@@ -166,24 +167,25 @@
     //    hud.contentColor = [UIColor redColor];
     hud.mode = MBProgressHUDModeCustomView;
     
-    hud.userInteractionEnabled = NO;
     //自定义动画
-    UIImageView *gifImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_refresh_01"]];
+    UIImageView *gifImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageArray[0]]];
     NSMutableArray *arrM = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 3; i ++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"icon_refresh_0%d", i + 2]];
+    for (int i = 0; i < imageArray.count; i ++) {
+        UIImage *image = [UIImage imageNamed:imageArray[i]];
         [arrM addObject:image];
     }
     [gifImageView setAnimationImages:arrM];
     [gifImageView setAnimationDuration:0.3];
     [gifImageView setAnimationRepeatCount:0];
     [gifImageView startAnimating];
-    
+
     hud.customView = gifImageView;
     hud.square = YES;
     hud.label.text = msg;
     //关闭交互可以点击去风火轮外的区域
     hud.userInteractionEnabled = NO;
+//    hud.bezelView.backgroundColor = [UIColor  colorWithRed:71/255.00 green:71/255.00 blue:73/255.00 alpha:0.7f]; 背景颜色
+    [hud hideAnimated:YES afterDelay:DelayTime];//设置几秒后消失
 }
 //隐藏HUD
 +(void)hideHUD{

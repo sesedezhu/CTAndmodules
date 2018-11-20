@@ -199,6 +199,12 @@
 		21BB2796216B515600B156A1 /* SmallViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2764216B515600B156A1 /* SmallViewCell.m */; };
 		21BB2799216B523700B156A1 /* TableViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2798216B523700B156A1 /* TableViews.m */; };
 		21BB279D216B541800B156A1 /* TableOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB279C216B541800B156A1 /* TableOne.m */; };
+		21DBBB3021A3FFC400548699 /* ShowsCtrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */; };
+		21DBBB5C21A40EFB00548699 /* HUBGIF004@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5721A40EFB00548699 /* HUBGIF004@2x.tiff */; };
+		21DBBB5D21A40EFB00548699 /* HUBGIF002@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5821A40EFB00548699 /* HUBGIF002@2x.tiff */; };
+		21DBBB5E21A40EFB00548699 /* HUBGIF005@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5921A40EFB00548699 /* HUBGIF005@2x.tiff */; };
+		21DBBB5F21A40EFB00548699 /* HUBGIF001@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5A21A40EFB00548699 /* HUBGIF001@2x.tiff */; };
+		21DBBB6021A40EFB00548699 /* HUBGIF003@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5B21A40EFB00548699 /* HUBGIF003@2x.tiff */; };
 		21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B564212E9C8200876E24 /* AFHTTPSessionManager.m */; };
 		21E0B59F212E9C8300876E24 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B567212E9C8200876E24 /* AFNetworkReachabilityManager.m */; };
 		21E0B5A0212E9C8300876E24 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B569212E9C8200876E24 /* AFSecurityPolicy.m */; };
@@ -609,6 +615,13 @@
 		21BB2798216B523700B156A1 /* TableViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViews.m; sourceTree = "<group>"; };
 		21BB279B216B541800B156A1 /* TableOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableOne.h; sourceTree = "<group>"; };
 		21BB279C216B541800B156A1 /* TableOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableOne.m; sourceTree = "<group>"; };
+		21DBBB2921A3FFC300548699 /* ShowsCtrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsCtrls.h; sourceTree = "<group>"; };
+		21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsCtrls.m; sourceTree = "<group>"; };
+		21DBBB5721A40EFB00548699 /* HUBGIF004@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF004@2x.tiff"; sourceTree = "<group>"; };
+		21DBBB5821A40EFB00548699 /* HUBGIF002@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF002@2x.tiff"; sourceTree = "<group>"; };
+		21DBBB5921A40EFB00548699 /* HUBGIF005@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF005@2x.tiff"; sourceTree = "<group>"; };
+		21DBBB5A21A40EFB00548699 /* HUBGIF001@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF001@2x.tiff"; sourceTree = "<group>"; };
+		21DBBB5B21A40EFB00548699 /* HUBGIF003@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF003@2x.tiff"; sourceTree = "<group>"; };
 		21E0B563212E9C8200876E24 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		21E0B564212E9C8200876E24 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		21E0B565212E9C8200876E24 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -1193,6 +1206,7 @@
 		2160624521104C6600B30B93 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				21DBBB2321A3FFC300548699 /* ShowsCtrls */,
 				21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */,
 				21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */,
 				21E0B4ED212E411500876E24 /* LoginModule */,
@@ -1670,6 +1684,20 @@
 			path = TableModeullOne;
 			sourceTree = "<group>";
 		};
+		21DBBB2321A3FFC300548699 /* ShowsCtrls */ = {
+			isa = PBXGroup;
+			children = (
+				21DBBB5A21A40EFB00548699 /* HUBGIF001@2x.tiff */,
+				21DBBB5821A40EFB00548699 /* HUBGIF002@2x.tiff */,
+				21DBBB5B21A40EFB00548699 /* HUBGIF003@2x.tiff */,
+				21DBBB5721A40EFB00548699 /* HUBGIF004@2x.tiff */,
+				21DBBB5921A40EFB00548699 /* HUBGIF005@2x.tiff */,
+				21DBBB2921A3FFC300548699 /* ShowsCtrls.h */,
+				21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */,
+			);
+			path = ShowsCtrls;
+			sourceTree = "<group>";
+		};
 		21E0B4ED212E411500876E24 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -2028,8 +2056,10 @@
 				21BB276F216B515600B156A1 /* OneSimple_title@2x.png in Resources */,
 				214A05AF211C3F8A00F820BD /* IQKeyboardManager.bundle in Resources */,
 				21BB278E216B515600B156A1 /* WK_WarningImage02@3x.png in Resources */,
+				21DBBB5D21A40EFB00548699 /* HUBGIF002@2x.tiff in Resources */,
 				21BB2774216B515600B156A1 /* threeSimple_Warning@3x.png in Resources */,
 				21BB2789216B515600B156A1 /* WK_matchingBtn@2x.png in Resources */,
+				21DBBB6021A40EFB00548699 /* HUBGIF003@2x.tiff in Resources */,
 				21BB2788216B515600B156A1 /* WK_ellipsisBack@3x.png in Resources */,
 				21BB278A216B515600B156A1 /* WK_matchingBtn@3x.png in Resources */,
 				21BB278B216B515600B156A1 /* WK_WarningImage013x.png in Resources */,
@@ -2042,6 +2072,7 @@
 				214A05CB211C3F8A00F820BD /* LICENSE in Resources */,
 				21BB276D216B515600B156A1 /* OneSimple_btn_background@2x.png in Resources */,
 				21266E3C215DE236005577A8 /* 1.png in Resources */,
+				21DBBB5F21A40EFB00548699 /* HUBGIF001@2x.tiff in Resources */,
 				21BB278D216B515600B156A1 /* WK_WarningImage02@2x.png in Resources */,
 				21BB278C216B515600B156A1 /* WK_WarningImage01@2x.png in Resources */,
 				21E0B5FE212FB47400876E24 /* Login_wx@3x.png in Resources */,
@@ -2068,6 +2099,7 @@
 				2169FA8421056F33005D6F2B /* Main.storyboard in Resources */,
 				21BB2768216B515600B156A1 /* fourSimple_Warning@3x.png in Resources */,
 				21BB2783216B515600B156A1 /* 7.jpeg in Resources */,
+				21DBBB5C21A40EFB00548699 /* HUBGIF004@2x.tiff in Resources */,
 				21BB278F216B515600B156A1 /* WX_UserImage@2x.png in Resources */,
 				21BB2776216B515600B156A1 /* ThreeSimpleView.png in Resources */,
 				214A05E7211C3F8A00F820BD /* MJRefresh.bundle in Resources */,
@@ -2077,6 +2109,7 @@
 				214A03EA211BEDD100F820BD /* 123.png in Resources */,
 				21BB2770216B515600B156A1 /* OneSimple_title@3x.png in Resources */,
 				21BB2785216B515600B156A1 /* WK_deleteBtn@2x.png in Resources */,
+				21DBBB5E21A40EFB00548699 /* HUBGIF005@2x.tiff in Resources */,
 				212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */,
 				21BB2782216B515600B156A1 /* 6.jpeg in Resources */,
 				21E0B5F6212FB47400876E24 /* Login_line@3x.png in Resources */,
@@ -2248,6 +2281,7 @@
 				21E0B5AA212E9C8300876E24 /* UIProgressView+AFNetworking.m in Sources */,
 				21E0B5A7212E9C8300876E24 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				21266E3D215DE236005577A8 /* oneModelCell.m in Sources */,
+				21DBBB3021A3FFC400548699 /* ShowsCtrls.m in Sources */,
 				214A05B1211C3F8A00F820BD /* NSData+ImageContentType.m in Sources */,
 				21A8DF1E219EAA5B000ACCA9 /* HGViewController.m in Sources */,
 				214A05C4211C3F8A00F820BD /* TAAbstractDotView.m in Sources */,
