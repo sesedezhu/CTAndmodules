@@ -46,8 +46,8 @@
             break;
         case 1://多图切换
         {
-            NSArray *arr = [NSArray arrayWithObjects:@"HUBGIF001@2x.tiff",@"HUBGIF002@2x.tiff",@"HUBGIF003@2x.tiff",@"HUBGIF004@2x.tiff",@"HUBGIF005@2x.tiff" ,nil];
-            [MBProgressHUD showCustomTwoGifHUD:@"来打我啊！" imageArray:arr];
+            NSArray *arr = [NSArray arrayWithObjects:@"showOne001",@"showOne002",@"showOne003",@"showOne004",@"showOne005",@"showOne006",@"showOne007",@"showOne008",@"showOne009" ,nil];
+            [MBProgressHUD showCustomTwoGifHUD:@"正在生成订单……" imageArray:arr];
         }
             break;
         case 2://单图旋转

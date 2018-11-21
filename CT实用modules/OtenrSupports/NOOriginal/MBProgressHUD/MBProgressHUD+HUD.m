@@ -175,7 +175,7 @@
         [arrM addObject:image];
     }
     [gifImageView setAnimationImages:arrM];
-    [gifImageView setAnimationDuration:0.3];
+    [gifImageView setAnimationDuration:1.0];
     [gifImageView setAnimationRepeatCount:0];
     [gifImageView startAnimating];
 
@@ -184,8 +184,9 @@
     hud.label.text = msg;
     //关闭交互可以点击去风火轮外的区域
     hud.userInteractionEnabled = NO;
-//    hud.bezelView.backgroundColor = [UIColor  colorWithRed:71/255.00 green:71/255.00 blue:73/255.00 alpha:0.7f]; 背景颜色
-    [hud hideAnimated:YES afterDelay:DelayTime];//设置几秒后消失
+    hud.bezelView.backgroundColor = [UIColor  colorWithRed:71/255.00 green:71/255.00 blue:73/255.00 alpha:0.7f]; //背景颜色
+    hud.label.textColor = [UIColor whiteColor];//设置文案颜色
+//    [hud hideAnimated:YES afterDelay:DelayTime];//设置几秒后消失
 }
 //隐藏HUD
 +(void)hideHUD{
