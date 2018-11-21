@@ -46,7 +46,7 @@
             break;
         case 1://多图切换
         {
-            NSArray *arr = [NSArray arrayWithObjects:@"showOne001",@"showOne002",@"showOne003",@"showOne004",@"showOne005",@"showOne006",@"showOne007",@"showOne008",@"showOne009" ,nil];
+            NSArray *arr = [NSArray arrayWithObjects:@"showOne001",@"showOne002",@"showOne003",@"showOne004",@"showOne005",@"showOne006",@"showOne007",@"showOne008",@"showOne009",@"showOne0010",@"showOne0011",@"showOne0012",@"showOne0013",@"showOne0014",@"showOne0015",@"showOne0016" ,nil];
             [MBProgressHUD showCustomTwoGifHUD:@"正在生成订单……" imageArray:arr];
         }
             break;
