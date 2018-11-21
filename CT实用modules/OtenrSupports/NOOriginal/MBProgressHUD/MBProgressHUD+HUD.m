@@ -180,7 +180,9 @@
     [gifImageView startAnimating];
 
     hud.customView = gifImageView;
-    hud.square = YES;
+    hud.square = NO; //等宽高
+//    hud.margin = 7;//修改该值，可以修改加载框大小
+    hud.minSize = CGSizeMake(179, 114);//设置大小
     hud.label.text = msg;
     //关闭交互可以点击去风火轮外的区域
     hud.userInteractionEnabled = NO;
