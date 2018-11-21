@@ -9,6 +9,7 @@
 #import "ShowsCtrls.h"
 #import "CTCollects.h"
 #import "CTShowsManager.h"
+#import "GiFHUD.h"
 @interface ShowsCtrls ()
 
 @end
@@ -23,7 +24,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -56,7 +57,13 @@
             break;
         case 3:
         {
-            
+            [GiFHUD setGifWithImageName:@"pika.gif"];
+            //            [GiFHUD show];弹出方式一
+            [GiFHUD showWithOverlay];//弹窗方式二,全屏幕背景
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [GiFHUD dismiss];
+            });
         }
             break;
             

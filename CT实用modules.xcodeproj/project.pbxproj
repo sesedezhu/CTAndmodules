@@ -205,6 +205,8 @@
 		21DBBB5E21A40EFB00548699 /* HUBGIF005@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5921A40EFB00548699 /* HUBGIF005@2x.tiff */; };
 		21DBBB5F21A40EFB00548699 /* HUBGIF001@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5A21A40EFB00548699 /* HUBGIF001@2x.tiff */; };
 		21DBBB6021A40EFB00548699 /* HUBGIF003@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB5B21A40EFB00548699 /* HUBGIF003@2x.tiff */; };
+		21DBBB6221A4145F00548699 /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = 21DBBB6121A4145F00548699 /* pika.gif */; };
+		21DBBB6521A4148100548699 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBBB6421A4148100548699 /* GiFHUD.m */; };
 		21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B564212E9C8200876E24 /* AFHTTPSessionManager.m */; };
 		21E0B59F212E9C8300876E24 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B567212E9C8200876E24 /* AFNetworkReachabilityManager.m */; };
 		21E0B5A0212E9C8300876E24 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B569212E9C8200876E24 /* AFSecurityPolicy.m */; };
@@ -622,6 +624,9 @@
 		21DBBB5921A40EFB00548699 /* HUBGIF005@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF005@2x.tiff"; sourceTree = "<group>"; };
 		21DBBB5A21A40EFB00548699 /* HUBGIF001@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF001@2x.tiff"; sourceTree = "<group>"; };
 		21DBBB5B21A40EFB00548699 /* HUBGIF003@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF003@2x.tiff"; sourceTree = "<group>"; };
+		21DBBB6121A4145F00548699 /* pika.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika.gif; sourceTree = "<group>"; };
+		21DBBB6321A4148100548699 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
+		21DBBB6421A4148100548699 /* GiFHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiFHUD.m; sourceTree = "<group>"; };
 		21E0B563212E9C8200876E24 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		21E0B564212E9C8200876E24 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		21E0B565212E9C8200876E24 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -1687,6 +1692,7 @@
 		21DBBB2321A3FFC300548699 /* ShowsCtrls */ = {
 			isa = PBXGroup;
 			children = (
+				21DBBB6121A4145F00548699 /* pika.gif */,
 				21DBBB5A21A40EFB00548699 /* HUBGIF001@2x.tiff */,
 				21DBBB5821A40EFB00548699 /* HUBGIF002@2x.tiff */,
 				21DBBB5B21A40EFB00548699 /* HUBGIF003@2x.tiff */,
@@ -1694,6 +1700,8 @@
 				21DBBB5921A40EFB00548699 /* HUBGIF005@2x.tiff */,
 				21DBBB2921A3FFC300548699 /* ShowsCtrls.h */,
 				21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */,
+				21DBBB6321A4148100548699 /* GiFHUD.h */,
+				21DBBB6421A4148100548699 /* GiFHUD.m */,
 			);
 			path = ShowsCtrls;
 			sourceTree = "<group>";
@@ -2091,6 +2099,7 @@
 				21E0B5F7212FB47400876E24 /* Login_LogBtnBack@2x.png in Resources */,
 				21E0B5FB212FB47400876E24 /* Login_MimaSelected@2x.png in Resources */,
 				21E0B5FD212FB47400876E24 /* Login_wx@2x.png in Resources */,
+				21DBBB6221A4145F00548699 /* pika.gif in Resources */,
 				21BB2780216B515600B156A1 /* 4.jpeg in Resources */,
 				21BB2778216B515600B156A1 /* TwoSimpleView.png in Resources */,
 				21E0B5D6212EB6F200876E24 /* Nav_leftImage@2x.png in Resources */,
@@ -2295,6 +2304,7 @@
 				21E0B5AD212E9C8300876E24 /* NetworkError.m in Sources */,
 				214A05E0211C3F8A00F820BD /* MJRefreshBackGifFooter.m in Sources */,
 				21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */,
+				21DBBB6521A4148100548699 /* GiFHUD.m in Sources */,
 				21E0B5A2212E9C8300876E24 /* AFURLResponseSerialization.m in Sources */,
 				21266E26215DC638005577A8 /* TextModelTime.m in Sources */,
 				214A05E2211C3F8A00F820BD /* MJRefreshBackStateFooter.m in Sources */,
