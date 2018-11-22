@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 #import "BaseTaBarViewCtrl.h"
 #import "IQKeyboardManager.h"
+#import "GuideCtrl2.h"
+#import "LostNetView.h"
 @interface AppDelegate ()
-
+@property(nonatomic,strong)LostNetView *lostView;
 @end
 
 @implementation AppDelegate
@@ -22,13 +24,104 @@
     
     // 1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[BaseTaBarViewCtrl alloc] init];
     [self.window makeKeyAndVisible];
     
-    
+    //二、注册网络状态显示
+    [self reachabilityChanged];
     //三、注册键盘监听
     [self loadIQKey];
+    //四、加载引导页
+    [self loadAdvertising];
     return YES;
+}
+#pragma mark - 网络状态
+-(void)showLostView{
+    _lostView = [[LostNetView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight)];
+    [self.window addSubview:_lostView];
+}
+-(void)removeLostView{
+    [_lostView removeView];
+}
+- (void)reachabilityChanged{
+    
+    // 1.获得网络监控的管理者
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    
+    // 2.设置网络状态改变后的处理
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        // 当网络状态改变了, 就会调用这个block
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+                NSLog(@"未知网络");
+                if (!_lostView) {
+                    
+                }else{
+                    [self removeLostView];
+                }
+                break;
+                
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+                NSLog(@"没有网络(断网)");
+                [self showLostView];
+                
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+                NSLog(@"手机自带网络");
+                if (!_lostView) {
+                    
+                }else{
+                    [self removeLostView];
+                }
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+                NSLog(@"WIFI");
+                if (!_lostView) {
+                    
+                }else{
+                    [self removeLostView];
+                }
+                
+                break;
+        }
+    }];
+    // 3.开始监控
+    [mgr startMonitoring];
+}
+#pragma mark - 引导或广告图
+- (void)loadAdvertising{
+    //保存当前版本
+    NSString * currentAppVersion = [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleShortVersionString"];
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString * appVersion = [userDefaults objectForKey:@"appVersion"];
+    
+    
+    //判断当前版本和之前版本，如果为nil或不一样，执行启动图
+    if (appVersion == nil || ![appVersion isEqualToString:currentAppVersion]) {
+        NSLog(@"启动引导图");
+        
+        [userDefaults setValue:currentAppVersion forKey:@"appVersion"];
+        GuideCtrl2 *guide = [[GuideCtrl2 alloc] init];
+        self.window.rootViewController = guide;
+        
+    }else{
+        NSLog(@"广告页");
+        //        [userDefaults setValue:nil forKey:@"appVersion"];
+        
+        self.window.rootViewController = [[BaseTaBarViewCtrl alloc] init];
+        // 判断沙盒中是否存在广告图片，如果存在，直接显示
+        //        NSString *filePath = [AdImageTool getFilePathWithImageName:[[NSUserDefaults standardUserDefaults] valueForKey:@"adImageName"]];
+        //        NSLog(@"filePath122222313-========%@",filePath);
+        //        BOOL isExist = [AdImageTool isFileExistWithFilePath:filePath];
+        //        if (isExist) {
+        //            AdvertiseView *advertiseView = [[AdvertiseView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        //            advertiseView.filePath = filePath;
+        //            [advertiseView show];
+        //        }else{
+        //            NSLog(@"启动的时候没有检索到广告图片");
+        //        }
+    }
 }
 #pragma mark - 键盘监听
 - (void)loadIQKey{
