@@ -36,6 +36,11 @@
     
     // 关闭半透明效果,初始值将从导航栏以下开始
 //    self.navigationBar.translucent = NO;
+    
+    /*
+     跳入下一页，保留导航栏左侧图标，文字隐藏
+     */
+//    self.navigationController.navigationBar.topItem.title = @""; //保留返回图标，去掉后面的字
 }
 
 - (void)didReceiveMemoryWarning {
