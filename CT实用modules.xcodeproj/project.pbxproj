@@ -245,6 +245,7 @@
 		21E0B5FC212FB47400876E24 /* Login_MimaSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5F2212FB47300876E24 /* Login_MimaSelected@3x.png */; };
 		21E0B5FD212FB47400876E24 /* Login_wx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5F3212FB47300876E24 /* Login_wx@2x.png */; };
 		21E0B5FE212FB47400876E24 /* Login_wx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E0B5F4212FB47300876E24 /* Login_wx@3x.png */; };
+		21EE83FD21D0CF2100A03742 /* modoulView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EE83FC21D0CF2100A03742 /* modoulView001.m */; };
 		21FA81B921A54533000AFC63 /* HUBGIF001@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21FA81A321A54532000AFC63 /* HUBGIF001@2x.tiff */; };
 		21FA81BA21A54533000AFC63 /* HUBGIF002@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21FA81A421A54532000AFC63 /* HUBGIF002@2x.tiff */; };
 		21FA81BB21A54533000AFC63 /* HUBGIF003@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 21FA81A521A54532000AFC63 /* HUBGIF003@2x.tiff */; };
@@ -718,6 +719,8 @@
 		21E0B5F2212FB47300876E24 /* Login_MimaSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_MimaSelected@3x.png"; sourceTree = "<group>"; };
 		21E0B5F3212FB47300876E24 /* Login_wx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_wx@2x.png"; sourceTree = "<group>"; };
 		21E0B5F4212FB47300876E24 /* Login_wx@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_wx@3x.png"; sourceTree = "<group>"; };
+		21EE83FB21D0CF2100A03742 /* modoulView001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modoulView001.h; sourceTree = "<group>"; };
+		21EE83FC21D0CF2100A03742 /* modoulView001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = modoulView001.m; sourceTree = "<group>"; };
 		21FA81A321A54532000AFC63 /* HUBGIF001@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF001@2x.tiff"; sourceTree = "<group>"; };
 		21FA81A421A54532000AFC63 /* HUBGIF002@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF002@2x.tiff"; sourceTree = "<group>"; };
 		21FA81A521A54532000AFC63 /* HUBGIF003@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "HUBGIF003@2x.tiff"; sourceTree = "<group>"; };
@@ -1736,6 +1739,8 @@
 				21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */,
 				21DBBB6321A4148100548699 /* GiFHUD.h */,
 				21DBBB6421A4148100548699 /* GiFHUD.m */,
+				21EE83FB21D0CF2100A03742 /* modoulView001.h */,
+				21EE83FC21D0CF2100A03742 /* modoulView001.m */,
 			);
 			path = ShowsCtrls;
 			sourceTree = "<group>";
@@ -2286,6 +2291,7 @@
 				21BB2792216B515600B156A1 /* LargeViewCell.m in Sources */,
 				214A05DA211C3F8A00F820BD /* MJRefreshComponent.m in Sources */,
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
+				21EE83FD21D0CF2100A03742 /* modoulView001.m in Sources */,
 				21E0B5B1212E9C8300876E24 /* LAndRRequest.m in Sources */,
 				214A05B2211C3F8A00F820BD /* NSImage+WebCache.m in Sources */,
 				21E0B5C2212E9E0400876E24 /* NavEveryoneView.m in Sources */,

@@ -10,6 +10,7 @@
 #import "CTCollects.h"
 #import "CTShowsManager.h"
 #import "GiFHUD.h"
+#import "modoulView001.h"
 @interface ShowsCtrls ()
 
 @end
@@ -24,7 +25,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"view",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -64,6 +65,12 @@
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 [GiFHUD dismiss];
             });
+        }
+            break;
+        case 4:
+        {
+            modoulView001 *view = [[modoulView001 alloc]init];
+            [CTShowsManager CTloadInitContViewTop:CONVER_VALUE(167) Left:CONVER_VALUE(63) Width:CONVER_VALUE(250) Height:CONVER_VALUE(290) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:NO time:1.0];
         }
             break;
             
