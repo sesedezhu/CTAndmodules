@@ -58,12 +58,12 @@
             break;
         case 4:
         {
-            _selecLab.text =[NSString stringWithFormat:@"%@",[CTTextTool deptNumInputShouldNumber:_textView.text]?@"是全数字":@"不是全数字"];
+            _selecLab.text =[NSString stringWithFormat:@"%@",[CTStringTool deptNumInputShouldNumber:_textView.text]?@"是全数字":@"不是全数字"];
         }
             break;
         case 5:
         {
-            _selecLab.text = [CTTextTool CTRemoveStrEmpty:_textView.text];
+            _selecLab.text = [CTStringTool CTRemoveStrEmpty:_textView.text];
         }
             break;
         default:

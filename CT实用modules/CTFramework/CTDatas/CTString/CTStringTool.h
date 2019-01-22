@@ -19,6 +19,10 @@
  *  @param dict 传入的对象
  */
 + (NSString*)stringinitID:(id)TherID;
+//判断字符串是否为全数字 yes是是，no是不是
++ (BOOL)deptNumInputShouldNumber:(NSString *)str;
+//字符串去空处理
++ (NSString *)CTRemoveStrEmpty:(NSString *)str;
 @end
 //[CTString stringinitID:
 

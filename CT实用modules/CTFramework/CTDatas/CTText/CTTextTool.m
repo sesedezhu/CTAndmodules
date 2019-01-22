@@ -54,22 +54,5 @@
     [str addAttribute:NSForegroundColorAttributeName value:vaColor range:range];
     labell.attributedText = str;
 }
-//判断字符串是否为全数字
-+ (BOOL)deptNumInputShouldNumber:(NSString *)str
-{
-    NSString *regex = @"[0-9]*";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-    if ([pred evaluateWithObject:str]) {
-        return YES;
-    }
-    return NO;
-}
-//字符串去空处理
-+ (NSString *)CTRemoveStrEmpty:(NSString *)str{
-    
-//    str = [NSString stringWithUTF8String:str.UTF8String];
-    str = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
-    str = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
-    return str;
-}
+
 @end

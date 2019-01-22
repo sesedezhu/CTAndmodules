@@ -16,8 +16,8 @@
 
 
 //
-#import "PlistManager.h"
-#import "UIColor+Definition.h"                 //非系统颜色生成方法
+#import "PlistManager.h"                       //本地plist文件控制器
+#import "UIColor+Definition.h"                 //非系统颜色生成方法,颜色生成图片
 #import "UIView+SDAutoLayout.h"                //自动布局（不完整-不包括cell自动高）
 #import "UIImageView+WebCache.h"               //图片处理类
 #import "MBProgressHUD+HUD.h"                  //风火轮

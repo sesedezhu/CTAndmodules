@@ -39,8 +39,5 @@
  * @vaColor 颜色改变
  */
 + (void)fuwenbenLabel:(UILabel *)labell FontNumber:(CGFloat)font AndRange:(NSRange)range AndColor:(UIColor *)vaColor;
-//判断字符串是否为全数字 yes是是，no是不是
-+ (BOOL)deptNumInputShouldNumber:(NSString *)str;
-//字符串去空处理
-+ (NSString *)CTRemoveStrEmpty:(NSString *)str;
+
 @end

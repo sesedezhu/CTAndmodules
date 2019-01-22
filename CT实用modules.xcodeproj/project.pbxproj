@@ -26,8 +26,6 @@
 		212728C1215F037300160B1E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C0215F037300160B1E /* 2.png */; };
 		212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C2215F072C00160B1E /* portraitDefault@2x.png */; };
 		212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C3215F072C00160B1E /* portraitDefault@3x.png */; };
-		214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AB21184FA100F820BD /* CTShowsManager.m */; };
-		214A03AF21184FA200F820BD /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03AC21184FA100F820BD /* CTShowView.m */; };
 		214A03B521193E9400F820BD /* CacheCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B421193E9400F820BD /* CacheCtrl.m */; };
 		214A03B921194B3B00F820BD /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B821194B3A00F820BD /* PlistManager.m */; };
 		214A03EA211BEDD100F820BD /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A03E9211BEDD100F820BD /* 123.png */; };
@@ -129,7 +127,10 @@
 		2169FAD521057A22005D6F2B /* ThemeTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FACB21057A22005D6F2B /* ThemeTabBarItem.m */; };
 		2169FAD621057A22005D6F2B /* UIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FACD21057A22005D6F2B /* UIFactory.m */; };
 		2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2169FADF2105851F005D6F2B /* UIColor+Definition.m */; };
-		217B7A9D2111B52900157434 /* CTCollects.m in Sources */ = {isa = PBXBuildFile; fileRef = 217B7A9C2111B52900157434 /* CTCollects.m */; };
+		219434AC21F70AF30010B640 /* CTShowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434A621F70AF30010B640 /* CTShowsManager.m */; };
+		219434AD21F70AF30010B640 /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434A821F70AF30010B640 /* CTShowView.m */; };
+		219434AE21F70AF30010B640 /* CTCollects.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434AB21F70AF30010B640 /* CTCollects.m */; };
+		219434B221F70D110010B640 /* CTControlsManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434B121F70D110010B640 /* CTControlsManagers.m */; };
 		21A8DEF1219EA64D000ACCA9 /* HuaBanCrrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8DEF0219EA64C000ACCA9 /* HuaBanCrrl.m */; };
 		21A8DF0E219EA6EB000ACCA9 /* HBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8DEF5219EA6EB000ACCA9 /* HBViewController.m */; };
 		21A8DF0F219EA6EB000ACCA9 /* DrawPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8DEF8219EA6EB000ACCA9 /* DrawPath.m */; };
@@ -326,10 +327,6 @@
 		212728C0215F037300160B1E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		212728C2215F072C00160B1E /* portraitDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@2x.png"; sourceTree = "<group>"; };
 		212728C3215F072C00160B1E /* portraitDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@3x.png"; sourceTree = "<group>"; };
-		214A03AA21184FA100F820BD /* CTShowsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowsManager.h; sourceTree = "<group>"; };
-		214A03AB21184FA100F820BD /* CTShowsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowsManager.m; sourceTree = "<group>"; };
-		214A03AC21184FA100F820BD /* CTShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowView.m; sourceTree = "<group>"; };
-		214A03AD21184FA100F820BD /* CTShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowView.h; sourceTree = "<group>"; };
 		214A03B321193E9400F820BD /* CacheCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCtrl.h; sourceTree = "<group>"; };
 		214A03B421193E9400F820BD /* CacheCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCtrl.m; sourceTree = "<group>"; };
 		214A03B721194B3A00F820BD /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
@@ -535,8 +532,14 @@
 		2169FAD821057D21005D6F2B /* CTPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPrefixHeader.pch; sourceTree = "<group>"; };
 		2169FADE2105851F005D6F2B /* UIColor+Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Definition.h"; sourceTree = "<group>"; };
 		2169FADF2105851F005D6F2B /* UIColor+Definition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Definition.m"; sourceTree = "<group>"; };
-		217B7A9B2111B52900157434 /* CTCollects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollects.h; sourceTree = "<group>"; };
-		217B7A9C2111B52900157434 /* CTCollects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollects.m; sourceTree = "<group>"; };
+		219434A521F70AF30010B640 /* CTShowsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowsManager.h; sourceTree = "<group>"; };
+		219434A621F70AF30010B640 /* CTShowsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowsManager.m; sourceTree = "<group>"; };
+		219434A721F70AF30010B640 /* CTShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTShowView.h; sourceTree = "<group>"; };
+		219434A821F70AF30010B640 /* CTShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowView.m; sourceTree = "<group>"; };
+		219434AA21F70AF30010B640 /* CTCollects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollects.h; sourceTree = "<group>"; };
+		219434AB21F70AF30010B640 /* CTCollects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollects.m; sourceTree = "<group>"; };
+		219434B021F70D110010B640 /* CTControlsManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTControlsManagers.h; sourceTree = "<group>"; };
+		219434B121F70D110010B640 /* CTControlsManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTControlsManagers.m; sourceTree = "<group>"; };
 		21A8DEEF219EA64C000ACCA9 /* HuaBanCrrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuaBanCrrl.h; sourceTree = "<group>"; };
 		21A8DEF0219EA64C000ACCA9 /* HuaBanCrrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuaBanCrrl.m; sourceTree = "<group>"; };
 		21A8DEF4219EA6EB000ACCA9 /* HBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBViewController.h; sourceTree = "<group>"; };
@@ -828,17 +831,6 @@
 				21266E39215DE236005577A8 /* oneModelCell.m */,
 			);
 			path = OneCell;
-			sourceTree = "<group>";
-		};
-		214A03A921184F0200F820BD /* CTShows */ = {
-			isa = PBXGroup;
-			children = (
-				214A03AA21184FA100F820BD /* CTShowsManager.h */,
-				214A03AB21184FA100F820BD /* CTShowsManager.m */,
-				214A03AD21184FA100F820BD /* CTShowView.h */,
-				214A03AC21184FA100F820BD /* CTShowView.m */,
-			);
-			path = CTShows;
 			sourceTree = "<group>";
 		};
 		214A03B621194B3A00F820BD /* CTPlistManagers */ = {
@@ -1456,6 +1448,9 @@
 		2169FADB210580DD005D6F2B /* CTModules */ = {
 			isa = PBXGroup;
 			children = (
+				219434AF21F70B540010B640 /* CTControls */,
+				219434A921F70AF30010B640 /* CTCollectSimplify */,
+				219434A421F70AF30010B640 /* CTShows */,
 			);
 			path = CTModules;
 			sourceTree = "<group>";
@@ -1466,8 +1461,6 @@
 				21266E2A215DD5A3005577A8 /* CTCell */,
 				21266E20215DC62F005577A8 /* CTLogin */,
 				21E0B5BF212E9E0400876E24 /* CTNavigatCustom */,
-				214A03A921184F0200F820BD /* CTShows */,
-				217B7A9A2111B50900157434 /* CTCollectSimplify */,
 			);
 			path = CTViews;
 			sourceTree = "<group>";
@@ -1481,13 +1474,33 @@
 			path = CTColor;
 			sourceTree = "<group>";
 		};
-		217B7A9A2111B50900157434 /* CTCollectSimplify */ = {
+		219434A421F70AF30010B640 /* CTShows */ = {
 			isa = PBXGroup;
 			children = (
-				217B7A9B2111B52900157434 /* CTCollects.h */,
-				217B7A9C2111B52900157434 /* CTCollects.m */,
+				219434A521F70AF30010B640 /* CTShowsManager.h */,
+				219434A621F70AF30010B640 /* CTShowsManager.m */,
+				219434A721F70AF30010B640 /* CTShowView.h */,
+				219434A821F70AF30010B640 /* CTShowView.m */,
+			);
+			path = CTShows;
+			sourceTree = "<group>";
+		};
+		219434A921F70AF30010B640 /* CTCollectSimplify */ = {
+			isa = PBXGroup;
+			children = (
+				219434AA21F70AF30010B640 /* CTCollects.h */,
+				219434AB21F70AF30010B640 /* CTCollects.m */,
 			);
 			path = CTCollectSimplify;
+			sourceTree = "<group>";
+		};
+		219434AF21F70B540010B640 /* CTControls */ = {
+			isa = PBXGroup;
+			children = (
+				219434B021F70D110010B640 /* CTControlsManagers.h */,
+				219434B121F70D110010B640 /* CTControlsManagers.m */,
+			);
+			path = CTControls;
 			sourceTree = "<group>";
 		};
 		21A8DEF2219EA6EB000ACCA9 /* HuaGui */ = {
@@ -2269,7 +2282,6 @@
 				2169FAD621057A22005D6F2B /* UIFactory.m in Sources */,
 				21A8DEF1219EA64D000ACCA9 /* HuaBanCrrl.m in Sources */,
 				214A05C7211C3F8A00F820BD /* TAPageControl.m in Sources */,
-				214A03AE21184FA200F820BD /* CTShowsManager.m in Sources */,
 				214A05BE211C3F8A00F820BD /* UIImage+WebP.m in Sources */,
 				21A8DF16219EA6EB000ACCA9 /* ToolView.m in Sources */,
 				214A05D5211C3F8A00F820BD /* NSString+MJExtension.m in Sources */,
@@ -2346,8 +2358,8 @@
 				2165207A218175E900A631A8 /* StringCtrl.m in Sources */,
 				214A05BC211C3F8A00F820BD /* UIImage+GIF.m in Sources */,
 				214A05D9211C3F8A00F820BD /* MJRefreshBackFooter.m in Sources */,
+				219434AE21F70AF30010B640 /* CTCollects.m in Sources */,
 				214A05D4211C3F8A00F820BD /* NSObject+MJProperty.m in Sources */,
-				214A03AF21184FA200F820BD /* CTShowView.m in Sources */,
 				214A05B9211C3F8A00F820BD /* SDWebImageManager.m in Sources */,
 				21E0B5C9212E9F0500876E24 /* CTStringTool.m in Sources */,
 				214A05AA211C3F8A00F820BD /* IQBarButtonItem.m in Sources */,
@@ -2396,11 +2408,11 @@
 				2169FA7E21056F33005D6F2B /* AppDelegate.m in Sources */,
 				21FA81DB21A6425F000AFC63 /* GuideCtrl2.m in Sources */,
 				21BB2777216B515600B156A1 /* TwoSimpleView.m in Sources */,
-				217B7A9D2111B52900157434 /* CTCollects.m in Sources */,
 				216520802181762300A631A8 /* ColorCtrl.m in Sources */,
 				214A05BB211C3F8A00F820BD /* UIButton+WebCache.m in Sources */,
 				21E0B5B7212E9C8300876E24 /* YYMemoryCache.m in Sources */,
 				21E0B5CA212E9F0500876E24 /* CTMD5Tool.m in Sources */,
+				219434AC21F70AF30010B640 /* CTShowsManager.m in Sources */,
 				21E0B5AA212E9C8300876E24 /* UIProgressView+AFNetworking.m in Sources */,
 				21E0B5A7212E9C8300876E24 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				21266E3D215DE236005577A8 /* oneModelCell.m in Sources */,
@@ -2410,6 +2422,7 @@
 				214A05C4211C3F8A00F820BD /* TAAbstractDotView.m in Sources */,
 				21266E13215DC5B7005577A8 /* GLMiMaCtrl.m in Sources */,
 				214A05A9211C3F8A00F820BD /* IQTextView.m in Sources */,
+				219434B221F70D110010B640 /* CTControlsManagers.m in Sources */,
 				214A05CA211C3F8A00F820BD /* UIView+SDExtension.m in Sources */,
 				21266E25215DC638005577A8 /* TextModelView.m in Sources */,
 				21E0B5B6212E9C8300876E24 /* YYKVStorage.m in Sources */,
@@ -2427,6 +2440,7 @@
 				21A8DF0F219EA6EB000ACCA9 /* DrawPath.m in Sources */,
 				214A05A3211C3F8A00F820BD /* IQUITextFieldView+Additions.m in Sources */,
 				214A05AE211C3F8A00F820BD /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				219434AD21F70AF30010B640 /* CTShowView.m in Sources */,
 				214A05B3211C3F8A00F820BD /* SDImageCache.m in Sources */,
 				21E0B5A1212E9C8300876E24 /* AFURLRequestSerialization.m in Sources */,
 				21BB277B216B515600B156A1 /* SmallLayout.m in Sources */,
