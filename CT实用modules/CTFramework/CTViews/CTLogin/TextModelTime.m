@@ -144,7 +144,6 @@
         [_Btn_time.layer setBorderColor:allcolorAlphasCT(143, 152, 174, 1).CGColor];
         [_Btn_time.layer setBorderWidth:1];
         [_Btn_time.layer setMasksToBounds:YES];
-        
         _Btn_time.titleLabel.textAlignment = NSTextAlignmentCenter;
         
         _Btn_time.titleLabel.adjustsFontSizeToFitWidth = YES;
