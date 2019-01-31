@@ -136,12 +136,12 @@
     .heightIs(20);
     
     
-//    _leftBtn.backgroundColor = [UIColor yellowColor];
-//    _rightBtn.backgroundColor = [UIColor yellowColor];
-//    _titleView.backgroundColor =[UIColor blueColor];
-//    _title.backgroundColor = [UIColor redColor];
-//    _leftBtn.imageView.backgroundColor = [UIColor lightTextColor];
-//    _leftBtn.titleLabel.backgroundColor = [UIColor blueColor];
+    _leftBtn.backgroundColor = [UIColor yellowColor];
+    _rightBtn.backgroundColor = [UIColor yellowColor];
+    _titleView.backgroundColor =[UIColor blueColor];
+    _title.backgroundColor = [UIColor redColor];
+    _leftBtn.imageView.backgroundColor = [UIColor lightTextColor];
+    _leftBtn.titleLabel.backgroundColor = [UIColor blueColor];
 }
 #pragma mark - 赋值
 //判断底部线条是否存在

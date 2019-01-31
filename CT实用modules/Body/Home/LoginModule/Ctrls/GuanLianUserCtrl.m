@@ -97,7 +97,7 @@
 }
 //发送绑定请求
 - (void)loadNetWorkLogin{
-    
+    msgInfo = @"123456";
     if (!(_Text_Name.text.length == 11) || !(_Text_Call.text.length == 6) || ![_Text_Call.text isEqualToString:msgInfo]) {
         [MBProgressHUD showHUDMsg:@"手机号或者验证码格式错误"];
         return;
