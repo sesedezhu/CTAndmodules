@@ -12,6 +12,7 @@
 #import "OneSimpleView.h"
 #import "TwoSimpleView.h"
 #import "LoginCtrls.h"
+#import "CTLoginCtrls2.h"
 @interface HomeViewCtrl ()
 
 @end
@@ -26,7 +27,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"自定义弹窗",@"未知类型",@"登录模块",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"自定义弹窗",@"登录模型0",@"登录模块1",@"未知类型",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -50,7 +51,9 @@
             break;
         case 1:
         {
-
+            CTLoginCtrls2 *login = [[CTLoginCtrls2 alloc]init];
+            [login setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:login animated:YES];
         }
             break;
         case 2:

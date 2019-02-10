@@ -6,9 +6,9 @@
 //  Copyright © 2019年 涛程. All rights reserved.
 //
 
-#import "CTControlsManagers.h"
+#import "CTUICtrlsManagers.h"
 
-@implementation CTControlsManagers
+@implementation CTUICtrlsManagers
 /*******************  Label  *******************/
 #define CTLabTextColor       [UIColor blackColor] //默认文字黑色
 #define CTLabFont            [UIFont systemFontOfSize:CONVER_VALUE(17)] //默认系统文字大小
