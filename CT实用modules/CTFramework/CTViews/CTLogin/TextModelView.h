@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TextModelView : UIView
-@property(nonatomic ,strong) UILabel *Lab_name;
-@property(nonatomic ,strong) UITextField *Text_content;
+@property(nonatomic ,strong) UILabel *Lab_name;  //标题提示问题
+@property(nonatomic ,strong) UITextField *Text_content; //输入内入
 @end

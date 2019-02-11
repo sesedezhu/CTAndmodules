@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface oneModelCell : UITableViewCell
-@property(nonatomic ,strong) UILabel *Lab_left;
-@property(nonatomic ,strong) UIButton *Btn_right;
-@property(nonatomic ,strong) UIImageView *Ima_right;
-@property(nonatomic ,strong) UIView *View_line;
+@property(nonatomic ,strong) UILabel *Lab_left;        //cell左边文案
+@property(nonatomic ,strong) UIButton *Btn_right;      //cell右侧可点击文案
+@property(nonatomic ,strong) UIImageView *Ima_right;   //cell最右侧图标
+@property(nonatomic ,strong) UIView *View_line;        //cell底部人为线条
 
 - (void)loadCellHiddenStyle:(BOOL)Ima_right;//是否隐藏右边图片,默认不隐藏
 @end
 /*
- 高61 ？
+ 此模型cell高度61
  */
 

@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface twoModelCell : UITableViewCell
-@property(nonatomic ,strong) UILabel *Lab_left;
-@property(nonatomic ,strong) UIImageView *Ima_right;
-@property(nonatomic ,strong) UIView *View_line;
+@property(nonatomic ,strong) UILabel *Lab_left;       //cell左侧文案
+@property(nonatomic ,strong) UIImageView *Ima_right;  //cell右侧头像图标
+@property(nonatomic ,strong) UIView *View_line;       //cell自定义人为线条
 @end
 /*
- 高93 ？
+ 此模型cell高度93
  */
