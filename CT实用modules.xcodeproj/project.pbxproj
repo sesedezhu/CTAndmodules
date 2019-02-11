@@ -26,6 +26,7 @@
 		212728C1215F037300160B1E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C0215F037300160B1E /* 2.png */; };
 		212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C2215F072C00160B1E /* portraitDefault@2x.png */; };
 		212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C3215F072C00160B1E /* portraitDefault@3x.png */; };
+		21324F0B22115EE700F1E3D1 /* CTLoginCtrls2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21324F0A22115EE700F1E3D1 /* CTLoginCtrls2.m */; };
 		214A03B521193E9400F820BD /* CacheCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B421193E9400F820BD /* CacheCtrl.m */; };
 		214A03B921194B3B00F820BD /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B821194B3A00F820BD /* PlistManager.m */; };
 		214A03EA211BEDD100F820BD /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A03E9211BEDD100F820BD /* 123.png */; };
@@ -279,7 +280,6 @@
 		21FA81DA21A6425F000AFC63 /* LostNetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FA81D621A6425F000AFC63 /* LostNetView.m */; };
 		21FA81DB21A6425F000AFC63 /* GuideCtrl2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FA81D921A6425F000AFC63 /* GuideCtrl2.m */; };
 		21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF8829216F39B20052BD61 /* TextCtrl.m */; };
-		42479878220FB1B90062B7B9 /* CTLoginCtrls2.m in Sources */ = {isa = PBXBuildFile; fileRef = 42479877220FB1B90062B7B9 /* CTLoginCtrls2.m */; };
 		4247987E220FD4EC0062B7B9 /* navLetBtn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987A220FD4EB0062B7B9 /* navLetBtn2@2x.png */; };
 		4247987F220FD4EC0062B7B9 /* navLetBtn2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987B220FD4EB0062B7B9 /* navLetBtn2@3x.png */; };
 		42479880220FD4EC0062B7B9 /* loginBak2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987C220FD4EB0062B7B9 /* loginBak2@3x.png */; };
@@ -347,6 +347,8 @@
 		212728C0215F037300160B1E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		212728C2215F072C00160B1E /* portraitDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@2x.png"; sourceTree = "<group>"; };
 		212728C3215F072C00160B1E /* portraitDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@3x.png"; sourceTree = "<group>"; };
+		21324F0922115EE700F1E3D1 /* CTLoginCtrls2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoginCtrls2.h; sourceTree = "<group>"; };
+		21324F0A22115EE700F1E3D1 /* CTLoginCtrls2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLoginCtrls2.m; sourceTree = "<group>"; };
 		214A03B321193E9400F820BD /* CacheCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCtrl.h; sourceTree = "<group>"; };
 		214A03B421193E9400F820BD /* CacheCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCtrl.m; sourceTree = "<group>"; };
 		214A03B721194B3A00F820BD /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
@@ -779,8 +781,6 @@
 		21FA81D921A6425F000AFC63 /* GuideCtrl2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCtrl2.m; sourceTree = "<group>"; };
 		21FF8828216F39B20052BD61 /* TextCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCtrl.h; sourceTree = "<group>"; };
 		21FF8829216F39B20052BD61 /* TextCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCtrl.m; sourceTree = "<group>"; };
-		42479876220FB1B90062B7B9 /* CTLoginCtrls2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginCtrls2.h; sourceTree = "<group>"; };
-		42479877220FB1B90062B7B9 /* CTLoginCtrls2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLoginCtrls2.m; sourceTree = "<group>"; };
 		4247987A220FD4EB0062B7B9 /* navLetBtn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@2x.png"; sourceTree = "<group>"; };
 		4247987B220FD4EB0062B7B9 /* navLetBtn2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@3x.png"; sourceTree = "<group>"; };
 		4247987C220FD4EB0062B7B9 /* loginBak2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBak2@3x.png"; sourceTree = "<group>"; };
@@ -2107,9 +2107,9 @@
 		4247986F220FB1220062B7B9 /* LoginModule2 */ = {
 			isa = PBXGroup;
 			children = (
+				21324F0922115EE700F1E3D1 /* CTLoginCtrls2.h */,
+				21324F0A22115EE700F1E3D1 /* CTLoginCtrls2.m */,
 				42479879220FD4EB0062B7B9 /* image */,
-				42479876220FB1B90062B7B9 /* CTLoginCtrls2.h */,
-				42479877220FB1B90062B7B9 /* CTLoginCtrls2.m */,
 			);
 			path = LoginModule2;
 			sourceTree = "<group>";
@@ -2480,7 +2480,6 @@
 				21BB2799216B523700B156A1 /* TableViews.m in Sources */,
 				214A05AD211C3F8A00F820BD /* IQToolbar.m in Sources */,
 				2169FAD121057A22005D6F2B /* NSAttributedString+Additon.m in Sources */,
-				42479878220FB1B90062B7B9 /* CTLoginCtrls2.m in Sources */,
 				21BB2775216B515600B156A1 /* ThreeSimpleView.m in Sources */,
 				2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */,
 				214A05E4211C3F8A00F820BD /* MJRefreshNormalHeader.m in Sources */,
@@ -2530,6 +2529,7 @@
 				214A05B1211C3F8A00F820BD /* NSData+ImageContentType.m in Sources */,
 				21A8DF1E219EAA5B000ACCA9 /* HGViewController.m in Sources */,
 				214A05C4211C3F8A00F820BD /* TAAbstractDotView.m in Sources */,
+				21324F0B22115EE700F1E3D1 /* CTLoginCtrls2.m in Sources */,
 				21266E13215DC5B7005577A8 /* GLMiMaCtrl.m in Sources */,
 				214A05A9211C3F8A00F820BD /* IQTextView.m in Sources */,
 				219434B221F70D110010B640 /* CTUICtrlsManagers.m in Sources */,

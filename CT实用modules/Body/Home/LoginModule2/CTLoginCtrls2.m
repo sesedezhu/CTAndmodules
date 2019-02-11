@@ -9,7 +9,7 @@
 #import "CTLoginCtrls2.h"
 #import "TextModelView2.h"
 #import "TextModelTime2.h"
-@interface CTLoginCtrls2 ()
+@interface CTLoginCtrls2 ()<UITextFieldDelegate>
 @property(nonatomic ,strong) UIView *TopBakView;     //上
 @property(nonatomic ,strong) UIView *ContentBakView; //中
 @property(nonatomic ,strong) UIView *BottomBakView;  //下
@@ -25,14 +25,88 @@
 @end
 
 @implementation CTLoginCtrls2
+#pragma mark - configuration
 - (void)CTconfiguration{
     self.view.backgroundColor = [UIColor whiteColor];
 }
+#pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //加载页面
     [self loadUI];
+    //加载本类配置
     [self CTconfiguration];
+    //添加键盘代理对象
+    [self loadTextFieldDelegateObject];
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+#pragma mark - 点击事件
+- (void)loadTopNavBtnClick{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+#pragma mark - 键盘代理
+//为键盘代理添加对象
+- (void)loadTextFieldDelegateObject{
+    _ContentTextView2.Text_content.delegate = self;
+    _ContentTextTime2.Text_content.delegate = self;
+    
+    _ContentTextView2.Text_content.tag = 2;
+    _ContentTextTime2.Text_content.tag = 3;
+}
+//取消text第一响应，键盘消失
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self textresignresponders];
+}
+//取消text第一响应，键盘消失
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self textresignresponders];
+    
+    //按retun使密码响应
+    if (textField == _ContentTextView2.Text_content) {
+        [_ContentTextTime2.Text_content becomeFirstResponder];
+    }
+    return YES;
+}
+- (void)textresignresponders{
+    [_ContentTextView2.Text_content resignFirstResponder];
+    [_ContentTextTime2.Text_content resignFirstResponder];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    switch (textField.tag) {
+        case 2:
+        {
+            NSString *toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+            if ([toBeString length] > 11) {
+                [_ContentTextTime2.Text_content becomeFirstResponder];
+            }
+        }
+            break;
+            
+        case 3:
+        {
+            NSString *toBeString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+            if ([toBeString length] > 6) {
+                textField.text = [toBeString substringToIndex:6];
+                return NO;
+            }
+        }
+            break;
+        default:
+            break;
+    }
+    return YES;
+}
+#pragma mark - loadUI
 - (void)loadUI{
     [self.view addSubview:self.TopBakView];
     [self.view addSubview:self.ContentBakView];
@@ -70,8 +144,14 @@
     .bottomSpaceToView(_TopBakView, 0);
     
     _TopNavBtn.sd_layout
-    .topSpaceToView(_TopBakView, CONVER_VALUE(32))
+    .topSpaceToView(_TopBakView, (CTStopStatusRect+CTStopNavRect)/2)
     .leftSpaceToView(_TopBakView, CONVER_VALUE(15))
+    .widthIs(CONVER_VALUE(38))
+    .heightIs(CONVER_VALUE(30));
+    
+    _TopNavBtn.titleLabel.sd_layout
+    .topSpaceToView(_TopNavBtn, 0)
+    .leftSpaceToView(_TopNavBtn, 0)
     .widthIs(CONVER_VALUE(19))
     .heightIs(CONVER_VALUE(19));
     
@@ -100,6 +180,7 @@
     .heightIs(CONVER_VALUE(12));
     
 }
+#pragma mark - 懒加载
 - (UIView *)TopBakView{
     if (!_TopBakView) {
         _TopBakView = [CTUICtrlsManagers createView];
@@ -122,13 +203,14 @@
     if (!_TopNavBtn) {
         _TopNavBtn = [CTUICtrlsManagers createButtonNormalText:nil normalTextColor:nil font:nil backgroundColor:nil];
         [_TopNavBtn setImage:[UIImage imageNamed:@"navLetBtn2"] forState:UIControlStateNormal];
+        [_TopNavBtn addTarget:self action:@selector(loadTopNavBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _TopNavBtn;
 }
 - (UIImageView *)TopImaview{
     if (!_TopImaview) {
         _TopImaview = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"loginBak2"];
-        _TopImaview.backgroundColor = [UIColor yellowColor];
+//        _TopImaview.backgroundColor = [UIColor yellowColor];
     }
     return _TopImaview;
 }
