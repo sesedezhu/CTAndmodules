@@ -27,6 +27,8 @@
 		212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C2215F072C00160B1E /* portraitDefault@2x.png */; };
 		212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C3215F072C00160B1E /* portraitDefault@3x.png */; };
 		21324F0B22115EE700F1E3D1 /* CTLoginCtrls2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21324F0A22115EE700F1E3D1 /* CTLoginCtrls2.m */; };
+		21324F122211641500F1E3D1 /* loginBak2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21324F102211641500F1E3D1 /* loginBak2@2x.png */; };
+		21324F132211641500F1E3D1 /* loginBak2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21324F112211641500F1E3D1 /* loginBak2@3x.png */; };
 		214A03B521193E9400F820BD /* CacheCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B421193E9400F820BD /* CacheCtrl.m */; };
 		214A03B921194B3B00F820BD /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 214A03B821194B3A00F820BD /* PlistManager.m */; };
 		214A03EA211BEDD100F820BD /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 214A03E9211BEDD100F820BD /* 123.png */; };
@@ -282,8 +284,6 @@
 		21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF8829216F39B20052BD61 /* TextCtrl.m */; };
 		4247987E220FD4EC0062B7B9 /* navLetBtn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987A220FD4EB0062B7B9 /* navLetBtn2@2x.png */; };
 		4247987F220FD4EC0062B7B9 /* navLetBtn2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987B220FD4EB0062B7B9 /* navLetBtn2@3x.png */; };
-		42479880220FD4EC0062B7B9 /* loginBak2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987C220FD4EB0062B7B9 /* loginBak2@3x.png */; };
-		42479881220FD4EC0062B7B9 /* loginBak2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247987D220FD4EB0062B7B9 /* loginBak2@2x.png */; };
 		42479884220FD8310062B7B9 /* TextModelView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 42479883220FD8310062B7B9 /* TextModelView2.m */; };
 		42479886220FD8610062B7B9 /* TextModelView2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42479885220FD8610062B7B9 /* TextModelView2.png */; };
 		42479889220FD87B0062B7B9 /* TextModelTime2.m in Sources */ = {isa = PBXBuildFile; fileRef = 42479888220FD87B0062B7B9 /* TextModelTime2.m */; };
@@ -349,6 +349,8 @@
 		212728C3215F072C00160B1E /* portraitDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@3x.png"; sourceTree = "<group>"; };
 		21324F0922115EE700F1E3D1 /* CTLoginCtrls2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLoginCtrls2.h; sourceTree = "<group>"; };
 		21324F0A22115EE700F1E3D1 /* CTLoginCtrls2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLoginCtrls2.m; sourceTree = "<group>"; };
+		21324F102211641500F1E3D1 /* loginBak2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBak2@2x.png"; sourceTree = "<group>"; };
+		21324F112211641500F1E3D1 /* loginBak2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBak2@3x.png"; sourceTree = "<group>"; };
 		214A03B321193E9400F820BD /* CacheCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheCtrl.h; sourceTree = "<group>"; };
 		214A03B421193E9400F820BD /* CacheCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheCtrl.m; sourceTree = "<group>"; };
 		214A03B721194B3A00F820BD /* PlistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
@@ -783,8 +785,6 @@
 		21FF8829216F39B20052BD61 /* TextCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCtrl.m; sourceTree = "<group>"; };
 		4247987A220FD4EB0062B7B9 /* navLetBtn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@2x.png"; sourceTree = "<group>"; };
 		4247987B220FD4EB0062B7B9 /* navLetBtn2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@3x.png"; sourceTree = "<group>"; };
-		4247987C220FD4EB0062B7B9 /* loginBak2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBak2@3x.png"; sourceTree = "<group>"; };
-		4247987D220FD4EB0062B7B9 /* loginBak2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loginBak2@2x.png"; sourceTree = "<group>"; };
 		42479882220FD8310062B7B9 /* TextModelView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextModelView2.h; sourceTree = "<group>"; };
 		42479883220FD8310062B7B9 /* TextModelView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextModelView2.m; sourceTree = "<group>"; };
 		42479885220FD8610062B7B9 /* TextModelView2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextModelView2.png; sourceTree = "<group>"; };
@@ -2119,8 +2119,8 @@
 			children = (
 				4247987A220FD4EB0062B7B9 /* navLetBtn2@2x.png */,
 				4247987B220FD4EB0062B7B9 /* navLetBtn2@3x.png */,
-				4247987C220FD4EB0062B7B9 /* loginBak2@3x.png */,
-				4247987D220FD4EB0062B7B9 /* loginBak2@2x.png */,
+				21324F102211641500F1E3D1 /* loginBak2@2x.png */,
+				21324F112211641500F1E3D1 /* loginBak2@3x.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -2251,7 +2251,6 @@
 			files = (
 				21A8DF18219EA6EB000ACCA9 /* JP@2x.png in Resources */,
 				21BB277D216B515600B156A1 /* 1.jpeg in Resources */,
-				42479881220FD4EC0062B7B9 /* loginBak2@2x.png in Resources */,
 				2169FAD321057A22005D6F2B /* theme.plist in Resources */,
 				21BB2784216B515600B156A1 /* 8.jpeg in Resources */,
 				42479886220FD8610062B7B9 /* TextModelView2.png in Resources */,
@@ -2276,10 +2275,12 @@
 				21FA81C721A54533000AFC63 /* showOne002@2x.png in Resources */,
 				21FA81BF21A54533000AFC63 /* showOne0010@2x.png in Resources */,
 				21BB278B216B515600B156A1 /* WK_WarningImage013x.png in Resources */,
+				21324F122211641500F1E3D1 /* loginBak2@2x.png in Resources */,
 				21BB276E216B515600B156A1 /* OneSimple_btn_background@3x.png in Resources */,
 				21266E31215DDFE3005577A8 /* imageRightCell@2x.png in Resources */,
 				21FA81C521A54533000AFC63 /* showOne0016@2x.png in Resources */,
 				21BB2767216B515600B156A1 /* fourSimple_Warning@2x.png in Resources */,
+				21324F132211641500F1E3D1 /* loginBak2@3x.png in Resources */,
 				212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */,
 				21FA81B921A54533000AFC63 /* HUBGIF001@2x.tiff in Resources */,
 				21BB276C216B515600B156A1 /* OneSimple_background@3x.png in Resources */,
@@ -2330,7 +2331,6 @@
 				21BB2768216B515600B156A1 /* fourSimple_Warning@3x.png in Resources */,
 				21BB2783216B515600B156A1 /* 7.jpeg in Resources */,
 				21BB278F216B515600B156A1 /* WX_UserImage@2x.png in Resources */,
-				42479880220FD4EC0062B7B9 /* loginBak2@3x.png in Resources */,
 				21BB2776216B515600B156A1 /* ThreeSimpleView.png in Resources */,
 				21FA81C621A54533000AFC63 /* showOne001@2x.png in Resources */,
 				214A05E7211C3F8A00F820BD /* MJRefresh.bundle in Resources */,
