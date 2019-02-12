@@ -49,10 +49,6 @@
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
-#pragma mark - 点击事件
-- (void)loadTopNavBtnClick{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 #pragma mark - 键盘代理
 //为键盘代理添加对象
 - (void)loadTextFieldDelegateObject{
@@ -145,11 +141,11 @@
     
     _TopNavBtn.sd_layout
     .topSpaceToView(_TopBakView, (CTStopStatusRect+CTStopNavRect)/2)
-    .leftSpaceToView(_TopBakView, CONVER_VALUE(15))
+    .leftSpaceToView(_TopBakView, 16)
     .widthIs(CONVER_VALUE(38))
     .heightIs(CONVER_VALUE(30));
-    
-    _TopNavBtn.titleLabel.sd_layout
+
+    _TopNavBtn.imageView.sd_layout
     .topSpaceToView(_TopNavBtn, 0)
     .leftSpaceToView(_TopNavBtn, 0)
     .widthIs(CONVER_VALUE(19))
@@ -179,6 +175,13 @@
     .rightSpaceToView(_BottomBakView, 0)
     .heightIs(CONVER_VALUE(12));
     
+}
+#pragma mark - 点击事件
+- (void)loadTopNavBtnClick{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)loadTimeBtnClick{
+    [_ContentTextTime2 startTimer];
 }
 #pragma mark - 懒加载
 - (UIView *)TopBakView{
@@ -210,7 +213,6 @@
 - (UIImageView *)TopImaview{
     if (!_TopImaview) {
         _TopImaview = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"loginBak2"];
-//        _TopImaview.backgroundColor = [UIColor yellowColor];
     }
     return _TopImaview;
 }
@@ -230,6 +232,7 @@
 - (TextModelTime2 *)ContentTextTime2{
     if (!_ContentTextTime2) {
         _ContentTextTime2 = [[TextModelTime2 alloc]init];
+        [_ContentTextTime2.Btn_time addTarget:self action:@selector(loadTimeBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _ContentTextTime2;
 }
