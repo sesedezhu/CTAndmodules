@@ -20,9 +20,9 @@
 		21266E30215DDFE3005577A8 /* imageRightCell@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21266E2E215DDFE2005577A8 /* imageRightCell@3x.png */; };
 		21266E31215DDFE3005577A8 /* imageRightCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21266E2F215DDFE3005577A8 /* imageRightCell@2x.png */; };
 		21266E3C215DE236005577A8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 21266E37215DE236005577A8 /* 1.png */; };
-		21266E3D215DE236005577A8 /* oneModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E39215DE236005577A8 /* oneModelCell.m */; };
-		21266E40215DE290005577A8 /* twoModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E3F215DE290005577A8 /* twoModelCell.m */; };
-		21266E43215DE2A7005577A8 /* ThreeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E42215DE2A7005577A8 /* ThreeModelCell.m */; };
+		21266E3D215DE236005577A8 /* oneModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E39215DE236005577A8 /* oneModuleCell.m */; };
+		21266E40215DE290005577A8 /* twoModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E3F215DE290005577A8 /* twoModuleCell.m */; };
+		21266E43215DE2A7005577A8 /* ThreeModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21266E42215DE2A7005577A8 /* ThreeModuleCell.m */; };
 		212728C1215F037300160B1E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C0215F037300160B1E /* 2.png */; };
 		212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C2215F072C00160B1E /* portraitDefault@2x.png */; };
 		212728C5215F072C00160B1E /* portraitDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 212728C3215F072C00160B1E /* portraitDefault@3x.png */; };
@@ -338,12 +338,12 @@
 		21266E2E215DDFE2005577A8 /* imageRightCell@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageRightCell@3x.png"; sourceTree = "<group>"; };
 		21266E2F215DDFE3005577A8 /* imageRightCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageRightCell@2x.png"; sourceTree = "<group>"; };
 		21266E37215DE236005577A8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		21266E38215DE236005577A8 /* oneModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneModelCell.h; sourceTree = "<group>"; };
-		21266E39215DE236005577A8 /* oneModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneModelCell.m; sourceTree = "<group>"; };
-		21266E3E215DE290005577A8 /* twoModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = twoModelCell.h; sourceTree = "<group>"; };
-		21266E3F215DE290005577A8 /* twoModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twoModelCell.m; sourceTree = "<group>"; };
-		21266E41215DE2A7005577A8 /* ThreeModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeModelCell.h; sourceTree = "<group>"; };
-		21266E42215DE2A7005577A8 /* ThreeModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeModelCell.m; sourceTree = "<group>"; };
+		21266E38215DE236005577A8 /* oneModuleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneModuleCell.h; sourceTree = "<group>"; };
+		21266E39215DE236005577A8 /* oneModuleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneModuleCell.m; sourceTree = "<group>"; };
+		21266E3E215DE290005577A8 /* twoModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = twoModuleCell.h; sourceTree = "<group>"; };
+		21266E3F215DE290005577A8 /* twoModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twoModuleCell.m; sourceTree = "<group>"; };
+		21266E41215DE2A7005577A8 /* ThreeModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeModuleCell.h; sourceTree = "<group>"; };
+		21266E42215DE2A7005577A8 /* ThreeModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeModuleCell.m; sourceTree = "<group>"; };
 		212728C0215F037300160B1E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		212728C2215F072C00160B1E /* portraitDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@2x.png"; sourceTree = "<group>"; };
 		212728C3215F072C00160B1E /* portraitDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "portraitDefault@3x.png"; sourceTree = "<group>"; };
@@ -860,8 +860,8 @@
 			isa = PBXGroup;
 			children = (
 				212728C0215F037300160B1E /* 2.png */,
-				21266E3E215DE290005577A8 /* twoModelCell.h */,
-				21266E3F215DE290005577A8 /* twoModelCell.m */,
+				21266E3E215DE290005577A8 /* twoModuleCell.h */,
+				21266E3F215DE290005577A8 /* twoModuleCell.m */,
 			);
 			path = TwoCell;
 			sourceTree = "<group>";
@@ -869,8 +869,8 @@
 		21266E34215DE236005577A8 /* ThreeCell */ = {
 			isa = PBXGroup;
 			children = (
-				21266E41215DE2A7005577A8 /* ThreeModelCell.h */,
-				21266E42215DE2A7005577A8 /* ThreeModelCell.m */,
+				21266E41215DE2A7005577A8 /* ThreeModuleCell.h */,
+				21266E42215DE2A7005577A8 /* ThreeModuleCell.m */,
 			);
 			path = ThreeCell;
 			sourceTree = "<group>";
@@ -879,8 +879,8 @@
 			isa = PBXGroup;
 			children = (
 				21266E37215DE236005577A8 /* 1.png */,
-				21266E38215DE236005577A8 /* oneModelCell.h */,
-				21266E39215DE236005577A8 /* oneModelCell.m */,
+				21266E38215DE236005577A8 /* oneModuleCell.h */,
+				21266E39215DE236005577A8 /* oneModuleCell.m */,
 			);
 			path = OneCell;
 			sourceTree = "<group>";
@@ -2436,7 +2436,7 @@
 				21FA81DA21A6425F000AFC63 /* LostNetView.m in Sources */,
 				21A8DF12219EA6EB000ACCA9 /* DrawView.m in Sources */,
 				2169FAD221057A22005D6F2B /* SkinTableViewCtrl.m in Sources */,
-				21266E40215DE290005577A8 /* twoModelCell.m in Sources */,
+				21266E40215DE290005577A8 /* twoModuleCell.m in Sources */,
 				21E0B5AC212E9C8300876E24 /* UIWebView+AFNetworking.m in Sources */,
 				21BB277C216B515600B156A1 /* YTAnimation.m in Sources */,
 				214A05D3211C3F8A00F820BD /* NSObject+MJKeyValue.m in Sources */,
@@ -2461,7 +2461,7 @@
 				21E0B5B0212E9C8300876E24 /* PanDuanHeaderView.m in Sources */,
 				214A05B4211C3F8A00F820BD /* SDImageCacheConfig.m in Sources */,
 				214A05D1211C3F8A00F820BD /* NSObject+MJClass.m in Sources */,
-				21266E43215DE2A7005577A8 /* ThreeModelCell.m in Sources */,
+				21266E43215DE2A7005577A8 /* ThreeModuleCell.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
 				214A05DE211C3F8A00F820BD /* MJRefreshAutoNormalFooter.m in Sources */,
 				2165207A218175E900A631A8 /* StringCtrl.m in Sources */,
@@ -2524,7 +2524,7 @@
 				219434AC21F70AF30010B640 /* CTShowsManager.m in Sources */,
 				21E0B5AA212E9C8300876E24 /* UIProgressView+AFNetworking.m in Sources */,
 				21E0B5A7212E9C8300876E24 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				21266E3D215DE236005577A8 /* oneModelCell.m in Sources */,
+				21266E3D215DE236005577A8 /* oneModuleCell.m in Sources */,
 				21DBBB3021A3FFC400548699 /* ShowsCtrls.m in Sources */,
 				214A05B1211C3F8A00F820BD /* NSData+ImageContentType.m in Sources */,
 				21A8DF1E219EAA5B000ACCA9 /* HGViewController.m in Sources */,

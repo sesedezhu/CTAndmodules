@@ -7,8 +7,8 @@
 //
 
 #import "CellModeuls.h"
-#import "oneModelCell.h"
-#import "twoModelCell.h"
+#import "oneModuleCell.h"
+#import "twoModuleCell.h"
 @interface CellModeuls ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic ,strong) UITableView *TableView;
 @end
@@ -53,16 +53,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         static NSString *str = @"twoModelCell";
-        twoModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        twoModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
         if (!cell) {
-            cell = [[twoModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+            cell = [[twoModuleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         }
         return cell;
     }else{
         static NSString *str = @"oneModelCell";
-        oneModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        oneModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
         if (!cell) {
-            cell = [[oneModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+            cell = [[oneModuleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         }
         switch (indexPath.row) {
             case 1:

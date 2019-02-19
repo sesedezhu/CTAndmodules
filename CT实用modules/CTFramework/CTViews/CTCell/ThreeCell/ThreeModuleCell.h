@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThreeModelCell : UITableViewCell
+@interface ThreeModuleCell : UITableViewCell
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "TableOne.h"
-#import "oneModelCell.h"
-#import "twoModelCell.h"
+#import "oneModuleCell.h"
+#import "twoModuleCell.h"
 @interface TableOne ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic ,strong) UITableView *TableView;
 @property (nonatomic ,retain) NSMutableDictionary *DataDic;
@@ -100,16 +100,16 @@
 - (UITableViewCell *)randomTableView:(UITableView *)tableView cellForRowStyle:(NSString *)style{
     if ([style isEqualToString:@"0"]) {
         static NSString *str = @"twoModelCell";
-        twoModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        twoModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
         if (!cell) {
-            cell = [[twoModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+            cell = [[twoModuleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         }
         return cell;
     }else{
         static NSString *str = @"oneModelCell";
-        oneModelCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        oneModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
         if (!cell) {
-            cell = [[oneModelCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+            cell = [[oneModuleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         }
         cell.Lab_left.text = @"昵称";
         [cell.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];

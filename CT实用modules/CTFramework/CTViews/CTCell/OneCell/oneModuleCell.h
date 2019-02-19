@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface oneModelCell : UITableViewCell
+@interface oneModuleCell : UITableViewCell
 @property(nonatomic ,strong) UILabel *Lab_left;        //cell左边文案
 @property(nonatomic ,strong) UIButton *Btn_right;      //cell右侧可点击文案
 @property(nonatomic ,strong) UIImageView *Ima_right;   //cell最右侧图标
