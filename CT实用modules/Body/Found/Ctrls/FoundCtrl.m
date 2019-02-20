@@ -12,6 +12,7 @@
 #import "CollectionModeul.h"
 #import "TableViews.h"
 #import "HuaBanCrrl.h"
+#import "MyCtrl001.h"
 @interface FoundCtrl ()
 
 @end
@@ -24,7 +25,7 @@
     
     __weak typeof(self) weakSelf = self;
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"UICollectionView",@"画板模块",@"UITableView",@"未知类型",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"UICollectionView",@"画板模块",@"UITableView",@"个人中心001",@"未知类型",@"未知类型", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtnMy:sender];
@@ -53,6 +54,13 @@
             //tableview相关
             TableViews *cell = [[TableViews alloc]init];
             [cell setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:cell animated:YES];
+        }
+            break;
+        case 3:
+        {
+            //tableview相关
+            MyCtrl001 *cell = [[MyCtrl001 alloc]init];
             [self.navigationController pushViewController:cell animated:YES];
         }
             break;

@@ -210,6 +210,17 @@
 		21BB2796216B515600B156A1 /* SmallViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2764216B515600B156A1 /* SmallViewCell.m */; };
 		21BB2799216B523700B156A1 /* TableViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2798216B523700B156A1 /* TableViews.m */; };
 		21BB279D216B541800B156A1 /* TableOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB279C216B541800B156A1 /* TableOne.m */; };
+		21D132E8221D497A00C9BEEF /* MyBakImage001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E0221D497A00C9BEEF /* MyBakImage001@2x.png */; };
+		21D132E9221D497A00C9BEEF /* MyBakImage001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E1221D497A00C9BEEF /* MyBakImage001@3x.png */; };
+		21D132EA221D497A00C9BEEF /* MyHelp001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E2221D497A00C9BEEF /* MyHelp001@2x.png */; };
+		21D132EB221D497A00C9BEEF /* MyHelp001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E3221D497A00C9BEEF /* MyHelp001@3x.png */; };
+		21D132EC221D497A00C9BEEF /* MyRightIcon001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E4221D497A00C9BEEF /* MyRightIcon001@2x.png */; };
+		21D132ED221D497A00C9BEEF /* MyRightIcon001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E5221D497A00C9BEEF /* MyRightIcon001@3x.png */; };
+		21D132EE221D497A00C9BEEF /* MyUserImage001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E6221D497A00C9BEEF /* MyUserImage001@2x.png */; };
+		21D132EF221D497A00C9BEEF /* MyUserImage001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D132E7221D497A00C9BEEF /* MyUserImage001@3x.png */; };
+		21D132FA221D4E3000C9BEEF /* MyCtrl001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D132F8221D4E2F00C9BEEF /* MyCtrl001.m */; };
+		21D132FD221D4E4A00C9BEEF /* MyHeaderView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D132FC221D4E4A00C9BEEF /* MyHeaderView001.m */; };
+		21D13301221D5EBE00C9BEEF /* FourModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D13300221D5EBE00C9BEEF /* FourModuleCell.m */; };
 		21DBBB3021A3FFC400548699 /* ShowsCtrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */; };
 		21DBBB6521A4148100548699 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBBB6421A4148100548699 /* GiFHUD.m */; };
 		21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B564212E9C8200876E24 /* AFHTTPSessionManager.m */; };
@@ -670,6 +681,20 @@
 		21BB2798216B523700B156A1 /* TableViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViews.m; sourceTree = "<group>"; };
 		21BB279B216B541800B156A1 /* TableOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableOne.h; sourceTree = "<group>"; };
 		21BB279C216B541800B156A1 /* TableOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableOne.m; sourceTree = "<group>"; };
+		21D132E0221D497A00C9BEEF /* MyBakImage001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyBakImage001@2x.png"; sourceTree = "<group>"; };
+		21D132E1221D497A00C9BEEF /* MyBakImage001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyBakImage001@3x.png"; sourceTree = "<group>"; };
+		21D132E2221D497A00C9BEEF /* MyHelp001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyHelp001@2x.png"; sourceTree = "<group>"; };
+		21D132E3221D497A00C9BEEF /* MyHelp001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyHelp001@3x.png"; sourceTree = "<group>"; };
+		21D132E4221D497A00C9BEEF /* MyRightIcon001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyRightIcon001@2x.png"; sourceTree = "<group>"; };
+		21D132E5221D497A00C9BEEF /* MyRightIcon001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyRightIcon001@3x.png"; sourceTree = "<group>"; };
+		21D132E6221D497A00C9BEEF /* MyUserImage001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyUserImage001@2x.png"; sourceTree = "<group>"; };
+		21D132E7221D497A00C9BEEF /* MyUserImage001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyUserImage001@3x.png"; sourceTree = "<group>"; };
+		21D132F7221D4E2F00C9BEEF /* MyCtrl001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCtrl001.h; sourceTree = "<group>"; };
+		21D132F8221D4E2F00C9BEEF /* MyCtrl001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCtrl001.m; sourceTree = "<group>"; };
+		21D132FB221D4E4A00C9BEEF /* MyHeaderView001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHeaderView001.h; sourceTree = "<group>"; };
+		21D132FC221D4E4A00C9BEEF /* MyHeaderView001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView001.m; sourceTree = "<group>"; };
+		21D132FF221D5EBE00C9BEEF /* FourModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourModuleCell.h; sourceTree = "<group>"; };
+		21D13300221D5EBE00C9BEEF /* FourModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourModuleCell.m; sourceTree = "<group>"; };
 		21DBBB2921A3FFC300548699 /* ShowsCtrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsCtrls.h; sourceTree = "<group>"; };
 		21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsCtrls.m; sourceTree = "<group>"; };
 		21DBBB6321A4148100548699 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
@@ -852,6 +877,7 @@
 				21266E36215DE236005577A8 /* OneCell */,
 				21266E32215DE235005577A8 /* TwoCell */,
 				21266E34215DE236005577A8 /* ThreeCell */,
+				21D132FE221D5E4200C9BEEF /* FourCell */,
 			);
 			path = CTCell;
 			sourceTree = "<group>";
@@ -1259,6 +1285,7 @@
 		2160624121104C6600B30B93 /* Ctrls */ = {
 			isa = PBXGroup;
 			children = (
+				21D132DB221D3C2600C9BEEF /* MyCenterModeul */,
 				2160625221104E6300B30B93 /* FoundCtrl.h */,
 				2160625321104E6300B30B93 /* FoundCtrl.m */,
 				21BB2797216B523700B156A1 /* TableViews.h */,
@@ -1797,6 +1824,58 @@
 			path = TableModeullOne;
 			sourceTree = "<group>";
 		};
+		21D132DB221D3C2600C9BEEF /* MyCenterModeul */ = {
+			isa = PBXGroup;
+			children = (
+				21D132F6221D4E2F00C9BEEF /* Ctrls */,
+				21D132F9221D4E2F00C9BEEF /* Views */,
+				21D132DF221D497A00C9BEEF /* Images */,
+			);
+			path = MyCenterModeul;
+			sourceTree = "<group>";
+		};
+		21D132DF221D497A00C9BEEF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				21D132E0221D497A00C9BEEF /* MyBakImage001@2x.png */,
+				21D132E1221D497A00C9BEEF /* MyBakImage001@3x.png */,
+				21D132E2221D497A00C9BEEF /* MyHelp001@2x.png */,
+				21D132E3221D497A00C9BEEF /* MyHelp001@3x.png */,
+				21D132E4221D497A00C9BEEF /* MyRightIcon001@2x.png */,
+				21D132E5221D497A00C9BEEF /* MyRightIcon001@3x.png */,
+				21D132E6221D497A00C9BEEF /* MyUserImage001@2x.png */,
+				21D132E7221D497A00C9BEEF /* MyUserImage001@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		21D132F6221D4E2F00C9BEEF /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				21D132F7221D4E2F00C9BEEF /* MyCtrl001.h */,
+				21D132F8221D4E2F00C9BEEF /* MyCtrl001.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		21D132F9221D4E2F00C9BEEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21D132FB221D4E4A00C9BEEF /* MyHeaderView001.h */,
+				21D132FC221D4E4A00C9BEEF /* MyHeaderView001.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21D132FE221D5E4200C9BEEF /* FourCell */ = {
+			isa = PBXGroup;
+			children = (
+				21D132FF221D5EBE00C9BEEF /* FourModuleCell.h */,
+				21D13300221D5EBE00C9BEEF /* FourModuleCell.m */,
+			);
+			path = FourCell;
+			sourceTree = "<group>";
+		};
 		21DBBB2321A3FFC300548699 /* ShowsCtrls */ = {
 			isa = PBXGroup;
 			children = (
@@ -2250,16 +2329,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				21A8DF18219EA6EB000ACCA9 /* JP@2x.png in Resources */,
+				21D132EC221D497A00C9BEEF /* MyRightIcon001@2x.png in Resources */,
 				21BB277D216B515600B156A1 /* 1.jpeg in Resources */,
 				2169FAD321057A22005D6F2B /* theme.plist in Resources */,
 				21BB2784216B515600B156A1 /* 8.jpeg in Resources */,
 				42479886220FD8610062B7B9 /* TextModelView2.png in Resources */,
 				4247987E220FD4EC0062B7B9 /* navLetBtn2@2x.png in Resources */,
 				212728C1215F037300160B1E /* 2.png in Resources */,
+				21D132EA221D497A00C9BEEF /* MyHelp001@2x.png in Resources */,
 				2169FA8921056F33005D6F2B /* LaunchScreen.storyboard in Resources */,
 				21FA81BD21A54533000AFC63 /* HUBGIF005@2x.tiff in Resources */,
 				21BB2772216B515600B156A1 /* OneSimpleView.png in Resources */,
+				21D132EF221D497A00C9BEEF /* MyUserImage001@3x.png in Resources */,
 				21BB2787216B515600B156A1 /* WK_ellipsisBack@2x.png in Resources */,
+				21D132ED221D497A00C9BEEF /* MyRightIcon001@3x.png in Resources */,
 				21E0B5F5212FB47400876E24 /* Login_line@2x.png in Resources */,
 				21A8DF1A219EA6EB000ACCA9 /* SP@2x.png in Resources */,
 				2194397B22014C520010B640 /* TextModelTimeimage.png in Resources */,
@@ -2292,7 +2375,9 @@
 				21BB278C216B515600B156A1 /* WK_WarningImage01@2x.png in Resources */,
 				21E0B5FE212FB47400876E24 /* Login_wx@3x.png in Resources */,
 				21A8DF19219EA6EB000ACCA9 /* JP@3x.png in Resources */,
+				21D132EE221D497A00C9BEEF /* MyUserImage001@2x.png in Resources */,
 				42479894220FDA3F0062B7B9 /* yaoshi2@2x.png in Resources */,
+				21D132E9221D497A00C9BEEF /* MyBakImage001@3x.png in Resources */,
 				2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */,
 				21FA81CA21A54533000AFC63 /* showOne005@2x.png in Resources */,
 				21FA81C221A54533000AFC63 /* showOne0013@2x.png in Resources */,
@@ -2346,8 +2431,10 @@
 				21BB2785216B515600B156A1 /* WK_deleteBtn@2x.png in Resources */,
 				212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */,
 				2194397922014B7D0010B640 /* TextModelViewimage.png in Resources */,
+				21D132E8221D497A00C9BEEF /* MyBakImage001@2x.png in Resources */,
 				21FA81CB21A54533000AFC63 /* showOne006@2x.png in Resources */,
 				21BB2782216B515600B156A1 /* 6.jpeg in Resources */,
+				21D132EB221D497A00C9BEEF /* MyHelp001@3x.png in Resources */,
 				2194396F220146920010B640 /* logimage.png in Resources */,
 				4247988B220FD8890062B7B9 /* TextModelTime2.png in Resources */,
 				21E0B5F6212FB47400876E24 /* Login_line@3x.png in Resources */,
@@ -2415,6 +2502,7 @@
 				21EE83FD21D0CF2100A03742 /* modoulView001.m in Sources */,
 				21E0B5B1212E9C8300876E24 /* LAndRRequest.m in Sources */,
 				214A05B2211C3F8A00F820BD /* NSImage+WebCache.m in Sources */,
+				21D132FA221D4E3000C9BEEF /* MyCtrl001.m in Sources */,
 				21E0B5C2212E9E0400876E24 /* NavEveryoneView.m in Sources */,
 				21E0B5AE212E9C8300876E24 /* NetworkErrorThree.m in Sources */,
 				214A05B6211C3F8A00F820BD /* SDWebImageDecoder.m in Sources */,
@@ -2542,6 +2630,7 @@
 				214A05E0211C3F8A00F820BD /* MJRefreshBackGifFooter.m in Sources */,
 				21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */,
 				21DBBB6521A4148100548699 /* GiFHUD.m in Sources */,
+				21D132FD221D4E4A00C9BEEF /* MyHeaderView001.m in Sources */,
 				21E0B5A2212E9C8300876E24 /* AFURLResponseSerialization.m in Sources */,
 				21266E26215DC638005577A8 /* TextModelTime.m in Sources */,
 				214A05E2211C3F8A00F820BD /* MJRefreshBackStateFooter.m in Sources */,
@@ -2554,6 +2643,7 @@
 				214A05B3211C3F8A00F820BD /* SDImageCache.m in Sources */,
 				21E0B5A1212E9C8300876E24 /* AFURLRequestSerialization.m in Sources */,
 				21BB277B216B515600B156A1 /* SmallLayout.m in Sources */,
+				21D13301221D5EBE00C9BEEF /* FourModuleCell.m in Sources */,
 				214A05E6211C3F8A00F820BD /* MJDIYBackFooter.m in Sources */,
 				2160625421104E6300B30B93 /* FoundCtrl.m in Sources */,
 			);

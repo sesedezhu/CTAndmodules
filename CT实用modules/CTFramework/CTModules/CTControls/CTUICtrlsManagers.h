@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)CTTextFieldBorder:(UITextField *)CTField refColor:(CGColorRef)refColor;
 
 //创建UITableView默认配置
-+(UITableView *)CTTableViewBackgroundColor:(UIColor *__nullable)bgColor separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle;
++(UITableView *)CTTableViewBackgroundColor:(UIColor *)bgColor separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle style:(UITableViewStyle)style Frame:(CGRect)frame;
 @end
 
 NS_ASSUME_NONNULL_END

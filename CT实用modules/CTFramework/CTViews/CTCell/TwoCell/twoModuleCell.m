@@ -19,6 +19,8 @@
     return self;
 }
 - (void)loadUI{
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     [self.contentView addSubview:self.Lab_left];
     [self.contentView addSubview:self.Ima_right];
     [self.contentView addSubview:self.View_line];

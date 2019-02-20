@@ -144,8 +144,8 @@
 }
 /*******************  UITableView  *******************/
 //创建UITableView默认配置
-+(UITableView *)CTTableViewBackgroundColor:(UIColor *)bgColor separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle{
-    UITableView *CTTableview = [[UITableView alloc]init];
++(UITableView *)CTTableViewBackgroundColor:(UIColor *)bgColor separatorStyle:(UITableViewCellSeparatorStyle)separatorStyle style:(UITableViewStyle)style Frame:(CGRect)frame{
+    UITableView *CTTableview = [[UITableView alloc]initWithFrame:frame style:style];
     //在iOS11上，默认关掉高度的设置，下面三个方法是打开设置的，请根据需求使用
     CTTableview.estimatedRowHeight = 0;
     CTTableview.estimatedSectionHeaderHeight = 0;
