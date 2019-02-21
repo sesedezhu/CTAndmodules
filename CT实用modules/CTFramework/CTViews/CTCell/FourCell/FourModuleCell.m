@@ -28,7 +28,7 @@
     UIView *contentView = self.contentView;
     _Btn.sd_layout
     .topSpaceToView(contentView, CONVER_VALUE(1))
-    .leftSpaceToView(contentView, CONVER_VALUE(1))
+    .leftSpaceToView(contentView, CONVER_VALUE(15))
     .rightSpaceToView(contentView, CONVER_VALUE(15))
     .bottomSpaceToView(contentView, CONVER_VALUE(1));
 }
@@ -37,8 +37,8 @@
     if (!_Btn) {
         _Btn = [CTUICtrlsManagers createButtonNormalText:@"退出登录" normalTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:[UIColor clearColor]];
         _Btn.titleLabel.adjustsFontSizeToFitWidth = YES;
-        _Btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        _Btn.titleLabel.textAlignment = NSTextAlignmentLeft;
+        _Btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        _Btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [CTUICtrlsManagers CTBtnRadius:_Btn Radius:3];
         [CTUICtrlsManagers CTBtnBorder:_Btn refColor:[UIColor groupTableViewBackgroundColor].CGColor];
     }

@@ -30,7 +30,7 @@
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
     .leftSpaceToView(contentView, CONVER_VALUE(15))
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .rightSpaceToView(contentView, -CONVER_VALUE(15))
     .heightIs(1);
     
     _Ima_left.sd_layout

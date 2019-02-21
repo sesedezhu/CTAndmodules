@@ -221,6 +221,13 @@
 		21D132FA221D4E3000C9BEEF /* MyCtrl001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D132F8221D4E2F00C9BEEF /* MyCtrl001.m */; };
 		21D132FD221D4E4A00C9BEEF /* MyHeaderView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D132FC221D4E4A00C9BEEF /* MyHeaderView001.m */; };
 		21D13301221D5EBE00C9BEEF /* FourModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D13300221D5EBE00C9BEEF /* FourModuleCell.m */; };
+		21D13329221E5BEF00C9BEEF /* QL_TelVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D13328221E5BEF00C9BEEF /* QL_TelVCViewController.m */; };
+		21D1332E221E5E2D00C9BEEF /* MyKey002@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D1332A221E5E2C00C9BEEF /* MyKey002@3x.png */; };
+		21D1332F221E5E2D00C9BEEF /* MyPhone002@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D1332B221E5E2C00C9BEEF /* MyPhone002@3x.png */; };
+		21D13330221E5E2D00C9BEEF /* MyPhone002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D1332C221E5E2C00C9BEEF /* MyPhone002@2x.png */; };
+		21D13331221E5E2D00C9BEEF /* MyKey002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D1332D221E5E2D00C9BEEF /* MyKey002@2x.png */; };
+		21D13334221E5E9500C9BEEF /* MyBkB002@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D13332221E5E9400C9BEEF /* MyBkB002@3x.png */; };
+		21D13335221E5E9500C9BEEF /* MyBkB002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D13333221E5E9500C9BEEF /* MyBkB002@2x.png */; };
 		21DBBB3021A3FFC400548699 /* ShowsCtrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */; };
 		21DBBB6521A4148100548699 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DBBB6421A4148100548699 /* GiFHUD.m */; };
 		21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B564212E9C8200876E24 /* AFHTTPSessionManager.m */; };
@@ -695,6 +702,14 @@
 		21D132FC221D4E4A00C9BEEF /* MyHeaderView001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView001.m; sourceTree = "<group>"; };
 		21D132FF221D5EBE00C9BEEF /* FourModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourModuleCell.h; sourceTree = "<group>"; };
 		21D13300221D5EBE00C9BEEF /* FourModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourModuleCell.m; sourceTree = "<group>"; };
+		21D13327221E5BEF00C9BEEF /* QL_TelVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QL_TelVCViewController.h; sourceTree = "<group>"; };
+		21D13328221E5BEF00C9BEEF /* QL_TelVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QL_TelVCViewController.m; sourceTree = "<group>"; };
+		21D1332A221E5E2C00C9BEEF /* MyKey002@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyKey002@3x.png"; sourceTree = "<group>"; };
+		21D1332B221E5E2C00C9BEEF /* MyPhone002@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyPhone002@3x.png"; sourceTree = "<group>"; };
+		21D1332C221E5E2C00C9BEEF /* MyPhone002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyPhone002@2x.png"; sourceTree = "<group>"; };
+		21D1332D221E5E2D00C9BEEF /* MyKey002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyKey002@2x.png"; sourceTree = "<group>"; };
+		21D13332221E5E9400C9BEEF /* MyBkB002@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyBkB002@3x.png"; sourceTree = "<group>"; };
+		21D13333221E5E9500C9BEEF /* MyBkB002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyBkB002@2x.png"; sourceTree = "<group>"; };
 		21DBBB2921A3FFC300548699 /* ShowsCtrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowsCtrls.h; sourceTree = "<group>"; };
 		21DBBB2A21A3FFC300548699 /* ShowsCtrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowsCtrls.m; sourceTree = "<group>"; };
 		21DBBB6321A4148100548699 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
@@ -1837,6 +1852,12 @@
 		21D132DF221D497A00C9BEEF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				21D13333221E5E9500C9BEEF /* MyBkB002@2x.png */,
+				21D13332221E5E9400C9BEEF /* MyBkB002@3x.png */,
+				21D1332D221E5E2D00C9BEEF /* MyKey002@2x.png */,
+				21D1332A221E5E2C00C9BEEF /* MyKey002@3x.png */,
+				21D1332C221E5E2C00C9BEEF /* MyPhone002@2x.png */,
+				21D1332B221E5E2C00C9BEEF /* MyPhone002@3x.png */,
 				21D132E0221D497A00C9BEEF /* MyBakImage001@2x.png */,
 				21D132E1221D497A00C9BEEF /* MyBakImage001@3x.png */,
 				21D132E2221D497A00C9BEEF /* MyHelp001@2x.png */,
@@ -1861,6 +1882,8 @@
 		21D132F9221D4E2F00C9BEEF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21D13327221E5BEF00C9BEEF /* QL_TelVCViewController.h */,
+				21D13328221E5BEF00C9BEEF /* QL_TelVCViewController.m */,
 				21D132FB221D4E4A00C9BEEF /* MyHeaderView001.h */,
 				21D132FC221D4E4A00C9BEEF /* MyHeaderView001.m */,
 			);
@@ -2338,6 +2361,7 @@
 				212728C1215F037300160B1E /* 2.png in Resources */,
 				21D132EA221D497A00C9BEEF /* MyHelp001@2x.png in Resources */,
 				2169FA8921056F33005D6F2B /* LaunchScreen.storyboard in Resources */,
+				21D13330221E5E2D00C9BEEF /* MyPhone002@2x.png in Resources */,
 				21FA81BD21A54533000AFC63 /* HUBGIF005@2x.tiff in Resources */,
 				21BB2772216B515600B156A1 /* OneSimpleView.png in Resources */,
 				21D132EF221D497A00C9BEEF /* MyUserImage001@3x.png in Resources */,
@@ -2352,10 +2376,12 @@
 				21FA81CC21A54533000AFC63 /* showOne007@2x.png in Resources */,
 				21FA81BA21A54533000AFC63 /* HUBGIF002@2x.tiff in Resources */,
 				21BB2774216B515600B156A1 /* threeSimple_Warning@3x.png in Resources */,
+				21D13334221E5E9500C9BEEF /* MyBkB002@3x.png in Resources */,
 				21BB2789216B515600B156A1 /* WK_matchingBtn@2x.png in Resources */,
 				21BB2788216B515600B156A1 /* WK_ellipsisBack@3x.png in Resources */,
 				21BB278A216B515600B156A1 /* WK_matchingBtn@3x.png in Resources */,
 				21FA81C721A54533000AFC63 /* showOne002@2x.png in Resources */,
+				21D13331221E5E2D00C9BEEF /* MyKey002@2x.png in Resources */,
 				21FA81BF21A54533000AFC63 /* showOne0010@2x.png in Resources */,
 				21BB278B216B515600B156A1 /* WK_WarningImage013x.png in Resources */,
 				21324F122211641500F1E3D1 /* loginBak2@2x.png in Resources */,
@@ -2390,6 +2416,7 @@
 				21FA81BB21A54533000AFC63 /* HUBGIF003@2x.tiff in Resources */,
 				21E0B5D7212EB6F200876E24 /* Nav_leftImage@3x.png in Resources */,
 				21943975220149530010B640 /* LogAccountViewimage.png in Resources */,
+				21D13335221E5E9500C9BEEF /* MyBkB002@2x.png in Resources */,
 				21BB2790216B515600B156A1 /* WX_UserImage@3x.png in Resources */,
 				21E0B5FA212FB47400876E24 /* Login_MimaDefault@3x.png in Resources */,
 				21943973220149290010B640 /* LogBottomViewimage.png in Resources */,
@@ -2404,6 +2431,7 @@
 				21E0B5FD212FB47400876E24 /* Login_wx@2x.png in Resources */,
 				21BB2780216B515600B156A1 /* 4.jpeg in Resources */,
 				21FA81C921A54533000AFC63 /* showOne004@2x.png in Resources */,
+				21D1332E221E5E2D00C9BEEF /* MyKey002@3x.png in Resources */,
 				21BB2778216B515600B156A1 /* TwoSimpleView.png in Resources */,
 				21FA81C421A54533000AFC63 /* showOne0015@2x.png in Resources */,
 				42479893220FDA3F0062B7B9 /* yaoshi2@3x.png in Resources */,
@@ -2428,6 +2456,7 @@
 				21BB2786216B515600B156A1 /* WK_deleteBtn@3x.png in Resources */,
 				214A03EA211BEDD100F820BD /* 123.png in Resources */,
 				21BB2770216B515600B156A1 /* OneSimple_title@3x.png in Resources */,
+				21D1332F221E5E2D00C9BEEF /* MyPhone002@3x.png in Resources */,
 				21BB2785216B515600B156A1 /* WK_deleteBtn@2x.png in Resources */,
 				212728C4215F072C00160B1E /* portraitDefault@2x.png in Resources */,
 				2194397922014B7D0010B640 /* TextModelViewimage.png in Resources */,
@@ -2514,6 +2543,7 @@
 				214A05C8211C3F8A00F820BD /* SDCollectionViewCell.m in Sources */,
 				214A05E8211C3F8A00F820BD /* MJRefreshConst.m in Sources */,
 				214A05DD211C3F8A00F820BD /* MJRefreshAutoGifFooter.m in Sources */,
+				21D13329221E5BEF00C9BEEF /* QL_TelVCViewController.m in Sources */,
 				214A05BF211C3F8A00F820BD /* UIImageView+HighlightedWebCache.m in Sources */,
 				21BB2796216B515600B156A1 /* SmallViewCell.m in Sources */,
 				214A05C6211C3F8A00F820BD /* TADotView.m in Sources */,
