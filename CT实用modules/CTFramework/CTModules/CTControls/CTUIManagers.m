@@ -6,7 +6,7 @@
 //  Copyright © 2019年 涛程. All rights reserved.
 //
 
-#import "CTUICtrlsManagers.h"
+#import "CTUIManagers.h"
 
 @implementation CTUIManagers
 /*******************  Label  *******************/

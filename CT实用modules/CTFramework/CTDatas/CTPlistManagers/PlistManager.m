@@ -47,7 +47,7 @@
 + (id)getFilePlists:(NSString *)name{
     NSString *pash = [self getFilePlistPushName:name];
     //判断路径是否存在
-    BOOL dataPath = [PlistManager isFileExistWithFilePlistPath:pash];
+    BOOL dataPath = [self isFileExistWithFilePlistPath:pash];
     id json;
     if (dataPath) {
         json = [NSMutableDictionary dictionaryWithContentsOfFile:pash];
@@ -68,7 +68,7 @@
 + (NSString *)getFileDatas:(NSString *)name{
     NSString *pash = [self getFilePlistPushName:name];
     //判断路径是否存在
-    BOOL dataPath = [PlistManager isFileExistWithFilePlistPath:pash];
+    BOOL dataPath = [self isFileExistWithFilePlistPath:pash];
     NSString *str = nil;
     if (dataPath) {
         NSData *data = [NSData dataWithContentsOfFile:pash];
@@ -102,9 +102,27 @@
         }
         //    4.6在Plists文件夹中添加即将生成的文件的名字
         NSString *plistPath = [createPath stringByAppendingPathComponent:name];
-        NSLog(@"即将生成的文件路径＝＝＝＝＝＝%@\n",plistPath);
+        NSLog(@"即将生成的文件路径＝＝＝＝＝＝%@",plistPath);
         return plistPath;
     }
     return nil;
 }
+/**
+ *  删除指定名称的plist文件
+ */
++ (void)deleteFilePlistName:(NSString *)name{
+    //1.根据name获取文件路径
+    NSString *path = [self getFilePlistPushName:name];
+    //2.判断路径是否存在
+    BOOL dataPath = [self isFileExistWithFilePlistPath:path];
+    if (dataPath) {
+        //3.删除指定的plist文件
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
+}
+
+
+
+
+
 @end

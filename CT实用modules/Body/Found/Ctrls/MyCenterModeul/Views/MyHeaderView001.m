@@ -42,10 +42,14 @@
     .heightIs(CONVER_VALUE(16))
     .bottomSpaceToView(_BakImage, CONVER_VALUE(118));
     
+    
+}
+- (void)updateDataUI{
     [self isUserImage];
 }
 - (void)isUserImage{
-    [_UserImage sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"MyUserImage001"]];
+    [_UserImage sd_setImageWithURL:[NSURL URLWithString:[UserManager getUrlUserHeadImageview]] placeholderImage:[UIImage imageNamed:[UserManager getNormalUserHeadImageview]]];
+    [_LoginBtn setTitle:[UserManager isUserRealName]?[UserManager isUserRealName]:@"登录/注册" forState:UIControlStateNormal];
 }
 #pragma mark - 懒加载
 - (UIButton *)LoginBtn{

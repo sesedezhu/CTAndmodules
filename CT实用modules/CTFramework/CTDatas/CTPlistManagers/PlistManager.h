@@ -39,5 +39,10 @@
  *  (ps：此步骤不会生成文件，只会生成文件路径)
  */
 + (NSString *)getFilePlistPushName:(NSString *)name;
+/**
+ *  根据名称删除相应的plist文件
+ */
++ (void)deleteFilePlistName:(NSString *)name;
+
 @end
  

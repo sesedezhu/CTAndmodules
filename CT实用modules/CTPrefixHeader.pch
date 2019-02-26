@@ -25,9 +25,9 @@
 #import "CTStringTool.h"                       //sing拼接需要
 #import "CTMD5Tool.h"                          //md5生成方法
 #import "CTTextTool.h"
-#import "CTUICtrlsManagers.h"                  //控件创建类
-
-
+#import "CTUIManagers.h"                  //控件创建类
+#import "UserManager.h"
+#import "DateTimes.h"
 
 
 

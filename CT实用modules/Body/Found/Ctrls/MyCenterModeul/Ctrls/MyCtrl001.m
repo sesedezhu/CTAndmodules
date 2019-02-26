@@ -23,7 +23,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadUI];
-    [self loadFinishingData];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self updateMyCtrl001];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+- (void)updateMyCtrl001{
+    [self loadFinishingData];//更新当前用户信息
+    [_headerView updateDataUI];//更新界面数据
 }
 #pragma mark - loadUI
 - (void)loadUI{
@@ -32,6 +48,10 @@
 }
 #pragma mark - 点击事件
 - (void)isPushLoginCtrls{
+    BOOL userLogin = [UserManager isJudgeLoginUser];
+    if (userLogin) {
+        return;
+    }
     CTLoginCtrls2 *login = [[CTLoginCtrls2 alloc]init];
     [login setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:login animated:YES];
@@ -39,7 +59,9 @@
 #pragma mark - 整理数据
 - (void)loadFinishingData{
     //1.制造假数据
-    NSString *tapy = @"1";
+    //判断用户是否登录
+    BOOL userLogin = [UserManager isJudgeLoginUser];
+    NSString *tapy = userLogin?@"1":@"0";
     if ([tapy isEqualToString:@"0"]) {
         [self loadZeroUI];
     }else{
@@ -137,7 +159,8 @@
         [telVC setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:telVC animated:YES];
     }else if ([style isEqualToString:FourModuleCellStyle]){
-        NSLog(@"FourModuleCell");
+        [PlistManager deleteFilePlistName:UserPlists];
+        [self updateMyCtrl001];
     }
     
 }
@@ -151,7 +174,7 @@
 #pragma mark - 懒加载
 - (UITableView *)TableView{
     if (!_TableView) {
-        _TableView = [CTUIManagers CTTableViewBackgroundColor:[UIColor whiteColor] separatorStyle:UITableViewCellSeparatorStyleNone style:UITableViewStyleGrouped Frame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        _TableView = [CTUIManagers CTTableViewBackgroundColor:[UIColor whiteColor] separatorStyle:UITableViewCellSeparatorStyleNone style:UITableViewStyleGrouped Frame:CGRectMake(0, -CTStopStatusRect, kScreenWidth, kScreenHeight)];
         _TableView.delegate = self;
         _TableView.dataSource = self;
         
