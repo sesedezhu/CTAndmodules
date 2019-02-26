@@ -7,8 +7,8 @@
 //
 
 #import "CTLoginCtrls2.h"
-#import "TextModelView2.h"
-#import "TextModelTime2.h"
+#import "ModelView001.h"
+#import "SeccodeView002.h"
 @interface CTLoginCtrls2 ()<UITextFieldDelegate>
 @property(nonatomic ,strong) UIView *TopBakView;     //上
 @property(nonatomic ,strong) UIView *ContentBakView; //中
@@ -18,8 +18,8 @@
 @property(nonatomic ,strong) UIImageView *TopImaview;
 
 @property(nonatomic ,strong) UIButton *ContentBtn;
-@property(nonatomic ,strong) TextModelView2 *ContentTextView2;
-@property(nonatomic ,strong) TextModelTime2 *ContentTextTime2;
+@property(nonatomic ,strong) ModelView001 *ContentTextView2;
+@property(nonatomic ,strong) SeccodeView002 *ContentTextTime2;
 
 @property(nonatomic ,strong) UILabel *BottomLab;
 @end
@@ -223,15 +223,15 @@
     }
     return _ContentBtn;
 }
-- (TextModelView2 *)ContentTextView2{
+- (ModelView001 *)ContentTextView2{
     if (!_ContentTextView2) {
-        _ContentTextView2 = [[TextModelView2 alloc]init];
+        _ContentTextView2 = [[ModelView001 alloc]init];
     }
     return _ContentTextView2;
 }
-- (TextModelTime2 *)ContentTextTime2{
+- (SeccodeView002 *)ContentTextTime2{
     if (!_ContentTextTime2) {
-        _ContentTextTime2 = [[TextModelTime2 alloc]init];
+        _ContentTextTime2 = [[SeccodeView002 alloc]init];
         [_ContentTextTime2.Btn_time addTarget:self action:@selector(loadTimeBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _ContentTextTime2;

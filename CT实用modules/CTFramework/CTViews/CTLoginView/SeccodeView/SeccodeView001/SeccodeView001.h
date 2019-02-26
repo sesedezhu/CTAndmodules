@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextModelTime : UIView
+@interface SeccodeView001 : UIView
 @property(nonatomic ,strong) UILabel *Lab_name;  //标题提示文案
 @property(nonatomic ,strong) UITextField *Text_content; //输入内容
 @property(nonatomic ,strong) UIButton *Btn_time;  //验证码按钮

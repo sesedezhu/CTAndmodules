@@ -9,12 +9,6 @@
 #import "UserManager.h"
 @implementation UserManager
 
-//更新本地用户信息
-+ (void)mergeUserPlistsUserDicWithObject:(NSString *)obj forKey:(NSString*)key{
-    NSMutableDictionary *mutaDic = [PlistManager getFilePlists:UserPlists];
-    [mutaDic setObject:obj forKey:key];
-    [PlistManager isFilePlistName:UserPlists loadData:mutaDic];
-}
 /**
  *  更新本地plist文件中指定的参数值
  *  value 需要更新的内容
@@ -23,7 +17,6 @@
 + (void)updateUserPlistsAndonlyOnlyValue:(NSString *)value forKey:(NSString *)key{
     NSMutableDictionary *mutaDic = [[NSMutableDictionary alloc]init];
     mutaDic = [PlistManager getFilePlists:UserPlists];
-    [mutaDic removeObjectForKey:key];
     [mutaDic setValue:value forKey:key];
     [PlistManager isFilePlistName:UserPlists loadData:mutaDic];
 }

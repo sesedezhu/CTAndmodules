@@ -7,8 +7,8 @@
 //
 
 #import "MiMaCtrl.h"
-#import "TextModelView.h"
-#import "TextModelTime.h"
+#import "PasswordView001.h"
+#import "SeccodeView001.h"
 @interface MiMaCtrl ()<UITextFieldDelegate,UIGestureRecognizerDelegate>
 {
     NSString *msgInfo;
@@ -16,9 +16,9 @@
 
 @property(nonatomic ,strong) UILabel *Lab_warning;
 @property(nonatomic ,strong) UIButton *Btn;
-@property(nonatomic ,strong) TextModelTime *TimeView;
-@property(nonatomic ,strong) TextModelView *OneView;
-@property(nonatomic ,strong) TextModelView *TwoView;
+@property(nonatomic ,strong) SeccodeView001 *TimeView;
+@property(nonatomic ,strong) PasswordView001 *OneView;
+@property(nonatomic ,strong) PasswordView001 *TwoView;
 
 
 @property (nonatomic, copy)   NSString * modifyFlag;  //方式 1:修改密码 2:找回密码
@@ -76,7 +76,7 @@
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             //结束倒计时
-            [_TimeView EndTimer];
+            [self->_TimeView EndTimer];
         });
         
     }else{
@@ -233,9 +233,9 @@
     }
     return _Btn;
 }
-- (TextModelTime *)TimeView{
+- (SeccodeView001 *)TimeView{
     if (!_TimeView) {
-        _TimeView = [[TextModelTime alloc]init];
+        _TimeView = [[SeccodeView001 alloc]init];
         _TimeView.Text_content.delegate = self;
         _TimeView.Text_content.tag = 2;
         _TimeView.Text_content.placeholder = @"请输入验证码";
@@ -243,9 +243,9 @@
     }
     return _TimeView;
 }
-- (TextModelView *)OneView{
+- (PasswordView001 *)OneView{
     if (!_OneView) {
-        _OneView = [[TextModelView alloc]init];
+        _OneView = [[PasswordView001 alloc]init];
         _OneView.Lab_name.text = @"手机号";
         _OneView.Text_content.placeholder = @"请输入手机号";
         _OneView.Text_content.keyboardType = UIKeyboardTypeNumberPad;
@@ -255,9 +255,9 @@
     }
     return _OneView;
 }
-- (TextModelView *)TwoView{
+- (PasswordView001 *)TwoView{
     if (!_TwoView) {
-        _TwoView = [[TextModelView alloc]init];
+        _TwoView = [[PasswordView001 alloc]init];
         _TwoView.Text_content.keyboardType = UIKeyboardTypeDefault;
         _TwoView.Lab_name.text = @"新密码";
         _TwoView.Text_content.placeholder = @"密码由6-16位字母、数字组合";

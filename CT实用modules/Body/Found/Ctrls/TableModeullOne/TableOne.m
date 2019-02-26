@@ -111,9 +111,9 @@
         if (!cell) {
             cell = [[oneModuleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
         }
-        cell.Lab_left.text = @"昵称";
-        [cell.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];
-        [cell loadCellHiddenStyle:NO];
+        cell.CellView.Lab_left.text = @"昵称";
+        [cell.CellView.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];
+        [cell.CellView loadCellHiddenStyle:NO];
         return cell;
     }
 }

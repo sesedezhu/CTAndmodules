@@ -6,12 +6,12 @@
 //  Copyright © 2019年 涛程. All rights reserved.
 //
 
-#import "TextModelView2.h"
-@interface TextModelView2 ()
+#import "ModelView001.h"
+@interface ModelView001 ()
 
 @property(nonatomic ,strong) UIView *view_line;
 @end
-@implementation TextModelView2
+@implementation ModelView001
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         /* 添加子控件的代码*/

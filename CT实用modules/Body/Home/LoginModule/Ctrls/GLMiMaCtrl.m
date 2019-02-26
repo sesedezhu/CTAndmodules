@@ -7,13 +7,13 @@
 //
 
 #import "GLMiMaCtrl.h"
-#import "TextModelView.h"
+#import "PasswordView001.h"
 @interface GLMiMaCtrl ()<UITextFieldDelegate,UIGestureRecognizerDelegate>
 @property(nonatomic ,strong) UIView *GLMiMaBakview;
 @property(nonatomic ,strong) UILabel *Lab_warning;
 @property(nonatomic ,strong) UIButton *btn;
-@property(nonatomic ,strong) TextModelView *TextViewOne;
-@property(nonatomic ,strong) TextModelView *TextViewTwo;
+@property(nonatomic ,strong) PasswordView001 *TextViewOne;
+@property(nonatomic ,strong) PasswordView001 *TextViewTwo;
 
 
 @end
@@ -230,15 +230,15 @@
     }
     return _btn;
 }
-- (TextModelView *)TextViewOne{
+- (PasswordView001 *)TextViewOne{
     if (!_TextViewOne) {
-        _TextViewOne = [[TextModelView alloc]init];
+        _TextViewOne = [[PasswordView001 alloc]init];
     }
     return _TextViewOne;
 }
-- (TextModelView *)TextViewTwo{
+- (PasswordView001 *)TextViewTwo{
     if (!_TextViewTwo) {
-        _TextViewTwo = [[TextModelView alloc]init];
+        _TextViewTwo = [[PasswordView001 alloc]init];
     }
     return _TextViewTwo;
 }

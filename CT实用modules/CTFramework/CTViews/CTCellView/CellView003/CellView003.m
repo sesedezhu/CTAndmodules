@@ -1,32 +1,34 @@
 //
-//  ThreeModelCell.m
+//  CellView003.m
 //  CT实用modules
 //
-//  Created by 涛程 on 2018/9/28.
-//  Copyright © 2018年 涛程. All rights reserved.
+//  Created by 涛程 on 2019/2/26.
+//  Copyright © 2019年 涛程. All rights reserved.
 //
 
-#import "ThreeModuleCell.h"
+#import "CellView003.h"
 
-@implementation ThreeModuleCell
-/** 初始化方法,自定义 cell时,不清楚高度,可以在这里添加子空间 */
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+@implementation CellView003
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        /* 添加子控件的代码*/
         [self loadUI];
+        
     }
     return self;
 }
+#pragma mark - UI
 - (void)loadUI{
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //设置此属性，点击cell不会有灰色显示
+    //    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    //设置此属性，是否显示系统右侧图标
+    //    [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
-    [self.contentView addSubview:self.Lab_left];
-    [self.contentView addSubview:self.Ima_left];
-    [self.contentView addSubview:self.View_line];
+    [self addSubview:self.Lab_left];
+    [self addSubview:self.Ima_left];
+    [self addSubview:self.View_line];
     
-    UIView *contentView = self.contentView;
+    UIView *contentView = self;
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
     .leftSpaceToView(contentView, CONVER_VALUE(15))

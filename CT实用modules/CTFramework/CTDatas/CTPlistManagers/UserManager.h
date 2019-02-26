@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface UserManager : NSObject
-//更新本地用户信息
-+ (void)mergeUserPlistsUserDicWithObject:(NSString *)obj forKey:(NSString*)key;
 /**
  *  更新本地plist文件中指定的参数值
  *  value 需要更新的内容

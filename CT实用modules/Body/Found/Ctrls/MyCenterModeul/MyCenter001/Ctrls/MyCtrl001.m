@@ -143,7 +143,7 @@
         FourModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
         if (!cell) {
             cell = [[FourModuleCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
-            cell.Btn.userInteractionEnabled = NO;
+            cell.CellView.Btn.userInteractionEnabled = NO;
         }
         return cell;
     }else{

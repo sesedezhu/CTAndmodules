@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CellView002.h"
 @interface twoModuleCell : UITableViewCell
-@property(nonatomic ,strong) UILabel *Lab_left;       //cell左侧文案
-@property(nonatomic ,strong) UIImageView *Ima_right;  //cell右侧头像图标
-@property(nonatomic ,strong) UIView *View_line;       //cell自定义人为线条
+@property(nonatomic ,strong) CellView002 *CellView;
 @end
 /*
  此模型cell高度93

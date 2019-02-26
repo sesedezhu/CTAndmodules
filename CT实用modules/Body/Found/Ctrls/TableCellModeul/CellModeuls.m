@@ -66,19 +66,19 @@
         }
         switch (indexPath.row) {
             case 1:
-                cell.Lab_left.text = @"昵称";
-                [cell.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];
-                [cell loadCellHiddenStyle:NO];
+                cell.CellView.Lab_left.text = @"昵称";
+                [cell.CellView.Btn_right setTitle:@"大帅哥-程" forState:UIControlStateNormal];
+                [cell.CellView loadCellHiddenStyle:NO];
                 break;
             case 2:
-                cell.Lab_left.text = @"手机号";
-                [cell.Btn_right setTitle:@"18789281990" forState:UIControlStateNormal];
-                [cell loadCellHiddenStyle:YES];
+                cell.CellView.Lab_left.text = @"手机号";
+                [cell.CellView.Btn_right setTitle:@"18789281990" forState:UIControlStateNormal];
+                [cell.CellView loadCellHiddenStyle:YES];
                 break;
             case 3:
-                cell.Lab_left.text = @"个人资料";
-                [cell.Btn_right setTitle:nil forState:UIControlStateNormal];
-                [cell loadCellHiddenStyle:NO];
+                cell.CellView.Lab_left.text = @"个人资料";
+                [cell.CellView.Btn_right setTitle:nil forState:UIControlStateNormal];
+                [cell.CellView loadCellHiddenStyle:NO];
                 break;
                 
             default:

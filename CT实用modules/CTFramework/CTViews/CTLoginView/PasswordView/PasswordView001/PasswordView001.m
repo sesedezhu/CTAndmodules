@@ -6,12 +6,12 @@
 //  Copyright © 2018年 ZQWFMac. All rights reserved.
 //
 
-#import "TextModelView.h"
-@interface TextModelView ()
+#import "PasswordView001.h"
+@interface PasswordView001 ()
 
 @property(nonatomic ,strong) UIView *view_line;
 @end
-@implementation TextModelView
+@implementation PasswordView001
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         /* 添加子控件的代码*/

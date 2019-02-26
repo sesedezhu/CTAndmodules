@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextModelView : UIView
+@interface PasswordView001 : UIView
 @property(nonatomic ,strong) UILabel *Lab_name;  //标题提示问题
 @property(nonatomic ,strong) UITextField *Text_content; //输入内入
 @end
