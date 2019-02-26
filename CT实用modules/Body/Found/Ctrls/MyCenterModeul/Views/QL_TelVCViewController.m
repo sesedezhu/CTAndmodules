@@ -151,9 +151,7 @@
     
    NSString *telSTr = telArray[but.tag-1];
     
-    
-    NSMutableString * string = [[NSMutableString alloc] initWithFormat:@"telprompt:%@",telSTr];
-    
+    NSString *string = [NSString stringWithFormat:@"tel:%@",telSTr];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
     
 }
