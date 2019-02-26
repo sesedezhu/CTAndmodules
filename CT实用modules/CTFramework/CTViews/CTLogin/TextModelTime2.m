@@ -99,20 +99,20 @@
 #pragma mark - 懒加载
 - (UIImageView *)letImageView{
     if (!_letImageView) {
-        _letImageView = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"yaoshi2"];
+        _letImageView = [CTUIManagers createImageViewURL:nil placeholderImage:@"yaoshi2"];
     }
     return _letImageView;
 }
 - (UIView *)view_line{
     if (!_view_line) {
-        _view_line = [CTUICtrlsManagers createView];
+        _view_line = [CTUIManagers createView];
         _view_line.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
     }
     return _view_line;
 }
 - (UITextField *)Text_content{
     if (!_Text_content) {
-        _Text_content = [CTUICtrlsManagers createTextFieldPlaceholder:@"请输入短信验证码" keyboardType:UIKeyboardTypeNumberPad backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft];
+        _Text_content = [CTUIManagers createTextFieldPlaceholder:@"请输入短信验证码" keyboardType:UIKeyboardTypeNumberPad backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft];
         _Text_content.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;  //垂直居中
         _Text_content.textColor = allcolorAlphasCT(145, 145, 145, 1.0);
     }

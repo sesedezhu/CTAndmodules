@@ -151,7 +151,7 @@
 #pragma mark - 懒加载
 - (UITableView *)TableView{
     if (!_TableView) {
-        _TableView = [CTUICtrlsManagers CTTableViewBackgroundColor:[UIColor whiteColor] separatorStyle:UITableViewCellSeparatorStyleNone style:UITableViewStyleGrouped Frame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        _TableView = [CTUIManagers CTTableViewBackgroundColor:[UIColor whiteColor] separatorStyle:UITableViewCellSeparatorStyleNone style:UITableViewStyleGrouped Frame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
         _TableView.delegate = self;
         _TableView.dataSource = self;
         

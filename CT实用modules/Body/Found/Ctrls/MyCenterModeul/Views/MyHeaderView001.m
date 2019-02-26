@@ -50,7 +50,7 @@
 #pragma mark - 懒加载
 - (UIButton *)LoginBtn{
     if (!_LoginBtn) {
-        _LoginBtn = [CTUICtrlsManagers createButtonNormalText:@"登录/注册" normalTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:CONVER_VALUE(16)] backgroundColor:nil];
+        _LoginBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:CONVER_VALUE(16)] backgroundColor:nil];
         _LoginBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         _LoginBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _LoginBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
@@ -59,16 +59,16 @@
 }
 - (UIImageView *)BakImage{
     if (!_BakImage) {
-        _BakImage = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"MyBakImage001"];
+        _BakImage = [CTUIManagers createImageViewURL:nil placeholderImage:@"MyBakImage001"];
         _BakImage.userInteractionEnabled = YES;
     }
     return _BakImage;
 }
 - (UIImageView *)UserImage{
     if (!_UserImage) {
-        _UserImage = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"MyUserImage001"];
+        _UserImage = [CTUIManagers createImageViewURL:nil placeholderImage:@"MyUserImage001"];
         _UserImage.userInteractionEnabled = YES;
-        [CTUICtrlsManagers CTImageViewRadius:_UserImage Radius:CONVER_VALUE(25)];//设置圆角
+        [CTUIManagers CTImageViewRadius:_UserImage Radius:CONVER_VALUE(25)];//设置圆角
     }
     return _UserImage;
 }

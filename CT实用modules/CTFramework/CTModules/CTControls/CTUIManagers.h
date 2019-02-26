@@ -13,7 +13,7 @@
  */
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CTUICtrlsManagers : NSObject
+@interface CTUIManagers : NSObject
 //创建lable,默认配置
 + (UILabel *)createLabelText:(NSString *)text;
 //创建lable,高度自定义配置

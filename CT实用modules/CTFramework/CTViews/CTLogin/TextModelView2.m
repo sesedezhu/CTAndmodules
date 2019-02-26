@@ -50,20 +50,20 @@
 #pragma mark - 懒加载
 - (UIImageView *)letImageView{
     if (!_letImageView) {
-        _letImageView = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"shouji2"];
+        _letImageView = [CTUIManagers createImageViewURL:nil placeholderImage:@"shouji2"];
     }
     return _letImageView;
 }
 - (UIView *)view_line{
     if (!_view_line) {
-        _view_line = [CTUICtrlsManagers createView];
+        _view_line = [CTUIManagers createView];
         _view_line.backgroundColor = allcolorAlphasCT(225, 225, 225, 1.0);
     }
     return _view_line;
 }
 - (UITextField *)Text_content{
     if (!_Text_content) {
-        _Text_content = [CTUICtrlsManagers createTextFieldPlaceholder:@"您的手机号码" keyboardType:UIKeyboardTypeDefault backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft];
+        _Text_content = [CTUIManagers createTextFieldPlaceholder:@"您的手机号码" keyboardType:UIKeyboardTypeDefault backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft];
         _Text_content.textColor = allcolorAlphasCT(145, 145, 145, 1.0);
         //        _Text_ZhangHao.keyboardType = UIKeyboardTypeNumberPad;
 //        _Text_content.placeholder = @"密码由6-16位字母、数字组合";

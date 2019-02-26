@@ -8,7 +8,7 @@
 
 #import "CTUICtrlsManagers.h"
 
-@implementation CTUICtrlsManagers
+@implementation CTUIManagers
 /*******************  Label  *******************/
 #define CTLabTextColor       [UIColor blackColor] //默认文字黑色
 #define CTLabFont            [UIFont systemFontOfSize:CONVER_VALUE(17)] //默认系统文字大小

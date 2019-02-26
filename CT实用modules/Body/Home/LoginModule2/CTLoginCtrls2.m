@@ -186,25 +186,25 @@
 #pragma mark - 懒加载
 - (UIView *)TopBakView{
     if (!_TopBakView) {
-        _TopBakView = [CTUICtrlsManagers createView];
+        _TopBakView = [CTUIManagers createView];
     }
     return _TopBakView;
 }
 - (UIView *)ContentBakView{
     if (!_ContentBakView) {
-        _ContentBakView = [CTUICtrlsManagers createView];
+        _ContentBakView = [CTUIManagers createView];
     }
     return _ContentBakView;
 }
 - (UIView *)BottomBakView{
     if (!_BottomBakView) {
-        _BottomBakView = [CTUICtrlsManagers createView];
+        _BottomBakView = [CTUIManagers createView];
     }
     return _BottomBakView;
 }
 - (UIButton *)TopNavBtn{
     if (!_TopNavBtn) {
-        _TopNavBtn = [CTUICtrlsManagers createButtonNormalText:nil normalTextColor:nil font:nil backgroundColor:nil];
+        _TopNavBtn = [CTUIManagers createButtonNormalText:nil normalTextColor:nil font:nil backgroundColor:nil];
         [_TopNavBtn setImage:[UIImage imageNamed:@"navLetBtn2"] forState:UIControlStateNormal];
         [_TopNavBtn addTarget:self action:@selector(loadTopNavBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -212,14 +212,14 @@
 }
 - (UIImageView *)TopImaview{
     if (!_TopImaview) {
-        _TopImaview = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"loginBak2"];
+        _TopImaview = [CTUIManagers createImageViewURL:nil placeholderImage:@"loginBak2"];
     }
     return _TopImaview;
 }
 - (UIButton *)ContentBtn{
     if (!_ContentBtn) {
-        _ContentBtn = [CTUICtrlsManagers createButtonNormalText:@"登录/注册" normalTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(241, 96, 39, 1.0)];
-        [CTUICtrlsManagers CTBtnRadius:_ContentBtn Radius:CONVER_VALUE(8)];
+        _ContentBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(241, 96, 39, 1.0)];
+        [CTUIManagers CTBtnRadius:_ContentBtn Radius:CONVER_VALUE(8)];
     }
     return _ContentBtn;
 }
@@ -238,7 +238,7 @@
 }
 - (UILabel *)BottomLab{
     if (!_BottomLab) {
-        _BottomLab = [CTUICtrlsManagers createLabelText:@"*未注册的手机号将自动创建为我度假公寓用户" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(12)] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _BottomLab = [CTUIManagers createLabelText:@"*未注册的手机号将自动创建为我度假公寓用户" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(12)] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
     }
     return _BottomLab;
 }

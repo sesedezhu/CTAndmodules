@@ -35,12 +35,12 @@
 #pragma mark - 懒加载
 - (UIButton *)Btn{
     if (!_Btn) {
-        _Btn = [CTUICtrlsManagers createButtonNormalText:@"退出登录" normalTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:[UIColor clearColor]];
+        _Btn = [CTUIManagers createButtonNormalText:@"退出登录" normalTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:[UIColor clearColor]];
         _Btn.titleLabel.adjustsFontSizeToFitWidth = YES;
         _Btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         _Btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        [CTUICtrlsManagers CTBtnRadius:_Btn Radius:3];
-        [CTUICtrlsManagers CTBtnBorder:_Btn refColor:[UIColor groupTableViewBackgroundColor].CGColor];
+        [CTUIManagers CTBtnRadius:_Btn Radius:3];
+        [CTUIManagers CTBtnBorder:_Btn refColor:[UIColor groupTableViewBackgroundColor].CGColor];
     }
     return _Btn;
 }

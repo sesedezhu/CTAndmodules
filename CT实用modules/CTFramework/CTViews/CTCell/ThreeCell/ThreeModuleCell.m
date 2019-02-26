@@ -48,20 +48,20 @@
 #pragma mark - 懒加载
 - (UILabel *)Lab_left{
     if (!_Lab_left) {
-        _Lab_left = [CTUICtrlsManagers createLabelText:@"联系我们"];
+        _Lab_left = [CTUIManagers createLabelText:@"联系我们"];
         _Lab_left.adjustsFontSizeToFitWidth = YES;
     }
     return _Lab_left;
 }
 - (UIImageView *)Ima_left{
     if (!_Ima_left) {
-        _Ima_left = [CTUICtrlsManagers createImageViewURL:nil placeholderImage:@"MyHelp001"];
+        _Ima_left = [CTUIManagers createImageViewURL:nil placeholderImage:@"MyHelp001"];
     }
     return _Ima_left;
 }
 - (UIView *)View_line{
     if (!_View_line) {
-        _View_line = [CTUICtrlsManagers createView];
+        _View_line = [CTUIManagers createView];
         _View_line.backgroundColor = [UIColor groupTableViewBackgroundColor];
     }
     return _View_line;

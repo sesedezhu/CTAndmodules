@@ -133,7 +133,7 @@
 		219434AC21F70AF30010B640 /* CTShowsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434A621F70AF30010B640 /* CTShowsManager.m */; };
 		219434AD21F70AF30010B640 /* CTShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434A821F70AF30010B640 /* CTShowView.m */; };
 		219434AE21F70AF30010B640 /* CTCollects.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434AB21F70AF30010B640 /* CTCollects.m */; };
-		219434B221F70D110010B640 /* CTUICtrlsManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434B121F70D110010B640 /* CTUICtrlsManagers.m */; };
+		219434B221F70D110010B640 /* CTUIManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = 219434B121F70D110010B640 /* CTUIManagers.m */; };
 		2194396F220146920010B640 /* logimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2194396E220146920010B640 /* logimage.png */; };
 		21943971220148F50010B640 /* LogHaedViewimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 21943970220148F40010B640 /* LogHaedViewimage.png */; };
 		21943973220149290010B640 /* LogBottomViewimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 21943972220149290010B640 /* LogBottomViewimage.png */; };
@@ -580,8 +580,8 @@
 		219434A821F70AF30010B640 /* CTShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTShowView.m; sourceTree = "<group>"; };
 		219434AA21F70AF30010B640 /* CTCollects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollects.h; sourceTree = "<group>"; };
 		219434AB21F70AF30010B640 /* CTCollects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollects.m; sourceTree = "<group>"; };
-		219434B021F70D110010B640 /* CTUICtrlsManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUICtrlsManagers.h; sourceTree = "<group>"; };
-		219434B121F70D110010B640 /* CTUICtrlsManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUICtrlsManagers.m; sourceTree = "<group>"; };
+		219434B021F70D110010B640 /* CTUIManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTUIManagers.h; sourceTree = "<group>"; };
+		219434B121F70D110010B640 /* CTUIManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTUIManagers.m; sourceTree = "<group>"; };
 		2194396E220146920010B640 /* logimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logimage.png; sourceTree = "<group>"; };
 		21943970220148F40010B640 /* LogHaedViewimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogHaedViewimage.png; sourceTree = "<group>"; };
 		21943972220149290010B640 /* LogBottomViewimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogBottomViewimage.png; sourceTree = "<group>"; };
@@ -1592,8 +1592,8 @@
 		219434AF21F70B540010B640 /* CTControls */ = {
 			isa = PBXGroup;
 			children = (
-				219434B021F70D110010B640 /* CTUICtrlsManagers.h */,
-				219434B121F70D110010B640 /* CTUICtrlsManagers.m */,
+				219434B021F70D110010B640 /* CTUIManagers.h */,
+				219434B121F70D110010B640 /* CTUIManagers.m */,
 			);
 			path = CTControls;
 			sourceTree = "<group>";
@@ -2650,7 +2650,7 @@
 				21324F0B22115EE700F1E3D1 /* CTLoginCtrls2.m in Sources */,
 				21266E13215DC5B7005577A8 /* GLMiMaCtrl.m in Sources */,
 				214A05A9211C3F8A00F820BD /* IQTextView.m in Sources */,
-				219434B221F70D110010B640 /* CTUICtrlsManagers.m in Sources */,
+				219434B221F70D110010B640 /* CTUIManagers.m in Sources */,
 				214A05CA211C3F8A00F820BD /* UIView+SDExtension.m in Sources */,
 				21266E25215DC638005577A8 /* TextModelView.m in Sources */,
 				21E0B5B6212E9C8300876E24 /* YYKVStorage.m in Sources */,
