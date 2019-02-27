@@ -21,7 +21,7 @@
 - (void)loadUI{
     //设置此属性，点击cell不会有灰色显示
     //    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    //设置此属性，是否显示系统右侧图标
+    //设置此属性，是否显示系统右侧图标,此类此方法禁止设置,已经人为创建
     //    [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
     [self addSubview:self.Lab_left];
@@ -32,26 +32,26 @@
     UIView *contentView = self;
     _Lab_left.sd_layout
     .topSpaceToView(contentView, CONVER_VALUE(13))
-    .leftSpaceToView(contentView, CONVER_VALUE(21))
+    .leftSpaceToView(contentView, CONVER_VALUE(15))
     .widthIs(CONVER_VALUE(120))
     .heightIs(CONVER_VALUE(49));
     
     _Ima_right.sd_layout
     .bottomSpaceToView(contentView, CONVER_VALUE(17))
-    .rightSpaceToView(contentView, CONVER_VALUE(27))
+    .rightSpaceToView(contentView, CONVER_VALUE(15))
     .widthIs(CONVER_VALUE(15))
     .heightIs(CONVER_VALUE(15));
     
     _Btn_right.sd_layout
     .topEqualToView(_Lab_left)
-    .rightSpaceToView(_Ima_right, CONVER_VALUE(13))
+    .rightSpaceToView(_Ima_right, CONVER_VALUE(15))
     .widthIs(CONVER_VALUE(120))
     .heightIs(CONVER_VALUE(49));
     
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
     .leftEqualToView(_Lab_left)
-    .rightSpaceToView(contentView, CONVER_VALUE(27))
+    .rightSpaceToView(contentView, CONVER_VALUE(15))
     .heightIs(1);
     
     _Lab_left.text = @"昵称";
@@ -75,13 +75,13 @@
     if (Ima_right) {
         _Btn_right.sd_layout
         .topEqualToView(_Lab_left)
-        .rightSpaceToView(contentView, CONVER_VALUE(29))
+        .rightSpaceToView(contentView, CONVER_VALUE(15))
         .widthIs(CONVER_VALUE(120))
         .heightIs(CONVER_VALUE(49));
     }else{
         _Btn_right.sd_layout
         .topEqualToView(_Lab_left)
-        .rightSpaceToView(_Ima_right, CONVER_VALUE(13))
+        .rightSpaceToView(_Ima_right, CONVER_VALUE(15))
         .widthIs(CONVER_VALUE(120))
         .heightIs(CONVER_VALUE(49));
     }
