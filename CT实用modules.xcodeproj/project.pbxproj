@@ -191,8 +191,7 @@
 		21AEA23122256E4A00069C36 /* MyHelp001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA22F22256E4A00069C36 /* MyHelp001@2x.png */; };
 		21AEA23222256E4A00069C36 /* MyHelp001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA23022256E4A00069C36 /* MyHelp001@3x.png */; };
 		21AEA235222690D200069C36 /* PayCtrl001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA234222690D200069C36 /* PayCtrl001.m */; };
-		21AEA2382226912900069C36 /* SuccessfulCtrl001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA2372226912900069C36 /* SuccessfulCtrl001.m */; };
-		21AEA23B2226914800069C36 /* FailureCtrl001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA23A2226914800069C36 /* FailureCtrl001.m */; };
+		21AEA2382226912900069C36 /* PayResultsCtrl001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA2372226912900069C36 /* PayResultsCtrl001.m */; };
 		21AEA23F2226926800069C36 /* CellView005.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA23E2226926800069C36 /* CellView005.m */; };
 		21AEA2412226927800069C36 /* CellView005.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2402226927700069C36 /* CellView005.png */; };
 		21AEA24E222699BE00069C36 /* Cell005Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA24A222699BD00069C36 /* Cell005Left@2x.png */; };
@@ -203,6 +202,16 @@
 		21AEA25522269B1700069C36 /* MyBkB002@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA25322269B1700069C36 /* MyBkB002@3x.png */; };
 		21AEA25822269B6200069C36 /* navLetBtn2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA25622269B6100069C36 /* navLetBtn2@3x.png */; };
 		21AEA25922269B6200069C36 /* navLetBtn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA25722269B6200069C36 /* navLetBtn2@2x.png */; };
+		21AEA25C22276F4400069C36 /* HeaderView002.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA25B22276F4400069C36 /* HeaderView002.png */; };
+		21AEA25F22276F5000069C36 /* HeaderView002.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA25E22276F5000069C36 /* HeaderView002.m */; };
+		21AEA265222776E500069C36 /* PayNRCell001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA264222776E500069C36 /* PayNRCell001.m */; };
+		21AEA2682227770D00069C36 /* PayStyleCell001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA2672227770D00069C36 /* PayStyleCell001.m */; };
+		21AEA26B22278AC700069C36 /* PayCtrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA26A22278AC700069C36 /* PayCtrls.m */; };
+		21AEA2752227DA7500069C36 /* CTPayFailure001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2732227DA7400069C36 /* CTPayFailure001@2x.png */; };
+		21AEA2762227DA7500069C36 /* CTPayFailure001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2742227DA7400069C36 /* CTPayFailure001@3x.png */; };
+		21AEA2792227DA8C00069C36 /* CTPaySuccessful001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2772227DA8B00069C36 /* CTPaySuccessful001@2x.png */; };
+		21AEA27A2227DA8C00069C36 /* CTPaySuccessful001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2782227DA8B00069C36 /* CTPaySuccessful001@3x.png */; };
+		21AEA27D2227DAA800069C36 /* CTPayView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA27C2227DAA800069C36 /* CTPayView001.m */; };
 		21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */; };
 		21BB2765216B515600B156A1 /* CellModeuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2718216B515500B156A1 /* CellModeuls.m */; };
 		21BB2766216B515600B156A1 /* CollectionModeul.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB271C216B515500B156A1 /* CollectionModeul.m */; };
@@ -681,10 +690,8 @@
 		21AEA23022256E4A00069C36 /* MyHelp001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyHelp001@3x.png"; sourceTree = "<group>"; };
 		21AEA233222690D200069C36 /* PayCtrl001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayCtrl001.h; sourceTree = "<group>"; };
 		21AEA234222690D200069C36 /* PayCtrl001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayCtrl001.m; sourceTree = "<group>"; };
-		21AEA2362226912900069C36 /* SuccessfulCtrl001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuccessfulCtrl001.h; sourceTree = "<group>"; };
-		21AEA2372226912900069C36 /* SuccessfulCtrl001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuccessfulCtrl001.m; sourceTree = "<group>"; };
-		21AEA2392226914800069C36 /* FailureCtrl001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FailureCtrl001.h; sourceTree = "<group>"; };
-		21AEA23A2226914800069C36 /* FailureCtrl001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailureCtrl001.m; sourceTree = "<group>"; };
+		21AEA2362226912900069C36 /* PayResultsCtrl001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayResultsCtrl001.h; sourceTree = "<group>"; };
+		21AEA2372226912900069C36 /* PayResultsCtrl001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayResultsCtrl001.m; sourceTree = "<group>"; };
 		21AEA23D2226926800069C36 /* CellView005.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellView005.h; sourceTree = "<group>"; };
 		21AEA23E2226926800069C36 /* CellView005.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellView005.m; sourceTree = "<group>"; };
 		21AEA2402226927700069C36 /* CellView005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellView005.png; sourceTree = "<group>"; };
@@ -696,6 +703,21 @@
 		21AEA25322269B1700069C36 /* MyBkB002@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyBkB002@3x.png"; sourceTree = "<group>"; };
 		21AEA25622269B6100069C36 /* navLetBtn2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@3x.png"; sourceTree = "<group>"; };
 		21AEA25722269B6200069C36 /* navLetBtn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@2x.png"; sourceTree = "<group>"; };
+		21AEA25B22276F4400069C36 /* HeaderView002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderView002.png; sourceTree = "<group>"; };
+		21AEA25D22276F5000069C36 /* HeaderView002.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView002.h; sourceTree = "<group>"; };
+		21AEA25E22276F5000069C36 /* HeaderView002.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView002.m; sourceTree = "<group>"; };
+		21AEA263222776E500069C36 /* PayNRCell001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNRCell001.h; sourceTree = "<group>"; };
+		21AEA264222776E500069C36 /* PayNRCell001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNRCell001.m; sourceTree = "<group>"; };
+		21AEA2662227770D00069C36 /* PayStyleCell001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayStyleCell001.h; sourceTree = "<group>"; };
+		21AEA2672227770D00069C36 /* PayStyleCell001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayStyleCell001.m; sourceTree = "<group>"; };
+		21AEA26922278AC700069C36 /* PayCtrls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayCtrls.h; sourceTree = "<group>"; };
+		21AEA26A22278AC700069C36 /* PayCtrls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayCtrls.m; sourceTree = "<group>"; };
+		21AEA2732227DA7400069C36 /* CTPayFailure001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTPayFailure001@2x.png"; sourceTree = "<group>"; };
+		21AEA2742227DA7400069C36 /* CTPayFailure001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTPayFailure001@3x.png"; sourceTree = "<group>"; };
+		21AEA2772227DA8B00069C36 /* CTPaySuccessful001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTPaySuccessful001@2x.png"; sourceTree = "<group>"; };
+		21AEA2782227DA8B00069C36 /* CTPaySuccessful001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTPaySuccessful001@3x.png"; sourceTree = "<group>"; };
+		21AEA27B2227DAA800069C36 /* CTPayView001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPayView001.h; sourceTree = "<group>"; };
+		21AEA27C2227DAA800069C36 /* CTPayView001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPayView001.m; sourceTree = "<group>"; };
 		21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		21BB2717216B515500B156A1 /* CellModeuls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModeuls.h; sourceTree = "<group>"; };
@@ -1292,6 +1314,8 @@
 				21BB2798216B523700B156A1 /* TableViews.m */,
 				21A8DEEF219EA64C000ACCA9 /* HuaBanCrrl.h */,
 				21A8DEF0219EA64C000ACCA9 /* HuaBanCrrl.m */,
+				21AEA26922278AC700069C36 /* PayCtrls.h */,
+				21AEA26A22278AC700069C36 /* PayCtrls.m */,
 				21BB279A216B540300B156A1 /* TableModeullOne */,
 				21BB2719216B515500B156A1 /* CollectionModeul */,
 				21BB2716216B515500B156A1 /* TableCellModeul */,
@@ -1543,6 +1567,7 @@
 		2169FADC210580DD005D6F2B /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				21AEA26C2227D9BA00069C36 /* CTPayView */,
 				21AEA21F22256D3F00069C36 /* CTHeaderView */,
 				21AEA1FA22256BB800069C36 /* CTLoginView */,
 				21AEA1C022254A2B00069C36 /* CTCellView */,
@@ -1744,6 +1769,10 @@
 		21AEA19B2225370D00069C36 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21AEA263222776E500069C36 /* PayNRCell001.h */,
+				21AEA264222776E500069C36 /* PayNRCell001.m */,
+				21AEA2662227770D00069C36 /* PayStyleCell001.h */,
+				21AEA2672227770D00069C36 /* PayStyleCell001.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1753,10 +1782,8 @@
 			children = (
 				21AEA233222690D200069C36 /* PayCtrl001.h */,
 				21AEA234222690D200069C36 /* PayCtrl001.m */,
-				21AEA2362226912900069C36 /* SuccessfulCtrl001.h */,
-				21AEA2372226912900069C36 /* SuccessfulCtrl001.m */,
-				21AEA2392226914800069C36 /* FailureCtrl001.h */,
-				21AEA23A2226914800069C36 /* FailureCtrl001.m */,
+				21AEA2362226912900069C36 /* PayResultsCtrl001.h */,
+				21AEA2372226912900069C36 /* PayResultsCtrl001.m */,
 			);
 			path = Ctrls;
 			sourceTree = "<group>";
@@ -1929,6 +1956,7 @@
 			isa = PBXGroup;
 			children = (
 				21AEA22622256D8300069C36 /* Images */,
+				21AEA25A22276F2000069C36 /* HeaderView002 */,
 				21AEA22022256D3F00069C36 /* HeaderView001 */,
 			);
 			path = CTHeaderView;
@@ -1963,6 +1991,45 @@
 				21AEA23E2226926800069C36 /* CellView005.m */,
 			);
 			path = CellView005;
+			sourceTree = "<group>";
+		};
+		21AEA25A22276F2000069C36 /* HeaderView002 */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA25B22276F4400069C36 /* HeaderView002.png */,
+				21AEA25D22276F5000069C36 /* HeaderView002.h */,
+				21AEA25E22276F5000069C36 /* HeaderView002.m */,
+			);
+			path = HeaderView002;
+			sourceTree = "<group>";
+		};
+		21AEA26C2227D9BA00069C36 /* CTPayView */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA26D2227D9BA00069C36 /*  CTPayImage */,
+				21AEA26E2227D9BA00069C36 /*  CTPayView001 */,
+			);
+			path = CTPayView;
+			sourceTree = "<group>";
+		};
+		21AEA26D2227D9BA00069C36 /*  CTPayImage */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA2772227DA8B00069C36 /* CTPaySuccessful001@2x.png */,
+				21AEA2782227DA8B00069C36 /* CTPaySuccessful001@3x.png */,
+				21AEA2732227DA7400069C36 /* CTPayFailure001@2x.png */,
+				21AEA2742227DA7400069C36 /* CTPayFailure001@3x.png */,
+			);
+			path = " CTPayImage";
+			sourceTree = "<group>";
+		};
+		21AEA26E2227D9BA00069C36 /*  CTPayView001 */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA27B2227DAA800069C36 /* CTPayView001.h */,
+				21AEA27C2227DAA800069C36 /* CTPayView001.m */,
+			);
+			path = " CTPayView001";
 			sourceTree = "<group>";
 		};
 		21BB2716216B515500B156A1 /* TableCellModeul */ = {
@@ -2626,11 +2693,13 @@
 				21324F132211641500F1E3D1 /* loginBak2@3x.png in Resources */,
 				21FA81B921A54533000AFC63 /* HUBGIF001@2x.tiff in Resources */,
 				21BB276C216B515600B156A1 /* OneSimple_background@3x.png in Resources */,
+				21AEA27A2227DA8C00069C36 /* CTPaySuccessful001@3x.png in Resources */,
 				21BB2773216B515600B156A1 /* threeSimple_Warning@2x.png in Resources */,
 				21AEA192222536D000069C36 /* MyPhone002@3x.png in Resources */,
 				214A05CB211C3F8A00F820BD /* LICENSE in Resources */,
 				21BB276D216B515600B156A1 /* OneSimple_btn_background@2x.png in Resources */,
 				21AEA22E22256E0F00069C36 /* MyUserImage001@2x.png in Resources */,
+				21AEA2762227DA7500069C36 /* CTPayFailure001@3x.png in Resources */,
 				21AEA21A22256BB800069C36 /* TextModelViewimage.png in Resources */,
 				21BB278D216B515600B156A1 /* WK_WarningImage02@2x.png in Resources */,
 				21BB278C216B515600B156A1 /* WK_WarningImage01@2x.png in Resources */,
@@ -2650,6 +2719,7 @@
 				21BB277F216B515600B156A1 /* 3.jpeg in Resources */,
 				21FA81BB21A54533000AFC63 /* HUBGIF003@2x.tiff in Resources */,
 				21E0B5D7212EB6F200876E24 /* Nav_leftImage@3x.png in Resources */,
+				21AEA25C22276F4400069C36 /* HeaderView002.png in Resources */,
 				21AEA22B22256E0F00069C36 /* MyUserImage001@3x.png in Resources */,
 				21943975220149530010B640 /* LogAccountViewimage.png in Resources */,
 				21BB2790216B515600B156A1 /* WX_UserImage@3x.png in Resources */,
@@ -2658,6 +2728,7 @@
 				21AEA25822269B6200069C36 /* navLetBtn2@3x.png in Resources */,
 				21AEA25522269B1700069C36 /* MyBkB002@3x.png in Resources */,
 				21943973220149290010B640 /* LogBottomViewimage.png in Resources */,
+				21AEA2752227DA7500069C36 /* CTPayFailure001@2x.png in Resources */,
 				21E0B5FC212FB47400876E24 /* Login_MimaSelected@3x.png in Resources */,
 				21AEA190222536D000069C36 /* MyKey002@3x.png in Resources */,
 				21E0B5F9212FB47400876E24 /* Login_MimaDefault@2x.png in Resources */,
@@ -2668,6 +2739,7 @@
 				21FA81BE21A54533000AFC63 /* pika.gif in Resources */,
 				21FA81C021A54533000AFC63 /* showOne0011@2x.png in Resources */,
 				21E0B5FD212FB47400876E24 /* Login_wx@2x.png in Resources */,
+				21AEA2792227DA8C00069C36 /* CTPaySuccessful001@2x.png in Resources */,
 				21BB2780216B515600B156A1 /* 4.jpeg in Resources */,
 				21FA81C921A54533000AFC63 /* showOne004@2x.png in Resources */,
 				21AEA23222256E4A00069C36 /* MyHelp001@3x.png in Resources */,
@@ -2752,6 +2824,7 @@
 				21A8DEF1219EA64D000ACCA9 /* HuaBanCrrl.m in Sources */,
 				214A05C7211C3F8A00F820BD /* TAPageControl.m in Sources */,
 				214A05BE211C3F8A00F820BD /* UIImage+WebP.m in Sources */,
+				21AEA265222776E500069C36 /* PayNRCell001.m in Sources */,
 				21A8DF16219EA6EB000ACCA9 /* ToolView.m in Sources */,
 				21AEA1F9222568AB00069C36 /* ThreeModuleCell.m in Sources */,
 				214A05D5211C3F8A00F820BD /* NSString+MJExtension.m in Sources */,
@@ -2765,14 +2838,16 @@
 				21BB277A216B515600B156A1 /* MovieLayout.m in Sources */,
 				21AEA21D22256BB800069C36 /* SeccodeView002.m in Sources */,
 				214A05B5211C3F8A00F820BD /* SDWebImageCompat.m in Sources */,
+				21AEA25F22276F5000069C36 /* HeaderView002.m in Sources */,
 				21E0B5A4212E9C8300876E24 /* AFAutoPurgingImageCache.m in Sources */,
-				21AEA2382226912900069C36 /* SuccessfulCtrl001.m in Sources */,
+				21AEA2382226912900069C36 /* PayResultsCtrl001.m in Sources */,
 				21A8DF17219EA6EB000ACCA9 /* viewcell.m in Sources */,
 				21266E1F215DC5F1005577A8 /* LogAccountView.m in Sources */,
 				2169FAD021057A22005D6F2B /* BaseViewController.m in Sources */,
 				214A05BA211C3F8A00F820BD /* SDWebImagePrefetcher.m in Sources */,
 				214A05AC211C3F8A00F820BD /* IQTitleBarButtonItem.m in Sources */,
 				21BB2792216B515600B156A1 /* LargeViewCell.m in Sources */,
+				21AEA2682227770D00069C36 /* PayStyleCell001.m in Sources */,
 				214A05DA211C3F8A00F820BD /* MJRefreshComponent.m in Sources */,
 				21AEA199222536D000069C36 /* QL_TelVCViewController.m in Sources */,
 				2169FAE02105851F005D6F2B /* UIColor+Definition.m in Sources */,
@@ -2824,7 +2899,6 @@
 				21E0B5A0212E9C8300876E24 /* AFSecurityPolicy.m in Sources */,
 				214A05A5211C3F8A00F820BD /* IQUIViewController+Additions.m in Sources */,
 				21A8DF0E219EA6EB000ACCA9 /* HBViewController.m in Sources */,
-				21AEA23B2226914800069C36 /* FailureCtrl001.m in Sources */,
 				21E0B59F212E9C8300876E24 /* AFNetworkReachabilityManager.m in Sources */,
 				21AEA235222690D200069C36 /* PayCtrl001.m in Sources */,
 				21AEA1E7222561E400069C36 /* CellView002.m in Sources */,
@@ -2904,6 +2978,7 @@
 				21324F0B22115EE700F1E3D1 /* CTLoginCtrls2.m in Sources */,
 				21266E13215DC5B7005577A8 /* GLMiMaCtrl.m in Sources */,
 				214A05A9211C3F8A00F820BD /* IQTextView.m in Sources */,
+				21AEA26B22278AC700069C36 /* PayCtrls.m in Sources */,
 				219434B221F70D110010B640 /* CTUIManagers.m in Sources */,
 				21AEA1E4222560F900069C36 /* CellView001.m in Sources */,
 				214A05CA211C3F8A00F820BD /* UIView+SDExtension.m in Sources */,
@@ -2919,6 +2994,7 @@
 				214A05D8211C3F8A00F820BD /* MJRefreshAutoFooter.m in Sources */,
 				214A05C9211C3F8A00F820BD /* SDCycleScrollView.m in Sources */,
 				21A8DF0F219EA6EB000ACCA9 /* DrawPath.m in Sources */,
+				21AEA27D2227DAA800069C36 /* CTPayView001.m in Sources */,
 				214A05A3211C3F8A00F820BD /* IQUITextFieldView+Additions.m in Sources */,
 				214A05AE211C3F8A00F820BD /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				21AEA1F8222568AB00069C36 /* FourModuleCell.m in Sources */,

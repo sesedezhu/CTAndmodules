@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SuccessfulCtrl001 : UIViewController
+@interface PayResultsCtrl001 : UIViewController
 
 @end
 

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CellView004 : UIView
 @property(nonatomic ,strong) UIButton *Btn;      //退出按钮
+//主动更新按钮位置
+- (void)updateUIFrameTop:(CGFloat)top Left:(CGFloat)left Width:(CGFloat)width Height:(CGFloat)height;
 @end
 
 NS_ASSUME_NONNULL_END

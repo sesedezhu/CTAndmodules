@@ -1,8 +1,8 @@
 //
-//  FailureCtrl001.h
+//  PayCtrls.h
 //  CT实用modules
 //
-//  Created by 涛程 on 2019/2/27.
+//  Created by 涛程 on 2019/2/28.
 //  Copyright © 2019年 涛程. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FailureCtrl001 : UIViewController
+@interface PayCtrls : UIViewController
 
 @end
 
