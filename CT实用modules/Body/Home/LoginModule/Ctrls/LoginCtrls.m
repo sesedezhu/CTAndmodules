@@ -7,7 +7,7 @@
 //
 
 #import "LoginCtrls.h"
-#import "NavEveryoneView.h"
+#import "NavView001.h"
 #import "LogHaedView.h"
 #import "LogBottomView.h"
 #import "LogAccountView.h"
@@ -21,7 +21,7 @@
     NSString *_msgInfo; //验证码
 
 }
-@property(nonatomic ,strong) NavEveryoneView *NavView; //虚假导航条
+@property(nonatomic ,strong) NavView001 *NavView; //虚假导航条
 @property(nonatomic ,strong) UIScrollView *logScrollViews;
 @property(nonatomic ,strong) UIView *loginBakView;   //整体背景
 @property(nonatomic ,strong) LogHaedView *logHaedViews;       //头部背景
@@ -371,9 +371,9 @@
     return YES;
 }
 #pragma mark - 懒加载
-- (NavEveryoneView *)NavView{
+- (NavView001 *)NavView{
     if (!_NavView) {
-        _NavView = [[NavEveryoneView alloc]init];
+        _NavView = [[NavView001 alloc]init];
     }
     return _NavView;
 }

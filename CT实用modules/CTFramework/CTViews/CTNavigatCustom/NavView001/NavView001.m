@@ -6,13 +6,13 @@
 //  Copyright © 2017年 涛程. All rights reserved.
 //
 
-#import "NavEveryoneView.h"
-@interface NavEveryoneView()
+#import "NavView001.h"
+@interface NavView001()
 @property(nonatomic ,strong) UIView *botViewBak;
 
 @end
 
-@implementation NavEveryoneView
+@implementation NavView001
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

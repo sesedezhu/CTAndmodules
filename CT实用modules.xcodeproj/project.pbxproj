@@ -212,6 +212,8 @@
 		21AEA2792227DA8C00069C36 /* CTPaySuccessful001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2772227DA8B00069C36 /* CTPaySuccessful001@2x.png */; };
 		21AEA27A2227DA8C00069C36 /* CTPaySuccessful001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA2782227DA8B00069C36 /* CTPaySuccessful001@3x.png */; };
 		21AEA27D2227DAA800069C36 /* CTPayView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA27C2227DAA800069C36 /* CTPayView001.m */; };
+		21AEA3DE2228D1BA00069C36 /* NavInform.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA3DD2228D1BA00069C36 /* NavInform.rtf */; };
+		21AEA3E22228D28D00069C36 /* NavView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA3E12228D28D00069C36 /* NavView001.m */; };
 		21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */; };
 		21BB2765216B515600B156A1 /* CellModeuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2718216B515500B156A1 /* CellModeuls.m */; };
 		21BB2766216B515600B156A1 /* CollectionModeul.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB271C216B515500B156A1 /* CollectionModeul.m */; };
@@ -295,7 +297,6 @@
 		21E0B5B7212E9C8300876E24 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B59D212E9C8200876E24 /* YYMemoryCache.m */; };
 		21E0B5BD212E9C8E00876E24 /* MBProgressHUD+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5BA212E9C8E00876E24 /* MBProgressHUD+HUD.m */; };
 		21E0B5BE212E9C8E00876E24 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5BC212E9C8E00876E24 /* MBProgressHUD.m */; };
-		21E0B5C2212E9E0400876E24 /* NavEveryoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C1212E9E0400876E24 /* NavEveryoneView.m */; };
 		21E0B5C9212E9F0500876E24 /* CTStringTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C5212E9F0400876E24 /* CTStringTool.m */; };
 		21E0B5CA212E9F0500876E24 /* CTMD5Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5C8212E9F0500876E24 /* CTMD5Tool.m */; };
 		21E0B5CE212EA11F00876E24 /* CTTextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0B5CD212EA11E00876E24 /* CTTextTool.m */; };
@@ -718,6 +719,9 @@
 		21AEA2782227DA8B00069C36 /* CTPaySuccessful001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTPaySuccessful001@3x.png"; sourceTree = "<group>"; };
 		21AEA27B2227DAA800069C36 /* CTPayView001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPayView001.h; sourceTree = "<group>"; };
 		21AEA27C2227DAA800069C36 /* CTPayView001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPayView001.m; sourceTree = "<group>"; };
+		21AEA3DD2228D1BA00069C36 /* NavInform.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = NavInform.rtf; sourceTree = "<group>"; };
+		21AEA3E02228D28D00069C36 /* NavView001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavView001.h; sourceTree = "<group>"; };
+		21AEA3E12228D28D00069C36 /* NavView001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavView001.m; sourceTree = "<group>"; };
 		21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		21BB2717216B515500B156A1 /* CellModeuls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModeuls.h; sourceTree = "<group>"; };
@@ -853,8 +857,6 @@
 		21E0B5BA212E9C8E00876E24 /* MBProgressHUD+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HUD.m"; sourceTree = "<group>"; };
 		21E0B5BB212E9C8E00876E24 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		21E0B5BC212E9C8E00876E24 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		21E0B5C0212E9E0400876E24 /* NavEveryoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavEveryoneView.h; sourceTree = "<group>"; };
-		21E0B5C1212E9E0400876E24 /* NavEveryoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavEveryoneView.m; sourceTree = "<group>"; };
 		21E0B5C4212E9F0400876E24 /* CTStringTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTStringTool.h; sourceTree = "<group>"; };
 		21E0B5C5212E9F0400876E24 /* CTStringTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTStringTool.m; sourceTree = "<group>"; };
 		21E0B5C7212E9F0500876E24 /* CTMD5Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMD5Tool.h; sourceTree = "<group>"; };
@@ -2032,6 +2034,15 @@
 			path = " CTPayView001";
 			sourceTree = "<group>";
 		};
+		21AEA3DF2228D28D00069C36 /* NavView001 */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA3E02228D28D00069C36 /* NavView001.h */,
+				21AEA3E12228D28D00069C36 /* NavView001.m */,
+			);
+			path = NavView001;
+			sourceTree = "<group>";
+		};
 		21BB2716216B515500B156A1 /* TableCellModeul */ = {
 			isa = PBXGroup;
 			children = (
@@ -2400,9 +2411,9 @@
 		21E0B5BF212E9E0400876E24 /* CTNavigatCustom */ = {
 			isa = PBXGroup;
 			children = (
+				21AEA3DF2228D28D00069C36 /* NavView001 */,
+				21AEA3DD2228D1BA00069C36 /* NavInform.rtf */,
 				21E0B5CF212EB51000876E24 /* Image */,
-				21E0B5C0212E9E0400876E24 /* NavEveryoneView.h */,
-				21E0B5C1212E9E0400876E24 /* NavEveryoneView.m */,
 			);
 			path = CTNavigatCustom;
 			sourceTree = "<group>";
@@ -2723,6 +2734,7 @@
 				21AEA22B22256E0F00069C36 /* MyUserImage001@3x.png in Resources */,
 				21943975220149530010B640 /* LogAccountViewimage.png in Resources */,
 				21BB2790216B515600B156A1 /* WX_UserImage@3x.png in Resources */,
+				21AEA3DE2228D1BA00069C36 /* NavInform.rtf in Resources */,
 				21E0B5FA212FB47400876E24 /* Login_MimaDefault@3x.png in Resources */,
 				21AEA22C22256E0F00069C36 /* MyBakImage001@3x.png in Resources */,
 				21AEA25822269B6200069C36 /* navLetBtn2@3x.png in Resources */,
@@ -2854,7 +2866,6 @@
 				21EE83FD21D0CF2100A03742 /* modoulView001.m in Sources */,
 				21E0B5B1212E9C8300876E24 /* LAndRRequest.m in Sources */,
 				214A05B2211C3F8A00F820BD /* NSImage+WebCache.m in Sources */,
-				21E0B5C2212E9E0400876E24 /* NavEveryoneView.m in Sources */,
 				21AEA22522256D4600069C36 /* MyHeaderView001.m in Sources */,
 				21E0B5AE212E9C8300876E24 /* NetworkErrorThree.m in Sources */,
 				214A05B6211C3F8A00F820BD /* SDWebImageDecoder.m in Sources */,
@@ -2942,6 +2953,7 @@
 				214A05C2211C3F8A00F820BD /* UIView+WebCacheOperation.m in Sources */,
 				214A05E1211C3F8A00F820BD /* MJRefreshBackNormalFooter.m in Sources */,
 				21BB2766216B515600B156A1 /* CollectionModeul.m in Sources */,
+				21AEA3E22228D28D00069C36 /* NavView001.m in Sources */,
 				21AEA16522252B2200069C36 /* PlistManager.m in Sources */,
 				2165207D2181760900A631A8 /* MD5Ctrl.m in Sources */,
 				21AEA188222536D000069C36 /* MyCtrl001.m in Sources */,

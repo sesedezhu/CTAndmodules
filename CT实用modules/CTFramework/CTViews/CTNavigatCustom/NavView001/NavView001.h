@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NavEveryoneView : UIView
+@interface NavView001 : UIView
 @property(nonatomic ,strong) UILabel *title;
 @property(nonatomic ,strong) UIView *titleView;
 @property(nonatomic ,strong) UIButton *leftBtn;
