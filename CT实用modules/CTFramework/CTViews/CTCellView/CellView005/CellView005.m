@@ -23,6 +23,12 @@
     [self addSubview:self.Ima_right];
     [self addSubview:self.View_line];
     
+}
+- (void)layoutSubviews {
+    // 一定要调用super的方法
+    [super layoutSubviews];
+    
+    CGFloat height = self.bounds.size.height;
     UIView *contentView = self;
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
@@ -31,19 +37,17 @@
     .heightIs(1);
     
     _Ima_left.sd_layout
-    .bottomSpaceToView(_View_line, CONVER_VALUE(15))
+    .centerYIs(height/2)
     .leftSpaceToView(contentView, CONVER_VALUE(15))
     .widthIs(CONVER_VALUE(29))
     .heightIs(CONVER_VALUE(29));
     
     _Ima_right.sd_layout
-    .bottomSpaceToView(_View_line, CONVER_VALUE(21))
+    .centerYIs(height/2)
     .rightSpaceToView(contentView, CONVER_VALUE(15))
     .widthIs(CONVER_VALUE(18))
     .heightIs(CONVER_VALUE(18));
-    
 }
-
 #pragma mark - 懒加载
 - (UIImageView *)Ima_left{
     if (!_Ima_left) {

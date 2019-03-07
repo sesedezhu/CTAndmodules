@@ -32,15 +32,16 @@
     .rightSpaceToView(contentView, CONVER_VALUE(15))
     .bottomSpaceToView(contentView, CONVER_VALUE(1));
 }
+
 - (void)updateUIFrameTop:(CGFloat)top Left:(CGFloat)left Width:(CGFloat)width Height:(CGFloat)height{
     [_Btn sd_clearAutoLayoutSettings];//清空自动布局
     UIView *contentView = self;
     _Btn.sd_layout
-    .topSpaceToView(contentView, CONVER_VALUE(14))
+    .topSpaceToView(contentView, top)
     .leftSpaceToView(contentView, left)
     .widthIs(width)
     .heightIs(height);
-
+    
 }
 #pragma mark - 懒加载
 - (UIButton *)Btn{

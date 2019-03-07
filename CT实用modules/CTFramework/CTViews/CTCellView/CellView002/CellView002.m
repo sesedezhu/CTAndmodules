@@ -28,53 +28,56 @@
     [self addSubview:self.Ima_right];
     [self addSubview:self.View_line];
     
+}
+- (void)layoutSubviews {
+    // 一定要调用super的方法
+    [super layoutSubviews];
+    
+    CGFloat height = self.bounds.size.height;
     UIView *contentView = self;
-    _Lab_left.sd_layout
-    .topSpaceToView(contentView, CONVER_VALUE(22))
+    _View_line.sd_layout
+    .bottomSpaceToView(contentView, 0)
     .leftSpaceToView(contentView, CONVER_VALUE(15))
+    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .heightIs(1);
+    
+    _Lab_left.sd_layout
+    .centerYIs(height/2)
+    .leftEqualToView(_View_line)
     .widthIs(CONVER_VALUE(120))
     .heightIs(CONVER_VALUE(49));
     
     _Ima_right.sd_layout
-    .bottomSpaceToView(contentView, CONVER_VALUE(10))
+    .centerYIs(height/2)
     .rightSpaceToView(contentView, CONVER_VALUE(15))
     .widthIs(CONVER_VALUE(70))
     .heightIs(CONVER_VALUE(70));
     
-    _View_line.sd_layout
-    .bottomSpaceToView(contentView, 0)
-    .leftEqualToView(_Lab_left)
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
-    .heightIs(1);
-    
-    _Lab_left.text = @"头像";
-    NSDictionary *UserDic = [PlistManager getFilePlists:UserPlists];
-    NSURL *imaurl = nil;
-    if (UserDic != nil){
-        NSString *photo     = UserDic[@"photo"];
-        imaurl = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.naliwan.com/%@",photo]];
-    }
-    [_Ima_right sd_setImageWithURL:imaurl placeholderImage:[UIImage imageNamed:@"portraitDefault"]];
-    
-    _View_line.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2f);
 }
 #pragma mark - 懒加载
 - (UILabel *)Lab_left{
     if (!_Lab_left) {
-        _Lab_left = [[UILabel alloc]init];
+        _Lab_left = [CTUIManagers createLabelText:@"头像" textColor:nil font:nil textAlignment:NSTextAlignmentLeft backgroundColor:nil];
         _Lab_left.adjustsFontSizeToFitWidth = YES;
     }
     return _Lab_left;
 }
 - (UIImageView *)Ima_right{
     if (!_Ima_right) {
-        _Ima_right = [[UIImageView alloc]init];
+        NSDictionary *UserDic = [PlistManager getFilePlists:UserPlists];
+        NSString *imaurl = nil;
+        if (UserDic != nil){
+            NSString *photo     = UserDic[@"photo"];
+            imaurl = [NSString stringWithFormat:@"http://img.naliwan.com/%@",photo];
+        }
+        _Ima_right = [CTUIManagers createImageViewURL:imaurl placeholderImage:@"Cell002Right"];
     }
     return _Ima_right;
 }
 - (UIView *)View_line{
     if (!_View_line) {
-        _View_line = [[UIView alloc]init];
+        _View_line = [CTUIManagers createView];
+        _View_line.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2f);
     }
     return _View_line;
 }
