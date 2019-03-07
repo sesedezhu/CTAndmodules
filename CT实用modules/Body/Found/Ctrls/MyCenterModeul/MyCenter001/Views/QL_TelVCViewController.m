@@ -49,7 +49,7 @@
     UIButton *backBut = [UIButton buttonWithType:UIButtonTypeCustom];
     backBut.frame = CGRectMake(0, 0,30, 25);
     [backBut setTitle:@"  " forState:UIControlStateNormal];
-    [backBut setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backBut setTitleColor:CTColorBlack forState:UIControlStateNormal];
     [backBut setImage:[UIImage imageNamed:@"MyBkB002"] forState:UIControlStateNormal];
     backBut.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
     [backBut addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];

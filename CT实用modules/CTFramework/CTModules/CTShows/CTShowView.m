@@ -218,7 +218,7 @@
 - (UIView *)contentView{
     if (!_contentView) {
         _contentView = [[UIView alloc]init];
-        _contentView.backgroundColor = [UIColor clearColor];
+        _contentView.backgroundColor = CTColorClear;
         _contentView.alpha = 0.0;
     }
     return _contentView;

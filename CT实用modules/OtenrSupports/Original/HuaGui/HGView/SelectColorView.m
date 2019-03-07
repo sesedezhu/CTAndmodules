@@ -40,8 +40,8 @@
                            [UIColor orangeColor],
                            [UIColor purpleColor],
                            [UIColor brownColor],
-                           [UIColor blackColor],
-                           [UIColor whiteColor]
+                           CTColorBlack,
+                           CTColorWhite
                            ];
         
         self.colorArray = array;

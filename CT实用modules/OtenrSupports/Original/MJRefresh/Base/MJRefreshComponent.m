@@ -32,7 +32,7 @@
 {
     // 基本属性
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = CTColorClear;
 }
 
 - (void)layoutSubviews
@@ -248,7 +248,7 @@
     label.textColor = MJRefreshLabelTextColor;
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.textAlignment = NSTextAlignmentCenter;
-    label.backgroundColor = [UIColor clearColor];
+    label.backgroundColor = CTColorClear;
     return label;
 }
 

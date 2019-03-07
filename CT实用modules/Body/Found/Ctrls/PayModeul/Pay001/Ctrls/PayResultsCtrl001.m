@@ -33,7 +33,7 @@
     UIButton *backBut = [UIButton buttonWithType:UIButtonTypeCustom];
     backBut.frame = CGRectMake(0, 0,30, 25);
     [backBut setTitle:@"  " forState:UIControlStateNormal];
-    [backBut setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backBut setTitleColor:CTColorBlack forState:UIControlStateNormal];
     [backBut setImage:[UIImage imageNamed:@"MyBkB002"] forState:UIControlStateNormal];
     backBut.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
     [backBut addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
@@ -58,7 +58,7 @@
     self.navigationItem.title =  @"支付失败";
     _HeaderView.PayImage.image = [UIImage imageNamed:@"CTPayFailure001"];
     [_HeaderView.LeftBtn setTitle:@"继续支付" forState:UIControlStateNormal];
-    [_HeaderView.LeftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_HeaderView.LeftBtn setTitleColor:CTColorWhite forState:UIControlStateNormal];
     _HeaderView.LeftBtn.backgroundColor = allcolorAlphasCT(241, 96, 39, 1.0);
     [_HeaderView.RightBtn setTitle:@"查看订单" forState:UIControlStateNormal];
     _HeaderView.LabResults.text = @"支付失败";
@@ -67,7 +67,7 @@
 }
 #pragma mark - loadUI
 - (void)loadUI{
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = CTColorGroupTableViewBackground;
     [self.view addSubview:self.HeaderView];
 }
 #pragma mark - 点击事件

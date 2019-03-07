@@ -22,7 +22,7 @@
 }
 #pragma mark - UI
 - (void)loadUI{
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = CTColorClear;
     
     [self addSubview:self.letImageView];
     [self addSubview:self.view_line];
@@ -63,7 +63,7 @@
 }
 - (UITextField *)Text_content{
     if (!_Text_content) {
-        _Text_content = [CTUIManagers createTextFieldPlaceholder:@"您的手机号码" keyboardType:UIKeyboardTypeDefault backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft];
+        _Text_content = [CTUIManagers createTextFieldPlaceholder:@"您的手机号码" keyboardType:UIKeyboardTypeDefault backgroundColor:CTColorClear textAlignment:NSTextAlignmentLeft];
         _Text_content.textColor = allcolorAlphasCT(145, 145, 145, 1.0);
         //        _Text_ZhangHao.keyboardType = UIKeyboardTypeNumberPad;
 //        _Text_content.placeholder = @"密码由6-16位字母、数字组合";

@@ -10,10 +10,10 @@
 
 @implementation CTUIManagers
 /*******************  Label  *******************/
-#define CTLabTextColor       [UIColor blackColor] //默认文字黑色
+#define CTLabTextColor       CTColorBlack //默认文字黑色
 #define CTLabFont            [UIFont systemFontOfSize:CONVER_VALUE(17)] //默认系统文字大小
 #define CTLabAlignment       NSTextAlignmentLeft  //默认左对齐
-#define CTLabBackgroundColor [UIColor whiteColor] //默认背景颜色
+#define CTLabBackgroundColor CTColorWhite //默认背景颜色
 #define CTLablineBreakMode   NSLineBreakByTruncatingTail //默认小数点位置
 #define CTLabFontSizeToFitWidth   NO //默认不开启文字自适应配置
 //创建lable,默认配置

@@ -41,8 +41,8 @@
     UIView *contentView = self;
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
-    .leftSpaceToView(contentView, CONVER_VALUE(15))
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .leftSpaceToView(contentView, LeftSpaceToCTView)
+    .rightSpaceToView(contentView, RightSpaceToCTView)
     .heightIs(1);
     
     _Lab_left.sd_layout
@@ -53,14 +53,14 @@
     
     _Ima_right.sd_layout
     .centerYIs(height/2)
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .rightEqualToView(_View_line)
     .widthIs(CONVER_VALUE(15))
     .heightIs(CONVER_VALUE(15));
     
     if (_Ima_right.hidden) {
         _Btn_right.sd_layout
         .bottomEqualToView(_Lab_left)
-        .rightSpaceToView(contentView, CONVER_VALUE(15))
+        .rightEqualToView(_View_line)
         .widthIs(CONVER_VALUE(120))
         .heightIs(CONVER_VALUE(49));
     }else{
@@ -86,7 +86,7 @@
 }
 - (UIButton *)Btn_right{
     if (!_Btn_right) {
-        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:allcolorAlphasCT(73, 75, 85, 1.0f) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:[UIColor clearColor]];;
+        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:allcolorAlphasCT(73, 75, 85, 1.0f) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];;
         _Btn_right.titleLabel.adjustsFontSizeToFitWidth = YES;
         _Btn_right.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;//按钮对齐
         _Btn_right.titleLabel.textAlignment = NSTextAlignmentRight;

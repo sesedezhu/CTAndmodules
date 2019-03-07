@@ -20,11 +20,11 @@
 
 - (void)loadDaiUI{
     //设置颜色
-    self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.backgroundColor = CTColorGroupTableViewBackground;
     [self.ima setImage:[UIImage imageNamed:@"NetError2"]];
     self.Lab_Title.textColor = [UIColor grayColor];
 //    self.Btn_Rob.backgroundColor = allcolor;
-    [_Btn_Rob setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_Btn_Rob setTitleColor:CTColorWhite forState:UIControlStateNormal];
     
     //添加控件
     [self addSubview:_ima];

@@ -18,13 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 1.设置导航栏上的标题文字颜色
-    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor blackColor], NSFontAttributeName : [UIFont systemFontOfSize:19]};
+    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : CTColorBlack, NSFontAttributeName : [UIFont systemFontOfSize:19]};
     
     // 2.以下两行代码可以把导航栏下面的阴影线去掉
     /*
        使用此方法，当隐藏导航栏的时候，其下的字类都将不调用
      */
-    [self.navigationBar setBackgroundImage:[UIColor imageColorWithCreateImage:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setBackgroundImage:[UIColor imageColorWithCreateImage:CTColorWhite] forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setShadowImage:[UIImage new]];
     
     //导航栏的背景颜色
@@ -32,7 +32,7 @@
 //    self.navigationBar.barTintColor = [UIColor colorWithHex:0x2e90d4];
 //    [UIColor colorWithHex:0x2e90d4];
     //改变返回键的文字颜色
-     [self.navigationBar setTintColor:[UIColor blackColor]];
+     [self.navigationBar setTintColor:CTColorBlack];
     
     // 关闭半透明效果,初始值将从导航栏以下开始
 //    self.navigationBar.translucent = NO;

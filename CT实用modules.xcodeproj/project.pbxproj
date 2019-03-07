@@ -215,8 +215,11 @@
 		21AEA4202230AEE200069C36 /* imageRightCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA4112230AEE200069C36 /* imageRightCell@2x.png */; };
 		21AEA4212230AEE200069C36 /* imageRightCell@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA4122230AEE200069C36 /* imageRightCell@3x.png */; };
 		21AEA4252230B0B200069C36 /* CellView006.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA4242230B0B200069C36 /* CellView006.m */; };
-		21AEA4272230B9FE00069C36 /* CellView006.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA4262230B9FE00069C36 /* CellView006.png */; };
-		21AEA4292230D4CF00069C36 /* View布局注意事项.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA4282230D4CF00069C36 /* View布局注意事项.rtf */; };
+		21AEA42D2230F8C100069C36 /* CellView006.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA42C2230F8C100069C36 /* CellView006.png */; };
+		21AEA4332230FB2D00069C36 /* View布局注意事项.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA4322230FB2D00069C36 /* View布局注意事项.rtf */; };
+		21AEA43722310B9F00069C36 /* CTPayView001.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA43622310B9E00069C36 /* CTPayView001.png */; };
+		21AEA43A22310C3700069C36 /* CellView007.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA43922310C3700069C36 /* CellView007.m */; };
+		21AEA43D22310C4300069C36 /* CellView008.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA43C22310C4300069C36 /* CellView008.m */; };
 		21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */; };
 		21BB2765216B515600B156A1 /* CellModeuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2718216B515500B156A1 /* CellModeuls.m */; };
 		21BB2766216B515600B156A1 /* CollectionModeul.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB271C216B515500B156A1 /* CollectionModeul.m */; };
@@ -727,8 +730,15 @@
 		21AEA4122230AEE200069C36 /* imageRightCell@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageRightCell@3x.png"; sourceTree = "<group>"; };
 		21AEA4232230B0B200069C36 /* CellView006.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellView006.h; sourceTree = "<group>"; };
 		21AEA4242230B0B200069C36 /* CellView006.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellView006.m; sourceTree = "<group>"; };
-		21AEA4262230B9FE00069C36 /* CellView006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellView006.png; sourceTree = "<group>"; };
-		21AEA4282230D4CF00069C36 /* View布局注意事项.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "View布局注意事项.rtf"; sourceTree = "<group>"; };
+		21AEA42C2230F8C100069C36 /* CellView006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellView006.png; sourceTree = "<group>"; };
+		21AEA4322230FB2D00069C36 /* View布局注意事项.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "View布局注意事项.rtf"; sourceTree = "<group>"; };
+		21AEA4342230FB6900069C36 /* CTViewColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewColors.h; sourceTree = "<group>"; };
+		21AEA4352230FBB600069C36 /* CTViewLayouts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewLayouts.h; sourceTree = "<group>"; };
+		21AEA43622310B9E00069C36 /* CTPayView001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CTPayView001.png; sourceTree = "<group>"; };
+		21AEA43822310C3700069C36 /* CellView007.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellView007.h; sourceTree = "<group>"; };
+		21AEA43922310C3700069C36 /* CellView007.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellView007.m; sourceTree = "<group>"; };
+		21AEA43B22310C4300069C36 /* CellView008.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellView008.h; sourceTree = "<group>"; };
+		21AEA43C22310C4300069C36 /* CellView008.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellView008.m; sourceTree = "<group>"; };
 		21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		21BB2717216B515500B156A1 /* CellModeuls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModeuls.h; sourceTree = "<group>"; };
@@ -1576,7 +1586,7 @@
 		2169FADC210580DD005D6F2B /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
-				21AEA4282230D4CF00069C36 /* View布局注意事项.rtf */,
+				21AEA4312230FB2D00069C36 /* CTViewConfiguration */,
 				21AEA26C2227D9BA00069C36 /* CTPayView */,
 				21AEA21F22256D3F00069C36 /* CTHeaderView */,
 				21AEA1FA22256BB800069C36 /* CTLoginView */,
@@ -1816,6 +1826,8 @@
 				21AEA1D222254A2B00069C36 /* CellView004 */,
 				21AEA23C2226924700069C36 /* CellView005 */,
 				21AEA4222230B08000069C36 /* CellView006 */,
+				21AEA42A2230F89A00069C36 /* CellView007 */,
+				21AEA42B2230F89A00069C36 /* CellView008 */,
 			);
 			path = CTCellView;
 			sourceTree = "<group>";
@@ -2016,6 +2028,7 @@
 		21AEA26E2227D9BA00069C36 /*  CTPayView001 */ = {
 			isa = PBXGroup;
 			children = (
+				21AEA43622310B9E00069C36 /* CTPayView001.png */,
 				21AEA27B2227DAA800069C36 /* CTPayView001.h */,
 				21AEA27C2227DAA800069C36 /* CTPayView001.m */,
 			);
@@ -2039,7 +2052,7 @@
 				21AEA4052230AEE200069C36 /* CellView003.png */,
 				21AEA4062230AEE200069C36 /* CellView004.png */,
 				21AEA4072230AEE200069C36 /* CellView005.png */,
-				21AEA4262230B9FE00069C36 /* CellView006.png */,
+				21AEA42C2230F8C100069C36 /* CellView006.png */,
 			);
 			path = CellImagesUI;
 			sourceTree = "<group>";
@@ -2068,6 +2081,34 @@
 				21AEA4242230B0B200069C36 /* CellView006.m */,
 			);
 			path = CellView006;
+			sourceTree = "<group>";
+		};
+		21AEA42A2230F89A00069C36 /* CellView007 */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA43822310C3700069C36 /* CellView007.h */,
+				21AEA43922310C3700069C36 /* CellView007.m */,
+			);
+			path = CellView007;
+			sourceTree = "<group>";
+		};
+		21AEA42B2230F89A00069C36 /* CellView008 */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA43B22310C4300069C36 /* CellView008.h */,
+				21AEA43C22310C4300069C36 /* CellView008.m */,
+			);
+			path = CellView008;
+			sourceTree = "<group>";
+		};
+		21AEA4312230FB2D00069C36 /* CTViewConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA4322230FB2D00069C36 /* View布局注意事项.rtf */,
+				21AEA4342230FB6900069C36 /* CTViewColors.h */,
+				21AEA4352230FBB600069C36 /* CTViewLayouts.h */,
+			);
+			path = CTViewConfiguration;
 			sourceTree = "<group>";
 		};
 		21BB2716216B515500B156A1 /* TableCellModeul */ = {
@@ -2746,6 +2787,7 @@
 				21E0B5FE212FB47400876E24 /* Login_wx@3x.png in Resources */,
 				21A8DF19219EA6EB000ACCA9 /* JP@3x.png in Resources */,
 				21AEA41F2230AEE200069C36 /* Cell005Right@3x.png in Resources */,
+				21AEA43722310B9F00069C36 /* CTPayView001.png in Resources */,
 				2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */,
 				21FA81CA21A54533000AFC63 /* showOne005@2x.png in Resources */,
 				21FA81C221A54533000AFC63 /* showOne0013@2x.png in Resources */,
@@ -2768,7 +2810,6 @@
 				21AEA25822269B6200069C36 /* navLetBtn2@3x.png in Resources */,
 				21AEA25522269B1700069C36 /* MyBkB002@3x.png in Resources */,
 				21943973220149290010B640 /* LogBottomViewimage.png in Resources */,
-				21AEA4272230B9FE00069C36 /* CellView006.png in Resources */,
 				21AEA2752227DA7500069C36 /* CTPayFailure001@2x.png in Resources */,
 				21E0B5FC212FB47400876E24 /* Login_MimaSelected@3x.png in Resources */,
 				21AEA190222536D000069C36 /* MyKey002@3x.png in Resources */,
@@ -2801,8 +2842,8 @@
 				21AEA4152230AEE200069C36 /* CellView003.png in Resources */,
 				21BB2776216B515600B156A1 /* ThreeSimpleView.png in Resources */,
 				21AEA21C22256BB800069C36 /* TextModelTimeimage.png in Resources */,
-				21AEA4292230D4CF00069C36 /* View布局注意事项.rtf in Resources */,
 				21AEA22D22256E0F00069C36 /* MyBakImage001@2x.png in Resources */,
+				21AEA4332230FB2D00069C36 /* View布局注意事项.rtf in Resources */,
 				21AEA21E22256BB800069C36 /* TextModelTime2.png in Resources */,
 				21FA81C621A54533000AFC63 /* showOne001@2x.png in Resources */,
 				214A05E7211C3F8A00F820BD /* MJRefresh.bundle in Resources */,
@@ -2824,6 +2865,7 @@
 				21FA81C121A54533000AFC63 /* showOne0012@2x.png in Resources */,
 				21AEA18F222536D000069C36 /* MyKey002@2x.png in Resources */,
 				21AEA4142230AEE200069C36 /* CellView002.png in Resources */,
+				21AEA42D2230F8C100069C36 /* CellView006.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3011,6 +3053,7 @@
 				21E0B5B7212E9C8300876E24 /* YYMemoryCache.m in Sources */,
 				21E0B5CA212E9F0500876E24 /* CTMD5Tool.m in Sources */,
 				219434AC21F70AF30010B640 /* CTShowsManager.m in Sources */,
+				21AEA43D22310C4300069C36 /* CellView008.m in Sources */,
 				21E0B5AA212E9C8300876E24 /* UIProgressView+AFNetworking.m in Sources */,
 				21E0B5A7212E9C8300876E24 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				21DBBB3021A3FFC400548699 /* ShowsCtrls.m in Sources */,
@@ -3027,6 +3070,7 @@
 				21E0B5B6212E9C8300876E24 /* YYKVStorage.m in Sources */,
 				214A05CC211C3F8A00F820BD /* MJExtensionConst.m in Sources */,
 				214A05B7211C3F8A00F820BD /* SDWebImageDownloader.m in Sources */,
+				21AEA43A22310C3700069C36 /* CellView007.m in Sources */,
 				21E0B5AD212E9C8300876E24 /* NetworkError.m in Sources */,
 				214A05E0211C3F8A00F820BD /* MJRefreshBackGifFooter.m in Sources */,
 				21E0B59E212E9C8300876E24 /* AFHTTPSessionManager.m in Sources */,

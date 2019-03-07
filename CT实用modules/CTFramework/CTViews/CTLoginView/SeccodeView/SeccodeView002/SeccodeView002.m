@@ -23,7 +23,7 @@
 }
 #pragma mark - UI
 - (void)loadUI{
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = CTColorClear;
     
     [self addSubview:self.letImageView];
     [self addSubview:self.Text_content];
@@ -112,7 +112,7 @@
 }
 - (UITextField *)Text_content{
     if (!_Text_content) {
-        _Text_content = [CTUIManagers createTextFieldPlaceholder:@"请输入短信验证码" keyboardType:UIKeyboardTypeNumberPad backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft];
+        _Text_content = [CTUIManagers createTextFieldPlaceholder:@"请输入短信验证码" keyboardType:UIKeyboardTypeNumberPad backgroundColor:CTColorClear textAlignment:NSTextAlignmentLeft];
         _Text_content.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;  //垂直居中
         _Text_content.textColor = allcolorAlphasCT(145, 145, 145, 1.0);
     }

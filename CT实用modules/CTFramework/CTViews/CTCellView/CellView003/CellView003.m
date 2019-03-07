@@ -39,19 +39,19 @@
     UIView *contentView = self;
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
-    .leftSpaceToView(contentView, CONVER_VALUE(15))
-    .rightSpaceToView(contentView, -CONVER_VALUE(15))
+    .leftSpaceToView(contentView, LeftSpaceToCTView)
+    .rightSpaceToView(contentView, RightSpaceToCTView)
     .heightIs(1);
     
     _Ima_left.sd_layout
-    .leftSpaceToView(contentView, CONVER_VALUE(15))
+    .leftEqualToView(_View_line)
     .centerYIs(height/2)
     .widthIs(CONVER_VALUE(21))
     .heightIs(CONVER_VALUE(18));
     
     _Lab_left.sd_layout
     .leftSpaceToView(_Ima_left, 15)
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .rightEqualToView(_View_line)
     .bottomEqualToView(_Ima_left)
     .topEqualToView(_Ima_left);
 }
@@ -72,7 +72,7 @@
 - (UIView *)View_line{
     if (!_View_line) {
         _View_line = [CTUIManagers createView];
-        _View_line.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        _View_line.backgroundColor = CTColorGroupTableViewBackground;
     }
     return _View_line;
 }

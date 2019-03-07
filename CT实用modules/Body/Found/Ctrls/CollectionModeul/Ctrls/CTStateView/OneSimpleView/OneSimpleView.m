@@ -82,7 +82,7 @@
     if (!_ContentLab) {
         _ContentLab = [[UILabel alloc]init];
 //        _ContentLabel.numberOfLines = 0;
-        _ContentLab.textColor = [UIColor whiteColor];
+        _ContentLab.textColor = CTColorWhite;
         _ContentLab.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
        
     }
@@ -91,7 +91,7 @@
 - (UIButton *)btn{
     if (!_btn) {
         _btn = [[UIButton alloc]init];
-        [_btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_btn setTitleColor:CTColorWhite forState:UIControlStateNormal];
         _btn.titleLabel.font    = [UIFont systemFontOfSize: CONVER_VALUE(15)];
     }
     return _btn;

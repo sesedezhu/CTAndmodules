@@ -199,7 +199,7 @@
     [_btn setTitle:@"确 定" forState:UIControlStateNormal];
     [_btn1 setTitle:@"获取验证码" forState:UIControlStateNormal];
     
-    _viwe1.backgroundColor = [UIColor clearColor];
+    _viwe1.backgroundColor = CTColorClear;
     _viwe2.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
     _viwe3.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
     _btn.backgroundColor = allcolorAlphasCT(73, 75, 81, 1.0);

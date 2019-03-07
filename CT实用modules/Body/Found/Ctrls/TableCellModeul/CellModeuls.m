@@ -113,7 +113,7 @@
         //去掉cell之间默认虚线
         _TableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
-        _TableView.backgroundColor = [UIColor whiteColor];
+        _TableView.backgroundColor = CTColorWhite;
     }
     return _TableView;
 }

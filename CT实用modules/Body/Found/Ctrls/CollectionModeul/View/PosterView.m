@@ -60,7 +60,7 @@
 }
 #pragma mark- 创建UI
 -(void)createUI{
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = CTColorWhite;
     //创建大海报视图
     [self createLargeView];
     //创建头视图（小的collection view）
@@ -102,7 +102,7 @@
 
 - (void)createSuspensionButton{
     UIImageView *imaView = [[UIImageView alloc]init];
-    imaView.backgroundColor = [UIColor clearColor];
+    imaView.backgroundColor = CTColorClear;
     [self addSubview:imaView];
     
     UIView *view = self;

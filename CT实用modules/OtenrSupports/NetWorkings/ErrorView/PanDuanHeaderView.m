@@ -19,7 +19,7 @@
 }
 
 - (void)loadDaiUI{
-    self.Lab_Title.backgroundColor = [UIColor clearColor];
+    self.Lab_Title.backgroundColor = CTColorClear;
     [self addSubview:_Lab_Title];
 }
 - (void)layoutSubviews{

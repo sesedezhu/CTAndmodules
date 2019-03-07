@@ -19,7 +19,7 @@
 }
 #pragma mark - UI
 - (void)loadUI{
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = CTColorWhite;
     
     _topTitleLabel = [[UILabel alloc] init];
 //    _topTitleLabel.backgroundColor = WFColor(255, 255, 255);

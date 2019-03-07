@@ -58,18 +58,18 @@
         [self addSubview:bbcolor];//线条
         
         UIView *view2 = [[UIView alloc]initWithFrame:CGRectMake(x+widthcell22+3, 0, x, y)];
-        view2.backgroundColor = [UIColor whiteColor];
+        view2.backgroundColor = CTColorWhite;
         
         [self addSubview:view2];
         UIView *view3 = [[UIView alloc]initWithFrame:CGRectMake(x*2+widthcell22+4, 0, x, y)];
-        view3.backgroundColor = [UIColor whiteColor];
+        view3.backgroundColor = CTColorWhite;
         [self addSubview:view3];
         UIView *view4 = [[UIView alloc]initWithFrame:CGRectMake(x*3+widthcell22+5, 0, x, y)];
-        view4.backgroundColor = [UIColor whiteColor];
+        view4.backgroundColor = CTColorWhite;
         [self addSubview:view4];
         
         UIView *view5 = [[UIView alloc]initWithFrame:CGRectMake(x*4+widthcell22+6, 0, x, y)];
-        view5.backgroundColor = [UIColor whiteColor];
+        view5.backgroundColor = CTColorWhite;
         [self addSubview:view5];
         
         //4
@@ -92,7 +92,7 @@
         //按钮
         _btn0 = [[UIButton alloc]initWithFrame:CGRectMake(0, y/2-BtnHeight/2, x, BtnHeight)];
 //        [_btn0 setTitle:@"1888" forState:UIControlStateNormal];
-        [_btn0 setTitleColor:[UIColor whiteColor]forState:UIControlStateNormal];
+        [_btn0 setTitleColor:CTColorWhite forState:UIControlStateNormal];
         _btn0.titleLabel.font = [UIFont systemFontOfSize: TRANS_VALUE(14.0f )];
         [view0 addSubview:_btn0];
 

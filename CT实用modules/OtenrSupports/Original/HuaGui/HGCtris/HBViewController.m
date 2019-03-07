@@ -9,7 +9,7 @@
 #import "HBViewController.h"
 #import "SDAutoLayout.h"
 //画规背景颜色
-#define backgrodColor [UIColor whiteColor]
+#define backgrodColor CTColorWhite
 /*--屏幕的宽高----*/
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
@@ -73,7 +73,7 @@
     [_sc addSubview:self.HuaBanView];
     //创建画布对象
     DrawView *drawView = [[DrawView alloc]init];
-    drawView.backgroundColor = [UIColor clearColor];
+    drawView.backgroundColor = CTColorClear;
     [_HuaBanView addSubview:drawView];
     self.drawView = drawView;
     //添加是否允许绘画开关
@@ -246,7 +246,7 @@
     if (!_HuaBanView) {
         _HuaBanView= [[UIView alloc]init];
         _HuaBanView.tag = 101;
-        _HuaBanView.backgroundColor = [UIColor clearColor];
+        _HuaBanView.backgroundColor = CTColorClear;
     }
     return _HuaBanView;
 }

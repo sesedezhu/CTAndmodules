@@ -54,7 +54,7 @@
 #pragma mark - 懒加载
 - (UIButton *)LoginBtn{
     if (!_LoginBtn) {
-        _LoginBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:[UIColor whiteColor] font:[UIFont systemFontOfSize:CONVER_VALUE(16)] backgroundColor:nil];
+        _LoginBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:CTColorWhite font:[UIFont systemFontOfSize:CONVER_VALUE(16)] backgroundColor:nil];
         _LoginBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         _LoginBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _LoginBtn.titleLabel.textAlignment = NSTextAlignmentLeft;

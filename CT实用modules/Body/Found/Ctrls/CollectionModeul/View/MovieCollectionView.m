@@ -20,7 +20,7 @@
 {
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = CTColorClear;
         
         self.dataSource = self;
         self.delegate = self;

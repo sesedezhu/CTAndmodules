@@ -17,7 +17,7 @@
     方框背景颜色(也可直接在MBProgressHUD.m的1111行修改)
     hud.bezelView.color = [UIColor blueColor];
     菊花和文字颜色
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
  ***/
 // 找到原因了，在MBProgressHUD.m的 1164行，注释掉就好了，原因是作者在背景图框上加了一层毛玻璃UIVisualEffectView，去掉就没有问题了。
 
@@ -27,7 +27,7 @@
     [MBProgressHUD hideHUD];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
 }
 
 
@@ -72,7 +72,7 @@
     hud.label.numberOfLines = 0;
     hud.label.text = message;
     hud.label.font = [UIFont systemFontOfSize:TRANS_VALUE(12)];
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
     hud.userInteractionEnabled = NO;
     hud.bezelView.backgroundColor = [UIColor  colorWithRed:71/255.00 green:71/255.00 blue:73/255.00 alpha:0.7f];
     
@@ -87,7 +87,7 @@
     [MBProgressHUD hideHUD];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
     hud.mode = MBProgressHUDModeAnnularDeterminate;
     hud.mode = MBProgressHUDModeDeterminate;
     hud.label.text = @"加载中...";
@@ -107,7 +107,7 @@
     [MBProgressHUD hideHUD];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
     hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
     hud.label.text = @"加载中...";
 }
@@ -118,7 +118,7 @@
     [MBProgressHUD hideHUD];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
     hud.mode = MBProgressHUDModeCustomView;
     //设置显示的图片
     UIImage *image = [[UIImage imageNamed:imageName]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -136,9 +136,9 @@
     [MBProgressHUD hideHUD];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    hud.contentColor = [UIColor whiteColor];
+    hud.contentColor = CTColorWhite;
     hud.mode = MBProgressHUDModeCustomView;
-//    hud.bezelView.color = [UIColor clearColor];
+//    hud.bezelView.color = CTColorClear;
     //设置显示的图片
     hud.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName]];
     hud.customView.size = CGSizeMake(46, 46);
@@ -187,7 +187,7 @@
     //关闭交互可以点击去风火轮外的区域
     hud.userInteractionEnabled = NO;
     hud.bezelView.backgroundColor = [UIColor  colorWithRed:71/255.00 green:71/255.00 blue:73/255.00 alpha:0.7f]; //背景颜色
-    hud.label.textColor = [UIColor whiteColor];//设置文案颜色
+    hud.label.textColor = CTColorWhite;//设置文案颜色
 //    [hud hideAnimated:YES afterDelay:DelayTime];//设置几秒后消失
 }
 //隐藏HUD

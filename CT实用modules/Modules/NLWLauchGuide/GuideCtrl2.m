@@ -203,7 +203,7 @@
         _Text_Call.clipsToBounds = YES;
         _Text_Call.placeholder = @"推荐人手机号码(可不填)";
         _Text_Call.keyboardType = UIKeyboardTypeNumberPad;
-        _Text_Call.backgroundColor = [UIColor whiteColor];
+        _Text_Call.backgroundColor = CTColorWhite;
         _Text_Call.textAlignment = NSTextAlignmentCenter;
         //        _Text_Call.backgroundColor = [UIColor  yellowColor];
         [_Text_Call.layer setBorderColor:allcolorAlphasCT(240, 240, 240, 1.0).CGColor];

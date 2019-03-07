@@ -142,7 +142,7 @@
 - (UIImageView *)LoadImaView{
     if (!_LoadImaView) {
         _LoadImaView = [[UIImageView alloc]init];
-        _LoadImaView.backgroundColor = [UIColor clearColor];
+        _LoadImaView.backgroundColor = CTColorClear;
     }
     return _LoadImaView;
 }
@@ -180,7 +180,7 @@
         _ReturnBtn = [[UIButton alloc]init];
         [_ReturnBtn setTitleColor:allcolorAlphasCT(87, 95, 115, 1.0) forState:UIControlStateNormal];
         _ReturnBtn.titleLabel.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
-        _ReturnBtn.backgroundColor = [UIColor whiteColor];
+        _ReturnBtn.backgroundColor = CTColorWhite;
     }
     return _ReturnBtn;
 }

@@ -77,7 +77,7 @@ NSString * const ID = @"cycleCell";
 {
     _pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _autoScrollTimeInterval = 2.0;
-    _titleLabelTextColor = [UIColor whiteColor];
+    _titleLabelTextColor = CTColorWhite;
     _titleLabelTextFont= [UIFont systemFontOfSize:14];
     _titleLabelBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     _titleLabelHeight = 30;
@@ -89,7 +89,7 @@ NSString * const ID = @"cycleCell";
     _pageControlRightOffset = 0;
     _pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
     _hidesForSinglePage = YES;
-    _currentPageDotColor = [UIColor whiteColor];
+    _currentPageDotColor = CTColorWhite;
     _pageDotColor = [UIColor lightGrayColor];
     _bannerImageViewContentMode = UIViewContentModeScaleToFill;
     
@@ -137,7 +137,7 @@ NSString * const ID = @"cycleCell";
     _flowLayout = flowLayout;
     
     UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
-    mainView.backgroundColor = [UIColor clearColor];
+    mainView.backgroundColor = CTColorClear;
     mainView.pagingEnabled = YES;
     mainView.showsHorizontalScrollIndicator = NO;
     mainView.showsVerticalScrollIndicator = NO;
@@ -335,7 +335,7 @@ NSString * const ID = @"cycleCell";
         for (int i = 0; i < _titlesGroup.count; i++) {
             [temp addObject:@""];
         }
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = CTColorClear;
         self.imageURLStringsGroup = [temp copy];
     }
 }

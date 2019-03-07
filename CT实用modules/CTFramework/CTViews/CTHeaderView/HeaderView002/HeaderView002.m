@@ -19,19 +19,24 @@
 }
 #pragma mark - loadUI
 - (void)loadUI{
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = CTColorWhite;
     [self addSubview:self.Lab_money];
+    
+}
+- (void)layoutSubviews {
+    // 一定要调用super的方法
+    [super layoutSubviews];
     UIView *view = self;
     _Lab_money.sd_layout
     .centerYIs(self.frame.size.height/2)
-    .leftSpaceToView(view, CONVER_VALUE(15))
-    .rightSpaceToView(view, CONVER_VALUE(15))
+    .leftSpaceToView(view, LeftSpaceToCTView)
+    .rightSpaceToView(view, RightSpaceToCTView)
     .heightIs(CONVER_VALUE(30));
 }
 #pragma mark - 懒加载
 - (UILabel *)Lab_money{
     if (!_Lab_money) {
-        _Lab_money = [CTUIManagers createLabelText:@"¥" textColor:[UIColor redColor] font:[UIFont systemFontOfSize:CONVER_VALUE(20)] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _Lab_money = [CTUIManagers createLabelText:@"¥" textColor:[UIColor redColor] font:[UIFont systemFontOfSize:CONVER_VALUE(20)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
     }
     return _Lab_money;
 }

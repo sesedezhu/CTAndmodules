@@ -129,7 +129,7 @@
         placeHolderLabel.numberOfLines = 0;
         placeHolderLabel.font = self.font;
         placeHolderLabel.textAlignment = self.textAlignment;
-        placeHolderLabel.backgroundColor = [UIColor clearColor];
+        placeHolderLabel.backgroundColor = CTColorClear;
         placeHolderLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
         placeHolderLabel.alpha = 0;
         [self addSubview:placeHolderLabel];

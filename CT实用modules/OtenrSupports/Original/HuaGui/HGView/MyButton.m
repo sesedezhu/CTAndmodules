@@ -18,7 +18,7 @@
     if (self) {
         [self.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
         
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self setTitleColor:CTColorWhite forState:UIControlStateNormal];
     }
     
     return self;

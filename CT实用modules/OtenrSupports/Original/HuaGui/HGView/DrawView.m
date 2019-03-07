@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:CTColorWhite];
         
         //设置属性值
         self.lineWidth = 3.0;

@@ -28,8 +28,8 @@
     UIView *contentView = self;
     _Btn.sd_layout
     .topSpaceToView(contentView, CONVER_VALUE(1))
-    .leftSpaceToView(contentView, CONVER_VALUE(15))
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .leftSpaceToView(contentView, LeftSpaceToCTView)
+    .rightSpaceToView(contentView, RightSpaceToCTView)
     .bottomSpaceToView(contentView, CONVER_VALUE(1));
 }
 
@@ -46,12 +46,12 @@
 #pragma mark - 懒加载
 - (UIButton *)Btn{
     if (!_Btn) {
-        _Btn = [CTUIManagers createButtonNormalText:@"退出登录" normalTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:[UIColor clearColor]];
+        _Btn = [CTUIManagers createButtonNormalText:@"退出登录" normalTextColor:CTColorBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];
         _Btn.titleLabel.adjustsFontSizeToFitWidth = YES;
         _Btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         _Btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [CTUIManagers CTBtnRadius:_Btn Radius:3];
-        [CTUIManagers CTBtnBorder:_Btn refColor:[UIColor groupTableViewBackgroundColor].CGColor];
+        [CTUIManagers CTBtnBorder:_Btn refColor:CTColorGroupTableViewBackground.CGColor];
     }
     return _Btn;
 }

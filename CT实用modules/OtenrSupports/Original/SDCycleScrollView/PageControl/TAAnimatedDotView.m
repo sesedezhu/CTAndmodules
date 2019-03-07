@@ -51,10 +51,10 @@ static CGFloat const kAnimateDuration = 1;
 
 - (void)initialization
 {
-    _dotColor = [UIColor whiteColor];
-    self.backgroundColor    = [UIColor clearColor];
+    _dotColor = CTColorWhite;
+    self.backgroundColor    = CTColorClear;
     self.layer.cornerRadius = CGRectGetWidth(self.frame) / 2;
-    self.layer.borderColor  = [UIColor whiteColor].CGColor;
+    self.layer.borderColor  = CTColorWhite.CGColor;
     self.layer.borderWidth  = 2;
 }
 
@@ -80,7 +80,7 @@ static CGFloat const kAnimateDuration = 1;
 - (void)animateToDeactiveState
 {
     [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = CTColorClear;
         self.transform = CGAffineTransformIdentity;
     } completion:nil];
 }

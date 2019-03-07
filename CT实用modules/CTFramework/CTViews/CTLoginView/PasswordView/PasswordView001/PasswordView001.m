@@ -22,7 +22,7 @@
 }
 #pragma mark - UI
 - (void)loadUI{
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = CTColorClear;
     
     [self addSubview:self.Lab_name];
     [self addSubview:self.view_line];

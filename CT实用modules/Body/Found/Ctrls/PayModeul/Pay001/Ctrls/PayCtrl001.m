@@ -41,7 +41,7 @@
     UIButton *backBut = [UIButton buttonWithType:UIButtonTypeCustom];
     backBut.frame = CGRectMake(0, 0,30, 25);
     [backBut setTitle:@"  " forState:UIControlStateNormal];
-    [backBut setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backBut setTitleColor:CTColorBlack forState:UIControlStateNormal];
     [backBut setImage:[UIImage imageNamed:@"MyBkB002"] forState:UIControlStateNormal];
     backBut.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
     [backBut addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
@@ -54,7 +54,7 @@
 }
 #pragma mark - loadUI
 - (void)loadUI{
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = CTColorGroupTableViewBackground;
     [self.view addSubview:self.TableView];
     _TableView.tableHeaderView = self.headerView;
     _TableView.tableFooterView = self.footerView;
@@ -155,10 +155,10 @@
 #pragma mark - 懒加载
 - (UITableView *)TableView{
     if (!_TableView) {
-        _TableView = [CTUIManagers CTTableViewBackgroundColor:[UIColor whiteColor] separatorStyle:UITableViewCellSeparatorStyleNone style:UITableViewStyleGrouped Frame:CGRectMake(0, 10, kScreenWidth, kScreenHeight)];
+        _TableView = [CTUIManagers CTTableViewBackgroundColor:CTColorWhite separatorStyle:UITableViewCellSeparatorStyleNone style:UITableViewStyleGrouped Frame:CGRectMake(0, 10, kScreenWidth, kScreenHeight)];
         _TableView.delegate = self;
         _TableView.dataSource = self;
-        _TableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        _TableView.backgroundColor = CTColorGroupTableViewBackground;
         _TableView.scrollEnabled = NO;
     }
     return _TableView;
@@ -172,10 +172,10 @@
 - (CellView004 *)footerView{
     if (!_footerView) {
         _footerView = [[CellView004 alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, CONVER_VALUE(94))];
-        _footerView.backgroundColor = [UIColor whiteColor];
+        _footerView.backgroundColor = CTColorWhite;
         _footerView.Btn.backgroundColor =allcolorAlphasCT(241, 96, 39, 10);
         [_footerView.Btn setTitle:@"立即付款" forState:UIControlStateNormal];
-        [_footerView.Btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_footerView.Btn setTitleColor:CTColorWhite forState:UIControlStateNormal];
         [_footerView updateUIFrameTop:CONVER_VALUE(14) Left:CONVER_VALUE(15) Width:CONVER_VALUE(346) Height:CONVER_VALUE(50)];
         [_footerView.Btn addTarget:self action:@selector(PayBtnClickEvent) forControlEvents:UIControlEventTouchUpInside];
     }

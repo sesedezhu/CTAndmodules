@@ -28,8 +28,8 @@
 }
 
 - (void)loadUI{
-    self.backgroundColor = [UIColor clearColor];
-    self.BackView.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = CTColorClear;
+    self.BackView.backgroundColor = CTColorWhite;
     
     [self.contentView addSubview:_BackView];
     [_BackView addSubview:self.NicknameLab];

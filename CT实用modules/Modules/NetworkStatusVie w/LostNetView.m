@@ -33,7 +33,7 @@
     _titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
     _titleLabel.textAlignment = NSTextAlignmentLeft;
     
-    self.rightImage.backgroundColor = [UIColor blackColor];
+    self.rightImage.backgroundColor = CTColorBlack;
     
     
     [_contentView addSubview:_leftImage];
@@ -81,7 +81,7 @@
     __weak typeof(self) _weakSelf = self;
     
     [UIView animateWithDuration:1.0 animations:^{
-        _weakSelf.backgroundColor = [UIColor clearColor];
+        _weakSelf.backgroundColor = CTColorClear;
         _weakSelf.contentView.frame = CGRectMake(CONVER_VALUE(0),64, kScreenWidth,CONVER_VALUE(44));
         [_weakSelf removeFromSuperview];
     }];

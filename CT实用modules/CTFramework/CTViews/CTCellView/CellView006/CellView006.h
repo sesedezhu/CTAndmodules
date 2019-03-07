@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CellView006 : UIView
 @property(nonatomic ,strong) UILabel *Lab_left;       //cell左侧文案
-@property(nonatomic ,strong) UILabel *Lab_right;       //cell右侧文案
+@property(nonatomic ,strong) UILabel *Lab_content;       //cell中间文案
 @property(nonatomic ,strong) UIView *View_line;       //cell自定义人为线条
 @end
 

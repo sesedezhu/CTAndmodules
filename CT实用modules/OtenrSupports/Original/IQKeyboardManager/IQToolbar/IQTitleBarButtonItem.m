@@ -41,14 +41,14 @@
     if (self)
     {
         _titleView = [[UIView alloc] init];
-        _titleView.backgroundColor = [UIColor clearColor];
+        _titleView.backgroundColor = CTColorClear;
 
         _titleButton = [UIButton buttonWithType:UIButtonTypeSystem];
         _titleButton.enabled = NO;
         _titleButton.titleLabel.numberOfLines = 3;
         [_titleButton setTitleColor:[UIColor colorWithRed:0.0 green:0.5 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
         [_titleButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-        [_titleButton setBackgroundColor:[UIColor clearColor]];
+        [_titleButton setBackgroundColor:CTColorClear];
         [_titleButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
         [self setTitle:title];
         [self setTitleFont:[UIFont systemFontOfSize:13.0]];

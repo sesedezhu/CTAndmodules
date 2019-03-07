@@ -262,7 +262,7 @@ static GiFHUD *instance;
     
     if (!self.overlayView) {
         self.overlayView = [[UIView alloc] initWithFrame:APPDELEGATE.window.frame];
-        [self.overlayView setBackgroundColor:[UIColor blackColor]];
+        [self.overlayView setBackgroundColor:CTColorBlack];
         [self.overlayView setAlpha:0];
         
         [UIView animateWithDuration:FadeDuration animations:^{

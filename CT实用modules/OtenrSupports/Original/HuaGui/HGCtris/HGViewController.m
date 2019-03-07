@@ -124,7 +124,7 @@
     
     //画布
     DrawView *drawView = [[DrawView alloc]initWithFrame:vv.bounds];
-    drawView.backgroundColor = [UIColor clearColor];
+    drawView.backgroundColor = CTColorClear;
     
     [vv addSubview:drawView];
     self.drawView = drawView;

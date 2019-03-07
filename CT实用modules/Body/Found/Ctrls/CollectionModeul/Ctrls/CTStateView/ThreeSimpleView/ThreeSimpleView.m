@@ -83,7 +83,7 @@
 - (UIImageView *)LoadImaView{
     if (!_LoadImaView) {
         _LoadImaView = [[UIImageView alloc]init];
-        _LoadImaView.backgroundColor = [UIColor clearColor];
+        _LoadImaView.backgroundColor = CTColorClear;
     } 
     return _LoadImaView;
 }

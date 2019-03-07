@@ -32,19 +32,19 @@
     UIView *contentView = self;
     _View_line.sd_layout
     .bottomSpaceToView(contentView, 0)
-    .leftSpaceToView(contentView, CONVER_VALUE(15))
-    .rightSpaceToView(contentView, -CONVER_VALUE(15))
+    .leftSpaceToView(contentView, LeftSpaceToCTView)
+    .rightSpaceToView(contentView, RightSpaceToCTView)
     .heightIs(1);
     
     _Ima_left.sd_layout
     .centerYIs(height/2)
-    .leftSpaceToView(contentView, CONVER_VALUE(15))
+    .leftEqualToView(_View_line)
     .widthIs(CONVER_VALUE(29))
     .heightIs(CONVER_VALUE(29));
     
     _Ima_right.sd_layout
     .centerYIs(height/2)
-    .rightSpaceToView(contentView, CONVER_VALUE(15))
+    .rightEqualToView(_View_line)
     .widthIs(CONVER_VALUE(18))
     .heightIs(CONVER_VALUE(18));
 }

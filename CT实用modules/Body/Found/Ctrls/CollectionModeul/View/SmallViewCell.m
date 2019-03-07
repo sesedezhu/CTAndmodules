@@ -24,7 +24,7 @@
 }
 
 - (void)loadUI{
-    self.contentView.backgroundColor = [UIColor clearColor];
+    self.contentView.backgroundColor = CTColorClear;
     [self.contentView addSubview:self.UserImaView];
     [self.contentView addSubview:self.NicknameLab];
     [self.contentView addSubview:self.deleteBtn];
@@ -50,7 +50,7 @@
     
 //    _UserImaView.backgroundColor = [UIColor lightGrayColor];
 //    _NickNameLab.backgroundColor = [UIColor lightGrayColor];
-//    _deleteBtn.backgroundColor = [UIColor blackColor];
+//    _deleteBtn.backgroundColor = CTColorBlack;
     //变圆
     _UserImaView.layer.cornerRadius = CONVER_VALUE(25.5);//半径大小
     _UserImaView.layer.masksToBounds = YES;//是否切割

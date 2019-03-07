@@ -19,7 +19,7 @@
 }
 #pragma mark - loadUI
 - (void)loadUI{
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = CTColorWhite;
     [self addSubview:self.PayImage];
     [self addSubview:self.LabResults];
     [self addSubview:self.LabWarning];
@@ -60,13 +60,13 @@
 #pragma mark - 懒加载
 - (UILabel *)LabResults{
     if (!_LabResults) {
-        _LabResults = [CTUIManagers createLabelText:@"支付结果" textColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(18)] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _LabResults = [CTUIManagers createLabelText:@"支付结果" textColor:CTColorBlack font:[UIFont systemFontOfSize:CONVER_VALUE(18)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
     }
     return _LabResults;
 }
 - (UILabel *)LabWarning{
     if (!_LabWarning) {
-        _LabWarning = [CTUIManagers createLabelText:@"文案告知" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentCenter backgroundColor:[UIColor clearColor]];
+        _LabWarning = [CTUIManagers createLabelText:@"文案告知" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
     }
     return _LabWarning;
 }
@@ -80,7 +80,7 @@
 }
 - (UIButton *)LeftBtn{
     if (!_LeftBtn) {
-        _LeftBtn = [CTUIManagers createButtonNormalText:@"" normalTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(245, 245, 245, 1.0)];
+        _LeftBtn = [CTUIManagers createButtonNormalText:@"" normalTextColor:CTColorBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(245, 245, 245, 1.0)];
         _LeftBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         _LeftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         _LeftBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -89,7 +89,7 @@
 }
 - (UIButton *)RightBtn{
     if (!_RightBtn) {
-        _RightBtn = [CTUIManagers createButtonNormalText:@"" normalTextColor:[UIColor blackColor] font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(245, 245, 245, 1.0)];
+        _RightBtn = [CTUIManagers createButtonNormalText:@"" normalTextColor:CTColorBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(245, 245, 245, 1.0)];
         _RightBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
         _RightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         _RightBtn.titleLabel.textAlignment = NSTextAlignmentCenter;

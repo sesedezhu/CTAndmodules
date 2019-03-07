@@ -51,7 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = CTColorGroupTableViewBackground;
     
     //1.加载UI
     [self liadUI];
@@ -89,13 +89,13 @@
     [_loginBakView addSubview:self.logBottomViews];
     [_loginBakView addSubview:self.loginBtn];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    _loginBakView.backgroundColor = [UIColor whiteColor];
-    _accountBakView.backgroundColor = [UIColor clearColor];
-    _logHaedViews.backgroundColor = [UIColor clearColor];
-    _mobileBakView.backgroundColor = [UIColor clearColor];
-    _logBottomViews.backgroundColor = [UIColor clearColor];
-    _loginBtn.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = CTColorWhite;
+    _loginBakView.backgroundColor = CTColorWhite;
+    _accountBakView.backgroundColor = CTColorClear;
+    _logHaedViews.backgroundColor = CTColorClear;
+    _mobileBakView.backgroundColor = CTColorClear;
+    _logBottomViews.backgroundColor = CTColorClear;
+    _loginBtn.backgroundColor = CTColorClear;
     
     UIView *view = self.view;
     _loginBakView.sd_layout

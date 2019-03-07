@@ -31,7 +31,7 @@
     .bottomSpaceToView(view, 0);
 }
 - (void)updatePayNRCell001UI{
-    _CellView.Lab_left.textColor = [UIColor blackColor];
+    _CellView.Lab_left.textColor = CTColorBlack;
     _CellView.Btn_right.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
 }
 #pragma mark - 懒加载

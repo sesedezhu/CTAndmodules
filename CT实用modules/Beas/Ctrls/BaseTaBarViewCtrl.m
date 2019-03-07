@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = CTColorGroupTableViewBackground;
     
     // 1.添加5个子控制器
     UIViewController *vc1 = [self addChildViewControllerWithClassName:@"HomeViewCtrl" andTabBarItemWithTitle:@"页面" andImageName:@"home_icon1"];
@@ -66,7 +66,7 @@
 
     // 设置导航条的标题
     vc.navigationItem.title = title;
-//    vc.view.backgroundColor = [UIColor whiteColor];
+//    vc.view.backgroundColor = CTColorWhite;
     
     return nav;
 }

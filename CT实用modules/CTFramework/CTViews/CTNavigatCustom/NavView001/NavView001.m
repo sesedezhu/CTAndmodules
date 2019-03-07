@@ -19,7 +19,7 @@
         /* 添加子控件的代码*/
         [self loadUI];
         //设置默认背景色
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = CTColorWhite;
     }
     return self;
 }
@@ -31,7 +31,7 @@
     self.title.font = [UIFont systemFontOfSize:19];
     
     //背景颜色设置
-    self.titleView.backgroundColor = [UIColor clearColor];
+    self.titleView.backgroundColor = CTColorClear;
    
     //默认文字
 //    [_rightBtn setTitle:@"右边" forState:UIControlStateNormal];
@@ -52,13 +52,13 @@
 //    [_rightBtn setImage:imaRight forState:UIControlStateHighlighted];
     
     //默认文字颜色
-    [_rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _title.textColor = [UIColor blackColor];
+    [_rightBtn setTitleColor:CTColorBlack forState:UIControlStateNormal];
+    [_leftBtn setTitleColor:CTColorBlack forState:UIControlStateNormal];
+    _title.textColor = CTColorBlack;
     
     //高亮时的字体颜色
-    [_rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-    [_leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+    [_rightBtn setTitleColor:CTColorBlack forState:UIControlStateHighlighted];
+    [_leftBtn setTitleColor:CTColorBlack forState:UIControlStateHighlighted];
     
     //位置设置
     _leftBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
@@ -189,7 +189,7 @@
 - (UIView *)botViewBak{
     if (!_botViewBak) {
         _botViewBak = [[UIView alloc]init];
-        _botViewBak.backgroundColor = [UIColor blackColor];
+        _botViewBak.backgroundColor = CTColorBlack;
         _botViewBak.hidden = NO;
     }
     return _botViewBak;

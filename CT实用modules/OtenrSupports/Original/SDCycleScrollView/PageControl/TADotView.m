@@ -44,9 +44,9 @@
 
 - (void)initialization
 {
-    self.backgroundColor    = [UIColor clearColor];
+    self.backgroundColor    = CTColorClear;
     self.layer.cornerRadius = CGRectGetWidth(self.frame) / 2;
-    self.layer.borderColor  = [UIColor whiteColor].CGColor;
+    self.layer.borderColor  = CTColorWhite.CGColor;
     self.layer.borderWidth  = 2;
 }
 
@@ -54,9 +54,9 @@
 - (void)changeActivityState:(BOOL)active
 {
     if (active) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = CTColorWhite;
     } else {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = CTColorClear;
     }
 }
 
