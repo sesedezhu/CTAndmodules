@@ -20,10 +20,18 @@
 #pragma mark - UI
 - (void)loadUI{
     
+    [self addSubview:self.View_line];
     [self addSubview:self.Btn_left];
     [self addSubview:self.Btn_content];
     [self addSubview:self.Btn_right];
 
+    UIView *contentView = self;
+    _View_line.sd_layout
+    .bottomSpaceToView(contentView, 0)
+    .leftSpaceToView(contentView, LeftSpaceToCTView)
+    .rightSpaceToView(contentView, RightSpaceToCTView)
+    .heightIs(1);
+    
     _Btn_left.sd_layout
     .heightIs(CONVER_VALUE(50));
     
@@ -73,5 +81,12 @@
         [CTUIManagers CTBtnBorder:_Btn_right refColor:CTColorGroupTableViewBackground.CGColor];
     }
     return _Btn_right;
+}
+- (UIView *)View_line{
+    if (!_View_line) {
+        _View_line = [CTUIManagers createView];
+        _View_line.backgroundColor = CTColorGroupTableViewBackground;
+    }
+    return _View_line;
 }
 @end

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic ,strong) UIButton *Btn_left;      //左边按钮
 @property(nonatomic ,strong) UIButton *Btn_content;      //中间按钮
 @property(nonatomic ,strong) UIButton *Btn_right;      //右边按钮
-
+@property(nonatomic ,strong) UIView *View_line;       //cell自定义人为线条
 //更新布局,(写死)只适合一行且2到3个按钮设置
 - (void)updateUIAutoWidthFlowItems:(NSArray *)viewsArray;
 @end

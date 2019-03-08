@@ -84,31 +84,31 @@
 #pragma mark - 懒加载
 - (UILabel *)Lab_title{
     if (!_Lab_title) {
-        _Lab_title = [CTUIManagers createLabelText:@"xxxxxxxxx" textColor:allcolorAlphasCT(51, 51, 51, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_title = [CTUIManagers createLabelText:@"xxxxxxxxx" textColor:CTColorGrayaAndBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
     }
     return _Lab_title;
 }
 - (UILabel *)Lab_date{
     if (!_Lab_date) {
-        _Lab_date = [CTUIManagers createLabelText:@"xxxx-xx-xx 至 xxxx-xx-xx  x人  x晚" textColor:allcolorAlphasCT(51, 51, 51, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_date = [CTUIManagers createLabelText:@"xxxx-xx-xx 至 xxxx-xx-xx  x人  x晚" textColor:CTColorGrayaAndBlack font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
     }
     return _Lab_date;
 }
 - (UILabel *)Lab_content{
     if (!_Lab_content) {
-        _Lab_content = [CTUIManagers createLabelText:@"连住x晚 享x折" textColor:allcolorAlphasCT(241, 96, 39, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_content = [CTUIManagers createLabelText:@"连住x晚 享x折" textColor:CTColorOrange font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
     }
     return _Lab_content;
 }
 - (UILabel *)Lab_numberText{
     if (!_Lab_numberText) {
-        _Lab_numberText = [CTUIManagers createLabelText:@"套餐:" textColor:allcolorAlphasCT(51, 51, 51, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_numberText = [CTUIManagers createLabelText:@"套餐:" textColor:CTColorGrayaAndBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
     }
     return _Lab_numberText;
 }
 - (UILabel *)Lab_number{
     if (!_Lab_number) {
-        _Lab_number = [CTUIManagers createLabelText:@"x" textColor:allcolorAlphasCT(241, 96, 39, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_number = [CTUIManagers createLabelText:@"x" textColor:CTColorOrange font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
     }
     return _Lab_number;
 }
@@ -117,5 +117,12 @@
         _Ima_left = [CTUIManagers createImageViewURL:nil placeholderImage:@"Cell005Left"];
     }
     return _Ima_left;
+}
+- (UIView *)View_line{
+    if (!_View_line) {
+        _View_line = [CTUIManagers createView];
+        _View_line.backgroundColor = CTColorGroupTableViewBackground;
+    }
+    return _View_line;
 }
 @end

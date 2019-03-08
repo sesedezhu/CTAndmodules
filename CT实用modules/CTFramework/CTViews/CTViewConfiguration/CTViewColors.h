@@ -19,4 +19,14 @@
 #define CTColorGroupTableViewBackground   [UIColor groupTableViewBackgroundColor]
 
 
+//自定义标题灰黑
+#define CTColorGrayaAndBlack   allcolorAlphasCT(51, 51, 51, 1.0)
+//自定义标题灰
+#define CTColorGraya           allcolorAlphasCT(145, 145, 145, 1.0)
+//自定义标题浅灰
+#define CTColorLightGraya      allcolorAlphasCT(73, 75, 85, 1.0f)
+//自定义标题橘橙
+#define CTColorOrange          allcolorAlphasCT(241, 96, 39, 1.0)
+
+
 #endif /* CTViewColors_h */

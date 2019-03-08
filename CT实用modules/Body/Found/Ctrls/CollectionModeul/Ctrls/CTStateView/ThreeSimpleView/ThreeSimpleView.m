@@ -90,7 +90,7 @@
 - (UILabel *)LoadTitleLab{
     if (!_LoadTitleLab) {
         _LoadTitleLab = [[UILabel alloc]init];
-        _LoadTitleLab.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+        _LoadTitleLab.textColor = CTColorGrayaAndBlack;
         _LoadTitleLab.font = [UIFont systemFontOfSize: CONVER_VALUE(15)];
         _LoadTitleLab.textAlignment = NSTextAlignmentCenter;
     }

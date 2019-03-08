@@ -114,7 +114,7 @@
     if (!_Text_content) {
         _Text_content = [CTUIManagers createTextFieldPlaceholder:@"请输入短信验证码" keyboardType:UIKeyboardTypeNumberPad backgroundColor:CTColorClear textAlignment:NSTextAlignmentLeft];
         _Text_content.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;  //垂直居中
-        _Text_content.textColor = allcolorAlphasCT(145, 145, 145, 1.0);
+        _Text_content.textColor = CTColorGraya;
     }
     return _Text_content;
 }

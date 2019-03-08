@@ -28,8 +28,8 @@
     [self addSubview:self.view_line];
     [self addSubview:self.Text_content];
     
-    _Lab_name.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
-    _Text_content.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    _Lab_name.textColor = CTColorGrayaAndBlack;
+    _Text_content.textColor = CTColorGrayaAndBlack;
     _view_line.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
     
     if (ABOVE_IOS9) {

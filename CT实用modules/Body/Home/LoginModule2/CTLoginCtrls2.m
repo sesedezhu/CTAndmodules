@@ -218,7 +218,7 @@
 }
 - (UIButton *)ContentBtn{
     if (!_ContentBtn) {
-        _ContentBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:CTColorWhite font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:allcolorAlphasCT(241, 96, 39, 1.0)];
+        _ContentBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:CTColorWhite font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorOrange];
         [CTUIManagers CTBtnRadius:_ContentBtn Radius:CONVER_VALUE(8)];
     }
     return _ContentBtn;
@@ -238,7 +238,7 @@
 }
 - (UILabel *)BottomLab{
     if (!_BottomLab) {
-        _BottomLab = [CTUIManagers createLabelText:@"*未注册的手机号将自动创建为我度假公寓用户" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(12)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
+        _BottomLab = [CTUIManagers createLabelText:@"*未注册的手机号将自动创建为我度假公寓用户" textColor:CTColorGraya font:[UIFont systemFontOfSize:CONVER_VALUE(12)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
     }
     return _BottomLab;
 }

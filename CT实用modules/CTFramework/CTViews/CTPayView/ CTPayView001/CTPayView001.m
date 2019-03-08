@@ -66,7 +66,7 @@
 }
 - (UILabel *)LabWarning{
     if (!_LabWarning) {
-        _LabWarning = [CTUIManagers createLabelText:@"文案告知" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
+        _LabWarning = [CTUIManagers createLabelText:@"文案告知" textColor:CTColorGraya font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentCenter backgroundColor:CTColorClear];
     }
     return _LabWarning;
 }

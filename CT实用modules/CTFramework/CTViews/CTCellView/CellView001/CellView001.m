@@ -79,14 +79,14 @@
 #pragma mark - 懒加载
 - (UILabel *)Lab_left{
     if (!_Lab_left) {
-        _Lab_left = [CTUIManagers createLabelText:@"昵称" textColor:allcolorAlphasCT(73, 75, 85, 1.0f) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_left = [CTUIManagers createLabelText:@"昵称" textColor:CTColorLightGraya font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
         _Lab_left.adjustsFontSizeToFitWidth = YES;
     }
     return _Lab_left;
 }
 - (UIButton *)Btn_right{
     if (!_Btn_right) {
-        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:allcolorAlphasCT(73, 75, 85, 1.0f) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];;
+        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:CTColorLightGraya font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];;
         _Btn_right.titleLabel.adjustsFontSizeToFitWidth = YES;
         _Btn_right.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;//按钮对齐
         _Btn_right.titleLabel.textAlignment = NSTextAlignmentRight;
@@ -102,7 +102,7 @@
 - (UIView *)View_line{
     if (!_View_line) {
         _View_line = [CTUIManagers createView];
-        _View_line.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2f);
+        _View_line.backgroundColor = CTColorGroupTableViewBackground;
     }
     return _View_line;
 }
