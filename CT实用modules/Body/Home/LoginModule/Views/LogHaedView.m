@@ -89,7 +89,7 @@
         _LeftBtn = [[UIButton alloc]init];
         
         [_LeftBtn setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
-        [_LeftBtn setTitleColor:allcolorAlphasCT(51, 51, 51, 1.0) forState:UIControlStateSelected];
+        [_LeftBtn setTitleColor:CTColorGrayaAndBlack forState:UIControlStateSelected];
         [_LeftBtn setTitle:@"手机验证码登陆" forState:UIControlStateNormal];
         
 //        _LeftBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
@@ -103,7 +103,7 @@
         _RightBtn = [[UIButton alloc]init];
         
         [_RightBtn setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
-        [_RightBtn setTitleColor:allcolorAlphasCT(51, 51, 51, 1.0) forState:UIControlStateSelected];
+        [_RightBtn setTitleColor:CTColorGrayaAndBlack forState:UIControlStateSelected];
         
         [_RightBtn setTitle:@"账号密码登陆" forState:UIControlStateNormal];
 //        _RightBtn.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];

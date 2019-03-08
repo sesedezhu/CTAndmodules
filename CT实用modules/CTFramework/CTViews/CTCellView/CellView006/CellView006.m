@@ -52,14 +52,14 @@
 #pragma mark - 懒加载
 - (UILabel *)Lab_left{
     if (!_Lab_left) {
-        _Lab_left = [CTUIManagers createLabelText:@"订 单 号:" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_left = [CTUIManagers createLabelText:@"订 单 号:" textColor:CTColorGraya font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
         
     }
     return _Lab_left;
 }
 - (UILabel *)Lab_content{
     if (!_Lab_content) {
-        _Lab_content = [CTUIManagers createLabelText:@"xxxx-xx-xx xx:xx:xx" textColor:allcolorAlphasCT(145, 145, 145, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_content = [CTUIManagers createLabelText:@"xxxx-xx-xx xx:xx:xx" textColor:CTColorGraya font:[UIFont systemFontOfSize:CONVER_VALUE(13)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
     }
     return _Lab_content;
 }

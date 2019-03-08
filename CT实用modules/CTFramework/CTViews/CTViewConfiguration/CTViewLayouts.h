@@ -10,8 +10,8 @@
 #define CTViewLayouts_h
 
 
-#define LeftSpaceToCTView   CONVER_VALUE(15)
-#define RightSpaceToCTView  CONVER_VALUE(15)
+#define LeftSpaceToCTView   CONVER_VALUE(15)  //到左边边距的距离
+#define RightSpaceToCTView  CONVER_VALUE(15)  //到右边边距的距离
 
 
 #endif /* CTViewLayouts_h */

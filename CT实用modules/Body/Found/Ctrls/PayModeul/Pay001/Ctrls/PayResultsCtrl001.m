@@ -59,7 +59,7 @@
     _HeaderView.PayImage.image = [UIImage imageNamed:@"CTPayFailure001"];
     [_HeaderView.LeftBtn setTitle:@"继续支付" forState:UIControlStateNormal];
     [_HeaderView.LeftBtn setTitleColor:CTColorWhite forState:UIControlStateNormal];
-    _HeaderView.LeftBtn.backgroundColor = allcolorAlphasCT(241, 96, 39, 1.0);
+    _HeaderView.LeftBtn.backgroundColor = CTColorOrange;
     [_HeaderView.RightBtn setTitle:@"查看订单" forState:UIControlStateNormal];
     _HeaderView.LabResults.text = @"支付失败";
     [_HeaderView.LeftBtn addTarget:self action:@selector(loadLeftBtnClick) forControlEvents:UIControlEventTouchUpInside];

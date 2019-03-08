@@ -206,11 +206,11 @@
     
     _Lab_1.textColor = allcolorAlphasCT(255, 0, 0, 1.0);
     [_btn setTitleColor:allcolorAlphasCT(255, 255, 255, 1.0) forState:UIControlStateNormal];
-    _Lab_2.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
-    _Lab_3.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    _Lab_2.textColor = CTColorGrayaAndBlack;
+    _Lab_3.textColor = CTColorGrayaAndBlack;
     [_btn1 setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
-    _Text_Name.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
-    _Text_Call.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    _Text_Name.textColor = CTColorGrayaAndBlack;
+    _Text_Call.textColor = CTColorGrayaAndBlack;
     
     if (ABOVE_IOS9) {
         _Lab_1.font = [UIFont fontWithName:@"PingFang-SC-Regular" size:CONVER_VALUE(12)];

@@ -30,8 +30,8 @@
     [self addSubview:self.Btn_time];
     [self addSubview:self.view_line];
     
-    _Lab_name.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
-    _Text_content.textColor = allcolorAlphasCT(51, 51, 51, 1.0);
+    _Lab_name.textColor = CTColorGrayaAndBlack;
+    _Text_content.textColor = CTColorGrayaAndBlack;
     [_Btn_time setTitleColor:allcolorAlphasCT(143, 152, 174, 1.0) forState:UIControlStateNormal];
     _view_line.backgroundColor = allcolorAlphasCT(0, 0, 0, 0.2);
     
