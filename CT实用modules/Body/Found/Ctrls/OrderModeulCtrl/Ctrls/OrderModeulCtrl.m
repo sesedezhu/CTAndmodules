@@ -16,6 +16,7 @@
 @interface OrderModeulCtrl ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic ,strong) UITableView *TableView;
 @property (nonatomic ,retain) NSMutableDictionary *sectionDic;
+@property(nonatomic ,strong) NSString *OrderTapy;//1为带支付状态架构,其他默认架构
 @end
 
 @implementation OrderModeulCtrl
@@ -26,7 +27,8 @@
     [self.view addSubview:self.TableView];
     _TableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, CONVER_VALUE(30))];
     //架构数据处理
-    [self loadFinishingDataAndTapy:@"0"];
+    _OrderTapy = @"0";
+    [self loadFinishingDataAndTapy:_OrderTapy];
 }
 
 #pragma mark - UITableViewDelegate
@@ -68,10 +70,10 @@
     return [self getNumberOfRowsInSection:section];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [self randomTableView:tableView cellForRowStyle:[self getDataDicStyleAndIndexPathRow:indexPath]];
+    UITableViewCell *cell = [self randomTableView:tableView cellForRowStyle:[self getDataDicStyleAndIndexPathRow:indexPath] cellForRowAtIndexPath:indexPath];
     return cell;
 }
-- (UITableViewCell *)randomTableView:(UITableView *)tableView cellForRowStyle:(NSString *)style{
+- (UITableViewCell *)randomTableView:(UITableView *)tableView cellForRowStyle:(NSString *)style cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger styles = [style integerValue];
     switch (styles) {
         case 1:{
@@ -79,6 +81,11 @@
             OrderCell001 *cell = [tableView dequeueReusableCellWithIdentifier:str];
             if (!cell) {
                 cell = [[OrderCell001 alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+                if (indexPath.section == 0) {
+                    cell.CellView.View_line.hidden = NO;
+                }else{
+                    cell.CellView.View_line.hidden = YES;
+                }
             }
             return cell;
         }
