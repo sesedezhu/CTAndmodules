@@ -126,11 +126,5 @@
     }
     return _Ima_left;
 }
-- (UIView *)View_line{
-    if (!_View_line) {
-        _View_line = [CTUIManagers createView];
-        _View_line.backgroundColor = CTColorGroupTableViewBackground;
-    }
-    return _View_line;
-}
+
 @end
