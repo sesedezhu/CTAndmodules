@@ -220,6 +220,15 @@
 		21AEA43722310B9F00069C36 /* CTPayView001.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA43622310B9E00069C36 /* CTPayView001.png */; };
 		21AEA43A22310C3700069C36 /* CellView007.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA43922310C3700069C36 /* CellView007.m */; };
 		21AEA43D22310C4300069C36 /* CellView008.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA43C22310C4300069C36 /* CellView008.m */; };
+		21AEA44B223201CC00069C36 /* CellView007.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA44A223201CC00069C36 /* CellView007.png */; };
+		21AEA44E223201E900069C36 /* CellView008-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA44C223201E800069C36 /* CellView008-2.png */; };
+		21AEA44F223201E900069C36 /* CellView008-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 21AEA44D223201E900069C36 /* CellView008-1.png */; };
+		21AEA45D223253EC00069C36 /* OrderModeulCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA459223253EC00069C36 /* OrderModeulCtrl.m */; };
+		21AEA4602232541D00069C36 /* OrderCell001.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA45F2232541D00069C36 /* OrderCell001.m */; };
+		21AEA4632232542F00069C36 /* OrderCell003.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA4622232542F00069C36 /* OrderCell003.m */; };
+		21AEA4662232543C00069C36 /* OrderCell006.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA4652232543C00069C36 /* OrderCell006.m */; };
+		21AEA4692232544600069C36 /* OrderCell007.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA4682232544600069C36 /* OrderCell007.m */; };
+		21AEA46C2232544F00069C36 /* OrderCell008.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEA46B2232544F00069C36 /* OrderCell008.m */; };
 		21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */; };
 		21BB2765216B515600B156A1 /* CellModeuls.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB2718216B515500B156A1 /* CellModeuls.m */; };
 		21BB2766216B515600B156A1 /* CollectionModeul.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BB271C216B515500B156A1 /* CollectionModeul.m */; };
@@ -739,6 +748,21 @@
 		21AEA43922310C3700069C36 /* CellView007.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellView007.m; sourceTree = "<group>"; };
 		21AEA43B22310C4300069C36 /* CellView008.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellView008.h; sourceTree = "<group>"; };
 		21AEA43C22310C4300069C36 /* CellView008.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellView008.m; sourceTree = "<group>"; };
+		21AEA44A223201CC00069C36 /* CellView007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellView007.png; sourceTree = "<group>"; };
+		21AEA44C223201E800069C36 /* CellView008-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellView008-2.png"; sourceTree = "<group>"; };
+		21AEA44D223201E900069C36 /* CellView008-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellView008-1.png"; sourceTree = "<group>"; };
+		21AEA458223253EC00069C36 /* OrderModeulCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModeulCtrl.h; sourceTree = "<group>"; };
+		21AEA459223253EC00069C36 /* OrderModeulCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModeulCtrl.m; sourceTree = "<group>"; };
+		21AEA45E2232541D00069C36 /* OrderCell001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell001.h; sourceTree = "<group>"; };
+		21AEA45F2232541D00069C36 /* OrderCell001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell001.m; sourceTree = "<group>"; };
+		21AEA4612232542F00069C36 /* OrderCell003.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell003.h; sourceTree = "<group>"; };
+		21AEA4622232542F00069C36 /* OrderCell003.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell003.m; sourceTree = "<group>"; };
+		21AEA4642232543C00069C36 /* OrderCell006.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell006.h; sourceTree = "<group>"; };
+		21AEA4652232543C00069C36 /* OrderCell006.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell006.m; sourceTree = "<group>"; };
+		21AEA4672232544600069C36 /* OrderCell007.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell007.h; sourceTree = "<group>"; };
+		21AEA4682232544600069C36 /* OrderCell007.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell007.m; sourceTree = "<group>"; };
+		21AEA46A2232544F00069C36 /* OrderCell008.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell008.h; sourceTree = "<group>"; };
+		21AEA46B2232544F00069C36 /* OrderCell008.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell008.m; sourceTree = "<group>"; };
 		21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCtrl.m; sourceTree = "<group>"; };
 		21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCtrl.h; sourceTree = "<group>"; };
 		21BB2717216B515500B156A1 /* CellModeuls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModeuls.h; sourceTree = "<group>"; };
@@ -1325,6 +1349,7 @@
 		2160624121104C6600B30B93 /* Ctrls */ = {
 			isa = PBXGroup;
 			children = (
+				21AEA456223253EC00069C36 /* OrderModeulCtrl */,
 				21AEA16E222536D000069C36 /* MyCenterModeul */,
 				21AEA16C222536D000069C36 /* PayModeul */,
 				2160625221104E6300B30B93 /* FoundCtrl.h */,
@@ -2053,6 +2078,9 @@
 				21AEA4062230AEE200069C36 /* CellView004.png */,
 				21AEA4072230AEE200069C36 /* CellView005.png */,
 				21AEA42C2230F8C100069C36 /* CellView006.png */,
+				21AEA44A223201CC00069C36 /* CellView007.png */,
+				21AEA44D223201E900069C36 /* CellView008-1.png */,
+				21AEA44C223201E800069C36 /* CellView008-2.png */,
 			);
 			path = CellImagesUI;
 			sourceTree = "<group>";
@@ -2109,6 +2137,57 @@
 				21AEA4352230FBB600069C36 /* CTViewLayouts.h */,
 			);
 			path = CTViewConfiguration;
+			sourceTree = "<group>";
+		};
+		21AEA456223253EC00069C36 /* OrderModeulCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA457223253EC00069C36 /* Ctrls */,
+				21AEA45A223253EC00069C36 /* Models */,
+				21AEA45B223253EC00069C36 /* Others */,
+				21AEA45C223253EC00069C36 /* View */,
+			);
+			path = OrderModeulCtrl;
+			sourceTree = "<group>";
+		};
+		21AEA457223253EC00069C36 /* Ctrls */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA458223253EC00069C36 /* OrderModeulCtrl.h */,
+				21AEA459223253EC00069C36 /* OrderModeulCtrl.m */,
+			);
+			path = Ctrls;
+			sourceTree = "<group>";
+		};
+		21AEA45A223253EC00069C36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21AEA45B223253EC00069C36 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		21AEA45C223253EC00069C36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21AEA45E2232541D00069C36 /* OrderCell001.h */,
+				21AEA45F2232541D00069C36 /* OrderCell001.m */,
+				21AEA4612232542F00069C36 /* OrderCell003.h */,
+				21AEA4622232542F00069C36 /* OrderCell003.m */,
+				21AEA4642232543C00069C36 /* OrderCell006.h */,
+				21AEA4652232543C00069C36 /* OrderCell006.m */,
+				21AEA4672232544600069C36 /* OrderCell007.h */,
+				21AEA4682232544600069C36 /* OrderCell007.m */,
+				21AEA46A2232544F00069C36 /* OrderCell008.h */,
+				21AEA46B2232544F00069C36 /* OrderCell008.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		21BB2716216B515500B156A1 /* TableCellModeul */ = {
@@ -2740,6 +2819,7 @@
 				21AEA4192230AEE200069C36 /* Cell002Right@3x.png in Resources */,
 				2169FA8921056F33005D6F2B /* LaunchScreen.storyboard in Resources */,
 				21AEA21422256BB800069C36 /* shouji2@3x.png in Resources */,
+				21AEA44F223201E900069C36 /* CellView008-1.png in Resources */,
 				21FA81BD21A54533000AFC63 /* HUBGIF005@2x.tiff in Resources */,
 				21AEA191222536D000069C36 /* MyPhone002@2x.png in Resources */,
 				21BB2772216B515600B156A1 /* OneSimpleView.png in Resources */,
@@ -2783,6 +2863,7 @@
 				21AEA21A22256BB800069C36 /* TextModelViewimage.png in Resources */,
 				21BB278D216B515600B156A1 /* WK_WarningImage02@2x.png in Resources */,
 				21BB278C216B515600B156A1 /* WK_WarningImage01@2x.png in Resources */,
+				21AEA44E223201E900069C36 /* CellView008-2.png in Resources */,
 				21AEA22422256D4600069C36 /* MyHeaderView001.png in Resources */,
 				21E0B5FE212FB47400876E24 /* Login_wx@3x.png in Resources */,
 				21A8DF19219EA6EB000ACCA9 /* JP@3x.png in Resources */,
@@ -2799,6 +2880,7 @@
 				21AEA25422269B1700069C36 /* MyBkB002@2x.png in Resources */,
 				21BB277F216B515600B156A1 /* 3.jpeg in Resources */,
 				21FA81BB21A54533000AFC63 /* HUBGIF003@2x.tiff in Resources */,
+				21AEA44B223201CC00069C36 /* CellView007.png in Resources */,
 				21E0B5D7212EB6F200876E24 /* Nav_leftImage@3x.png in Resources */,
 				21AEA25C22276F4400069C36 /* HeaderView002.png in Resources */,
 				21AEA22B22256E0F00069C36 /* MyUserImage001@3x.png in Resources */,
@@ -2913,6 +2995,7 @@
 				214A05D5211C3F8A00F820BD /* NSString+MJExtension.m in Sources */,
 				21E0B5B5212E9C8300876E24 /* YYDiskCache.m in Sources */,
 				21266E1D215DC5F1005577A8 /* LogMobileView.m in Sources */,
+				21AEA45D223253EC00069C36 /* OrderModeulCtrl.m in Sources */,
 				21E0B5BD212E9C8E00876E24 /* MBProgressHUD+HUD.m in Sources */,
 				214A05CE211C3F8A00F820BD /* MJProperty.m in Sources */,
 				21BB2793216B515600B156A1 /* MovieCollectionView.m in Sources */,
@@ -2920,6 +3003,7 @@
 				214A05EC211C3F8A00F820BD /* UIView+MJExtension.m in Sources */,
 				21BB277A216B515600B156A1 /* MovieLayout.m in Sources */,
 				21AEA21D22256BB800069C36 /* SeccodeView002.m in Sources */,
+				21AEA4662232543C00069C36 /* OrderCell006.m in Sources */,
 				214A05B5211C3F8A00F820BD /* SDWebImageCompat.m in Sources */,
 				21AEA25F22276F5000069C36 /* HeaderView002.m in Sources */,
 				21E0B5A4212E9C8300876E24 /* AFAutoPurgingImageCache.m in Sources */,
@@ -2973,6 +3057,7 @@
 				21266E12215DC5B7005577A8 /* LoginCtrls.m in Sources */,
 				21BB2769216B515600B156A1 /* FourSimpleView.m in Sources */,
 				214A05DB211C3F8A00F820BD /* MJRefreshFooter.m in Sources */,
+				21AEA4602232541D00069C36 /* OrderCell001.m in Sources */,
 				214A05E9211C3F8A00F820BD /* NSBundle+MJRefresh.m in Sources */,
 				21E0B5A6212E9C8300876E24 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				214A05BD211C3F8A00F820BD /* UIImage+MultiFormat.m in Sources */,
@@ -3009,6 +3094,7 @@
 				2169FAD121057A22005D6F2B /* NSAttributedString+Additon.m in Sources */,
 				21BB2775216B515600B156A1 /* ThreeSimpleView.m in Sources */,
 				2160625721104E7400B30B93 /* MyViewCtrl.m in Sources */,
+				21AEA4632232542F00069C36 /* OrderCell003.m in Sources */,
 				214A05E4211C3F8A00F820BD /* MJRefreshNormalHeader.m in Sources */,
 				21E0B5AB212E9C8300876E24 /* UIRefreshControl+AFNetworking.m in Sources */,
 				21E0B5BE212E9C8E00876E24 /* MBProgressHUD.m in Sources */,
@@ -3037,6 +3123,7 @@
 				214A05DC211C3F8A00F820BD /* MJRefreshHeader.m in Sources */,
 				21AEA23F2226926800069C36 /* CellView005.m in Sources */,
 				21E0B5A5212E9C8300876E24 /* AFImageDownloader.m in Sources */,
+				21AEA46C2232544F00069C36 /* OrderCell008.m in Sources */,
 				214A05D6211C3F8A00F820BD /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				21BB2794216B515600B156A1 /* PosterView.m in Sources */,
 				214A05A8211C3F8A00F820BD /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -3077,6 +3164,7 @@
 				21DBBB6521A4148100548699 /* GiFHUD.m in Sources */,
 				21E0B5A2212E9C8300876E24 /* AFURLResponseSerialization.m in Sources */,
 				214A05E2211C3F8A00F820BD /* MJRefreshBackStateFooter.m in Sources */,
+				21AEA4692232544600069C36 /* OrderCell007.m in Sources */,
 				214A05D8211C3F8A00F820BD /* MJRefreshAutoFooter.m in Sources */,
 				214A05C9211C3F8A00F820BD /* SDCycleScrollView.m in Sources */,
 				21A8DF0F219EA6EB000ACCA9 /* DrawPath.m in Sources */,

@@ -34,14 +34,14 @@
     .heightIs(CONVER_VALUE(50));
     
     NSArray *arr = [NSArray arrayWithObjects:_Btn_left,_Btn_content,_Btn_right, nil];
-    [self setupAutoWidthFlowItems:arr withPerRowItemsCount:arr.count verticalMargin:CONVER_VALUE(1) horizontalMargin:CONVER_VALUE(10) verticalEdgeInset:CONVER_VALUE(9) horizontalEdgeInset:LeftSpaceToCTView];
+    [self setupAutoWidthFlowItems:arr withPerRowItemsCount:arr.count verticalMargin:0 horizontalMargin:CONVER_VALUE(10) verticalEdgeInset:0 horizontalEdgeInset:LeftSpaceToCTView];
     
 }
 //更新布局,(写死)只适合一行且2到3个按钮设置
 - (void)updateUIAutoWidthFlowItems:(NSArray *)viewsArray{
     [self clearAutoWidthFlowItemsSettings];//清楚
     //重新布置
-    [self setupAutoWidthFlowItems:viewsArray withPerRowItemsCount:viewsArray.count verticalMargin:CONVER_VALUE(1) horizontalMargin:CONVER_VALUE(10) verticalEdgeInset:CONVER_VALUE(10) horizontalEdgeInset:LeftSpaceToCTView];
+    [self setupAutoWidthFlowItems:viewsArray withPerRowItemsCount:viewsArray.count verticalMargin:0 horizontalMargin:CONVER_VALUE(10) verticalEdgeInset:0 horizontalEdgeInset:LeftSpaceToCTView];
 }
 #pragma mark - 懒加载
 - (UIButton *)Btn_left{

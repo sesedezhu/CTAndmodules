@@ -20,7 +20,7 @@
 #pragma mark - UI
 - (void)loadUI{
     //设置此属性，点击cell不会有灰色显示
-    //    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    //    self.selectionStyle = UITableViewCellSelectionStyleNone;//点击不会有选中效果
     //设置此属性，是否显示系统右侧图标
     //    [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
@@ -73,6 +73,7 @@
     if (!_View_line) {
         _View_line = [CTUIManagers createView];
         _View_line.backgroundColor = CTColorGroupTableViewBackground;
+        _View_line.hidden = YES;
     }
     return _View_line;
 }

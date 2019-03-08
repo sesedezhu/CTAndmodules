@@ -19,7 +19,7 @@
     return self;
 }
 - (void)loadUI{
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;//点击不会有选中效果
     
     [self addSubview:self.CellView];
     

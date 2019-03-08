@@ -14,6 +14,7 @@
 #import "HuaBanCrrl.h"
 #import "MyCtrl001.h"
 #import "PayCtrls.h"
+#import "OrderModeulCtrl.h"
 @interface FoundCtrl ()
 
 @end
@@ -26,7 +27,7 @@
     
     __weak typeof(self) weakSelf = self;
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"UICollectionView",@"画板模块",@"UITableView",@"个人中心001",@"支付中心",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"UICollectionView",@"画板模块",@"UITableView",@"个人中心001",@"支付中心",@"订单模块", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtnMy:sender];
@@ -69,6 +70,14 @@
         {
             //tableview相关
             PayCtrls *cell = [[PayCtrls alloc]init];
+            [cell setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:cell animated:YES];
+        }
+            break;
+        case 5:
+        {
+            //tableview相关
+            OrderModeulCtrl *cell = [[OrderModeulCtrl alloc]init];
             [cell setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:cell animated:YES];
         }

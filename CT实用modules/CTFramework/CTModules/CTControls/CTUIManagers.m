@@ -37,7 +37,7 @@
     CTLab.textColor=textColor;
     CTLab.font=font;
     CTLab.textAlignment=textAlignment;
-    CTLab.backgroundColor=bgColor;
+    CTLab.backgroundColor=bgColor?bgColor:[UIColor clearColor];
     CTLab.adjustsFontSizeToFitWidth = CTLabFontSizeToFitWidth;
     return CTLab;
 }

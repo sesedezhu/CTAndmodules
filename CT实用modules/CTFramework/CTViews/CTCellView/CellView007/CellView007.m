@@ -34,22 +34,23 @@
     [super layoutSubviews];
     
     UIView *contentView = self;
-    _View_line.sd_layout
-    .bottomSpaceToView(contentView, 0)
+    _Lab_title.sd_layout
+    .topSpaceToView(contentView, CONVER_VALUE(20))
     .leftSpaceToView(contentView, LeftSpaceToCTView)
     .rightSpaceToView(contentView, RightSpaceToCTView)
-    .heightIs(1);
+    .autoHeightRatio(0);
+    [_Lab_title setMaxNumberOfLinesToShow:2];//自适应高度的时候限制控件最大行数
     
     _Ima_left.sd_layout
-    .bottomSpaceToView(_View_line, CONVER_VALUE(30))
-    .leftEqualToView(_View_line)
+    .topSpaceToView(_Lab_title, CONVER_VALUE(30))
+    .leftEqualToView(_Lab_title)
     .heightIs(CONVER_VALUE(80))
     .widthIs(CONVER_VALUE(103));
     
     _Lab_date.sd_layout
     .topEqualToView(_Ima_left)
     .leftSpaceToView(_Ima_left, 15)
-    .rightEqualToView(_View_line)
+    .rightEqualToView(_Lab_title)
     .heightIs(CONVER_VALUE(13));
     
     _Lab_content.sd_layout
@@ -70,18 +71,25 @@
     .leftSpaceToView(_Lab_numberText, 1)
     .rightEqualToView(_Lab_date);
     
-    _Lab_title.sd_layout
-    .bottomSpaceToView(_Ima_left, CONVER_VALUE(30))
-    .leftEqualToView(_View_line)
-    .rightEqualToView(_View_line)
-    .autoHeightRatio(0);
-    [_Lab_title setMaxNumberOfLinesToShow:2];//自适应高度的时候限制控件最大行数
+    _View_line.sd_layout
+    .topSpaceToView(_Ima_left, CONVER_VALUE(30))
+    .leftSpaceToView(contentView, LeftSpaceToCTView)
+    .rightSpaceToView(contentView, RightSpaceToCTView)
+    .heightIs(1);
     
     //自动适配cell高度;自动布局
     [self setupAutoHeightWithBottomView:_View_line bottomMargin:0];
 }
 
 #pragma mark - 懒加载
+- (UIView *)View_line{
+    if (!_View_line) {
+        _View_line = [CTUIManagers createView];
+        _View_line.backgroundColor = CTColorGroupTableViewBackground;
+        _View_line.hidden = YES;
+    }
+    return _View_line;
+}
 - (UILabel *)Lab_title{
     if (!_Lab_title) {
         _Lab_title = [CTUIManagers createLabelText:@"xxxxxxxxx" textColor:allcolorAlphasCT(51, 51, 51, 1.0) font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];

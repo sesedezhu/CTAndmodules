@@ -1,14 +1,14 @@
 //
-//  PayNRCell001.m
+//  OrderCell008.m
 //  CT实用modules
 //
-//  Created by 涛程 on 2019/2/28.
+//  Created by 涛程 on 2019/3/8.
 //  Copyright © 2019年 涛程. All rights reserved.
 //
 
-#import "PayNRCell001.h"
+#import "OrderCell008.h"
 
-@implementation PayNRCell001
+@implementation OrderCell008
 /** 初始化方法,自定义 cell时,不清楚高度,可以在这里添加子空间 */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,15 +29,13 @@
     .leftSpaceToView(view, 0)
     .rightSpaceToView(view, 0)
     .bottomSpaceToView(view, 0);
-}
-- (void)updatePayNRCell001UI{
-    _CellView.Lab_left.textColor = CTColorBlack;
-    _CellView.Btn_right.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+    
 }
 #pragma mark - 懒加载
-- (CellView001 *)CellView{
+- (CellView008 *)CellView{
     if (!_CellView) {
-        _CellView = [[CellView001 alloc]init];
+        _CellView = [[CellView008 alloc]init];
+        _CellView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     }
     return _CellView;
 }
