@@ -20,4 +20,6 @@ typedef void (^deleteBtnBlock)(NSIndexPath *indexPath);
 @property (nonatomic,strong)NSIndexPath *indexPath;
 
 @property (nonatomic, strong) UILabel *NicknameLab;      //昵称
+
+
 @end

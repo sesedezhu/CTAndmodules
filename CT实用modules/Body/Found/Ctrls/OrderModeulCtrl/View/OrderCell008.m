@@ -31,6 +31,20 @@
     .bottomSpaceToView(view, 0);
     
 }
+#pragma mark - 配置cell页面样式
+- (void)SetTheCellStyleAtIndexPath:(NSIndexPath *)indexPath{
+    [_CellView.Btn_left setTitleColor:CTColorGrayaAndBlack forState:UIControlStateNormal];
+    _CellView.Btn_left.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+    [_CellView.Btn_left setBackgroundColor:CTColorWhite];
+    
+    [_CellView.Btn_content setTitleColor:CTColorGrayaAndBlack forState:UIControlStateNormal];
+    _CellView.Btn_content.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+    [_CellView.Btn_content setBackgroundColor:CTColorWhite];
+    
+    [_CellView.Btn_right setTitleColor:CTColorGrayaAndBlack forState:UIControlStateNormal];
+    _CellView.Btn_right.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+    [_CellView.Btn_right setBackgroundColor:CTColorWhite];
+}
 #pragma mark - 懒加载
 - (CellView008 *)CellView{
     if (!_CellView) {

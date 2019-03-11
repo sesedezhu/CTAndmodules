@@ -30,6 +30,13 @@
     .rightSpaceToView(view, 0)
     .bottomSpaceToView(view, 0);
 }
+#pragma mark - 配置cell页面样式
+- (void)SetTheCellStyleAtIndexPath:(NSIndexPath *)indexPath{
+    [_CellView.Ima_left sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"OrderCell003_left"]];
+    _CellView.Lab_left.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+    _CellView.Lab_left.textColor = CTColorGrayaAndBlack;
+    _CellView.Lab_left.text = @"地址:xxxxxxxx";
+}
 #pragma mark - 懒加载
 - (CellView003 *)CellView{
     if (!_CellView) {

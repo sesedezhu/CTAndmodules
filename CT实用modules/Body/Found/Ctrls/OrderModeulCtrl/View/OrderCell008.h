@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OrderCell008 : UITableViewCell
 @property(nonatomic ,strong) CellView008 *CellView;
+- (void)SetTheCellStyleAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -30,6 +30,23 @@
     .rightSpaceToView(view, 0)
     .bottomSpaceToView(view, 0);
 }
+#pragma mark - 配置cell页面样式
+- (void)SetTheCellStyleAtIndexPath:(NSIndexPath *)indexPath{
+    [_CellView.Ima_left sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"OrderCell007_left"]];
+    
+    _CellView.Lab_title.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+    _CellView.Lab_date.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+    _CellView.Lab_content.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+    _CellView.Lab_numberText.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+    _CellView.Lab_number.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
+    
+    _CellView.Lab_title.textColor = CTColorGrayaAndBlack;
+    _CellView.Lab_date.textColor = CTColorGrayaAndBlack;
+    _CellView.Lab_content.textColor = CTColorOrange;
+    _CellView.Lab_numberText.textColor = CTColorGrayaAndBlack;
+    _CellView.Lab_number.textColor = CTColorOrange;
+    
+}
 #pragma mark - 懒加载
 - (CellView007 *)CellView{
     if (!_CellView) {

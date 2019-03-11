@@ -30,6 +30,59 @@
     .rightSpaceToView(view, 0)
     .bottomSpaceToView(view, 0);
 }
+#pragma mark - 配置cell页面样式
+- (void)SetTheCellStyleAtIndexPath:(NSIndexPath *)indexPath{
+    [self setLabTextContents:indexPath];
+    switch (indexPath.section) {
+        case 3:{
+            _CellView.Lab_left.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+            _CellView.Lab_content.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+            _CellView.Lab_left.textColor = CTColorLightGraya;
+            _CellView.Lab_content.textColor = CTColorGrayaAndBlack;
+        }
+            break;
+            
+        default:{
+            _CellView.Lab_content.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
+            _CellView.Lab_content.textColor = CTColorLightGraya;
+        }
+            break;
+    }
+}
+//设置系统文案
+- (void)setLabTextContents:(NSIndexPath *)indexPath{
+    switch (indexPath.section) {
+        case 3:
+            switch (indexPath.row) {
+                case 1:
+                    _CellView.Lab_left.text = @"姓     名:";
+                    break;
+                case 2:
+                    _CellView.Lab_left.text = @"手 机 号:";
+                    break;
+                default:
+                    _CellView.Lab_left.text = @"身 份 证:";
+                    break;
+            }
+            break;
+        default:
+            switch (indexPath.row) {
+                case 0:
+                    _CellView.Lab_left.text = @"订 单 号:";
+                    break;
+                case 1:
+                    _CellView.Lab_left.text = @"支付单号:";
+                    break;
+                case 2:
+                    _CellView.Lab_left.text = @"下单时间:";
+                    break;
+                default:
+                    _CellView.Lab_left.text = @"支付时间:";
+                    break;
+            }
+            break;
+    }
+}
 #pragma mark - 懒加载
 - (CellView006 *)CellView{
     if (!_CellView) {

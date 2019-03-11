@@ -24,13 +24,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self loadConfiguration];
+    
+    
     [self.view addSubview:self.TableView];
     _TableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, CONVER_VALUE(30))];
     //架构数据处理
     _OrderTapy = @"0";
     [self loadFinishingDataAndTapy:_OrderTapy];
 }
-
+#pragma mark - 本页配置
+- (void)loadConfiguration{
+    self.navigationItem.title =  @"订单详情";
+    UIButton *backBut = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBut.frame = CGRectMake(0, 0,30, 25);
+    [backBut setTitle:@"  " forState:UIControlStateNormal];
+    [backBut setTitleColor:CTColorBlack forState:UIControlStateNormal];
+    [backBut setImage:[UIImage imageNamed:@"MyBkB002"] forState:UIControlStateNormal];
+    backBut.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+    [backBut addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *itemBut = [[UIBarButtonItem alloc] initWithCustomView:backBut];
+    self.navigationItem.leftBarButtonItem = itemBut;
+    
+}
+- (void)backClick{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - UITableViewDelegate
 //返回头视图的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -81,11 +100,7 @@
             OrderCell001 *cell = [tableView dequeueReusableCellWithIdentifier:str];
             if (!cell) {
                 cell = [[OrderCell001 alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
-                if (indexPath.section == 0) {
-                    cell.CellView.View_line.hidden = NO;
-                }else{
-                    cell.CellView.View_line.hidden = YES;
-                }
+                [cell SetTheCellStyleAtIndexPath:indexPath];//设置cell样式
             }
             return cell;
         }
@@ -95,6 +110,7 @@
             OrderCell003 *cell = [tableView dequeueReusableCellWithIdentifier:str];
             if (!cell) {
                 cell = [[OrderCell003 alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+                [cell SetTheCellStyleAtIndexPath:indexPath];//设置cell样式
             }
             return cell;
         }
@@ -104,6 +120,7 @@
             OrderCell006 *cell = [tableView dequeueReusableCellWithIdentifier:str];
             if (!cell) {
                 cell = [[OrderCell006 alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+                [cell SetTheCellStyleAtIndexPath:indexPath];//设置cell样式
             }
             return cell;
         }
@@ -113,6 +130,7 @@
             OrderCell007 *cell = [tableView dequeueReusableCellWithIdentifier:str];
             if (!cell) {
                 cell = [[OrderCell007 alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+                [cell SetTheCellStyleAtIndexPath:indexPath];//设置cell样式
             }
             return cell;
         }
@@ -122,6 +140,7 @@
             OrderCell008 *cell = [tableView dequeueReusableCellWithIdentifier:str];
             if (!cell) {
                 cell = [[OrderCell008 alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:str];
+                [cell SetTheCellStyleAtIndexPath:indexPath];//设置cell样式
             }
             return cell;
         }
