@@ -357,6 +357,7 @@
 		21FA81DA21A6425F000AFC63 /* LostNetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FA81D621A6425F000AFC63 /* LostNetView.m */; };
 		21FA81DB21A6425F000AFC63 /* GuideCtrl2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FA81D921A6425F000AFC63 /* GuideCtrl2.m */; };
 		21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF8829216F39B20052BD61 /* TextCtrl.m */; };
+		4973F25A223B5CE700E98B20 /* NSArray+CTArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F259223B5CE700E98B20 /* NSArray+CTArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -954,6 +955,8 @@
 		21FA81D921A6425F000AFC63 /* GuideCtrl2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCtrl2.m; sourceTree = "<group>"; };
 		21FF8828216F39B20052BD61 /* TextCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCtrl.h; sourceTree = "<group>"; };
 		21FF8829216F39B20052BD61 /* TextCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCtrl.m; sourceTree = "<group>"; };
+		4973F258223B5CE700E98B20 /* NSArray+CTArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CTArray.h"; sourceTree = "<group>"; };
+		4973F259223B5CE700E98B20 /* NSArray+CTArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CTArray.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1607,6 +1610,7 @@
 		2169FADA210580DD005D6F2B /* CTDatas */ = {
 			isa = PBXGroup;
 			children = (
+				4973F257223B5CE700E98B20 /* CTArray */,
 				21AEA1592225298B00069C36 /* CTTimes */,
 				21E0B5CB212EA11E00876E24 /* CTText */,
 				21E0B5C3212E9F0400876E24 /* CTString */,
@@ -2724,6 +2728,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		4973F257223B5CE700E98B20 /* CTArray */ = {
+			isa = PBXGroup;
+			children = (
+				4973F258223B5CE700E98B20 /* NSArray+CTArray.h */,
+				4973F259223B5CE700E98B20 /* NSArray+CTArray.m */,
+			);
+			path = CTArray;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3098,6 +3111,7 @@
 				214A05B4211C3F8A00F820BD /* SDImageCacheConfig.m in Sources */,
 				214A05D1211C3F8A00F820BD /* NSObject+MJClass.m in Sources */,
 				2169FACE21057A22005D6F2B /* BaseNavigatViewCtrl.m in Sources */,
+				4973F25A223B5CE700E98B20 /* NSArray+CTArray.m in Sources */,
 				214A05DE211C3F8A00F820BD /* MJRefreshAutoNormalFooter.m in Sources */,
 				2165207A218175E900A631A8 /* StringCtrl.m in Sources */,
 				214A05BC211C3F8A00F820BD /* UIImage+GIF.m in Sources */,
