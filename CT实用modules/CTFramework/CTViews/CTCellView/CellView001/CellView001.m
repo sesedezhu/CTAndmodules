@@ -84,14 +84,14 @@
 #pragma mark - 懒加载
 - (UILabel *)Lab_left{
     if (!_Lab_left) {
-        _Lab_left = [CTUIManagers createLabelText:@"昵称" textColor:CTColorLightGraya font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
+        _Lab_left = [CTUIManagers createLabelText:@"昵称" textColor:CTColorGrayaAndBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] textAlignment:NSTextAlignmentLeft backgroundColor:nil];
         _Lab_left.adjustsFontSizeToFitWidth = YES;
     }
     return _Lab_left;
 }
 - (UIButton *)Btn_right{
     if (!_Btn_right) {
-        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:CTColorLightGraya font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];;
+        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:CTColorGrayaAndBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];;
         _Btn_right.titleLabel.adjustsFontSizeToFitWidth = YES;
         _Btn_right.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;//按钮对齐
         _Btn_right.titleLabel.textAlignment = NSTextAlignmentRight;
