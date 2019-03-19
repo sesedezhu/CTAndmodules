@@ -3383,7 +3383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V282GCR752;
+				DEVELOPMENT_TEAM = 6BF6N68TQ4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CT实用modules/CTPrefixHeader.pch";
 				INFOPLIST_FILE = "CT实用modules/Info.plist";
@@ -3400,7 +3400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V282GCR752;
+				DEVELOPMENT_TEAM = 6BF6N68TQ4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CT实用modules/CTPrefixHeader.pch";
 				INFOPLIST_FILE = "CT实用modules/Info.plist";

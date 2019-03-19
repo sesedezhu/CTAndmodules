@@ -61,15 +61,20 @@
         _Btn_right.sd_layout
         .bottomEqualToView(_Lab_left)
         .rightEqualToView(_View_line)
-        .widthIs(CONVER_VALUE(120))
+        .leftSpaceToView(_Lab_left, 8)
         .heightIs(CONVER_VALUE(49));
     }else{
         _Btn_right.sd_layout
         .bottomEqualToView(_Lab_left)
         .rightSpaceToView(_Ima_right, CONVER_VALUE(15))
-        .widthIs(CONVER_VALUE(120))
+        .leftSpaceToView(_Lab_left, 8)
         .heightIs(CONVER_VALUE(49));
     }
+    _Btn_right.titleLabel.sd_layout
+    .topSpaceToView(_Btn_right, 0)
+    .leftSpaceToView(_Btn_right, 0)
+    .bottomSpaceToView(_Btn_right, 0)
+    .rightSpaceToView(_Btn_right, 0);
    
 }
 - (void)loadCellHiddenStyle:(BOOL)Ima_right{

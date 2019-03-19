@@ -10,8 +10,10 @@
 #import "CellView001.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+//定义ValueBlock类型
+typedef void (^timerExampleValueBlock)(void);
 @interface OrderCell001 : UITableViewCell
+@property(nonatomic, copy)timerExampleValueBlock ExampleValueBlock;
 @property(nonatomic ,strong) CellView001 *CellView;
 - (void)SetTheCellStyleAtIndexPath:(NSIndexPath *)indexPath;
 @end

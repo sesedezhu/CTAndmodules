@@ -16,7 +16,7 @@
     }
     else
     {
-        MBHUDTitle_Warning(@"数组越界了");
+        MBHUD_Warning(@"数组越界了");
         return nil;
     }
 }
@@ -33,7 +33,7 @@
     }
     else
     {
-        MBHUDTitle_Warning(@"数组越界了");
+        MBHUD_Warning(@"数组越界了");
         return nil;
     }
 }
