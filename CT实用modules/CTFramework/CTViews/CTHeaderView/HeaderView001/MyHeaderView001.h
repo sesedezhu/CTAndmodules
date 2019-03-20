@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyHeaderView001 : UIView
 @property(nonatomic ,strong) UIButton *LoginBtn;      //登录按钮/用户名称
+@property(nonatomic ,strong) UIButton *PhoneBtn;      //手机号.默认隐藏
 @property(nonatomic ,strong) UIImageView *BakImage;   //背景图片
 @property(nonatomic ,strong) UIImageView *UserImage;   //用户头像
 

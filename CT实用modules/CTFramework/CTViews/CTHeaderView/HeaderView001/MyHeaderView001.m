@@ -22,6 +22,7 @@
     [self addSubview:self.BakImage];
     [_BakImage addSubview:self.UserImage];
     [_BakImage addSubview:self.LoginBtn];
+    [_BakImage addSubview:self.PhoneBtn];
     
     UIView *view = self;
     _BakImage.sd_layout
@@ -36,20 +37,46 @@
     .widthIs(CONVER_VALUE(75))
     .heightIs(CONVER_VALUE(75));
     
+    [self updateBeforeUI];
+}
+//登陆前
+- (void)updateBeforeUI{
+    _PhoneBtn.hidden = YES;
     _LoginBtn.sd_layout
     .leftSpaceToView(_UserImage, 14)
     .rightSpaceToView(_BakImage, CONVER_VALUE(15))
     .heightIs(CONVER_VALUE(16))
     .bottomSpaceToView(_BakImage, CONVER_VALUE(118));
+}
+//登陆后
+- (void)updateAfterUI{
+    _PhoneBtn.hidden = NO;
+    _LoginBtn.sd_layout
+    .leftSpaceToView(_UserImage, 14)
+    .rightSpaceToView(_BakImage, CONVER_VALUE(15))
+    .heightIs(CONVER_VALUE(16))
+    .bottomSpaceToView(_BakImage, CONVER_VALUE(132));
     
-    
+    _PhoneBtn.sd_layout
+    .leftSpaceToView(_UserImage, 14)
+    .rightSpaceToView(_BakImage, CONVER_VALUE(15))
+    .heightIs(CONVER_VALUE(16))
+    .topSpaceToView(_LoginBtn, CONVER_VALUE(16));
 }
 - (void)updateDataUI{
-    [self isUserImage];
+    [self isUserImage];//赋值处理
+    if ([UserManager isJudgeLoginUser]) {
+        [self updateAfterUI];
+    }else{
+        [self updateBeforeUI];
+    }
+    [_LoginBtn updateLayout];
+    [_PhoneBtn updateLayout];
 }
 - (void)isUserImage{
     [_UserImage sd_setImageWithURL:[NSURL URLWithString:[UserManager getUrlUserHeadImageview]] placeholderImage:[UIImage imageNamed:[UserManager getNormalUserHeadImageview]]];
     [_LoginBtn setTitle:[UserManager isUserRealName]?[UserManager isUserRealName]:@"登录/注册" forState:UIControlStateNormal];
+    [_PhoneBtn setTitle:[UserManager isUsermobile]?[UserManager isUsermobile]:@"" forState:UIControlStateNormal];
 }
 #pragma mark - 懒加载
 - (UIButton *)LoginBtn{
@@ -60,6 +87,16 @@
         _LoginBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
     }
     return _LoginBtn;
+}
+- (UIButton *)PhoneBtn{
+    if (!_PhoneBtn) {
+        _PhoneBtn = [CTUIManagers createButtonNormalText:@"登录/注册" normalTextColor:CTColorWhite font:[UIFont systemFontOfSize:CONVER_VALUE(16)] backgroundColor:nil];
+        _PhoneBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+        _PhoneBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        _PhoneBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
+        _PhoneBtn.hidden = YES;
+    }
+    return _PhoneBtn;
 }
 - (UIImageView *)BakImage{
     if (!_BakImage) {

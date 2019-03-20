@@ -26,6 +26,8 @@
     
     [self addSubview:self.Lab_left];
     [self addSubview:self.Ima_left];
+    [self addSubview:self.Btn_right];
+    [self addSubview:self.Ima_right];
     [self addSubview:self.View_line];
     
 }
@@ -51,9 +53,38 @@
     
     _Lab_left.sd_layout
     .leftSpaceToView(_Ima_left, 15)
+    .centerYIs(height/2)
+    .widthIs(CONVER_VALUE(120))
+    .heightIs(CONVER_VALUE(49));
+    
+    _Ima_right.sd_layout
+    .centerYIs(height/2)
     .rightEqualToView(_View_line)
-    .bottomEqualToView(_Ima_left)
-    .topEqualToView(_Ima_left);
+    .widthIs(CONVER_VALUE(15))
+    .heightIs(CONVER_VALUE(15));
+    
+    if (_Ima_right.hidden) {
+        _Btn_right.sd_layout
+        .bottomEqualToView(_Lab_left)
+        .rightEqualToView(_View_line)
+        .leftSpaceToView(_Lab_left, 8)
+        .heightIs(CONVER_VALUE(49));
+    }else{
+        _Btn_right.sd_layout
+        .bottomEqualToView(_Lab_left)
+        .rightSpaceToView(_Ima_right, CONVER_VALUE(15))
+        .leftSpaceToView(_Lab_left, 8)
+        .heightIs(CONVER_VALUE(49));
+    }
+    _Btn_right.titleLabel.sd_layout
+    .topSpaceToView(_Btn_right, 0)
+    .leftSpaceToView(_Btn_right, 0)
+    .bottomSpaceToView(_Btn_right, 0)
+    .rightSpaceToView(_Btn_right, 0);
+}
+- (void)loadCellHiddenStyle:(BOOL)Ima_right{
+    _Ima_right.hidden = Ima_right;
+    [_Btn_right updateLayout];
 }
 #pragma mark - 懒加载
 - (UILabel *)Lab_left{
@@ -62,6 +93,23 @@
         _Lab_left.adjustsFontSizeToFitWidth = YES;
     }
     return _Lab_left;
+}
+- (UIButton *)Btn_right{
+    if (!_Btn_right) {
+        _Btn_right = [CTUIManagers createButtonNormalText:@"帅哥程" normalTextColor:CTColorGrayaAndBlack font:[UIFont systemFontOfSize:CONVER_VALUE(15)] backgroundColor:CTColorClear];;
+        _Btn_right.titleLabel.adjustsFontSizeToFitWidth = YES;
+        _Btn_right.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;//按钮对齐
+        _Btn_right.titleLabel.textAlignment = NSTextAlignmentRight;
+        _Btn_right.hidden = YES;
+    }
+    return _Btn_right;
+}
+- (UIImageView *)Ima_right{
+    if (!_Ima_right) {
+        _Ima_right = [CTUIManagers createImageViewURL:nil placeholderImage:@"imageRightCell"];
+        _Ima_right.hidden = YES;
+    }
+    return _Ima_right;
 }
 - (UIImageView *)Ima_left{
     if (!_Ima_left) {
