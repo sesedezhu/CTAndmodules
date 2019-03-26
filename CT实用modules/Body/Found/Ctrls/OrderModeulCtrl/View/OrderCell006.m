@@ -37,14 +37,14 @@
         case 3:{
             _CellView.Lab_left.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
             _CellView.Lab_content.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
-            _CellView.Lab_left.textColor = CTColorLightGraya;
+            _CellView.Lab_left.textColor = CTColorGrayaAndBlack;
             _CellView.Lab_content.textColor = CTColorGrayaAndBlack;
         }
             break;
             
         default:{
             _CellView.Lab_content.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
-            _CellView.Lab_content.textColor = CTColorLightGraya;
+            _CellView.Lab_content.textColor = CTColorGrayaAndBlack;
         }
             break;
     }

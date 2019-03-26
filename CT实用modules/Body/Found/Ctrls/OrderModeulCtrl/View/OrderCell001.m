@@ -71,14 +71,14 @@
             }else if (indexPath.row == 5) {
                 _CellView.Lab_left.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
                 _CellView.Btn_right.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(15)];
-                _CellView.Lab_left.textColor = CTColorLightGraya;
+                _CellView.Lab_left.textColor = CTColorGrayaAndBlack;
                 [_CellView.Btn_right setTitleColor:CTColorOrange forState:UIControlStateNormal];
                 _CellView.Btn_right.hidden = NO;
             }else{
                 _CellView.Lab_left.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
                 _CellView.Btn_right.titleLabel.font = [UIFont systemFontOfSize:CONVER_VALUE(13)];
-                _CellView.Lab_left.textColor = CTColorLightGraya;
-                [_CellView.Btn_right setTitleColor:CTColorLightGraya forState:UIControlStateNormal];
+                _CellView.Lab_left.textColor = CTColorGrayaAndBlack;
+                [_CellView.Btn_right setTitleColor:CTColorGrayaAndBlack forState:UIControlStateNormal];
                 _CellView.Btn_right.hidden = NO;
             }
         }

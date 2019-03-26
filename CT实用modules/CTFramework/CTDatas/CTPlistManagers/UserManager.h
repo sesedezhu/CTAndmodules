@@ -31,6 +31,8 @@
 + (NSString *)getUrlUserHeadImageview;
 //获取用户昵称
 + (NSString *)isUserRealName;
+//获取用户手机号
++ (NSString *)isUsermobile;
 //获取用户性别
 + (NSString *)isUserSex;
 //获取用户年龄

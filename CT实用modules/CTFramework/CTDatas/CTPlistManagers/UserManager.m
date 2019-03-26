@@ -105,6 +105,15 @@
     }
     return realName;
 }
+//获取用户手机号
++ (NSString *)isUsermobile{
+    NSDictionary *UserDic = [PlistManager getFilePlists:UserPlists];
+    NSString *mobile = nil;
+    if ([UserManager isJudgeLoginUser]){
+        mobile = UserDic[@"mobile"];
+    }
+    return mobile;
+}
 //获取用户性别
 + (NSString *)isUserSex{
     NSDictionary *UserDic = [PlistManager getFilePlists:UserPlists];
