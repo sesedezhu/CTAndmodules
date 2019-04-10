@@ -358,6 +358,7 @@
 		49997BF3225DFE1C0075C1EF /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BE1225DFE1C0075C1EF /* UIWebView+AFNetworking.m */; };
 		49997BF4225DFE1C0075C1EF /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BE2225DFE1C0075C1EF /* AFAutoPurgingImageCache.m */; };
 		49997BF5225DFE1C0075C1EF /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BE4225DFE1C0075C1EF /* AFImageDownloader.m */; };
+		49997BF9225DFFE90075C1EF /* CTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BF8225DFFE90075C1EF /* CTRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -958,6 +959,8 @@
 		49997BE4225DFE1C0075C1EF /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
 		49997BE5225DFE1C0075C1EF /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		49997BE6225DFE1C0075C1EF /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		49997BF7225DFFE90075C1EF /* CTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRequest.h; sourceTree = "<group>"; };
+		49997BF8225DFFE90075C1EF /* CTRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2158,6 +2161,7 @@
 		21E0B561212E9C8200876E24 /* NetWorkings */ = {
 			isa = PBXGroup;
 			children = (
+				49997BF6225DFF900075C1EF /* CTNetworkManagers */,
 				49997BC3225DFE1C0075C1EF /* AFNetworking */,
 				21E0B585212E9C8200876E24 /* ErrorView */,
 				21E0B58E212E9C8200876E24 /* LAndRRequest.h */,
@@ -2740,6 +2744,15 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		49997BF6225DFF900075C1EF /* CTNetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				49997BF7225DFFE90075C1EF /* CTRequest.h */,
+				49997BF8225DFFE90075C1EF /* CTRequest.m */,
+			);
+			path = CTNetworkManagers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3066,6 +3079,7 @@
 				21E0B5B1212E9C8300876E24 /* LAndRRequest.m in Sources */,
 				214A05B2211C3F8A00F820BD /* NSImage+WebCache.m in Sources */,
 				21E0B5AE212E9C8300876E24 /* NetworkErrorThree.m in Sources */,
+				49997BF9225DFFE90075C1EF /* CTRequest.m in Sources */,
 				214A05B6211C3F8A00F820BD /* SDWebImageDecoder.m in Sources */,
 				21BB2791216B515600B156A1 /* LargeMovieView.m in Sources */,
 				21AEA1F32225683000069C36 /* oneModuleCell.m in Sources */,
