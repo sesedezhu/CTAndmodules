@@ -37,7 +37,6 @@
             //4.2.3 请求失败
             NSLog(@"有缓存请求失败");
             
-            [MBProgressHUD showHUDMsg:@"服务器异常，请稍后再试"];
             failure ? failure(error) : nil;
         }];
         
@@ -54,7 +53,6 @@
             //4.3.2 请求失败
             NSLog(@"无缓存请求失败========%@",error);
             
-            [MBProgressHUD showHUDMsg:@"请求超时"];
             failure ? failure(error) : nil;
         }];
     }
