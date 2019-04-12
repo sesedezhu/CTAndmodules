@@ -19,8 +19,9 @@ typedef void(^CTHttpRequestFailed)(NSError *error);
 
 @interface CTRequest : NSObject
 //post请求
-- (void)startPostConnectionWithHeaders:(NSString *)headers Path:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne cacha:(CTHttpRequestCaCha)cacha success:(CTHttpRequestSuccess)success failure:(CTHttpRequestFailed)failure;
-
++ (void)startPostConnectionWithAddress:(NSString *)address Path:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne cacha:(CTHttpRequestCaCha)cacha success:(CTHttpRequestSuccess)success failure:(CTHttpRequestFailed)failure;
+//取消指定URL的HTTP请求
++ (void)cancelRequestsNetworkSpecifiedAddress:(NSString *)address Path:(NSString *)path;
 @end
 
 NS_ASSUME_NONNULL_END

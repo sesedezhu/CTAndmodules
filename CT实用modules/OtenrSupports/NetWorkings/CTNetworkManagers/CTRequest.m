@@ -10,11 +10,11 @@
 #import "PPNetworkHelper.h"
 @implementation CTRequest
 //post请求
-- (void)startPostConnectionWithHeaders:(NSString *)headers Path:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne cacha:(CTHttpRequestCaCha)cacha success:(CTHttpRequestSuccess)success failure:(CTHttpRequestFailed)failure{
++ (void)startPostConnectionWithAddress:(NSString *)address Path:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne cacha:(CTHttpRequestCaCha)cacha success:(CTHttpRequestSuccess)success failure:(CTHttpRequestFailed)failure{
     //1.这个方法是用来进行转码的，即将汉字转码
     path=[path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     //2.继续转码
-    NSString *str= [NSString stringWithFormat:@"%@%@",headers,path];;
+    NSString *str= [NSString stringWithFormat:@"%@%@",address,path];;
     str=[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     //3开启日志打印
     [PPNetworkHelper openLog];
@@ -57,7 +57,15 @@
         }];
     }
 }
-
+//取消指定URL的HTTP请求
++ (void)cancelRequestsNetworkSpecifiedAddress:(NSString *)address Path:(NSString *)path{
+    //1.这个方法是用来进行转码的，即将汉字转码
+    path=[path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    //2.继续转码
+    NSString *str= [NSString stringWithFormat:@"%@%@",address,path];;
+    str=[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    [PPNetworkHelper cancelRequestWithURL:str];
+}
 /**
  设置网络请求参数的格式:默认为二进制格式
  PPRequestSerializerJSON(JSON格式),
