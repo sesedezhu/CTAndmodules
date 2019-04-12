@@ -359,6 +359,8 @@
 		49997C2A225F40DB0075C1EF /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C18225F40DB0075C1EF /* UIWebView+AFNetworking.m */; };
 		49997C2B225F40DB0075C1EF /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C19225F40DB0075C1EF /* AFAutoPurgingImageCache.m */; };
 		49997C2C225F40DB0075C1EF /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C1B225F40DB0075C1EF /* AFImageDownloader.m */; };
+		49997C31226034A90075C1EF /* CTLoginRequest001.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C30226034A90075C1EF /* CTLoginRequest001.m */; };
+		49997C34226078100075C1EF /* CeShiCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C33226078100075C1EF /* CeShiCtrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -961,6 +963,10 @@
 		49997C1B225F40DB0075C1EF /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
 		49997C1C225F40DB0075C1EF /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		49997C1D225F40DB0075C1EF /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		49997C2F226034A90075C1EF /* CTLoginRequest001.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTLoginRequest001.h; sourceTree = "<group>"; };
+		49997C30226034A90075C1EF /* CTLoginRequest001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLoginRequest001.m; sourceTree = "<group>"; };
+		49997C32226078100075C1EF /* CeShiCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeShiCtrl.h; sourceTree = "<group>"; };
+		49997C33226078100075C1EF /* CeShiCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeShiCtrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1424,6 +1430,8 @@
 				21DBBB2321A3FFC300548699 /* ShowsCtrls */,
 				21B4CC4D21240DD400C37C8A /* HomeViewCtrl.h */,
 				21B4CC4C21240DD400C37C8A /* HomeViewCtrl.m */,
+				49997C32226078100075C1EF /* CeShiCtrl.h */,
+				49997C33226078100075C1EF /* CeShiCtrl.m */,
 				4247986F220FB1220062B7B9 /* LoginModule2 */,
 				21E0B4ED212E411500876E24 /* LoginModule */,
 			);
@@ -1504,6 +1512,7 @@
 		2169FA7B21056F33005D6F2B /* CT实用modules */ = {
 			isa = PBXGroup;
 			children = (
+				49997C2D226032B50075C1EF /* CTRequestDatas */,
 				21FA81D321A6425F000AFC63 /* Modules */,
 				42C9C0E0211FF02A00870E10 /* Images */,
 				214A03F4211C3EDB00F820BD /* OtenrSupports */,
@@ -2753,6 +2762,23 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		49997C2D226032B50075C1EF /* CTRequestDatas */ = {
+			isa = PBXGroup;
+			children = (
+				49997C2E226033010075C1EF /* CTLoginRequest */,
+			);
+			path = CTRequestDatas;
+			sourceTree = "<group>";
+		};
+		49997C2E226033010075C1EF /* CTLoginRequest */ = {
+			isa = PBXGroup;
+			children = (
+				49997C2F226034A90075C1EF /* CTLoginRequest001.h */,
+				49997C30226034A90075C1EF /* CTLoginRequest001.m */,
+			);
+			path = CTLoginRequest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3062,6 +3088,7 @@
 				214A05EC211C3F8A00F820BD /* UIView+MJExtension.m in Sources */,
 				49997C21225F40DB0075C1EF /* AFURLRequestSerialization.m in Sources */,
 				495C496E2249B36000C96716 /* CellView008.m in Sources */,
+				49997C34226078100075C1EF /* CeShiCtrl.m in Sources */,
 				21BB277A216B515600B156A1 /* MovieLayout.m in Sources */,
 				21AEA4662232543C00069C36 /* OrderCell006.m in Sources */,
 				214A05B5211C3F8A00F820BD /* SDWebImageCompat.m in Sources */,
@@ -3085,6 +3112,7 @@
 				214A05B6211C3F8A00F820BD /* SDWebImageDecoder.m in Sources */,
 				21BB2791216B515600B156A1 /* LargeMovieView.m in Sources */,
 				21AEA1F32225683000069C36 /* oneModuleCell.m in Sources */,
+				49997C31226034A90075C1EF /* CTLoginRequest001.m in Sources */,
 				21E0B5B3212E9C8300876E24 /* PPNetworkHelper.m in Sources */,
 				21E0B5B2212E9C8300876E24 /* PPNetworkCache.m in Sources */,
 				21A8DF13219EA6EB000ACCA9 /* MyButton.m in Sources */,

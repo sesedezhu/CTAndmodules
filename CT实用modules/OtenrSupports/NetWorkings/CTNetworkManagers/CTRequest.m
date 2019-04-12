@@ -27,11 +27,7 @@
         } success:^(id responseObject) {
             //4.2.2 请求成功
             NSLog(@"有缓存请求成功");
-            //转化成json，上架的时候注销
-            //            NSData *data1=[NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-            //            NSString *jsonStr=[[NSString alloc]initWithData:data1 encoding:NSUTF8StringEncoding];
-            //            NSLog(@"responseObject========%@",jsonStr);
-            
+
             success ? success(responseObject) : nil;
         } failure:^(NSError *error) {
             //4.2.3 请求失败
@@ -44,10 +40,6 @@
         [PPNetworkHelper POST:str parameters:parameter success:^(id responseObject) {
             //4.3.1 请求成功
             NSLog(@"无缓存请求成功");
-            //转化成json，上架的时候注销
-            //            NSData *data1=[NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-            //            NSString *jsonStr=[[NSString alloc]initWithData:data1 encoding:NSUTF8StringEncoding];
-            //            NSLog(@"responseObject========%@",jsonStr);
             success ? success(responseObject) : nil;
         } failure:^(NSError *error) {
             //4.3.2 请求失败

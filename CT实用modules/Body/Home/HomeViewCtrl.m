@@ -13,7 +13,7 @@
 #import "TwoSimpleView.h"
 #import "LoginCtrls.h"
 #import "CTLoginCtrls2.h"
-
+#import "CeShiCtrl.h"
 
 @interface HomeViewCtrl ()
 
@@ -69,7 +69,9 @@
             break;
         case 3:
         {
-
+            CeShiCtrl *login = [[CeShiCtrl alloc]init];
+            [login setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:login animated:YES];
         }
             break;
             
