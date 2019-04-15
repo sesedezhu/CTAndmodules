@@ -61,7 +61,7 @@
 }
 //验证码
 - (void)loadyanzhengma{
-    [CTLoginRequest001 getVerificationCodeMobile:@"18789281990" success:^(id  _Nonnull responseObject) {
+    [CTLoginRequest001 getVerificationCodeMobile:@"18789281990" verificationCodeType:CTVerificationCodeLogin success:^(id  _Nonnull responseObject) {
         NSLog(@"验证码请求成功");
         NSString *errCode = [responseObject objectForKey:@"errCode"];
         if ([errCode isEqualToString:@"00000"]) {
