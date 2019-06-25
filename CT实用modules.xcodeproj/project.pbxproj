@@ -280,6 +280,8 @@
 		21FA81DA21A6425F000AFC63 /* LostNetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FA81D621A6425F000AFC63 /* LostNetView.m */; };
 		21FA81DB21A6425F000AFC63 /* GuideCtrl2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FA81D921A6425F000AFC63 /* GuideCtrl2.m */; };
 		21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF8829216F39B20052BD61 /* TextCtrl.m */; };
+		4933AFCB22C224730074CD33 /* TSDateRequt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933AFCA22C224730074CD33 /* TSDateRequt.m */; };
+		4933AFCE22C225290074CD33 /* WebViewCtrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933AFCC22C225290074CD33 /* WebViewCtrls.m */; };
 		495C49332249B36000C96716 /* NavView001.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C48C72249B36000C96716 /* NavView001.m */; };
 		495C49342249B36000C96716 /* navLetBtn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 495C48C92249B36000C96716 /* navLetBtn2@2x.png */; };
 		495C49352249B36000C96716 /* navLetBtn2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 495C48CA2249B36000C96716 /* navLetBtn2@3x.png */; };
@@ -845,6 +847,10 @@
 		21FA81D921A6425F000AFC63 /* GuideCtrl2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCtrl2.m; sourceTree = "<group>"; };
 		21FF8828216F39B20052BD61 /* TextCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCtrl.h; sourceTree = "<group>"; };
 		21FF8829216F39B20052BD61 /* TextCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCtrl.m; sourceTree = "<group>"; };
+		4933AFC922C224730074CD33 /* TSDateRequt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSDateRequt.h; sourceTree = "<group>"; };
+		4933AFCA22C224730074CD33 /* TSDateRequt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSDateRequt.m; sourceTree = "<group>"; };
+		4933AFCC22C225290074CD33 /* WebViewCtrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewCtrls.m; sourceTree = "<group>"; };
+		4933AFCD22C225290074CD33 /* WebViewCtrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewCtrls.h; sourceTree = "<group>"; };
 		495C48C62249B36000C96716 /* NavView001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavView001.h; sourceTree = "<group>"; };
 		495C48C72249B36000C96716 /* NavView001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavView001.m; sourceTree = "<group>"; };
 		495C48C92249B36000C96716 /* navLetBtn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navLetBtn2@2x.png"; sourceTree = "<group>"; };
@@ -1512,6 +1518,7 @@
 		2169FA7B21056F33005D6F2B /* CT实用modules */ = {
 			isa = PBXGroup;
 			children = (
+				4933AFC822C224310074CD33 /* TSRequDatas(包链接) */,
 				49997C2D226032B50075C1EF /* CTRequestDatas */,
 				21FA81D321A6425F000AFC63 /* Modules */,
 				42C9C0E0211FF02A00870E10 /* Images */,
@@ -2359,6 +2366,17 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		4933AFC822C224310074CD33 /* TSRequDatas(包链接) */ = {
+			isa = PBXGroup;
+			children = (
+				4933AFC922C224730074CD33 /* TSDateRequt.h */,
+				4933AFCA22C224730074CD33 /* TSDateRequt.m */,
+				4933AFCD22C225290074CD33 /* WebViewCtrls.h */,
+				4933AFCC22C225290074CD33 /* WebViewCtrls.m */,
+			);
+			path = "TSRequDatas(包链接)";
+			sourceTree = "<group>";
+		};
 		495C48C32249B36000C96716 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -3057,6 +3075,8 @@
 				495C493C2249B36000C96716 /* ModelView001.m in Sources */,
 				21BB2779216B515600B156A1 /* LargeLayout.m in Sources */,
 				21A8DF15219EA6EB000ACCA9 /* SelectLineWidthView.m in Sources */,
+				4933AFCE22C225290074CD33 /* WebViewCtrls.m in Sources */,
+				4933AFCB22C224730074CD33 /* TSDateRequt.m in Sources */,
 				214A05E5211C3F8A00F820BD /* MJRefreshStateHeader.m in Sources */,
 				214A05B0211C3F8A00F820BD /* MKAnnotationView+WebCache.m in Sources */,
 				214A05C0211C3F8A00F820BD /* UIImageView+WebCache.m in Sources */,

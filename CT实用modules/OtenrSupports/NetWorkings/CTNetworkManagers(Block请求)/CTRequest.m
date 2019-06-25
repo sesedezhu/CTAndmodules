@@ -9,6 +9,51 @@
 #import "CTRequest.h"
 #import "PPNetworkHelper.h"
 @implementation CTRequest
+//get请求
+- (void)startGetConnectionWithHeaders:(NSString *)headers Path:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne cacha:(CTHttpRequestCaCha)cacha success:(CTHttpRequestSuccess)success failure:(CTHttpRequestFailed)failure{
+    //1.这个方法是用来进行转码的，即将汉字转码
+    path=[path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    //2.继续转码
+    NSString *str= [NSString stringWithFormat:@"%@%@",headers,path];;
+    str=[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    //3开启日志打印
+    [PPNetworkHelper openLog];
+    //4设置请求超时时间:默认为30.0fS
+    [PPNetworkHelper setRequestTimeoutInterval:30.0f];
+    //5 发送post请求
+    if (isOne) {
+        [PPNetworkHelper GET:str parameters:parameter responseCache:^(id responseCache) {
+            cacha ? cacha(responseCache):nil;
+        } success:^(id responseObject) {
+            //4.2.2 请求成功
+            NSLog(@"有缓存请求成功");
+            
+            success ? success(responseObject) : nil;
+        } failure:^(NSError *error) {
+            //4.2.3 请求失败
+            NSLog(@"有缓存请求失败");
+            
+            failure ? failure(error) : nil;
+        }];
+        
+    }else{
+        [PPNetworkHelper GET:str parameters:parameter success:^(id responseObject) {
+            //4.3.1 请求成功
+            NSLog(@"无缓存请求成功");
+            //转化成json，上架的时候注销
+            //            NSData *data1=[NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+            //            NSString *jsonStr=[[NSString alloc]initWithData:data1 encoding:NSUTF8StringEncoding];
+            //            NSLog(@"responseObject========%@",jsonStr);
+            success ? success(responseObject) : nil;
+        } failure:^(NSError *error) {
+            //4.3.2 请求失败
+            NSLog(@"无缓存请求失败========%@",error);
+            
+            failure ? failure(error) : nil;
+        }];
+    }
+}
+
 //post请求
 + (void)startPostConnectionWithAddress:(NSString *)address Path:(NSString *)path parameter:(NSDictionary *)parameter CaCha:(BOOL)isOne cacha:(CTHttpRequestCaCha)cacha success:(CTHttpRequestSuccess)success failure:(CTHttpRequestFailed)failure{
     //1.这个方法是用来进行转码的，即将汉字转码
