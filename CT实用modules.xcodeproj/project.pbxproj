@@ -1637,9 +1637,9 @@
 		2169FADB210580DD005D6F2B /* CTModules */ = {
 			isa = PBXGroup;
 			children = (
-				219434AF21F70B540010B640 /* CTControls */,
+				219434AF21F70B540010B640 /* CTControls(控件管理者) */,
 				219434A921F70AF30010B640 /* CTCollectSimplify */,
-				219434A421F70AF30010B640 /* CTShows */,
+				219434A421F70AF30010B640 /* CTShows(弹窗管理者) */,
 			);
 			path = CTModules;
 			sourceTree = "<group>";
@@ -1653,7 +1653,7 @@
 			path = "CTColor(颜色扩展)";
 			sourceTree = "<group>";
 		};
-		219434A421F70AF30010B640 /* CTShows */ = {
+		219434A421F70AF30010B640 /* CTShows(弹窗管理者) */ = {
 			isa = PBXGroup;
 			children = (
 				219434A521F70AF30010B640 /* CTShowsManager.h */,
@@ -1661,7 +1661,7 @@
 				219434A721F70AF30010B640 /* CTShowView.h */,
 				219434A821F70AF30010B640 /* CTShowView.m */,
 			);
-			path = CTShows;
+			path = "CTShows(弹窗管理者)";
 			sourceTree = "<group>";
 		};
 		219434A921F70AF30010B640 /* CTCollectSimplify */ = {
@@ -1673,13 +1673,13 @@
 			path = CTCollectSimplify;
 			sourceTree = "<group>";
 		};
-		219434AF21F70B540010B640 /* CTControls */ = {
+		219434AF21F70B540010B640 /* CTControls(控件管理者) */ = {
 			isa = PBXGroup;
 			children = (
 				219434B021F70D110010B640 /* CTUIManagers.h */,
 				219434B121F70D110010B640 /* CTUIManagers.m */,
 			);
-			path = CTControls;
+			path = "CTControls(控件管理者)";
 			sourceTree = "<group>";
 		};
 		21A8DEF2219EA6EB000ACCA9 /* HuaGui(画规) */ = {
