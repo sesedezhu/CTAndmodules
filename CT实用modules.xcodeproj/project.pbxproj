@@ -1029,7 +1029,7 @@
 		214A03F5211C3EDB00F820BD /* NOOriginal */ = {
 			isa = PBXGroup;
 			children = (
-				21E0B5B8212E9C8E00876E24 /* MBProgressHUD */,
+				21E0B5B8212E9C8E00876E24 /* MBProgressHUD(风火轮) */,
 			);
 			path = NOOriginal;
 			sourceTree = "<group>";
@@ -1037,19 +1037,19 @@
 		214A03F6211C3EDB00F820BD /* Original */ = {
 			isa = PBXGroup;
 			children = (
-				21A8DEF2219EA6EB000ACCA9 /* HuaGui */,
-				214A04F2211C3F8800F820BD /* IQKeyboardManager */,
-				214A0552211C3F8900F820BD /* MJExtension */,
-				214A0570211C3F8A00F820BD /* MJRefresh */,
-				214A053F211C3F8900F820BD /* MZTimerLabel */,
-				214A056A211C3F8900F820BD /* SDAutoLayout */,
-				214A0542211C3F8900F820BD /* SDCycleScrollView */,
-				214A0517211C3F8900F820BD /* SDWebImage */,
+				21A8DEF2219EA6EB000ACCA9 /* HuaGui(画规) */,
+				214A04F2211C3F8800F820BD /* IQKeyboardManager(键盘) */,
+				214A0552211C3F8900F820BD /* MJExtension(模型) */,
+				214A0570211C3F8A00F820BD /* MJRefresh(刷新) */,
+				214A053F211C3F8900F820BD /* MZTimerLabel(时间) */,
+				214A056A211C3F8900F820BD /* SDAutoLayout(约束) */,
+				214A0542211C3F8900F820BD /* SDCycleScrollView(幻灯片) */,
+				214A0517211C3F8900F820BD /* SDWebImage(图片缓存) */,
 			);
 			path = Original;
 			sourceTree = "<group>";
 		};
-		214A04F2211C3F8800F820BD /* IQKeyboardManager */ = {
+		214A04F2211C3F8800F820BD /* IQKeyboardManager(键盘) */ = {
 			isa = PBXGroup;
 			children = (
 				214A04F3211C3F8800F820BD /* Categories */,
@@ -1062,7 +1062,7 @@
 				214A050A211C3F8800F820BD /* IQToolbar */,
 				214A0515211C3F8800F820BD /* Resources */,
 			);
-			path = IQKeyboardManager;
+			path = "IQKeyboardManager(键盘)";
 			sourceTree = "<group>";
 		};
 		214A04F3211C3F8800F820BD /* Categories */ = {
@@ -1127,7 +1127,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		214A0517211C3F8900F820BD /* SDWebImage */ = {
+		214A0517211C3F8900F820BD /* SDWebImage(图片缓存) */ = {
 			isa = PBXGroup;
 			children = (
 				214A0518211C3F8900F820BD /* MKAnnotationView+WebCache.h */,
@@ -1170,19 +1170,19 @@
 				214A053D211C3F8900F820BD /* UIView+WebCacheOperation.h */,
 				214A053E211C3F8900F820BD /* UIView+WebCacheOperation.m */,
 			);
-			path = SDWebImage;
+			path = "SDWebImage(图片缓存)";
 			sourceTree = "<group>";
 		};
-		214A053F211C3F8900F820BD /* MZTimerLabel */ = {
+		214A053F211C3F8900F820BD /* MZTimerLabel(时间) */ = {
 			isa = PBXGroup;
 			children = (
 				214A0540211C3F8900F820BD /* MZTimerLabel.h */,
 				214A0541211C3F8900F820BD /* MZTimerLabel.m */,
 			);
-			path = MZTimerLabel;
+			path = "MZTimerLabel(时间)";
 			sourceTree = "<group>";
 		};
-		214A0542211C3F8900F820BD /* SDCycleScrollView */ = {
+		214A0542211C3F8900F820BD /* SDCycleScrollView(幻灯片) */ = {
 			isa = PBXGroup;
 			children = (
 				214A0543211C3F8900F820BD /* PageControl */,
@@ -1193,7 +1193,7 @@
 				214A0550211C3F8900F820BD /* UIView+SDExtension.h */,
 				214A0551211C3F8900F820BD /* UIView+SDExtension.m */,
 			);
-			path = SDCycleScrollView;
+			path = "SDCycleScrollView(幻灯片)";
 			sourceTree = "<group>";
 		};
 		214A0543211C3F8900F820BD /* PageControl */ = {
@@ -1211,13 +1211,13 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
-		214A0552211C3F8900F820BD /* MJExtension */ = {
+		214A0552211C3F8900F820BD /* MJExtension(模型) */ = {
 			isa = PBXGroup;
 			children = (
 				214A0553211C3F8900F820BD /* LICENSE */,
 				214A0554211C3F8900F820BD /* MJExtension */,
 			);
-			path = MJExtension;
+			path = "MJExtension(模型)";
 			sourceTree = "<group>";
 		};
 		214A0554211C3F8900F820BD /* MJExtension */ = {
@@ -1248,7 +1248,7 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
-		214A056A211C3F8900F820BD /* SDAutoLayout */ = {
+		214A056A211C3F8900F820BD /* SDAutoLayout(约束) */ = {
 			isa = PBXGroup;
 			children = (
 				214A056B211C3F8900F820BD /* SDAutoLayout.h */,
@@ -1257,10 +1257,10 @@
 				214A056E211C3F8900F820BD /* UIView+SDAutoLayout.h */,
 				214A056F211C3F8900F820BD /* UIView+SDAutoLayout.m */,
 			);
-			path = SDAutoLayout;
+			path = "SDAutoLayout(约束)";
 			sourceTree = "<group>";
 		};
-		214A0570211C3F8A00F820BD /* MJRefresh */ = {
+		214A0570211C3F8A00F820BD /* MJRefresh(刷新) */ = {
 			isa = PBXGroup;
 			children = (
 				214A0571211C3F8A00F820BD /* Base */,
@@ -1280,7 +1280,7 @@
 				214A059F211C3F8A00F820BD /* UIView+MJExtension.h */,
 				214A05A0211C3F8A00F820BD /* UIView+MJExtension.m */,
 			);
-			path = MJRefresh;
+			path = "MJRefresh(刷新)";
 			sourceTree = "<group>";
 		};
 		214A0571211C3F8A00F820BD /* Base */ = {
@@ -1682,7 +1682,7 @@
 			path = CTControls;
 			sourceTree = "<group>";
 		};
-		21A8DEF2219EA6EB000ACCA9 /* HuaGui */ = {
+		21A8DEF2219EA6EB000ACCA9 /* HuaGui(画规) */ = {
 			isa = PBXGroup;
 			children = (
 				21A8DEF3219EA6EB000ACCA9 /* HGCtris */,
@@ -1690,7 +1690,7 @@
 				21A8DEFC219EA6EB000ACCA9 /* HGView */,
 				21A8DF09219EA6EB000ACCA9 /* other */,
 			);
-			path = HuaGui;
+			path = "HuaGui(画规)";
 			sourceTree = "<group>";
 		};
 		21A8DEF3219EA6EB000ACCA9 /* HGCtris */ = {
@@ -2170,18 +2170,18 @@
 		21E0B561212E9C8200876E24 /* NetWorkings */ = {
 			isa = PBXGroup;
 			children = (
-				49997BFA225F40DB0075C1EF /* AFNetworking */,
-				49997BF6225DFF900075C1EF /* CTNetworkManagers */,
-				21E0B585212E9C8200876E24 /* ErrorView */,
+				49997BFA225F40DB0075C1EF /* AFNetworking(网络请求) */,
+				49997BF6225DFF900075C1EF /* CTNetworkManagers(Block请求) */,
+				21E0B585212E9C8200876E24 /* ErrorView(错误页) */,
 				21E0B58E212E9C8200876E24 /* LAndRRequest.h */,
 				21E0B58F212E9C8200876E24 /* LAndRRequest.m */,
 				21E0B590212E9C8200876E24 /* PPNetworkHelper */,
-				21E0B595212E9C8200876E24 /* YYCache */,
+				21E0B595212E9C8200876E24 /* YYCache(缓存) */,
 			);
 			path = NetWorkings;
 			sourceTree = "<group>";
 		};
-		21E0B585212E9C8200876E24 /* ErrorView */ = {
+		21E0B585212E9C8200876E24 /* ErrorView(错误页) */ = {
 			isa = PBXGroup;
 			children = (
 				21E0B586212E9C8200876E24 /* NetworkError.h */,
@@ -2193,7 +2193,7 @@
 				21E0B58C212E9C8200876E24 /* PanDuanHeaderView.h */,
 				21E0B58D212E9C8200876E24 /* PanDuanHeaderView.m */,
 			);
-			path = ErrorView;
+			path = "ErrorView(错误页)";
 			sourceTree = "<group>";
 		};
 		21E0B590212E9C8200876E24 /* PPNetworkHelper */ = {
@@ -2207,7 +2207,7 @@
 			path = PPNetworkHelper;
 			sourceTree = "<group>";
 		};
-		21E0B595212E9C8200876E24 /* YYCache */ = {
+		21E0B595212E9C8200876E24 /* YYCache(缓存) */ = {
 			isa = PBXGroup;
 			children = (
 				21E0B596212E9C8200876E24 /* YYCache.h */,
@@ -2219,10 +2219,10 @@
 				21E0B59C212E9C8200876E24 /* YYMemoryCache.h */,
 				21E0B59D212E9C8200876E24 /* YYMemoryCache.m */,
 			);
-			path = YYCache;
+			path = "YYCache(缓存)";
 			sourceTree = "<group>";
 		};
-		21E0B5B8212E9C8E00876E24 /* MBProgressHUD */ = {
+		21E0B5B8212E9C8E00876E24 /* MBProgressHUD(风火轮) */ = {
 			isa = PBXGroup;
 			children = (
 				21E0B5B9212E9C8E00876E24 /* MBProgressHUD+HUD.h */,
@@ -2230,7 +2230,7 @@
 				21E0B5BB212E9C8E00876E24 /* MBProgressHUD.h */,
 				21E0B5BC212E9C8E00876E24 /* MBProgressHUD.m */,
 			);
-			path = MBProgressHUD;
+			path = "MBProgressHUD(风火轮)";
 			sourceTree = "<group>";
 		};
 		21E0B5C3212E9F0400876E24 /* CTString */ = {
@@ -2309,28 +2309,28 @@
 		21FA81D321A6425F000AFC63 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				21FA81D421A6425F000AFC63 /* NetworkStatusVie w */,
-				21FA81D721A6425F000AFC63 /* NLWLauchGuide */,
+				21FA81D421A6425F000AFC63 /* NetworkStatusVie(网络提示) */,
+				21FA81D721A6425F000AFC63 /* NLWLauchGuide(引导页) */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		21FA81D421A6425F000AFC63 /* NetworkStatusVie w */ = {
+		21FA81D421A6425F000AFC63 /* NetworkStatusVie(网络提示) */ = {
 			isa = PBXGroup;
 			children = (
 				21FA81D521A6425F000AFC63 /* LostNetView.h */,
 				21FA81D621A6425F000AFC63 /* LostNetView.m */,
 			);
-			path = "NetworkStatusVie w";
+			path = "NetworkStatusVie(网络提示)";
 			sourceTree = "<group>";
 		};
-		21FA81D721A6425F000AFC63 /* NLWLauchGuide */ = {
+		21FA81D721A6425F000AFC63 /* NLWLauchGuide(引导页) */ = {
 			isa = PBXGroup;
 			children = (
 				21FA81D821A6425F000AFC63 /* GuideCtrl2.h */,
 				21FA81D921A6425F000AFC63 /* GuideCtrl2.m */,
 			);
-			path = NLWLauchGuide;
+			path = "NLWLauchGuide(引导页)";
 			sourceTree = "<group>";
 		};
 		4247986F220FB1220062B7B9 /* LoginModule2 */ = {
@@ -2704,16 +2704,16 @@
 			path = CTArray;
 			sourceTree = "<group>";
 		};
-		49997BF6225DFF900075C1EF /* CTNetworkManagers */ = {
+		49997BF6225DFF900075C1EF /* CTNetworkManagers(Block请求) */ = {
 			isa = PBXGroup;
 			children = (
 				49997BF7225DFFE90075C1EF /* CTRequest.h */,
 				49997BF8225DFFE90075C1EF /* CTRequest.m */,
 			);
-			path = CTNetworkManagers;
+			path = "CTNetworkManagers(Block请求)";
 			sourceTree = "<group>";
 		};
-		49997BFA225F40DB0075C1EF /* AFNetworking */ = {
+		49997BFA225F40DB0075C1EF /* AFNetworking(网络请求) */ = {
 			isa = PBXGroup;
 			children = (
 				49997BFB225F40DB0075C1EF /* AFSecurityPolicy.h */,
@@ -2732,7 +2732,7 @@
 				49997C1C225F40DB0075C1EF /* AFCompatibilityMacros.h */,
 				49997C1D225F40DB0075C1EF /* AFHTTPSessionManager.h */,
 			);
-			path = AFNetworking;
+			path = "AFNetworking(网络请求)";
 			sourceTree = "<group>";
 		};
 		49997C07225F40DB0075C1EF /* UIKit+AFNetworking */ = {
@@ -2765,18 +2765,18 @@
 		49997C2D226032B50075C1EF /* CTRequestDatas */ = {
 			isa = PBXGroup;
 			children = (
-				49997C2E226033010075C1EF /* CTLoginRequest */,
+				49997C2E226033010075C1EF /* CTLoginRequest(用户数据) */,
 			);
 			path = CTRequestDatas;
 			sourceTree = "<group>";
 		};
-		49997C2E226033010075C1EF /* CTLoginRequest */ = {
+		49997C2E226033010075C1EF /* CTLoginRequest(用户数据) */ = {
 			isa = PBXGroup;
 			children = (
 				49997C2F226034A90075C1EF /* CTLoginRequest001.h */,
 				49997C30226034A90075C1EF /* CTLoginRequest001.m */,
 			);
-			path = CTLoginRequest;
+			path = "CTLoginRequest(用户数据)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
