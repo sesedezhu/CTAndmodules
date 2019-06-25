@@ -1005,7 +1005,7 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		214A03B621194B3A00F820BD /* CTPlistManagers */ = {
+		214A03B621194B3A00F820BD /* CTPlistManagers(本地数据) */ = {
 			isa = PBXGroup;
 			children = (
 				21AEA16422252B2200069C36 /* PlistManager.h */,
@@ -1013,7 +1013,7 @@
 				21AEA15E2225299500069C36 /* UserManager.h */,
 				21AEA15D2225299400069C36 /* UserManager.m */,
 			);
-			path = CTPlistManagers;
+			path = "CTPlistManagers(本地数据)";
 			sourceTree = "<group>";
 		};
 		214A03F4211C3EDB00F820BD /* OtenrSupports */ = {
@@ -1623,13 +1623,13 @@
 			isa = PBXGroup;
 			children = (
 				495C48C32249B36000C96716 /* CTViews */,
-				4973F257223B5CE700E98B20 /* CTArray */,
-				21AEA1592225298B00069C36 /* CTTimes */,
-				21E0B5CB212EA11E00876E24 /* CTText */,
-				21E0B5C3212E9F0400876E24 /* CTString */,
-				21E0B5C6212E9F0500876E24 /* LoadMD5 */,
-				214A03B621194B3A00F820BD /* CTPlistManagers */,
-				2169FADD21058210005D6F2B /* CTColor */,
+				4973F257223B5CE700E98B20 /* CTArray(数组扩展) */,
+				21AEA1592225298B00069C36 /* CTTimes(时间) */,
+				21E0B5CB212EA11E00876E24 /* CTText(text方法) */,
+				21E0B5C3212E9F0400876E24 /* CTString(字符串) */,
+				21E0B5C6212E9F0500876E24 /* LoadMD5(MD5) */,
+				214A03B621194B3A00F820BD /* CTPlistManagers(本地数据) */,
+				2169FADD21058210005D6F2B /* CTColor(颜色扩展) */,
 			);
 			path = CTDatas;
 			sourceTree = "<group>";
@@ -1644,13 +1644,13 @@
 			path = CTModules;
 			sourceTree = "<group>";
 		};
-		2169FADD21058210005D6F2B /* CTColor */ = {
+		2169FADD21058210005D6F2B /* CTColor(颜色扩展) */ = {
 			isa = PBXGroup;
 			children = (
 				2169FADE2105851F005D6F2B /* UIColor+Definition.h */,
 				2169FADF2105851F005D6F2B /* UIColor+Definition.m */,
 			);
-			path = CTColor;
+			path = "CTColor(颜色扩展)";
 			sourceTree = "<group>";
 		};
 		219434A421F70AF30010B640 /* CTShows */ = {
@@ -1746,13 +1746,13 @@
 			path = other;
 			sourceTree = "<group>";
 		};
-		21AEA1592225298B00069C36 /* CTTimes */ = {
+		21AEA1592225298B00069C36 /* CTTimes(时间) */ = {
 			isa = PBXGroup;
 			children = (
 				21AEA15A2225298B00069C36 /* DateTimes.h */,
 				21AEA15B2225298B00069C36 /* DateTimes.m */,
 			);
-			path = CTTimes;
+			path = "CTTimes(时间)";
 			sourceTree = "<group>";
 		};
 		21AEA16C222536D000069C36 /* PayModeul */ = {
@@ -2233,31 +2233,31 @@
 			path = "MBProgressHUD(风火轮)";
 			sourceTree = "<group>";
 		};
-		21E0B5C3212E9F0400876E24 /* CTString */ = {
+		21E0B5C3212E9F0400876E24 /* CTString(字符串) */ = {
 			isa = PBXGroup;
 			children = (
 				21E0B5C4212E9F0400876E24 /* CTStringTool.h */,
 				21E0B5C5212E9F0400876E24 /* CTStringTool.m */,
 			);
-			path = CTString;
+			path = "CTString(字符串)";
 			sourceTree = "<group>";
 		};
-		21E0B5C6212E9F0500876E24 /* LoadMD5 */ = {
+		21E0B5C6212E9F0500876E24 /* LoadMD5(MD5) */ = {
 			isa = PBXGroup;
 			children = (
 				21E0B5C7212E9F0500876E24 /* CTMD5Tool.h */,
 				21E0B5C8212E9F0500876E24 /* CTMD5Tool.m */,
 			);
-			path = LoadMD5;
+			path = "LoadMD5(MD5)";
 			sourceTree = "<group>";
 		};
-		21E0B5CB212EA11E00876E24 /* CTText */ = {
+		21E0B5CB212EA11E00876E24 /* CTText(text方法) */ = {
 			isa = PBXGroup;
 			children = (
 				21E0B5CC212EA11E00876E24 /* CTTextTool.h */,
 				21E0B5CD212EA11E00876E24 /* CTTextTool.m */,
 			);
-			path = CTText;
+			path = "CTText(text方法)";
 			sourceTree = "<group>";
 		};
 		21E0B5EA212FB47300876E24 /* Images */ = {
@@ -2362,25 +2362,25 @@
 		495C48C32249B36000C96716 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
-				495C48C42249B36000C96716 /* CTNavigatCustom */,
-				495C48D02249B36000C96716 /* CTLoginView */,
-				495C48E92249B36000C96716 /* CTPayView */,
-				495C48F32249B36000C96716 /* CTHeaderView */,
-				495C49012249B36000C96716 /* CTCellView */,
+				495C48C42249B36000C96716 /* CTNavigatCustom(导航) */,
+				495C48D02249B36000C96716 /* CTLoginView(登录) */,
+				495C48E92249B36000C96716 /* CTPayView(支付) */,
+				495C48F32249B36000C96716 /* CTHeaderView(头部) */,
+				495C49012249B36000C96716 /* CTCellView(cell类view) */,
 				495C492F2249B36000C96716 /* CTViewConfiguration */,
 			);
 			name = CTViews;
 			path = "CT实用modules/CTFramework/CTViews";
 			sourceTree = SOURCE_ROOT;
 		};
-		495C48C42249B36000C96716 /* CTNavigatCustom */ = {
+		495C48C42249B36000C96716 /* CTNavigatCustom(导航) */ = {
 			isa = PBXGroup;
 			children = (
 				495C48C52249B36000C96716 /* NavView001 */,
 				495C48C82249B36000C96716 /* Image */,
 				495C48CF2249B36000C96716 /* NavInform.rtf */,
 			);
-			path = CTNavigatCustom;
+			path = "CTNavigatCustom(导航)";
 			sourceTree = "<group>";
 		};
 		495C48C52249B36000C96716 /* NavView001 */ = {
@@ -2405,23 +2405,23 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		495C48D02249B36000C96716 /* CTLoginView */ = {
+		495C48D02249B36000C96716 /* CTLoginView(登录) */ = {
 			isa = PBXGroup;
 			children = (
-				495C48D12249B36000C96716 /* MobileView */,
-				495C48D62249B36000C96716 /* PasswordView */,
+				495C48D12249B36000C96716 /* MobileView(账号) */,
+				495C48D62249B36000C96716 /* PasswordView(密码) */,
 				495C48DB2249B36000C96716 /* image */,
-				495C48E02249B36000C96716 /* SeccodeView */,
+				495C48E02249B36000C96716 /* SeccodeView(验证码) */,
 			);
-			path = CTLoginView;
+			path = "CTLoginView(登录)";
 			sourceTree = "<group>";
 		};
-		495C48D12249B36000C96716 /* MobileView */ = {
+		495C48D12249B36000C96716 /* MobileView(账号) */ = {
 			isa = PBXGroup;
 			children = (
 				495C48D22249B36000C96716 /* ModelView001 */,
 			);
-			path = MobileView;
+			path = "MobileView(账号)";
 			sourceTree = "<group>";
 		};
 		495C48D22249B36000C96716 /* ModelView001 */ = {
@@ -2434,12 +2434,12 @@
 			path = ModelView001;
 			sourceTree = "<group>";
 		};
-		495C48D62249B36000C96716 /* PasswordView */ = {
+		495C48D62249B36000C96716 /* PasswordView(密码) */ = {
 			isa = PBXGroup;
 			children = (
 				495C48D72249B36000C96716 /* PasswordView001 */,
 			);
-			path = PasswordView;
+			path = "PasswordView(密码)";
 			sourceTree = "<group>";
 		};
 		495C48D72249B36000C96716 /* PasswordView001 */ = {
@@ -2463,13 +2463,13 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		495C48E02249B36000C96716 /* SeccodeView */ = {
+		495C48E02249B36000C96716 /* SeccodeView(验证码) */ = {
 			isa = PBXGroup;
 			children = (
 				495C48E12249B36000C96716 /* SeccodeView001 */,
 				495C48E52249B36000C96716 /* SeccodeView002 */,
 			);
-			path = SeccodeView;
+			path = "SeccodeView(验证码)";
 			sourceTree = "<group>";
 		};
 		495C48E12249B36000C96716 /* SeccodeView001 */ = {
@@ -2492,13 +2492,13 @@
 			path = SeccodeView002;
 			sourceTree = "<group>";
 		};
-		495C48E92249B36000C96716 /* CTPayView */ = {
+		495C48E92249B36000C96716 /* CTPayView(支付) */ = {
 			isa = PBXGroup;
 			children = (
 				495C48EA2249B36000C96716 /*  CTPayView001 */,
 				495C48EE2249B36000C96716 /*  CTPayImage */,
 			);
-			path = CTPayView;
+			path = "CTPayView(支付)";
 			sourceTree = "<group>";
 		};
 		495C48EA2249B36000C96716 /*  CTPayView001 */ = {
@@ -2522,14 +2522,14 @@
 			path = " CTPayImage";
 			sourceTree = "<group>";
 		};
-		495C48F32249B36000C96716 /* CTHeaderView */ = {
+		495C48F32249B36000C96716 /* CTHeaderView(头部) */ = {
 			isa = PBXGroup;
 			children = (
 				495C48F42249B36000C96716 /* HeaderView002 */,
 				495C48F82249B36000C96716 /* Images */,
 				495C48FD2249B36000C96716 /* HeaderView001 */,
 			);
-			path = CTHeaderView;
+			path = "CTHeaderView(头部)";
 			sourceTree = "<group>";
 		};
 		495C48F42249B36000C96716 /* HeaderView002 */ = {
@@ -2563,7 +2563,7 @@
 			path = HeaderView001;
 			sourceTree = "<group>";
 		};
-		495C49012249B36000C96716 /* CTCellView */ = {
+		495C49012249B36000C96716 /* CTCellView(cell类view) */ = {
 			isa = PBXGroup;
 			children = (
 				495C49022249B36000C96716 /* CellImages */,
@@ -2577,7 +2577,7 @@
 				495C49292249B36000C96716 /* CellView008 */,
 				495C492C2249B36000C96716 /* CellView007 */,
 			);
-			path = CTCellView;
+			path = "CTCellView(cell类view)";
 			sourceTree = "<group>";
 		};
 		495C49022249B36000C96716 /* CellImages */ = {
@@ -2695,13 +2695,13 @@
 			path = CTViewConfiguration;
 			sourceTree = "<group>";
 		};
-		4973F257223B5CE700E98B20 /* CTArray */ = {
+		4973F257223B5CE700E98B20 /* CTArray(数组扩展) */ = {
 			isa = PBXGroup;
 			children = (
 				4973F258223B5CE700E98B20 /* NSArray+CTArray.h */,
 				4973F259223B5CE700E98B20 /* NSArray+CTArray.m */,
 			);
-			path = CTArray;
+			path = "CTArray(数组扩展)";
 			sourceTree = "<group>";
 		};
 		49997BF6225DFF900075C1EF /* CTNetworkManagers(Block请求) */ = {
