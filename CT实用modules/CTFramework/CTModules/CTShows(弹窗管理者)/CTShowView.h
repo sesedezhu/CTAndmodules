@@ -34,6 +34,7 @@ typedef NS_ENUM(NSUInteger, NLWAnimationMode) {
  */
 - (void)CTloadContViewTop:(CGFloat)top Left:(CGFloat)left Width:(CGFloat)width Height:(CGFloat)height addView:(UIView *)view animation:(NLWAnimationMode)tepy;//适配内容图层Frame值,必写
 
-- (void)showView;//弹出
+- (void)showCustomView:(UIView *)view;//弹出，自定义view
+- (void)showView;//弹出，UIWindow
 - (void)dismiss;//移除
 @end

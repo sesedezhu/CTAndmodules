@@ -74,6 +74,25 @@
     _shadowView.userInteractionEnabled = _isUserInteractionShadowView;
 }
 #pragma mark - 开始动画
+//弹出，自定义
+- (void)showCustomView:(UIView *)view{
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:_timeAnimation animations:^{
+        [weakSelf showCustomAnimations:view];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+- (void)showCustomAnimations:(UIView *)view{
+    [view addSubview:self];
+    
+    self.shadowView.alpha = 0.5;
+    self.contentView.alpha = 1.0;
+    //样式配置
+    self.contentView.frame = CGRectMake(_left, _top, _width, _height);
+}
+/////////////////////////////////////////
+//弹出，UIWindow
 - (void)showView{
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:_timeAnimation animations:^{

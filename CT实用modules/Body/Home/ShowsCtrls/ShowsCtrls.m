@@ -25,7 +25,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"view",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"view",@"self.view弹窗", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -71,6 +71,13 @@
         {
             modoulView001 *view = [[modoulView001 alloc]init];
             [CTShowsManager CTloadInitContViewTop:CONVER_VALUE(167) Left:CONVER_VALUE(63) Width:CONVER_VALUE(250) Height:CONVER_VALUE(290) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:NO time:1.0];
+        }
+            break;
+        case 5:
+        {
+            UIView *view = [[UIView alloc]init];
+            view.backgroundColor = [UIColor orangeColor];
+            [CTShowsManager CTCustomloadInitContViewTop:kScreenHeight/2-50 Left:kScreenWidth/2-50 Width:100 Height:100 addView:view animationTepy:NLWDefault transparency:YES interaction:YES time:1.0 AndClassView:self.view];
         }
             break;
             
