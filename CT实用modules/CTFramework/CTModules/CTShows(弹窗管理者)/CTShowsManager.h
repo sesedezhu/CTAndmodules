@@ -11,6 +11,7 @@
 @interface CTShowsManager : NSObject
 
 /*
+ * @param classView 添加在那个view上
  * @param view    开发者传入自定义的内容视图，不需要设置from值
  * @param top     内容视图到屏幕顶部的距离（传入的view）
  * @param left    内容视图到屏幕左边的距离（传入的view）
