@@ -11,6 +11,7 @@
 #import "CTShowsManager.h"
 #import "GiFHUD.h"
 #import "modoulView001.h"
+#import "BottomView.h"
 @interface ShowsCtrls ()
 
 @end
@@ -25,7 +26,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"view",@"self.view弹窗", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"普通渐变",@"多图切换",@"单图旋转",@"gif动画",@"view",@"self.view弹窗",@"TableBrush", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -80,7 +81,12 @@
             [CTShowsManager CTCustomloadInitContViewTop:kScreenHeight/2-50 Left:kScreenWidth/2-50 Width:100 Height:100 addView:view animationTepy:NLWDefault transparency:YES interaction:YES time:1.0 AndClassView:self.view];
         }
             break;
-            
+        case 6:
+        {
+            BottomView *view = [[BottomView alloc]init];
+            [CTShowsManager CTCustomloadInitContViewTop:0 Left:0 Width:kScreenWidth Height:kScreenHeight-100-CTStopStatusRect-CTStopNavRect addView:view animationTepy:NLWMobileAndReturnTop transparency:YES interaction:YES time:1.0 AndClassView:self.view];
+        }
+            break;
         default:
             break;
     }
