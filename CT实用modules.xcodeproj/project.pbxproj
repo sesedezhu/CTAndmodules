@@ -380,6 +380,8 @@
 		49FAE2D8234C7C420040F840 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2D7234C7C420040F840 /* BottomView.m */; };
 		49FAE2DB234D730C0040F840 /* TableBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2DA234D730C0040F840 /* TableBrush.m */; };
 		49FAE2DE234D73380040F840 /* TableCellBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2DD234D73380040F840 /* TableCellBrush.m */; };
+		49FAE2E3235016810040F840 /* InstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2E2235016810040F840 /* InstructionView.m */; };
+		49FAE2E623506AAF0040F840 /* InstructionScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2E523506AAF0040F840 /* InstructionScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1013,6 +1015,10 @@
 		49FAE2DA234D730C0040F840 /* TableBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableBrush.m; sourceTree = "<group>"; };
 		49FAE2DC234D73380040F840 /* TableCellBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCellBrush.h; sourceTree = "<group>"; };
 		49FAE2DD234D73380040F840 /* TableCellBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableCellBrush.m; sourceTree = "<group>"; };
+		49FAE2E1235016810040F840 /* InstructionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionView.h; sourceTree = "<group>"; };
+		49FAE2E2235016810040F840 /* InstructionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionView.m; sourceTree = "<group>"; };
+		49FAE2E423506AAF0040F840 /* InstructionScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionScrollView.h; sourceTree = "<group>"; };
+		49FAE2E523506AAF0040F840 /* InstructionScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2551,6 +2557,7 @@
 		49FAE226234C371B0040F840 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				49FAE2DF234F14070040F840 /* CTBottonHelper */,
 				49FAE2D4234C6DF80040F840 /* CTTableview */,
 				49FAE227234C371B0040F840 /* CTCellView(cell类view) */,
 				49FAE255234C371B0040F840 /* CTLoginView(登录) */,
@@ -2903,6 +2910,25 @@
 				49FAE2DD234D73380040F840 /* TableCellBrush.m */,
 			);
 			path = "TwoBrush(双刷)";
+			sourceTree = "<group>";
+		};
+		49FAE2DF234F14070040F840 /* CTBottonHelper */ = {
+			isa = PBXGroup;
+			children = (
+				49FAE2E0234F16220040F840 /* UserInstructions */,
+			);
+			path = CTBottonHelper;
+			sourceTree = "<group>";
+		};
+		49FAE2E0234F16220040F840 /* UserInstructions */ = {
+			isa = PBXGroup;
+			children = (
+				49FAE2E1235016810040F840 /* InstructionView.h */,
+				49FAE2E2235016810040F840 /* InstructionView.m */,
+				49FAE2E423506AAF0040F840 /* InstructionScrollView.h */,
+				49FAE2E523506AAF0040F840 /* InstructionScrollView.m */,
+			);
+			path = UserInstructions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3321,6 +3347,7 @@
 				214A05E3211C3F8A00F820BD /* MJRefreshGifHeader.m in Sources */,
 				21B4CC6921240DD400C37C8A /* HomeViewCtrl.m in Sources */,
 				21BB279D216B541800B156A1 /* TableOne.m in Sources */,
+				49FAE2E623506AAF0040F840 /* InstructionScrollView.m in Sources */,
 				214A05C1211C3F8A00F820BD /* UIView+WebCache.m in Sources */,
 				49FAE2CF234C371B0040F840 /* CTPayView001.m in Sources */,
 				214A05EB211C3F8A00F820BD /* UIScrollView+MJRefresh.m in Sources */,
@@ -3383,6 +3410,7 @@
 				214A05E0211C3F8A00F820BD /* MJRefreshBackGifFooter.m in Sources */,
 				21DBBB6521A4148100548699 /* GiFHUD.m in Sources */,
 				214A05E2211C3F8A00F820BD /* MJRefreshBackStateFooter.m in Sources */,
+				49FAE2E3235016810040F840 /* InstructionView.m in Sources */,
 				21AEA4692232544600069C36 /* OrderCell007.m in Sources */,
 				214A05D8211C3F8A00F820BD /* MJRefreshAutoFooter.m in Sources */,
 				214A05C9211C3F8A00F820BD /* SDCycleScrollView.m in Sources */,

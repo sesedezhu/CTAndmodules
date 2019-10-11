@@ -14,7 +14,7 @@
 #import "LoginCtrls.h"
 #import "CTLoginCtrls2.h"
 #import "CeShiCtrl.h"
-
+#import "InstructionView.h"
 @interface HomeViewCtrl ()
 
 @end
@@ -36,6 +36,8 @@
     }];
     [self.view addSubview:collview];
     
+    InstructionView *insview = [[InstructionView alloc]initWithFrame:CGRectMake(50, 350, 150, 50)];
+    [self.view addSubview:insview];
     
 }
 

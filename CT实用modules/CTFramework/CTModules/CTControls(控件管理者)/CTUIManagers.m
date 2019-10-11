@@ -45,10 +45,10 @@
 //创建Button,默认配置
 + (UIButton *)createButtonNormalText:(NSString *)normlText normalTextColor:(UIColor *)normlTextColor font:(UIFont *)font backgroundColor:(UIColor *)bgColor{
     UIButton *CTBtn = [[UIButton alloc]init];
-    [CTBtn setTitle:normlText forState:UIControlStateNormal];
-    [CTBtn setTitleColor:normlTextColor forState:UIControlStateNormal];
-    CTBtn.titleLabel.font = font;
-    [CTBtn setBackgroundColor:bgColor];
+    normlText?[CTBtn setTitle:normlText forState:UIControlStateNormal]:nil;
+    normlTextColor?[CTBtn setTitleColor:normlTextColor forState:UIControlStateNormal]:nil;
+    font?CTBtn.titleLabel.font = font:nil;
+    bgColor?[CTBtn setBackgroundColor:bgColor]:nil;
     return CTBtn;
 }
 //创建Button,高度自定义配置
