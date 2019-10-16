@@ -382,6 +382,12 @@
 		49FAE2DE234D73380040F840 /* TableCellBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2DD234D73380040F840 /* TableCellBrush.m */; };
 		49FAE2E3235016810040F840 /* InstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2E2235016810040F840 /* InstructionView.m */; };
 		49FAE2E623506AAF0040F840 /* InstructionScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FAE2E523506AAF0040F840 /* InstructionScrollView.m */; };
+		49FAE2FB23516B9F0040F840 /* TickSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FAE2F523516B9F0040F840 /* TickSelected.png */; };
+		49FAE2FC23516B9F0040F840 /* TickNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FAE2F623516B9F0040F840 /* TickNormal.png */; };
+		49FAE2FD23516B9F0040F840 /* TickNormal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FAE2F723516B9F0040F840 /* TickNormal@3x.png */; };
+		49FAE2FE23516B9F0040F840 /* TickSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FAE2F823516B9F0040F840 /* TickSelected@2x.png */; };
+		49FAE2FF23516B9F0040F840 /* TickSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FAE2F923516B9F0040F840 /* TickSelected@3x.png */; };
+		49FAE30023516B9F0040F840 /* TickNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FAE2FA23516B9F0040F840 /* TickNormal@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1019,6 +1025,12 @@
 		49FAE2E2235016810040F840 /* InstructionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionView.m; sourceTree = "<group>"; };
 		49FAE2E423506AAF0040F840 /* InstructionScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstructionScrollView.h; sourceTree = "<group>"; };
 		49FAE2E523506AAF0040F840 /* InstructionScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstructionScrollView.m; sourceTree = "<group>"; };
+		49FAE2F523516B9F0040F840 /* TickSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TickSelected.png; sourceTree = "<group>"; };
+		49FAE2F623516B9F0040F840 /* TickNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TickNormal.png; sourceTree = "<group>"; };
+		49FAE2F723516B9F0040F840 /* TickNormal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TickNormal@3x.png"; sourceTree = "<group>"; };
+		49FAE2F823516B9F0040F840 /* TickSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TickSelected@2x.png"; sourceTree = "<group>"; };
+		49FAE2F923516B9F0040F840 /* TickSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TickSelected@3x.png"; sourceTree = "<group>"; };
+		49FAE2FA23516B9F0040F840 /* TickNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TickNormal@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2923,12 +2935,26 @@
 		49FAE2E0234F16220040F840 /* UserInstructions */ = {
 			isa = PBXGroup;
 			children = (
+				49FAE2F423516B9F0040F840 /* Image */,
 				49FAE2E1235016810040F840 /* InstructionView.h */,
 				49FAE2E2235016810040F840 /* InstructionView.m */,
 				49FAE2E423506AAF0040F840 /* InstructionScrollView.h */,
 				49FAE2E523506AAF0040F840 /* InstructionScrollView.m */,
 			);
 			path = UserInstructions;
+			sourceTree = "<group>";
+		};
+		49FAE2F423516B9F0040F840 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				49FAE2F523516B9F0040F840 /* TickSelected.png */,
+				49FAE2F623516B9F0040F840 /* TickNormal.png */,
+				49FAE2F723516B9F0040F840 /* TickNormal@3x.png */,
+				49FAE2F823516B9F0040F840 /* TickSelected@2x.png */,
+				49FAE2F923516B9F0040F840 /* TickSelected@3x.png */,
+				49FAE2FA23516B9F0040F840 /* TickNormal@2x.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3048,11 +3074,13 @@
 				21BB2784216B515600B156A1 /* 8.jpeg in Resources */,
 				2169FA8921056F33005D6F2B /* LaunchScreen.storyboard in Resources */,
 				49FAE296234C371B0040F840 /* Cell002Right@3x.png in Resources */,
+				49FAE2FF23516B9F0040F840 /* TickSelected@3x.png in Resources */,
 				49FAE2B7234C371B0040F840 /* shouji2@2x.png in Resources */,
 				49FAE2C8234C371B0040F840 /* MyBkB002@2x.png in Resources */,
 				21FA81BD21A54533000AFC63 /* HUBGIF005@2x.tiff in Resources */,
 				21AEA191222536D000069C36 /* MyPhone002@2x.png in Resources */,
 				21BB2772216B515600B156A1 /* OneSimpleView.png in Resources */,
+				49FAE2FB23516B9F0040F840 /* TickSelected.png in Resources */,
 				21BB2787216B515600B156A1 /* WK_ellipsisBack@2x.png in Resources */,
 				21E0B5F5212FB47400876E24 /* Login_line@2x.png in Resources */,
 				49FAE2A2234C371B0040F840 /* CellView004.png in Resources */,
@@ -3078,6 +3106,7 @@
 				21FA81BF21A54533000AFC63 /* showOne0010@2x.png in Resources */,
 				49FAE2CB234C371B0040F840 /* MyBkB002@3x.png in Resources */,
 				49FAE2BC234C371B0040F840 /* TextModelViewimage.png in Resources */,
+				49FAE2FC23516B9F0040F840 /* TickNormal.png in Resources */,
 				21BB278B216B515600B156A1 /* WK_WarningImage013x.png in Resources */,
 				21324F122211641500F1E3D1 /* loginBak2@2x.png in Resources */,
 				21BB276E216B515600B156A1 /* OneSimple_btn_background@3x.png in Resources */,
@@ -3085,12 +3114,14 @@
 				21FA81C521A54533000AFC63 /* showOne0016@2x.png in Resources */,
 				49FAE2B5234C371B0040F840 /* TextModelTime2.png in Resources */,
 				21BB2767216B515600B156A1 /* fourSimple_Warning@2x.png in Resources */,
+				49FAE2FD23516B9F0040F840 /* TickNormal@3x.png in Resources */,
 				49FAE2C0234C371B0040F840 /* MyBakImage001@3x.png in Resources */,
 				21324F132211641500F1E3D1 /* loginBak2@3x.png in Resources */,
 				21FA81B921A54533000AFC63 /* HUBGIF001@2x.tiff in Resources */,
 				21BB276C216B515600B156A1 /* OneSimple_background@3x.png in Resources */,
 				49FAE29C234C371B0040F840 /* Cell005Right@3x.png in Resources */,
 				21BB2773216B515600B156A1 /* threeSimple_Warning@2x.png in Resources */,
+				49FAE2FE23516B9F0040F840 /* TickSelected@2x.png in Resources */,
 				21AEA192222536D000069C36 /* MyPhone002@3x.png in Resources */,
 				49FAE2CA234C371B0040F840 /* Nav_leftImage@2x.png in Resources */,
 				49FAE29A234C371B0040F840 /* Cell003Left@2x.png in Resources */,
@@ -3139,6 +3170,7 @@
 				49FAE2A7234C371B0040F840 /* CellView003.png in Resources */,
 				21E0B5F7212FB47400876E24 /* Login_LogBtnBack@2x.png in Resources */,
 				21FA81CE21A54533000AFC63 /* showOne009@2x.png in Resources */,
+				49FAE30023516B9F0040F840 /* TickNormal@2x.png in Resources */,
 				21E0B5FB212FB47400876E24 /* Login_MimaSelected@2x.png in Resources */,
 				21FA81BE21A54533000AFC63 /* pika.gif in Resources */,
 				21FA81C021A54533000AFC63 /* showOne0011@2x.png in Resources */,

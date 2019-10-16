@@ -24,7 +24,7 @@
 }
 #pragma mark - UI
 - (void)loadUI{
-    self.backgroundColor=[UIColor redColor];
+    self.backgroundColor=[UIColor clearColor];
     
     [self addSubview:self.BtnIma_Instruction];
     [self addSubview:self.Btn_Instruction];
@@ -63,17 +63,18 @@
         _BtnIma_Instruction = [CTUIManagers createButtonNormalText:nil normalTextColor:nil font:nil backgroundColor:nil];
         [_BtnIma_Instruction addTarget:self action:@selector(ClickInstructionBtns) forControlEvents:UIControlEventTouchUpInside];
         _BtnIma_Instruction.selected = NO;
-        [_BtnIma_Instruction setImage:[UIImage imageNamed:@"Cell002Right"] forState:UIControlStateNormal];
-        [_BtnIma_Instruction setImage:[UIImage imageNamed:@"Cell005Left"] forState:UIControlStateSelected];
+        [_BtnIma_Instruction setImage:[UIImage imageNamed:@"TickNormal@2x"] forState:UIControlStateNormal];
+        [_BtnIma_Instruction setImage:[UIImage imageNamed:@"TickSelected@2x"] forState:UIControlStateSelected];
     }
     return _BtnIma_Instruction;
 }
 - (UIButton *)Btn_Instruction{
     if (!_Btn_Instruction) {
-        _Btn_Instruction = [CTUIManagers createButtonNormalText:@"用户须知" normalTextColor:nil font:nil backgroundColor:nil];
+        _Btn_Instruction = [CTUIManagers createButtonNormalText:@"用户须知" normalTextColor:[UIColor blueColor] font:nil backgroundColor:[UIColor clearColor]];
         _Btn_Instruction.titleLabel.adjustsFontSizeToFitWidth = YES;
+        _Btn_Instruction.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;//按钮中lab的左右距离
+        _Btn_Instruction.titleLabel.textAlignment = NSTextAlignmentLeft;   //按钮中labk里文字的左右距离
         [_Btn_Instruction addTarget:self action:@selector(ClickInstructionBtnImages) forControlEvents:UIControlEventTouchUpInside];
-        _Btn_Instruction.backgroundColor = [UIColor blackColor];
     }
     return _Btn_Instruction;
 }
