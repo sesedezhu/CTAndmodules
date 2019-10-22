@@ -282,6 +282,12 @@
 		21FF882A216F39B20052BD61 /* TextCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF8829216F39B20052BD61 /* TextCtrl.m */; };
 		4933AFCB22C224730074CD33 /* TSDateRequt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933AFCA22C224730074CD33 /* TSDateRequt.m */; };
 		4933AFCE22C225290074CD33 /* WebViewCtrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4933AFCC22C225290074CD33 /* WebViewCtrls.m */; };
+		494131AF23581692004930FC /* ShareView01ct.m in Sources */ = {isa = PBXBuildFile; fileRef = 494131AE23581692004930FC /* ShareView01ct.m */; };
+		494131B423584AEE004930FC /* Action_Moments@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494131B023584AED004930FC /* Action_Moments@2x.png */; };
+		494131B523584AEE004930FC /* Action_Moments@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494131B123584AED004930FC /* Action_Moments@3x.png */; };
+		494131B623584AEE004930FC /* Action_Share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494131B223584AEE004930FC /* Action_Share@2x.png */; };
+		494131B723584AEE004930FC /* Action_Share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494131B323584AEE004930FC /* Action_Share@3x.png */; };
+		494131BA23584D0E004930FC /* ZYShareCanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494131B923584D0E004930FC /* ZYShareCanceView.m */; };
 		4973F25A223B5CE700E98B20 /* NSArray+CTArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F259223B5CE700E98B20 /* NSArray+CTArray.m */; };
 		49997BF9225DFFE90075C1EF /* CTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BF8225DFFE90075C1EF /* CTRequest.m */; };
 		49997C1E225F40DB0075C1EF /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BFF225F40DB0075C1EF /* AFURLResponseSerialization.m */; };
@@ -876,6 +882,14 @@
 		4933AFCA22C224730074CD33 /* TSDateRequt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSDateRequt.m; sourceTree = "<group>"; };
 		4933AFCC22C225290074CD33 /* WebViewCtrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewCtrls.m; sourceTree = "<group>"; };
 		4933AFCD22C225290074CD33 /* WebViewCtrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewCtrls.h; sourceTree = "<group>"; };
+		494131AD23581692004930FC /* ShareView01ct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareView01ct.h; sourceTree = "<group>"; };
+		494131AE23581692004930FC /* ShareView01ct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareView01ct.m; sourceTree = "<group>"; };
+		494131B023584AED004930FC /* Action_Moments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Action_Moments@2x.png"; sourceTree = "<group>"; };
+		494131B123584AED004930FC /* Action_Moments@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Action_Moments@3x.png"; sourceTree = "<group>"; };
+		494131B223584AEE004930FC /* Action_Share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Action_Share@2x.png"; sourceTree = "<group>"; };
+		494131B323584AEE004930FC /* Action_Share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Action_Share@3x.png"; sourceTree = "<group>"; };
+		494131B823584D0D004930FC /* ZYShareCanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYShareCanceView.h; sourceTree = "<group>"; };
+		494131B923584D0E004930FC /* ZYShareCanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYShareCanceView.m; sourceTree = "<group>"; };
 		4973F258223B5CE700E98B20 /* NSArray+CTArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CTArray.h"; sourceTree = "<group>"; };
 		4973F259223B5CE700E98B20 /* NSArray+CTArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CTArray.m"; sourceTree = "<group>"; };
 		49997BF7225DFFE90075C1EF /* CTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRequest.h; sourceTree = "<group>"; };
@@ -2452,6 +2466,21 @@
 			path = "TSRequDatas(包链接)";
 			sourceTree = "<group>";
 		};
+		494131AC2358154A004930FC /* CTShareView */ = {
+			isa = PBXGroup;
+			children = (
+				494131B823584D0D004930FC /* ZYShareCanceView.h */,
+				494131B923584D0E004930FC /* ZYShareCanceView.m */,
+				494131B023584AED004930FC /* Action_Moments@2x.png */,
+				494131B123584AED004930FC /* Action_Moments@3x.png */,
+				494131B223584AEE004930FC /* Action_Share@2x.png */,
+				494131B323584AEE004930FC /* Action_Share@3x.png */,
+				494131AD23581692004930FC /* ShareView01ct.h */,
+				494131AE23581692004930FC /* ShareView01ct.m */,
+			);
+			path = CTShareView;
+			sourceTree = "<group>";
+		};
 		4973F257223B5CE700E98B20 /* CTArray(数组扩展) */ = {
 			isa = PBXGroup;
 			children = (
@@ -2569,6 +2598,7 @@
 		49FAE226234C371B0040F840 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				494131AC2358154A004930FC /* CTShareView */,
 				49FAE2DF234F14070040F840 /* CTBottonHelper */,
 				49FAE2D4234C6DF80040F840 /* CTTableview */,
 				49FAE227234C371B0040F840 /* CTCellView(cell类view) */,
@@ -3083,6 +3113,7 @@
 				49FAE2FB23516B9F0040F840 /* TickSelected.png in Resources */,
 				21BB2787216B515600B156A1 /* WK_ellipsisBack@2x.png in Resources */,
 				21E0B5F5212FB47400876E24 /* Login_line@2x.png in Resources */,
+				494131B523584AEE004930FC /* Action_Moments@3x.png in Resources */,
 				49FAE2A2234C371B0040F840 /* CellView004.png in Resources */,
 				21A8DF1A219EA6EB000ACCA9 /* SP@2x.png in Resources */,
 				21BB276F216B515600B156A1 /* OneSimple_title@2x.png in Resources */,
@@ -3114,6 +3145,7 @@
 				21FA81C521A54533000AFC63 /* showOne0016@2x.png in Resources */,
 				49FAE2B5234C371B0040F840 /* TextModelTime2.png in Resources */,
 				21BB2767216B515600B156A1 /* fourSimple_Warning@2x.png in Resources */,
+				494131B623584AEE004930FC /* Action_Share@2x.png in Resources */,
 				49FAE2FD23516B9F0040F840 /* TickNormal@3x.png in Resources */,
 				49FAE2C0234C371B0040F840 /* MyBakImage001@3x.png in Resources */,
 				21324F132211641500F1E3D1 /* loginBak2@3x.png in Resources */,
@@ -3139,9 +3171,11 @@
 				49FAE2CE234C371B0040F840 /* CTPayView001.png in Resources */,
 				21A8DF19219EA6EB000ACCA9 /* JP@3x.png in Resources */,
 				2169FA8621056F33005D6F2B /* Assets.xcassets in Resources */,
+				494131B723584AEE004930FC /* Action_Share@3x.png in Resources */,
 				21FA81CA21A54533000AFC63 /* showOne005@2x.png in Resources */,
 				21FA81C221A54533000AFC63 /* showOne0013@2x.png in Resources */,
 				21BB2781216B515600B156A1 /* 5.jpeg in Resources */,
+				494131B423584AEE004930FC /* Action_Moments@2x.png in Resources */,
 				49FAE2C3234C371B0040F840 /* MyHeaderView001.png in Resources */,
 				49FAE2C6234C371B0040F840 /* navLetBtn2@2x.png in Resources */,
 				49FAE2CD234C371B0040F840 /* View布局注意事项.rtf in Resources */,
@@ -3317,7 +3351,9 @@
 				2169FAD421057A22005D6F2B /* ThemeManager.m in Sources */,
 				49FAE2C5234C371B0040F840 /* NavView001.m in Sources */,
 				2169FACF21057A22005D6F2B /* BaseTaBarViewCtrl.m in Sources */,
+				494131BA23584D0E004930FC /* ZYShareCanceView.m in Sources */,
 				214A03B521193E9400F820BD /* CacheCtrl.m in Sources */,
+				494131AF23581692004930FC /* ShareView01ct.m in Sources */,
 				21FA81DA21A6425F000AFC63 /* LostNetView.m in Sources */,
 				49FAE2B2234C371B0040F840 /* ModelView001.m in Sources */,
 				21A8DF12219EA6EB000ACCA9 /* DrawView.m in Sources */,

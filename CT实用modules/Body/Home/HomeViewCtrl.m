@@ -51,6 +51,24 @@
             [login setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:login animated:YES];
             
+//             NSString * shareText = @"分享内容";
+//            UIImage * shareImage =[UIImage imageNamed:@"123"];
+//              NSURL * shareURL = [NSURL URLWithString:@"http://touch.naliwan.com/act/scareDetail.html"];
+//              NSArray * activityItems = [[NSArray alloc] initWithObjects:shareText, shareImage, shareURL, nil];
+//              UIActivityViewController * activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+//              UIActivityViewControllerCompletionWithItemsHandler myBlock = ^(UIActivityType activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+//                        NSLog(@"%@",activityType);
+//                        if (completed) {
+//                            NSLog(@"分享成功");
+//                        } else {
+//                            NSLog(@"分享失败");
+//                        }
+//              [activityVC dismissViewControllerAnimated:YES completion:nil];
+//                    };
+//               activityVC.completionWithItemsHandler = myBlock;
+//               [self presentViewController:activityVC animated:YES completion:nil];
+      
+            
         }
             break;
         case 1:

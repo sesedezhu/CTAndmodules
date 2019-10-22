@@ -56,6 +56,8 @@
     view.backgroundColor = [UIColor orangeColor];
     
     [CTShowsManager CTloadInitContViewTop:100 Left:50 Width:CONVER_VALUE(250) Height:CONVER_VALUE(290) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
+    
+    
 }
 #pragma mark - 懒加载
 - (UIButton *)BtnIma_Instruction{

@@ -134,7 +134,7 @@
             
             float hCall = TRANS_VALUE(440);
             float hbtn = TRANS_VALUE(482);
-            if (BoolIponX) {
+            if (IS_IPHONE_LH) {
                 hCall = TRANS_VALUE(440)+TRANS_VALUE(81);
                 hbtn = TRANS_VALUE(482)+TRANS_VALUE(81);
             }
@@ -189,7 +189,7 @@
         //图片向右或者向下滚动
         _cycleScrollView6.scrollDirection =
         UICollectionViewScrollDirectionHorizontal;
-        if (BoolIponX) {
+        if (IS_IPHONE_LH) {
             _cycleScrollView6.pageControlBottomOffset = TRANS_VALUE(37);
         }
         

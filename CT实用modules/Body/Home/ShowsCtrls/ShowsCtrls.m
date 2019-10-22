@@ -12,6 +12,7 @@
 #import "GiFHUD.h"
 #import "modoulView001.h"
 #import "BottomView.h"
+#import "ShareView01ct.h"
 @interface ShowsCtrls ()
 
 @end
@@ -35,15 +36,21 @@
     
     
 }
-
+- (void)bbbbbbbbbbbbbb{
+    NSLog(@"mmda");
+}
 - (void)ClickBtn:(UIButton *)sender{
     NSLog(@"啊！我点击了%ld",sender.tag-1);
     switch (sender.tag-1) {
         case 0://一、CTShows 自定义弹窗
         {
-            UIView *view = [[UIView alloc]init];
-            view.backgroundColor = [UIColor orangeColor];
-            [CTShowsManager CTloadInitContViewTop:kScreenHeight/2-50 Left:kScreenWidth/2-50 Width:100 Height:100 addView:view animationTepy:NLWDefault transparency:YES interaction:YES time:1.0];
+            ShareView01ct *view = [[ShareView01ct alloc]init];
+//            view.backgroundColor = [UIColor orangeColor];
+//            UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(50, 250, 50, 50)];
+//            btn.backgroundColor = [UIColor yellowColor];
+//            [view addSubview:btn];
+//            [btn addTarget:self action:@selector(bbbbbbbbbbbbbb) forControlEvents:UIControlEventTouchUpInside];
+            [CTShowsManager CTloadInitContViewTop:kScreenHeight-CONVER_VALUE(200) Left:0 Width:kScreenWidth Height:CONVER_VALUE(200) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
         }
             break;
         case 1://多图切换
