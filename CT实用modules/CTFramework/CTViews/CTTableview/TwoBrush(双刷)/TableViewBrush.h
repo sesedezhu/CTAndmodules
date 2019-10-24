@@ -1,8 +1,8 @@
 //
-//  TableBrush.h
+//  TableViewBrush.h
 //  CT实用modules
 //
-//  Created by xihasezhu on 2019/10/9.
+//  Created by xihasezhu on 2019/10/23.
 //  Copyright © 2019 涛程. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableBrush : UITableViewController
+@interface TableViewBrush : UITableView<UITableViewDataSource, UITableViewDelegate>
 /*
  格式要求:
  tapy :表示页面样式类型

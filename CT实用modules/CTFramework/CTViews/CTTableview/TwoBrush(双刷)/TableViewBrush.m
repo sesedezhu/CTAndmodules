@@ -1,37 +1,33 @@
 //
-//  TableBrush.m
+//  TableViewBrush.m
 //  CT实用modules
 //
-//  Created by xihasezhu on 2019/10/9.
+//  Created by xihasezhu on 2019/10/23.
 //  Copyright © 2019 涛程. All rights reserved.
 //
 
-#import "TableBrush.h"
+#import "TableViewBrush.h"
 #import "TableCellBrush.h"
-@interface TableBrush ()
+@implementation TableViewBrush
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
+    if (self = [super initWithFrame:frame style:style]) {
+        /* 添加子控件的代码*/
+        [self loadUI];
+    }
+    return self;
+}
 
-@end
-
-@implementation TableBrush
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    //在iOS11上，默认关掉高度的设置，下面三个方法是打开设置的，请根据需求使用
-    self.tableView.estimatedRowHeight = 0;
-    self.tableView.estimatedSectionHeaderHeight = 0;
-    self.tableView.estimatedSectionFooterHeight = 0;
-    //去掉cell之间默认虚线
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.tableView.backgroundColor = CTColorOrange;
+#pragma mark - UI
+- (void)loadUI{
+    self.delegate = self;
+    self.dataSource = self;
 }
 - (void)setBrushDataDic:(NSDictionary *)BrushDataDic{
-    BrushDataDic = _BrushDataDic;
-    [self.tableView reloadData];
+    _BrushDataDic = BrushDataDic;
+    
+    [self reloadData];
 }
 #pragma mark - Table view data source
-
 //返回头视图的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.01f;
@@ -58,6 +54,7 @@
 //设置每组有多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     NSArray *arr = _BrushDataDic[@"DataArr"];
+    NSLog(@"arr.count ============%lu",(unsigned long)arr.count);
     return arr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -97,5 +94,4 @@
     //UIEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right)
     //缩进50pt
 }
-
 @end

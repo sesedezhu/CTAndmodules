@@ -289,6 +289,7 @@
 		494131B723584AEE004930FC /* Action_Share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494131B323584AEE004930FC /* Action_Share@3x.png */; };
 		494131BA23584D0E004930FC /* ZYShareCanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 494131B923584D0E004930FC /* ZYShareCanceView.m */; };
 		4973F25A223B5CE700E98B20 /* NSArray+CTArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973F259223B5CE700E98B20 /* NSArray+CTArray.m */; };
+		497F68A5236050360017B343 /* TableViewBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = 497F68A4236050360017B343 /* TableViewBrush.m */; };
 		49997BF9225DFFE90075C1EF /* CTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BF8225DFFE90075C1EF /* CTRequest.m */; };
 		49997C1E225F40DB0075C1EF /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997BFF225F40DB0075C1EF /* AFURLResponseSerialization.m */; };
 		49997C1F225F40DB0075C1EF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C00225F40DB0075C1EF /* AFHTTPSessionManager.m */; };
@@ -892,6 +893,8 @@
 		494131B923584D0E004930FC /* ZYShareCanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYShareCanceView.m; sourceTree = "<group>"; };
 		4973F258223B5CE700E98B20 /* NSArray+CTArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CTArray.h"; sourceTree = "<group>"; };
 		4973F259223B5CE700E98B20 /* NSArray+CTArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CTArray.m"; sourceTree = "<group>"; };
+		497F68A3236050360017B343 /* TableViewBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewBrush.h; sourceTree = "<group>"; };
+		497F68A4236050360017B343 /* TableViewBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewBrush.m; sourceTree = "<group>"; };
 		49997BF7225DFFE90075C1EF /* CTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTRequest.h; sourceTree = "<group>"; };
 		49997BF8225DFFE90075C1EF /* CTRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTRequest.m; sourceTree = "<group>"; };
 		49997BFB225F40DB0075C1EF /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
@@ -2948,6 +2951,8 @@
 				49FAE2D7234C7C420040F840 /* BottomView.m */,
 				49FAE2D9234D730C0040F840 /* TableBrush.h */,
 				49FAE2DA234D730C0040F840 /* TableBrush.m */,
+				497F68A3236050360017B343 /* TableViewBrush.h */,
+				497F68A4236050360017B343 /* TableViewBrush.m */,
 				49FAE2DC234D73380040F840 /* TableCellBrush.h */,
 				49FAE2DD234D73380040F840 /* TableCellBrush.m */,
 			);
@@ -3388,6 +3393,7 @@
 				49997C24225F40DB0075C1EF /* UIProgressView+AFNetworking.m in Sources */,
 				49FAE2DE234D73380040F840 /* TableCellBrush.m in Sources */,
 				214A05BC211C3F8A00F820BD /* UIImage+GIF.m in Sources */,
+				497F68A5236050360017B343 /* TableViewBrush.m in Sources */,
 				214A05D9211C3F8A00F820BD /* MJRefreshBackFooter.m in Sources */,
 				219434AE21F70AF30010B640 /* CTCollects.m in Sources */,
 				214A05D4211C3F8A00F820BD /* NSObject+MJProperty.m in Sources */,

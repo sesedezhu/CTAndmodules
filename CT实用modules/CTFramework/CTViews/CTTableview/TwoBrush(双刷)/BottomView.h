@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TableBrush.h"
+#import "TableViewBrush.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BottomView : UIView
-@property(nonatomic ,strong) UITableView *TableView;
+@property(nonatomic ,strong) TableViewBrush *TableView;
+//@property(nonatomic ,strong) UITableView *TableViewaa;
 @end
 
 NS_ASSUME_NONNULL_END
