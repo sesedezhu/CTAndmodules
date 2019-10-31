@@ -92,6 +92,12 @@
         {
             BottomView *view = [[BottomView alloc]init];
             [CTShowsManager CTCustomloadInitContViewTop:0 Left:0 Width:kScreenWidth Height:kScreenHeight-100-CTStopStatusRect-CTStopNavRect addView:view animationTepy:NLWMobileAndReturnTop transparency:YES interaction:YES time:1.0 AndClassView:self.view];
+            view.BottomViewTableLeftBlock = ^(NSIndexPath * _Nonnull indexPath, NSString * _Nonnull content) {
+                NSLog(@"主左--------%ld,%@",(long)indexPath.row,content);
+            };
+            view.BottomViewTableRightBlock = ^(NSIndexPath * _Nonnull indexPath, NSString * _Nonnull content) {
+                NSLog(@"主右--------%ld,%@",(long)indexPath.row,content);
+            };
         }
             break;
         default:

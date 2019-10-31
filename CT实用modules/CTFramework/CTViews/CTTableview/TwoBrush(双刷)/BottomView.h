@@ -11,8 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BottomView : UIView
-@property(nonatomic ,strong) TableViewBrush *TableView;
-//@property(nonatomic ,strong) UITableView *TableViewaa;
+@property(nonatomic ,strong) TableViewBrush *TableRight;
+@property(nonatomic ,strong) TableViewBrush *TableLeft;
+
+@property (nonatomic, copy) void (^BottomViewTableLeftBlock)(NSIndexPath *indexPath,NSString *content);
+@property (nonatomic, copy) void (^BottomViewTableRightBlock)(NSIndexPath *indexPath,NSString *content);
 @end
 
 NS_ASSUME_NONNULL_END
