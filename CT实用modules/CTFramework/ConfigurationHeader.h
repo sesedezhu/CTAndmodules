@@ -19,7 +19,8 @@
 #define CONVER_VALUE(x) ceil(kScreenWidth * x / 375)
 
 
-
+//导航栏高度(包括状态栏)
+#define Height_NavBar (IS_IPHONE_LH ? 88.0 : 64.0)
 //状态栏高度
 #define CTStopStatusRect (IS_IPHONE_LH ? 44.0 : 20.0)
 //导航栏高度(包括状态栏)

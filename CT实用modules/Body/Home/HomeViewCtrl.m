@@ -15,6 +15,8 @@
 #import "CTLoginCtrls2.h"
 #import "CeShiCtrl.h"
 #import "InstructionView.h"
+#import "WebViewCtrls.h"
+
 @interface HomeViewCtrl ()
 
 @end
@@ -94,7 +96,13 @@
             [self.navigationController pushViewController:login animated:YES];
         }
             break;
-            
+        case 4:
+        {
+            WebViewCtrls *web = [[WebViewCtrls alloc]init];
+            web.url = @"http://p.qiao.baidu.com/cps/chat?siteId=4954872&userId=7120819";
+            [self.navigationController pushViewController:web animated:YES];
+        }
+            break;
         default:
             break;
     }

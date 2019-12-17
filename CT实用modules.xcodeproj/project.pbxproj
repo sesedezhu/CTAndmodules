@@ -308,6 +308,7 @@
 		49997C2C225F40DB0075C1EF /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C1B225F40DB0075C1EF /* AFImageDownloader.m */; };
 		49997C31226034A90075C1EF /* CTLoginRequest001.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C30226034A90075C1EF /* CTLoginRequest001.m */; };
 		49997C34226078100075C1EF /* CeShiCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 49997C33226078100075C1EF /* CeShiCtrl.m */; };
+		49D831A923A39665006907B2 /* ToolWebview01.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D831A823A39665006907B2 /* ToolWebview01.m */; };
 		49F675B922D5DA38008EB54C /* jpush-extension-ios-1.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F675B422D5DA38008EB54C /* jpush-extension-ios-1.1.2.a */; };
 		49F675BA22D5DA38008EB54C /* jcore-ios-2.0.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F675B722D5DA38008EB54C /* jcore-ios-2.0.2.a */; };
 		49F675BB22D5DA38008EB54C /* jpush-ios-3.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F675B822D5DA38008EB54C /* jpush-ios-3.2.0.a */; };
@@ -935,6 +936,8 @@
 		49997C30226034A90075C1EF /* CTLoginRequest001.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTLoginRequest001.m; sourceTree = "<group>"; };
 		49997C32226078100075C1EF /* CeShiCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeShiCtrl.h; sourceTree = "<group>"; };
 		49997C33226078100075C1EF /* CeShiCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeShiCtrl.m; sourceTree = "<group>"; };
+		49D831A723A39665006907B2 /* ToolWebview01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolWebview01.h; sourceTree = "<group>"; };
+		49D831A823A39665006907B2 /* ToolWebview01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolWebview01.m; sourceTree = "<group>"; };
 		49F675B422D5DA38008EB54C /* jpush-extension-ios-1.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.1.2.a"; sourceTree = "<group>"; };
 		49F675B522D5DA38008EB54C /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
 		49F675B622D5DA38008EB54C /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
@@ -2568,6 +2571,15 @@
 			path = "CTLoginRequest(用户数据)";
 			sourceTree = "<group>";
 		};
+		49D831A323A39605006907B2 /* CTUIWebviews */ = {
+			isa = PBXGroup;
+			children = (
+				49D831A723A39665006907B2 /* ToolWebview01.h */,
+				49D831A823A39665006907B2 /* ToolWebview01.m */,
+			);
+			path = CTUIWebviews;
+			sourceTree = "<group>";
+		};
 		49F675B322D5DA38008EB54C /* JGPushs(极光) */ = {
 			isa = PBXGroup;
 			children = (
@@ -2601,6 +2613,7 @@
 		49FAE226234C371B0040F840 /* CTViews */ = {
 			isa = PBXGroup;
 			children = (
+				49D831A323A39605006907B2 /* CTUIWebviews */,
 				494131AC2358154A004930FC /* CTShareView */,
 				49FAE2DF234F14070040F840 /* CTBottonHelper */,
 				49FAE2D4234C6DF80040F840 /* CTTableview */,
@@ -3403,6 +3416,7 @@
 				214A05AA211C3F8A00F820BD /* IQBarButtonItem.m in Sources */,
 				214A05CD211C3F8A00F820BD /* MJFoundation.m in Sources */,
 				214A05CF211C3F8A00F820BD /* MJPropertyKey.m in Sources */,
+				49D831A923A39665006907B2 /* ToolWebview01.m in Sources */,
 				49FAE2B4234C371B0040F840 /* SeccodeView001.m in Sources */,
 				49997C2A225F40DB0075C1EF /* UIWebView+AFNetworking.m in Sources */,
 				21A8DF11219EA6EB000ACCA9 /* viewcellModel.m in Sources */,

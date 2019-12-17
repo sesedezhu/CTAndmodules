@@ -9,6 +9,7 @@
 #import "InstructionView.h"
 #import "CTShowsManager.h"
 #import "InstructionScrollView.h"
+#import "ToolWebview01.h"
 @interface InstructionView ()
 @property(nonatomic ,strong) UIButton *BtnIma_Instruction;       //须知按钮
 @property(nonatomic ,strong) UIButton *Btn_Instruction;       //须知按钮
@@ -52,10 +53,14 @@
 }
 //须知详情按钮
 - (void)ClickInstructionBtnImages{
-    InstructionScrollView *view = [[InstructionScrollView alloc]init];
-    view.backgroundColor = [UIColor orangeColor];
+//    InstructionScrollView *view = [[InstructionScrollView alloc]init];
+//    view.backgroundColor = [UIColor orangeColor];
+//
     
-    [CTShowsManager CTloadInitContViewTop:100 Left:50 Width:CONVER_VALUE(250) Height:CONVER_VALUE(290) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
+    ToolWebview01 *vs= [[ToolWebview01 alloc]init];
+    vs.backgroundColor = [UIColor whiteColor];
+    
+    [CTShowsManager CTloadInitContViewTop:CONVER_VALUE(100) Left:(kScreenWidth - CONVER_VALUE(250))/2 Width:CONVER_VALUE(250) Height:CONVER_VALUE(430) addView:vs animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
     
     
 }
