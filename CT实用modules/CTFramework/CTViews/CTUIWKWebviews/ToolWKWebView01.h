@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ToolWKWebView01 : UIView
-- (void)loadWebViewWithURL:(id)url;
+- (void)loadWKWebViewWithURL:(id)url;
+- (void)loadloadWKWebViewHTMLString:(NSString *)htmlString;
 @end
 
 NS_ASSUME_NONNULL_END

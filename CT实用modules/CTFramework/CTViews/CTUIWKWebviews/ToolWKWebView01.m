@@ -10,6 +10,7 @@
 #import <WebKit/WebKit.h>
 @interface ToolWKWebView01()<WKUIDelegate,WKNavigationDelegate>
 @property(nonatomic,strong)WKWebView *WKView;
+@property (nonatomic, assign) BOOL isHtmlString;//判断加载方式
 @end
 @implementation ToolWKWebView01
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -49,7 +50,10 @@
 // 加载完成
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     NSLog(@"加载完成");
-  
+  if (_isHtmlString) {
+      //修改字体大小 240%
+      [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '320%'"completionHandler:nil];
+  }
 }
 // 加载失败
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
@@ -57,8 +61,9 @@
    
 }
 
-// 加载wkwebView
+#pragma mark - 加载wkwebView
 - (void)loadWebViewWithURL:(id)url {
+    _isHtmlString = NO;
     NSURL *loadURL = nil;
     // 对url进行检查
     if (!url) {
@@ -87,7 +92,16 @@
     [self.WKView loadRequest:request];
     
 }
-
+#pragma mark - 特殊数据加载HTMLString
+- (void)loadloadWKWebViewHTMLString:(NSString *)htmlString{
+    _isHtmlString = YES;
+    // 对url进行检查
+    if (!htmlString) {
+        return;
+    }
+   
+    [self.WKView loadHTMLString:htmlString baseURL:nil];
+}
 #pragma mark - 懒加载
 - (WKWebView *)WKView{
     if (!_WKView) {
