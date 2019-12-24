@@ -16,7 +16,8 @@
 #import "CeShiCtrl.h"
 #import "InstructionView.h"
 #import "WebViewCtrls.h"
-
+#import "ToolWKWebView01.h"
+#import "CTShowsManager.h"
 @interface HomeViewCtrl ()
 
 @end
@@ -31,7 +32,7 @@
     __weak typeof(self) weakSelf = self;
     
     //CTCollectSimplify
-    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"自定义弹窗",@"登录模型0",@"登录模块1",@"用户数据",@"未知类型",@"未知类型", nil];
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"自定义弹窗",@"登录模型0",@"登录模块1",@"用户数据",@"WebView",@"WKWebView", nil];
     CTCollects *collview = [[CTCollects alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [collview CTloadDataArr:arr senderBlock:^(UIButton *sender) {
         [weakSelf ClickBtn:sender];
@@ -104,6 +105,11 @@
         }
             break;
         default:
+        {
+            
+            ToolWKWebView01 *web = [[ToolWKWebView01 alloc]init];
+            [CTShowsManager CTloadInitContViewTop:100 Left:0 Width:kScreenWidth Height:kScreenHeight-100 addView:web animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
+        }
             break;
     }
 }

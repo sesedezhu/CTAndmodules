@@ -57,10 +57,10 @@
 //    view.backgroundColor = [UIColor orangeColor];
 //
     
-    ToolWebview01 *vs= [[ToolWebview01 alloc]init];
-    vs.backgroundColor = [UIColor whiteColor];
-    
-    [CTShowsManager CTloadInitContViewTop:CONVER_VALUE(100) Left:(kScreenWidth - CONVER_VALUE(250))/2 Width:CONVER_VALUE(250) Height:CONVER_VALUE(430) addView:vs animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
+    ToolWebview01 *view= [[ToolWebview01 alloc]init];
+    view.backgroundColor = [UIColor whiteColor];
+//
+    [CTShowsManager CTloadInitContViewTop:CONVER_VALUE(100) Left:(kScreenWidth - CONVER_VALUE(250))/2 Width:CONVER_VALUE(250) Height:CONVER_VALUE(430) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
     
     
 }
