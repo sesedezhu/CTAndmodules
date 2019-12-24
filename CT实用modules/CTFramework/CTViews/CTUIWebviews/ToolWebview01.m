@@ -25,9 +25,8 @@
     labtext.textAlignment = NSTextAlignmentCenter;
     [self addSubview:labtext];
     
-    _referralWebView = [[UIWebView alloc] init];
-    _referralWebView.delegate = self;
-    _referralWebView.scrollView.scrollEnabled = YES;
+    _referralWebView = [[ToolWKWebView01 alloc] init];
+    
     [self addSubview:_referralWebView];
     
     UIButton *btn = [[UIButton alloc]init];

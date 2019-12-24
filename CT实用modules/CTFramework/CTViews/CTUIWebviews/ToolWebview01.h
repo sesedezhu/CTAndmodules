@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ToolWKWebView01.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToolWebview01 : UIView<UIWebViewDelegate>
+@interface ToolWebview01 : UIView
 @property(nonatomic,copy)NSString *sty;
 @property(nonatomic,copy)NSString *connets;
-@property(nonatomic,strong)UIWebView *referralWebView;
+@property(nonatomic,strong)ToolWKWebView01 *referralWebView;
 @end
 
 NS_ASSUME_NONNULL_END
