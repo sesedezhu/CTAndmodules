@@ -60,7 +60,7 @@
     ToolWebview01 *view= [[ToolWebview01 alloc]init];
     view.backgroundColor = [UIColor whiteColor];
 //
-    [CTShowsManager CTloadInitContViewTop:CONVER_VALUE(100) Left:(kScreenWidth - CONVER_VALUE(250))/2 Width:CONVER_VALUE(250) Height:CONVER_VALUE(430) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
+    [CTShowsManager CTloadInitContViewTop:kScreenHeight/2 - CONVER_VALUE(430)/2 Left:(kScreenWidth - CONVER_VALUE(300))/2 Width:CONVER_VALUE(300) Height:CONVER_VALUE(430) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
     
     
 }

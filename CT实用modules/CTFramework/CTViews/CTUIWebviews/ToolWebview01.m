@@ -20,7 +20,7 @@
 #pragma mark - UI
 - (void)loadUI{
     UILabel *labtext = [[UILabel alloc]init];
-    labtext.text = @"隐私政策";
+    labtext.text = @"用户须知";
     labtext.textColor = [UIColor blackColor];
     labtext.textAlignment = NSTextAlignmentCenter;
     [self addSubview:labtext];
