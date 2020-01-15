@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadWKWebViewWithStringURL:(NSString *)urlString Type:(NSString *__nullable)types;
 - (void)loadloadWKWebViewHTMLString:(NSString *)htmlString Type:(NSString *__nullable)types;
+- (void)loadWKWebViewPushString:(NSString *)PushString Type:(NSString *__nullable)types;
 @end
 
 NS_ASSUME_NONNULL_END

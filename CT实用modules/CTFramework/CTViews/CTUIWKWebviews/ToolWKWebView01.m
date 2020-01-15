@@ -33,7 +33,7 @@
     .bottomSpaceToView(view, 0);
     
 //    [self loadWKWebViewWithStringURL:@"https://www.jianshu.com/p/416b84d87105" Type:nil];
-    [self loadloadWKWebViewHTMLString:@"大三大四的阿斯顿阿斯顿个阿斯顿呀啊 u 已收到u 牙刷地瓜干啥的u 呀是毒药啊素养度大关u 呀是高度压缩过毒牙素颜的噶素养的古雅说孤独呀是孤独呀gassed故意撒过的u 呀是个电影u 啊公司的u 牙膏是毒药gassedgulags读雅思过多余噶剩余的古雅说故意大帅哥u 一点噶与孤独与阿哥u 一点噶素养高待遇啊事故的古雅说的的" Type:nil];
+//    [self loadloadWKWebViewHTMLString:@"大三大四的阿斯顿阿斯顿个阿斯顿呀啊 u 已收到u 牙刷地瓜干啥的u 呀是毒药啊素养度大关u 呀是高度压缩过毒牙素颜的噶素养的古雅说孤独呀是孤独呀gassed故意撒过的u 呀是个电影u 啊公司的u 牙膏是毒药gassedgulags读雅思过多余噶剩余的古雅说故意大帅哥u 一点噶与孤独与阿哥u 一点噶素养高待遇啊事故的古雅说的的" Type:nil];
     
 }
 
@@ -52,7 +52,7 @@
     NSLog(@"加载完成");
 // if ([_WKTypes isEqualToString:@"ToolWebview01"] || [_WKTypes isEqualToString:@"WF_QLPrivacyVCViewController"]) {
 //     //修改字体大小 240%
-     [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '300%'"completionHandler:nil];
+     [webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '220%'"completionHandler:nil];
 // }
 }
 // 加载失败
@@ -82,6 +82,20 @@
     }
    
     [self.WKView loadHTMLString:htmlString baseURL:nil];
+}
+#pragma mark - 本地文件加载HTMLString
+- (void)loadWKWebViewPushString:(NSString *)PushString Type:(NSString *__nullable)types{
+    _WKTypes = types;
+    // 对本地路径进行检查
+    if (!PushString) {
+        return;
+    }
+    NSString *bundleStr = [[NSBundle mainBundle] pathForResource:PushString ofType:@"html"];
+        
+    NSURL * feedbackUrl = [NSURL fileURLWithPath:bundleStr];
+        
+    [self.WKView loadRequest:[NSURLRequest requestWithURL:feedbackUrl]];
+    
 }
 #pragma mark - 懒加载
 - (WKWebView *)WKView{

@@ -32,7 +32,7 @@
     UIView *view = self;
     _BtnIma_Instruction.sd_layout
     .topSpaceToView(view, 2)
-    .leftSpaceToView(view, 2)
+    .leftSpaceToView(view, -CONVER_VALUE(10))
     .widthIs(46)
     .heightIs(46);
     
@@ -59,7 +59,8 @@
     
     ToolWebview01 *view= [[ToolWebview01 alloc]init];
     view.backgroundColor = [UIColor whiteColor];
-//
+    
+    [view.referralWebView loadWKWebViewPushString:@"哪里玩隐私政策1" Type:@"InstructionView"];
     [CTShowsManager CTloadInitContViewTop:kScreenHeight/2 - CONVER_VALUE(430)/2 Left:(kScreenWidth - CONVER_VALUE(300))/2 Width:CONVER_VALUE(300) Height:CONVER_VALUE(430) addView:view animationTepy:NLWMobileAndReturnBottom transparency:YES interaction:YES time:1.0];
     
     
